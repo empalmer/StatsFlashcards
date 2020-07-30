@@ -6,7 +6,8 @@
 \newenvironment{tags}{\paragraph{tags:}}{}
 
 \begin{document}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%start_tag From Stat Cheatsheet
 \tags{FromStatCheatsheet}
 
 \begin{note}
@@ -18,6 +19,7 @@
   \end{field}
 \end{note}
 
+
 \begin{note}
   \begin{field}
     CDF of Exponential($\beta$)
@@ -26,8 +28,6 @@
     $1 - e^{-\frac{x}{\beta}}$
   \end{field}
 \end{note}
-
-
 
 \begin{note}
   \begin{field}
@@ -324,324 +324,9 @@
   \end{field}
 \end{note}
 
+%%end_tag
 
-% From undergrad stats book
-
-
-\tags{CasellaCh1}
-
-\begin{note}
-  \begin{field}
-    \text{Sample Space}
-  \end{field}
-  \begin{field}
-    \text{The set}, $S$, of all possible outcomes of a particular experiment is called the \textit{sample space} for the experiment.
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    \text{Event}
-  \end{field}
-  \begin{field}
-    \text{An} \textit{event} is any collection of possible outcomes of an experiment, that is, any subset of $S$ (including $S$ itself).
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Union
-  \end{field}
-  \begin{field}
-    $ A \cup B = \{x:x \in A \text{ or } x \in B\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Intersection
-  \end{field}
-  \begin{field}
-    $A \cap B = \{x:x \in A \text{ and } x \in B\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Complememntation
-  \end{field}
-  \begin{field}
-    $A^c = \{x:x\notin A\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Commutativity
-  \end{field}
-  \begin{field}
-    Commutativity
-    $$ A \cup B = B \cup A$$
-    $$ A \cap B = B \cap A$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Associativity
-  \end{field}
-
-    \begin{field}
-      \text{Associativity}
-        $$ A \cup (B \cup C) = (A \cup B) \cup C$$
-        $$ A \cap (B \cap C) = (A \cap B) \cap C$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    \text{Distributive Laws}
-    $$A \cap ( B \cup C) = $$
-    $$ A \cup ( B \cap C) = $$
-  \end{field}
-
-    \begin{field}
-      \text{Distributive Laws}
-        $$A \cap ( B \cup C) = (A \cap B) \cup (A \cap C)$$
-        $$ A \cup ( B \cap C) = (A \cup B) \cap ( A \cup C)$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    DeMorgan's Laws
-  \end{field}
-    \begin{field}
-      DeMorgan's Laws
-        $$(A \cup B)^c = A^c \cap B^c$$
-        $$(A \cap B)^c = A^c \cup B^c$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    \text{Disjoint}
-  \end{field}
-    \begin{field}
-        \text{Disjoint}: Two events $A$ and $B$ are disjoint ( or mutually exclusive) if $ A \cap B = \emptyset $
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Pairwise disjoint
-  \end{field}
-    \begin{field}
-        $ \text{Two Events} A_1, A_2$ are pairwise disjoint ( or mutually exclusive) if $A_i \cap A_j = \emptyset $ for all $i \neq j$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-      Partition
-    \end{field}
-    \begin{field}
-        \text{If }$A_1, A_2, \ldots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the collection $A_1, A_2, \ldots$ forms a partition of $S$.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Sigma Algebra}
-    \end{field}
-    \begin{field}
-        \text{A} collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
-            \begin{enumerate}
-              \item $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
-              \item If $A \in \mathcal{B}$, then $A^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation)
-              \item If $A_1, A_2, \ldots \in \mathcal{B}$, then $\cup_{i-1}^\infty A_i \in \mathcal{B} \mathcal{B}$ is closed under countable unions)
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Probability Function / Kolmogorov Axioms}
-    \end{field}
-    \begin{field}
-        \text{Given a sample space} $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies:
-            \begin{enumerate}
-              \item $P(A) \geq 0$ for all $A \in \mathcal{B}$
-              \item $P(S) = 1$
-              \item If $A_1, A_2, \ldots \mathcal{B}$ are pairwise disjoint, then $P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$ (Axiom of Countable Additivity)
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Theorem }1.2.6
-    \end{field}
-    \begin{field}
-        \text{Let} $S = \{ s_1, \ldots, s_n \}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \ldots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
-            $$ P(A) = \sum_{\{i:s_i \in A\}} $$
-            (The sum over an empty set is defined to be 0) Then $P$ is a probability function on $\mathcal{B}$ This remains true if $S = \{s_1, s_2, \ldots \}$ is a countable set.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Axiom of Finite Additivity}
-    \end{field}
-    \begin{field}
-        \text{If} $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
-            $$P(A\cup B) = P(A) + P(B) $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Properties of probability functions}
-    \end{field}
-    \begin{field}
-      \text{Properties of probability functions}
-        \begin{enumerate}
-              \item $P(\emptyset) = 0$
-              \item $P(A) \leq 1$
-              \item $P(A^c) = 1 - P(A)$
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = $$
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = P(B) - P(A \cap B)$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = $
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = P(A) + P(B) - P(A \cap B)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then $P(A) \leq P(B)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Bonferroni's Inequality}
-    \end{field}
-    \begin{field}
-      \text{Bonferroni's Inequality:}
-        $$P(A\cap B) \geq P(A) + P(B) -1 $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = $
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = \sum_{i=1}^\infty P(A \cap C_i)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Boole's Inequality}
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function,
-            $$P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i) \text{ for any sets } A_1, A_2, \ldots $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Fundamental Theorem of Counting}
-    \end{field}
-    \begin{field}
-        \text{If} a job consists of $k$ seperate tasks, the ith of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Ordered without} replacement: outcomes of choosing $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-        $$\frac{n!}{(n-r)!}$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
-      \end{field}
-    \begin{field}
-      \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
-        $$\binom{n}{r}$$
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        \text{Ordered with replacement: choose} $r$ from $n$ objects:
-    \end{field}
-    \begin{field}
-      \text{Ordered with replacement: choose} $r$ from $n$ objects:
-        $$n^r$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects }
-    \end{field}
-    \begin{field}
-      \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects: }
-        $$\binom{n}{r}$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Unordered with replacement choose} $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-      \text{Unordered with replacement choose} $r$ from $n$ objects:
-        $$\binom{n+1-1}{r}$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Binomial Coefficient} $\binom{n}{r}$
-    \end{field}
-    \begin{field}
-      \text{Binomial Coefficient}
-        $$\binom{n}{r} = \frac{n!}{r!(n-r)!}$$
-    \end{field}
-\end{note}
-
-
-
-
-
+%%start_tag Distribution Relationships
 \tags{distributionrelationships}
 \begin{note}
   \begin{field}
@@ -1010,7 +695,326 @@
   \end{field}
 \end{note}
 
+%%end_tag
 
+%%start_tag Casella Berger
+
+
+\tags{CasellaCh1}
+
+\begin{note}
+  \begin{field}
+    \text{Sample Space}
+  \end{field}
+  \begin{field}
+    \text{The set}, $S$, of all possible outcomes of a particular experiment is called the \textit{sample space} for the experiment.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \text{Event}
+  \end{field}
+  \begin{field}
+    \text{An} \textit{event} is any collection of possible outcomes of an experiment, that is, any subset of $S$ (including $S$ itself).
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Union
+  \end{field}
+  \begin{field}
+    $ A \cup B = \{x:x \in A \text{ or } x \in B\}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Intersection
+  \end{field}
+  \begin{field}
+    $A \cap B = \{x:x \in A \text{ and } x \in B\}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Complementation
+  \end{field}
+  \begin{field}
+    $A^c = \{x:x\notin A\}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Commutativity
+    $$ A \cup B = $$
+    $$ A \cap B = $$
+  \end{field}
+  \begin{field}
+    Commutativity
+    $$ A \cup B = B \cup A$$
+    $$ A \cap B = B \cap A$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Associativity
+    $$ A \cup (B \cup C) = $$
+    $$ A \cap (B \cap C) = $$
+  \end{field}
+    \begin{field}
+      \text{Associativity}
+        $$ A \cup (B \cup C) = (A \cup B) \cup C$$
+        $$ A \cap (B \cap C) = (A \cap B) \cap C$$
+    \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \text{Distributive Laws}
+    $$A \cap ( B \cup C) = $$
+    $$ A \cup ( B \cap C) = $$
+  \end{field}
+    \begin{field}
+      \text{Distributive Laws}
+        $$A \cap ( B \cup C) = (A \cap B) \cup (A \cap C)$$
+        $$ A \cup ( B \cap C) = (A \cup B) \cap ( A \cup C)$$
+    \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    DeMorgan's Laws
+    $$(A \cup B)^c = $$
+    $$(A \cap B)^c = $$
+  \end{field}
+    \begin{field}
+      DeMorgan's Laws
+        $$(A \cup B)^c = A^c \cap B^c$$
+        $$(A \cap B)^c = A^c \cup B^c$$
+    \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Disjoint
+  \end{field}
+    \begin{field}
+        Disjoint: Two events $A$ and $B$ are disjoint ( or mutually exclusive) if $ A \cap B = \emptyset $
+    \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Pairwise disjoint
+  \end{field}
+    \begin{field}
+        Two Events $A_1, A_2$ are pairwise disjoint ( or mutually exclusive) if $A_i \cap A_j = \emptyset $ for all $i \neq j$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+      Partition
+    \end{field}
+    \begin{field}
+        If $A_1, A_2, \ldots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the collection $A_1, A_2, \ldots$ forms a partition of $S$.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Sigma Algebra}
+    \end{field}
+    \begin{field}
+        \text{A} collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
+            \begin{enumerate}
+              \item $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
+              \item If $A \in \mathcal{B}$, then $A^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation)
+              \item If $A_1, A_2, \ldots \in \mathcal{B}$, then $\cup_{i-1}^\infty A_i \in \mathcal{B} \mathcal{B}$ is closed under countable unions)
+            \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Probability Function / Kolmogorov Axioms}
+    \end{field}
+    \begin{field}
+        \text{Given a sample space} $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies:
+            \begin{enumerate}
+              \item $P(A) \geq 0$ for all $A \in \mathcal{B}$
+              \item $P(S) = 1$
+              \item If $A_1, A_2, \ldots \mathcal{B}$ are pairwise disjoint, then $P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$ (Axiom of Countable Additivity)
+            \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Theorem }1.2.6
+    \end{field}
+    \begin{field}
+        \text{Let} $S = \{ s_1, \ldots, s_n \}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \ldots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
+            $$ P(A) = \sum_{\{i:s_i \in A\}} $$
+            (The sum over an empty set is defined to be 0) Then $P$ is a probability function on $\mathcal{B}$ This remains true if $S = \{s_1, s_2, \ldots \}$ is a countable set.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Axiom of Finite Additivity}
+    \end{field}
+    \begin{field}
+        \text{If} $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
+            $$P(A\cup B) = P(A) + P(B) $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Properties of probability functions}
+    \end{field}
+    \begin{field}
+      \text{Properties of probability functions}
+        \begin{enumerate}
+              \item $P(\emptyset) = 0$
+              \item $P(A) \leq 1$
+              \item $P(A^c) = 1 - P(A)$
+            \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = $$
+    \end{field}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = P(B) - P(A \cap B)$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = $
+    \end{field}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = P(A) + P(B) - P(A \cap B)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then
+    \end{field}
+    \begin{field}
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then $P(A) \leq P(B)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Bonferroni's Inequality}
+    \end{field}
+    \begin{field}
+      \text{Bonferroni's Inequality:}
+        $$P(A\cap B) \geq P(A) + P(B) -1 $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = $
+    \end{field}
+    \begin{field}
+        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = \sum_{i=1}^\infty P(A \cap C_i)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Boole's Inequality}
+    \end{field}
+    \begin{field}
+        \text{If} $P$ is a probability function,
+            $$P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i) \text{ for any sets } A_1, A_2, \ldots $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Fundamental Theorem of Counting}
+    \end{field}
+    \begin{field}
+        \text{If} a job consists of $k$ seperate tasks, the ith of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Ordered without} replacement: outcomes of choosing $r$ from $n$ objects
+    \end{field}
+    \begin{field}
+        $$\frac{n!}{(n-r)!}$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
+      \end{field}
+    \begin{field}
+      \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
+        $$\binom{n}{r}$$
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \text{Ordered with replacement: choose} $r$ from $n$ objects:
+    \end{field}
+    \begin{field}
+      \text{Ordered with replacement: choose} $r$ from $n$ objects:
+        $$n^r$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects }
+    \end{field}
+    \begin{field}
+      \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects: }
+        $$\binom{n}{r}$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Unordered with replacement choose} $r$ from $n$ objects
+    \end{field}
+    \begin{field}
+      \text{Unordered with replacement choose} $r$ from $n$ objects:
+        $$\binom{n+1-1}{r}$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \text{Binomial Coefficient} $\binom{n}{r}$
+    \end{field}
+    \begin{field}
+      \text{Binomial Coefficient}
+        $$\binom{n}{r} = \frac{n!}{r!(n-r)!}$$
+    \end{field}
+\end{note}
+
+%%end_tag
 
 
 % Todo
