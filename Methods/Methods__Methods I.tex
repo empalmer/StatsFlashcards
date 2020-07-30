@@ -1,0 +1,356 @@
+% -*- coding: utf-8 -*-
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{mathrsfs}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+
+\begin{note}
+    \begin{field}
+        Epidemiology Definition of Causation
+    \end{field}
+    \begin{field}
+        Factor/variable $X$ \textbf{causes} result $Y$ if some cases of $Y$ would not have occured if X had been absent.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Variance
+    \end{field}
+    \begin{field}
+        $s^2 = \frac{1}{n-1}\sum_{i=1}^n(x_i - \bar{x})^2$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Population(s) of interest
+    \end{field}
+    \begin{field}
+        The group to which you would like your answer to apply
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Variable of Interest
+    \end{field}
+    \begin{field}
+        A measurement that can be made on each individual/member of the population
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Facts about Normal Distributions
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+              \item If $Z$ has a Normal(0,1) distribution then $X = \sigma Z + \mu$ has a Normal$(\mu,\sigma^2)$ distribution
+              \item If $X$ has a Normal($\mu,\sigma^2$) distribution, then $Z = \frac{X - \mu}{\sigma}$ has a Normal(0,1) distribution.
+              \item If $X$ has a Normal($\mu_x,\sigma^2_x)$ distribution, and $Y$ has a Normal($\mu_y,\sigma_y^2$) distribution, and $X$ and $Y$ are independent of each other, then $X + Y \sim $ Normal($\mu_x + \mu_y, \sigma_x^2 + \sigma_y^2)$
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Sample mean
+    \end{field}
+    \begin{field}
+        $\bar{Y} = \frac{1}{n}\sum_{i=1}^n Y_i$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Sampling distribution for population $Y \sim $ Normal($\mu,\sigma$)
+    \end{field}
+    \begin{field}
+        $N(\mu,\sigma^2/n)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Variance (Expected value)
+    \end{field}
+    \begin{field}
+        $V(Y) = E[(X - E(X))^2] = E(X^2) - E[(X)]^2$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Covariance
+    \end{field}
+    \begin{field}
+        $Cov(X,Y) = E[(X - E(X))(Y - E(Y))]$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        If $X$ and $Y$ are independent (covariance)
+    \end{field}
+    \begin{field}
+        The covariance is 0
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        If $Cov(X,Y) = 0$, (independence)
+    \end{field}
+    \begin{field}
+        Cannot say that $X$ and $Y$ are independent
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        $Cov(X,X) =$
+    \end{field}
+    \begin{field}
+        $Var(X)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        $X \sim N(\mu,\sigma^2)$
+            \begin{itemize}
+              \item $E(\bar{X}) = $
+              \item $V(\bar{X}) = $
+            \end{itemize}
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+              \item $E(\bar{X}) = \mu$
+              \item $V(\bar{X}) = \sigma^2/n$
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Central Limit Theorem (in words)
+    \end{field}
+    \begin{field}
+        If the population distribution of a variable $X$ has population mean $\mu$ and finite population variance $\sigma^2$, then the sampling distribution of the sample mean becomes closer and closer to a Normal distribution as the sample size $n$ increases: $\bar{X} \sim N(\mu,\sigma^2/n)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Central Limit Theorem (theoretical)
+    \end{field}
+    \begin{field}
+        Let $X_1, X_2, \ldots X_n$ be an iid sample from some poupation distribution $F$ with mean $\mu$ and variance $\sigma^2 < \infty$. Then as the sample size $n \to \infty$, we have $$\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \to N(0,1)$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        $X \sim (\mu,\sigma^2)$
+            \begin{itemize}
+              \item $E(\bar{X}) = $
+              \item $V(\bar{X}) = $
+            \end{itemize}
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+              \item $E(\bar{X}) = \mu$
+              \item $V(\bar{X}) = \sigma^2/n$
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Reject $H_0$ when $H_0$ True
+    \end{field}
+    \begin{field}
+        Type I error (false positive)
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Type I error (false positive)
+    \end{field}
+    \begin{field}
+        Reject $H_0$ when $H_0$ True
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Fail to Reject $H_0$ when $H_0$ false
+    \end{field}
+    \begin{field}
+        Type II error
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Type II error
+    \end{field}
+    \begin{field}
+        Fail to Reject $H_0$ when $H_0$ false
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Significance level
+    \end{field}
+    \begin{field}
+        $\alpha$ the probability of a Type I error
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Power (at $\theta_1$)
+    \end{field}
+    \begin{field}
+        Probability of rejecting the null hypothesis when $\theta_1$ is the truth
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Test for data setting: $X_1, X_2, \ldots X_n$ iid with sample mean $\bar{X}$, and known population variance $\sigma^2$, Null hypothesis $mu = \mu_0$
+        
+            \begin{itemize}
+              \item Test name
+              \item Test Statistic
+              \item Test Reference Distribution
+              \item Critical Value upper
+              \item Critical Value lower
+              \item Critical value two-sided
+              \item Confidence interval
+              \item pvalue
+              \begin{itemize}
+                \item upper:
+                \item lower:
+                \item two-sided
+              \end{itemize}
+              \item Consistent/Finite Sample Exact/ Asymptotically Exact
+            \end{itemize}
+    \end{field}
+    \begin{field}
+        z-test
+            \begin{itemize}
+              \item Test statistic: $Z(\mu_0) = \frac{\bar{X} - \mu_0}{\sqrt{\sigma^2/n}}$
+              \item Reference Distribution: Under $H_0, Z(\mu_0) \sim N(0,1)$
+              \item Critical Value upper: Reject when $Z(\mu_0) > z_{1 - \alpha} = $qnorm(1-$\alpha$)
+              \item Critical Value lower: Reject when $Z(\mu_0) z_{1 - \alpha/2}$ = qnorm(1 - $\alpha/2$)
+              \item Confidence interval: $ \bar{X} \pm z_{1 - \alpha/2}\sqrt{\frac{\sigma^2}{n}}$
+              \item pvalue:
+              \begin{itemize}
+                \item upper: 1 - $\Phi(z)$ = 1 - pnorm(z)
+                \item lower: $\Phi(z)$ = pnorm(z)
+                \item two-sided: $2(1 - \Phi(|z|))$ = 2*(1 - pnorm(abs(z)))
+              \end{itemize}
+              \item Consistent: Yes /Finite Sample Exact: Yes if $X_i \sim N$/ Asymptotically Exact: Yes
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Exactness (finite/asymptotic)
+    \end{field}
+    \begin{field}
+        Under any setting for which the null hypothesis is true, is the actual rejection probability equal to the desired level $\alpha$?
+            \begin{itemize}
+              \item Finite Sample Exact: for sample size $n$ is $P(Reject H_0) = \alpha$ when $H_0$ is true?
+              \item Asymptotic Exactness: As $n \to \infty$ does $P(Reject H_0) \to \alpha$ when $H_0$ is true?
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        When is a test exact?
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+              \item A test is FSE if the reference distribution is the true distribution of the test statistic $T$ when $H_0$ is true
+              \item A test is AE if the reference distribution is the asymptotic distribution of the test statistic when $H_0$ is true.
+              \item (Distribution of p-values should be Unif(0.1))
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Consistency
+    \end{field}
+    \begin{field}
+        When $H_0$ is false (the alternative hypothesis is true), does the rejection probability (probability reject the null) tend to 1 as $n \to \infty$?
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Interpretation of Confidence intervals
+    \end{field}
+    \begin{field}
+        $(1 - \alpha)100$\% of the time, intervals constructed in this manner will include $\mu$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        Test for data setting: $X_1, X_2, \ldots X_n$ iid with sample mean $\bar{X}$, and unknown population variance , Null hypothesis $mu = \mu_0$
+            \begin{itemize}
+              \item Test name
+              \item Test Statistic
+              \item Test Reference Distribution
+              \item Critical Value/ Rejection region
+              \begin{itemize}
+                \item upper:
+                \item lower:
+                \item two-sided
+              \end{itemize}
+              \item Confidence interval
+              \item pvalue
+              \begin{itemize}
+                \item upper:
+                \item lower:
+                \item two-sided
+              \end{itemize}
+              \item Consistent/Finite Sample Exact/ Asymptotically Exact
+            \end{itemize}
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+              \item Test name: t-test
+              \item Test Statistic: $t(\mu_0) = \frac{\bar{X} - \mu_0}{\sqrt{s^2/n}}$
+              \item Test Reference Distribution: $t_{n-1}$
+              \item Critical Value/ Rejection region
+              \begin{itemize}
+                \item upper: Reject if $t(\mu_0) > t_{(n-1),1-\alpha}$ = qt(1 - $\alpha$,n-1)
+                \item lower: Reject if $t(\mu_0)  t_{n-1,1-\alpha/2}$
+              \end{itemize}
+              \item Confidence interval: $\bar{X} \pm t_{n-1,1-\alpha/2}\sqrt{\frac{s^2}{n}}$
+              \item pvalue, with $t(\mu_0)  = t$, and pt representing the cdf of a t distribution
+              \begin{itemize}
+                \item upper: 1 - pt($t,n-1$)
+                \item lower: pt($t$,n-1)
+                \item two-sided: 2*(1 - pt(abs(t)),n-1)
+              \end{itemize}
+              \item Consistent Yes/Finite Sample Exact Yes if normal/ Asymptotically Exact Yes
+            \end{itemize}
+    \end{field}
+\end{note}
+
+\end{document}
