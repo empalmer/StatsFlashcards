@@ -6,8 +6,15 @@
 \usepackage{mathrsfs}
 \pagestyle{empty}
 \setlength{\parindent}{0in}
+
+\newenvironment{note}{\paragraph{NOTE:}}{}
+\newenvironment{field}{\paragraph{field:}}{}
+\newenvironment{tags}{\paragraph{tags:}}{}
+
 \begin{document}
 
+
+\tags{Methods1}
 \begin{note}
     \begin{field}
         Epidemiology Definition of Causation
@@ -227,7 +234,7 @@
 \begin{note}
     \begin{field}
         Test for data setting: $X_1, X_2, \ldots X_n$ iid with sample mean $\bar{X}$, and known population variance $\sigma^2$, Null hypothesis $mu = \mu_0$
-        
+
             \begin{itemize}
               \item Test name
               \item Test Statistic
