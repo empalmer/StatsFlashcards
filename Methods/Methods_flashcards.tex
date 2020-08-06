@@ -13,20 +13,20 @@
 
 \begin{document}
 
-
+%%start_tag Methods 1
 \tags{Methods1}
 \begin{note}
 	\begin{field}
 		Epidemiology Definition of Causation
 	\end{field}
 	\begin{field}
-		Factor/variable $X$ \textbf{causes} result $Y$ if some cases of $Y$ would not have occured if X had been absent.
+		Factor/variable $X$ \textbf{causes} result $Y$ if some cases of $Y$ would not have occurred if X had been absent.
 	\end{field}
 \end{note}
 
 \begin{note}
 	\begin{field}
-		Variance
+		Sample variance
 	\end{field}
 	\begin{field}
 		$s^2 = \frac{1}{n-1}\sum_{i=1}^n(x_i - \bar{x})^2$
@@ -239,9 +239,12 @@
 			\item Test name
 			\item Test Statistic
 			\item Test Reference Distribution
-			\item Critical Value upper
-			\item Critical Value lower
-			\item Critical value two-sided
+			\item Critical Value
+      \begin{itemize}
+        \item Lower
+        \item Upper
+        \item Two sided
+      \end{itemize}
 			\item Confidence interval
 			\item pvalue
 			      \begin{itemize}
@@ -257,8 +260,11 @@
 		\begin{itemize}
 			\item Test statistic: $Z(\mu_0) = \frac{\bar{X} - \mu_0}{\sqrt{\sigma^2/n}}$
 			\item Reference Distribution: Under $H_0, Z(\mu_0) \sim N(0,1)$
-			\item Critical Value upper: Reject when $Z(\mu_0) > z_{1 - \alpha} = $qnorm(1-$\alpha$)
-			\item Critical Value lower: Reject when $Z(\mu_0) z_{1 - \alpha/2}$ = qnorm(1 - $\alpha/2$)
+      \begin{itemize}
+        \item Lower: Reject when $Z(\mu_0) < z_{\alpha}$ = qnorm($\alpha$)
+        \item Upper: Reject when $Z(\mu_0) > z_{1 - \alpha} = $qnorm(1-$\alpha$)
+        \item Two sided:  Reject when $|Z(\mu_0)| > z_{1 - \alpha/2}$ = qnorm(1 - $\alpha/2$)
+      \end{itemize}
 			\item Confidence interval: $ \bar{X} \pm z_{1 - \alpha/2}\sqrt{\frac{\sigma^2}{n}}$
 			\item pvalue:
 			      \begin{itemize}
@@ -346,7 +352,8 @@
 			\item Critical Value/ Rejection region
 			      \begin{itemize}
 				      \item upper: Reject if $t(\mu_0) > t_{(n-1),1-\alpha}$ = qt(1 - $\alpha$,n-1)
-				      \item lower: Reject if $t(\mu_0)  t_{n-1,1-\alpha/2}$
+				      \item lower: Reject if $t(\mu_0)  < t_{n-1,\alpha}$
+              \item two sided: Reject if $|t(\mu_0)| > t_{n-1, 1 - \alpha/2}$
 			      \end{itemize}
 			\item Confidence interval: $\bar{X} \pm t_{n-1,1-\alpha/2}\sqrt{\frac{s^2}{n}}$
 			\item pvalue, with $t(\mu_0)  = t$, and pt representing the cdf of a t distribution
@@ -359,5 +366,920 @@
 		\end{itemize}
 	\end{field}
 \end{note}
+
+
+\begin{note}
+  \begin{field}
+    Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p) (option 1), parameter of interest $p$
+    \begin{itemize}
+			\item Test name
+			\item Test Statistic
+			\item Test Reference Distribution
+			\item Critical Value/ Rejection region
+			      \begin{itemize}
+				      \item upper:
+				      \item lower:
+				      \item two-sided
+			      \end{itemize}
+			\item Confidence interval
+			\item pvalue
+			\item Consistent/Finite Sample Exact/ Asymptotically Exact
+		\end{itemize}
+  \end{field}
+  \begin{field}
+    Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p), parameter of interest $p$
+    \begin{itemize}
+      \item Test name: Exact Binomial Test (uses the distribution of the sum of Bern(p) RVs)
+      \item Test Statistic: $X = \sum_{i=1}^n Y_i = n\bar{Y}$
+      \item Test Reference Distribution: Under $H_0$ Binomial$(n,p_0)$
+      \item Critical Value/ Rejection region: Sometimes use randomized test
+            \begin{itemize}
+              \item upper: Reject $H_0$ for $X \geq c$ for c such that $P(X \geq c)\leq \alpha$
+              \item lower: Reject $H_0$ for $X \leq c$ for c such that $P(X \leq c)\leq \alpha$
+              \item two-sided: Reject $H_0$ for $p_0(X)\leq c$ for $c$ such that$P_{H_0}(p_0(X) \leq c)\leq \alpha$, where $p_0(X)$ is $P(X = x)$ under $H_0$
+            \end{itemize}
+      \item Confidence interval: Values that are not rejected
+      \item pvalue: Sum of the probabilities that are less than or equal to the observed value (under the null hypothesis)
+      \item Consistent/Finite Sample Exact/ Asymptotically Exact
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Test for data setting $Y_1, \ldots, Y_n$, parameter of interest: $p$ iid Bernoulli(p) (option 2)
+    \begin{itemize}
+      \item Test name
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+            \begin{itemize}
+              \item upper:
+              \item lower:
+              \item two-sided
+            \end{itemize}
+      \item Confidence interval
+      \item pvalue
+      \item Consistent/Finite Sample Exact/ Asymptotically Exact
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Test for data setting $Y_1, \ldots, Y_n$, parameter of interest: $p$ iid Bernoulli(p) (option 2)
+    \begin{itemize}
+			\item Test name: Binomial $z$-test (Use when $np_0 > 5$ and $n(1-p_0) > 5$)
+			\item Test Statistic: $X  = \sum_{i=1}^n = n\bar{Y}$, $\hat{p} = X/n$, $z(p_0) = \frac{\hat{p}- p_0}{\sqrt{p_0(1-p_0)/n}}$ (score)
+			\item Test Reference Distribution: Under $H_0$, Approximately $X \sim N(np_0,np_0(1-p_0))$ and $z(p_0) \sim N(0,1)$
+			\item Critical Value/ Rejection region
+			      \begin{itemize}
+				      \item upper: $z(p_0) > z_{1-\alpha}$
+				      \item lower: $z(p_0) < z_\alpha$
+				      \item two-sided: $|z(p_0)| > z_{1-\alpha/2}$
+			      \end{itemize}
+			\item Confidence interval: Uses wald interval (derived from t-test) (with $z_w(p_0) = \frac{\hat{p} - p_0}{\sqrt{\hat{p}(1 - \hat{p})/n}}$) $\hat{p} \pm z_{1-\alpha/2}\sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}$
+			\item pvalue
+      \begin{itemize}
+        \item upper: 1 - $\Phi(z(p_0))$ = 1 - pnorm($z(p_0)$)
+        \item lower: $\Phi(z(p_0))$ = pnorm(z)
+        \item two-sided: $2(1 - \Phi(|z(p_0)|))$ = 2*(1 - pnorm(abs(z)))
+      \end{itemize}
+			\item Consistent: Yes/Finite Sample Exact: No/ Asymptotically Exact: Yes
+		\end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Continuity correction for Binomial z-test
+  \end{field}
+  \begin{field}
+    With $X \sim Binom(n,p)$, instead of $P(X \leq x)$, use $P(W \leq x + 1/2)$ where $W \sim N(np,np(1-p))$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 1)
+    \begin{itemize}
+			\item Test name:
+			\item Test Statistic
+			\item Test Reference Distribution
+			\item Critical Value/ Rejection region
+			      \begin{itemize}
+				      \item upper:
+				      \item lower:
+				      \item two-sided
+			      \end{itemize}
+			\item Confidence interval
+			\item pvalue
+			      \begin{itemize}
+				      \item upper:
+				      \item lower:
+				      \item two-sided
+			      \end{itemize}
+			\item Consistent/Finite Sample Exact/ Asymptotically Exact
+		\end{itemize}
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+			\item Test name: Sign Test
+			\item Test Statistic: $Y_i = I(X_i < M_0)$ , $\hat{p}_{M_0} = \frac{\sum Y_i}{n}$ (proportion of observations less than or equal to hypothesized median)
+			\item Test Reference Distribution: Normal distribution: with $p_0 = .5$
+			\item Critical Value/ Rejection region: $z = \frac{\hat{p}_{M_0} - p_0}{\sqrt{p_0(1-p_0)/n}}$
+      \begin{itemize}
+        \item upper: $z > z_{1-\alpha}$
+        \item lower: $z < z_\alpha$
+        \item two-sided: $|z| > z_{1-\alpha/2}$
+      \end{itemize}
+			\item Confidence interval: cant use the binomial proportion CI
+        Set of values of $M_0$ that wouldn't be rejected at level $\alpha$
+
+        $$ \bigg( \frac{n - z_{1 - \alpha/2 \sqrt{n}}}{2}\bigg)^{th} \text{ Smallest Observation}, \bigg( \frac{n - z_{1 - \alpha/2 \sqrt{n}}}{2}\bigg)^{th}\text{ Smallest Observation} $$
+			\item pvalue (binomial test on proportion)
+			      \begin{itemize}
+              \item upper: 1 - $\Phi(z(p_0))$ = 1 - pnorm($z(p_0)$)
+              \item lower: $\Phi(z(p_0))$ = pnorm(z)
+              \item two-sided: $2(1 - \Phi(|z(p_0)|))$ = 2*(1 - pnorm(abs(z)))
+			      \end{itemize}
+      \item If there are ties: remove all observations equal to $M_0$, then test prop of observations $< M_0$ given not equal to $M_0$ is .5
+			\item Consistent: yes/Finite Sample Exact: No / Asymptotically Exact: yes
+		\end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+      Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 2)
+      \begin{itemize}
+        \item Test name:
+        \item Procedure:
+        \item Test Statistic
+        \item Test Reference Distribution
+        \item Critical Value/ Rejection region
+              \begin{itemize}
+                \item upper:
+                \item lower:
+                \item two-sided
+              \end{itemize}
+        \item Confidence interval
+        \item pvalue
+        \item Consistent/Finite Sample Exact/ Asymptotically Exact
+      \end{itemize}
+    \end{field}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 1)
+    \begin{itemize}
+      \item Test name: Wilcoxon signed-rank test (require symmetry assumption) - equivalently a test of the mean - Tests the pseudo-median
+      \item Procedure: testing $c_0$ is the center (median)
+      \begin{itemize}
+        \item Calculate distance of each observation from $c_0$
+        \item Rank observations by the distance (abs value) from $c_0$
+      \end{itemize}
+      \item Test Statistic: $S$ sum of the ranks that correspond to observations larger than $c_0$, $Z = \frac{S - \frac{n(n+1)}{4}}{\sqrt{\frac{n(n+1)(2n+1)}{24}}} \sim N(0,1)$
+      \item Test Reference Distribution:
+       \begin{itemize}
+         \item Exact p-value - assume each rank has the same chance of being assigned to observations above or below $c_0$ - all possible ways to assign the ranks
+         \item Normal approximation to the null distribution $S \sim N\big(\frac{n(n+1)}{4}, \frac{n(n+1)(2n+1)}{24}\big)$
+       \end{itemize}
+      \item Critical Value/ Rejection region
+            \begin{itemize}
+              \item upper:
+              \item lower:
+              \item two-sided
+            \end{itemize}
+      \item Confidence interval
+      \item pvalue - Same as for Normal
+      \item Consistent Yes under symmetry assumption /Finite Sample Exact No/ Asymptotically Exact Yes (under symmetry assumption)
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Pseudomedian
+  \end{field}
+  \begin{field}
+    Median of the distribution of sample means from samples of size 2
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$) parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
+    \begin{itemize}
+      \item Test name:
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+      \item pvalue
+      \item Consistent/Finite Sample Exact/ Asymptotically Exact
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$) parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
+    \begin{itemize}
+      \item Test name: $\chi^2$ for Population Variance
+      \item Test Statistic $X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2}$
+      \item Test Reference Distribution: Under $H_0: X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2} \sim \chi_{n-1}^2$
+      \item Critical Value/ Rejection region
+            \begin{itemize}
+              \item  $\sigma^2 > \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1}(1-\alpha)$
+              \item $\sigma^2 < \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) < \chi^2_{n-1}(\alpha)$
+              \item $\sigma^2 \neq \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1}(1 - \alpha/2)$ or $X(\sigma_0) < \chi^2_{n-1}(\alpha/2)$
+            \end{itemize}
+      \item Confidence interval  $$ \bigg( \frac{(n-1)s^2}{\chi^2_{n-1}(1 - \alpha/2)}, \frac{(n-1)s^2}{\chi^2_{n-1}(\alpha/2)}\bigg)$$
+      \item pvalue
+      \begin{itemize}
+        \item $\sigma^2 > \sigma_0^2$: $p = 1 - pchisq(X(\sigma_0)^2,n-1)$
+        \item $\sigma^2 < \sigma_0^2: p = pchisq(X(\sigma_0^2),n-1)$
+        \item $\sigma^2 \neq \sigma_0^2: p = 2\min(1 - pchisq(X(\sigma_0^2), n-1), pchisq(X(\sigma_0^2)),n-1)$
+      \end{itemize}
+      \item Consistent/Finite Sample Exact/ Asymptotically Exact
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
+    \begin{itemize}
+      \item Test name:
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+      \item pvalue
+      \item Consistent/Finite Sample Exact/ Asymptotically Exact
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
+    \begin{itemize}
+      \item Test name: Asymptotic $t$-test for population variance
+      \item Test Statistic: $Y = (X_i - \bar{X})^2 t(\sigma_0^2)  = \frac{\bar{Y - \frac{n-1}{n}\sigma_0^2}}{\sqrt{s_y^2/n}} \to N(0,1)$
+      \item Test Reference Distribution $ \frac{\frac{n-1}{n}s^2 - \frac{n-1}{n}\sigma^2}{\sqrt{Var(\frac{n-1}{n}s^2)}} = \frac{\bar{Y}- \frac{n-1}{n}\sigma^2}{\sqrt{Var(\bar{Y})}} \to N(0,1)$, so we can use t-test
+      \item Critical Value/ Rejection region
+			      \begin{itemize}
+				      \item upper: Reject if $t(\sigma_0^2) > t_{(n-1),1-\alpha}$ = qt(1 - $\alpha$,n-1)
+              \item lower: Reject if $t(\sigma_0^2)  < t_{n-1,\alpha}$
+              \item two sided: Reject if $|t(\sigma_0^2)| > t_{n-1, 1 - \alpha/2}$
+            \end{itemize}
+			\item Confidence interval: $\bar{X} \pm t_{n-1,1-\alpha/2}\sqrt{\frac{s^2}{n}}$
+			\item pvalue, with $t(\mu_0)  = t$, and pt representing the cdf of a t distribution
+			      \begin{itemize}
+				      \item upper: 1 - pt($t,n-1$)
+				      \item lower: pt($t$,n-1)
+				      \item two-sided: 2*(1 - pt(abs(t)),n-1)
+			      \end{itemize}
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Test for data setting $X_1, \ldots X_n$ iid from population distribution $F$. Test $H_0: F = F_0$
+    \begin{itemize}
+      \item Test name:
+      \item Process
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Test for data setting $X_1, \ldots X_n$ iid from population distribution $F$. Test $H_0: F = F_0$
+    \begin{itemize}
+      \item Test name: Kolmogorov-Smirnov Test
+      \item Process
+      \item Test Statistic: $D(F_0) = sup_x|\hat{F}(x) - F_0(x)$, where $\hat{F}(x) = \frac{1}{n}\sum_{i=1}^n 1(X_i \leq x)$ is the empirical cdf and $F_0(x)$ is the null hypothesis cdf (maximum values of difference between emperical and null)
+      \item Test Reference Distribution: Kolmogorov distribution
+      \item Critical Value/ Rejection region: Reject for large values of $\sqrt{n}D(F_0)$
+      \item Note the one sided version does not have an easy interpretation
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+
+\begin{note}
+  \begin{field}
+    Data setting: $X_1, \ldots , X_n$ iid from discrete distribution. Test fit of distribution
+    \begin{itemize}
+      \item Test name:
+      \item Process
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting: $X_1, \ldots , X_n$ iid from discrete distribution. Test fit of distribution
+    \begin{itemize}
+      \item Test name: $\chi^2$ goodness of fit test, test for discrete distributions
+      \item Process: Test the underlying population distribution is $P(X = x) = p_0(x)$, where $\hat{p}(x) = \frac{1}{n} \sum_{i=1}^n 1(X_i = x)$
+      \begin{itemize}
+        \item Let $j = 1, \ldots, k$ the different categories that $X_i$ can take
+        \item Let $O_j$ be the observed number of observations that belong to category $j$
+        \item Let $E_j = np_0(j)$ be the expected number of observations that would belong to category $j$ if the null hypothesis were true
+      \end{itemize}
+      \item Test Statistic: $X(p_0) = \sum_x\frac{n(\hat{p}(x) - p_0(x))^2}{p_0(x)} = \sum_{j=1}^k \frac{(O_j - E_j)^2}{E_j}$
+      \item Test Reference Distribution: Under $H_0$, $X(p_0) \to \chi_{k-1}^2$
+      \item Critical Value/ Rejection region: Reject for large values of $X(p_0)$ - Reject $H_0$ for $X(p_0) > \chi_{k-1}^2(1-\alpha)$
+      \item Note: Null hypothesis doesnt completely specify the distribution, just the family of distributions with perhaps unknown parameters
+      \begin{itemize}
+        \item Estimate the parameters
+        \item Use null distribution with estimated parameter values for $E_j$
+        \item Compute $\chi^2$ test statistic
+        \item Compare to $\chi_{k-d-1}^2$ distribution where $k$ = number of categories, $d = $ number of estimated parameters
+      \end{itemize}
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with known $\sigma_x, \sigma_y$. Estimate $d$
+    \begin{itemize}
+      \item Test name:
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+      \item p-value
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with known $\sigma_x, \sigma_y$. Estimate $d$,
+    \begin{itemize}
+      \item Test name: 2 sample $z$ test
+      \item Test Statistic: $z(d_0) = \frac{(\bar{X}- \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{m} - \frac{\sigma_y^2}{n}}}$
+      \item Test Reference Distribution: Under $H_0$, $z(d_0) \sim N(0,1)$
+      \item Critical Value/ Rejection region
+      \begin{itemize}
+        \item Lower: $d \leq d_0$ Reject when $z(d_0) < z_{\alpha}$ = qnorm($\alpha$)
+        \item Upper: $d \geq d_0$ Reject when $z(d_0) > z_{1 - \alpha} = $qnorm(1-$\alpha$)
+        \item Two sided: $d \neq d_0$ Reject when $|z(d_0)| > z_{1 - \alpha/2}$ = qnorm(1 - $\alpha/2$)
+      \end{itemize}
+      \item Confidence interval: $$ (\bar{X} - \bar{Y}) \pm z(1 - \frac{\alpha}{2})\sqrt{\frac{\sigma_x^2}{m} + \frac{\sigma_y^2}{n}} $$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with unknown but equal  $\sigma_x, \sigma_y$ Estimate $d$
+    \begin{itemize}
+      \item Test name:
+      \item Estimate of $\sigma_x^2 = \sigma_y^2$
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+      \item When not equal
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with unknown $\sigma_x, \sigma_y$. Estimate $d$
+    \begin{itemize}
+      \item Test name: Equal variance 2-sample t-test
+      \item Note: Estimate of $\sigma_x^2 = \sigma_y^2 = s_p^2 = \frac{\sum_{i=1}^m (X_i - \bar{X})^2 + \sum_{i=1}^n (Y_i - \bar{Y})}{(m-1) + (n-1)} = \frac{(m-1)s_x^2 + (n-1)s_y^2}{(m+n-2)}$ (weighted average of the two sample variances )
+      \item Test Statistic: $t(d_0) = \frac{(\bar{X} - \bar{Y}) - d_0}{\sqrt{s_p^2(\frac{1}{m} + \frac{1}{n})}}$
+      \item Test Reference Distribution: For Normal populations, under $H_0$: $t(d_0) \sim t_{m+n-2}$
+      \item Critical Value/ Rejection region
+      \begin{itemize}
+        \item $d > d_0$ Reject $H_0$ for $t_e(d_0) > t_{m+n-2}(1 - \alpha)$
+        \item $d < d_0$ Reject $H_0$ for $t_e(d_0) < t_{m+n-2}(\alpha)$
+        \item $d \neq d_0$ Reject $H_0$ for $|t_e(d_0)| > t_{m+n-2}(1 - \alpha/2)$
+      \end{itemize}
+      \item Confidence interval $ (\bar{X} - \bar{Y}) \pm t_{m+n-2}(1 - \frac{\alpha}{2})\sqrt{s_p^2(\frac{1}{m} + \frac{1}{n})}$
+      \item When not equal:
+      \begin{itemize}
+        \item Expected value of Estimated variance is larger than it should be when the smaller sample comes from the population with smaller variance - the test statistic will be closer to zero than it should be, and rejection rates will be smaller - Less power - more conservative
+        \item Expected value of Estimated variance is smaller than it shoudl be when smaller sample comes from the population with the larger variance - test statistic will have a larger absolute value than it should an rejection rates will be larger  - more power - anti conservative
+      \end{itemize}
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with unknown not equal equal  $\sigma_x, \sigma_y$ Estimate $d$
+    \begin{itemize}
+      \item Test name:
+      \item Estimate of $Var(\bar{X} - \bar{Y})$
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+      \item Compare to equal variance
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with unknown not equal equal  $\sigma_x, \sigma_y$ Estimate $d$
+    \begin{itemize}
+      \item Test name: Unequal variance 2 sample t-test
+      \item Estimate of $Var(\bar{X} - \bar{Y}) = \frac{s_x^2}{m} + \frac{s_y^2}{n}$
+      \item Test Statistic: $t_U(d_0) = \frac{(\bar{X} - \bar{Y}) - d_0}{\sqrt{\frac{s_x^2}{m} + \frac{s_y^2}{n}}}$
+      \item Test Reference Distribution: If the two distributions are Normal, there is not an exact distribution for the test statistic -  Use Welch-Satterthwaite approximation: Estimate degrees of freedom
+      $$ v = \frac{\big(\frac{s_x^2}{m} + \frac{s_y^2}{n}\big)^2}{\frac{s_x^4}{m^2(m-1)} + \frac{s_Y^4}{n^2(n-1)}}$$
+      $\min(m-1,n-1) \leq v \leq m+n-2$
+      Under $H_0$ $t_u(d_0) $ approx $\sim t_{v}$
+      \item Critical Value/ Rejection region: same as t-test
+      \item Confidence interval: $(\bar{X} - \bar{Y}) \pm t_v(1 - \frac{\alpha}{2})\sqrt{\frac{s_x^2}{m} + \frac{s_Y^2}{n}}$
+      \item Compare to equal variance:
+      \begin{itemize}
+        \item For unequal sample sizes with unequal population variances, equal variance t-test does not have correct calibration
+        \item When samples sizes are equal both test statistics are the same, but degrees of freedom differ
+        \item When equal variance assumption is true, equal variance has slightly better power, and very slightly better calibration (more exact )
+      \end{itemize}
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$, $X_i$ not independent $Y_i$, $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$ Estimate $d = \mu_x - \mu_y$, $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
+    \begin{itemize}
+      \item Test name:
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$, $X_i$ not independent $Y_i$, $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$. Estimate $d = \mu_x - \mu_y$, $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
+    \begin{itemize}
+      \item Test name: Paired z-test
+      \item Test Statistic: $z(d_0) = \frac{(\bar{X} - \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{n} + \frac{\sigma_Y^2}{n} - 2 \frac{\sigma_{XY}}{n}}} = \frac{\bar{D} - d_0}{\sqrt{\frac{\sigma_D^2}{n}}}$
+      \item Test Reference Distribution: Under $H_0$, $z(d_0) $ aprox $\sim N(0,1)$
+      \item Critical Value/ Rejection region: Same as normal
+      \item Confidence interval : $$(\bar{X} - \bar{Y}) \pm z(1 - \frac{\alpha}{2})\sqrt{\frac{\sigma_x^2}{n} + \frac{\sigma_Y^2}{n} - 2 \frac{\sigma_{XY}}{n}} = \bar{D} \pm z(1 - \alpha/2) \sqrt{\frac{\sigma_D^2}{n}}$$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$, $X_i$ not independent $Y_i$, $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$ Estimate $d = \mu_x - \mu_y$, $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ unknown
+    \begin{itemize}
+      \item Test name:
+      \item Estimate of $\sigma_{XY}$
+      \item Estimate of $Var(\bar{X} - \bar{Y})$
+      \item Test Statistic
+      \item Test Reference Distribution
+      \item Critical Value/ Rejection region
+      \item Confidence interval
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$, $X_i$ not independent $Y_i$, $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$ Estimate $d = \mu_x - \mu_y$, $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ unknown
+    \begin{itemize}
+      \item Test name: Paired Data t-test
+      \item Estimate of $\sigma_{XY} = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})$
+      \item Estimate of $Var(\bar{X} - \bar{Y}) = \frac{s_d^2}{n} = \frac{s_x^2}{n} + \frac{s_Y^2}{n} - 2 \frac{s_{XY}}{n}$
+      \item Test Statistic: $t(d_0) = \frac{(\bar{X} - \bar{Y}) - d_0}{\sqrt{\frac{s_x^2}{n} + \frac{s_Y^2}{n} - 2 \frac{s_{XY}}{n}}} = \frac{\bar{D} - d_0}{\sqrt{\frac{s_D^2}{n}}}$
+      \item Test Reference Distribution: If differences are Normal (note X,Y Normal does not imply Differences are normal unless X,Y are jointly multivariate-normal) Under $H_0$, $t(d_0) \sim t_{n-1}$ (exact distribution)
+      \item Critical Value/ Rejection region Same as t
+      \item Confidence interval
+      $$ (\bar{X} - \bar{Y}) = t_{n-1}(1 - \frac{\alpha}{2})\sqrt{\frac{s_x^2}{n} + \frac{s_Y^2}{n} - 2 \frac{s_{XY}}{n}} = \bar{D} \pm  t_{n-1}(1 - \frac{\alpha}{2}) \sqrt{\frac{s_d^2}{n}}$$
+      \item Equivalent to a one sample - t-test on the differences
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+\begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x - p_y = 0$
+  \begin{itemize}
+    \item Test name:
+    \item Test Statistic
+    \item Test Reference Distribution
+    \item Critical Value/ Rejection region
+    \item Confidence interval
+  \end{itemize}
+\end{field}
+\begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x - p_y = 0$
+  \begin{itemize}
+    \item Test name: Binomial proportions two-sample z-test
+    \item Test Statistic: $$ z = \frac{\hat{p}_x - \hat{p}_y}{\sqrt{\hat{p}_c(1 - \hat{p}_c(\frac{1}{m} + \frac{1}{n}))}} $$ Where $\hat{p_c} = \frac{m\hat{p}_x + n\hat{p}_y}{m+n} = \frac{b + d}{N}$
+    \item Test Reference Distribution: Under $H_0: z $ approx $\sim N(0,1)$
+    \item Critical Value/ Rejection region: Same as regular 2-sample
+    \item Confidence interval: $$  \hat{p}_x - \hat{p}_y \pm z_{1 - \alpha/2} \sqrt{\big(\frac{\hat{p}_x(1 - \hat{p}_x)}{m} + \frac{\hat{p}_y(1 - \hat{p}_y)}{n}\big)}$$
+    \end{itemize}
+\end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Multinomial sampling
+  \end{field}
+  \begin{field}
+    Collection of random samples, recording what group they are in: Can estimate $P(X = x | G = g)$, where $G$ is the group
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Two-Sample Binomial sampling
+  \end{field}
+  \begin{field}
+     Sample $m$ units from group 1 and $n $ units from group 2
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $P(X = x | G = g)$ with binomial sampling
+  \end{field}
+  \begin{field}
+    Cannot estimate
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $P(X = x | G = g)$ with multinomial sampling
+  \end{field}
+  \begin{field}
+    Can estimate
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $E(g(T)) = $
+  \end{field}
+  \begin{field}
+    $E(g(T)) \neq g(E(T))$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Reason for performing transformations on data
+  \end{field}
+  \begin{field}
+    Some tests are FSE only when population distribution is Normal (otherwise the methods are asymptotically exact), requiring a large $n$. Transformations that improve approximation of normality make Normal-based methods perform more exactly
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x - p_y = 0$ (Association/independent/relationship)
+  \begin{itemize}
+    \item Test name:
+    \item Test Statistic
+    \item Test Reference Distribution
+    \item Critical Value/ Rejection region
+    \item Confidence interval
+  \end{itemize}
+\end{field}
+\begin{field}
+Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x - p_y = 0$ (Association/independent/relationship)
+\begin{itemize}
+  \item Test name: Pearson's Chi-squared Test
+  \item Test Statistic: $X = \sum_{i,j \in \{1,2\}} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ Where $O_{ij} = n_{ij}$ and $E_{ij} = \frac{R_iC_j}{N}$
+  \item Test Reference Distribution: Under $H_0$ $X \sim \chi^2_1$
+  \item Critical Value/ Rejection region: Reject for $X > \chi_1^2(1 - \alpha)$
+  \item Note: Equal to to sided z-test for binomial proportions: $X = z^2$
+\end{itemize}
+\end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$)
+  \begin{itemize}
+    \item Test name:
+    \item Test Statistic:
+    \item pvalue
+    \item Test Reference Distribution
+    \item Critical Value/ Rejection region
+    \item Confidence interval
+  \end{itemize}
+\end{field}
+\begin{field}
+Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$)
+\begin{itemize}
+  \item Test name: Fisher's Exact Test (of homogeneity of proportions)
+  \item Test Statistic: Probability of observed table conditioning on margins: Compute all tables with the same margin totals: $\frac{\binom{C_2}{O_{12}}\binom{C_1}{O_{11}}}{\binom{N}{R_1}}$
+  \item pvalue: Sum of probability of all tables more extreme than observed table
+  More Extreme:
+  \begin{itemize}
+    \item $p_x > p_y$ More extreme = larger $O_{12}$
+    \item $p_x < p_y$ More extreme = smaller $O_{12}$
+    \item $p_x \neq p_y$ More extreme = less likely table
+  \end{itemize}
+\end{itemize}
+\end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ Binomial sampling scheme
+  \begin{itemize}
+    \item Test name:
+    \item Test Statistic:
+    \item Test Reference Distribution
+    \item Critical Value/ Rejection region
+    \item Confidence interval
+  \end{itemize}
+\end{field}
+  \begin{field}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ Binomial sampling scheme
+  \begin{itemize}
+    \item Test name: Log Odds - test $H_0: \omega = 1$
+    \item Test Statistic: $\hat{\omega} = \frac{ad}{bc}$, $z = \frac{\log(\hat{omega})}{\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}$
+    \item Test Reference Distribution $ \log(\hat{\omega}) $ approx $\sim N(\log(\omega), \frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d})$, $z $ approx $\sim N(0,1)$
+    \item Critical Value/ Rejection region
+    \item Confidence interval $(\hat{omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{omega}e^{z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
+    \item: $\omega > 1, p_1 > p_2$, $\omega = 1, p_1 = p_2$, small $p_1, p_2$, $\omega = p_1/p_2$ = relative risk
+  \end{itemize}
+\end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired) test proportions equal in groups (equally likely/probability)
+  \begin{itemize}
+    \item Test name:
+    \item Test Statistic:
+    \item Test Reference Distribution
+    \item Critical Value/ Rejection region
+    \item Confidence interval
+  \end{itemize}
+\end{field}
+\begin{field}
+Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired), test proportions equal in groups (equally likely/probability)
+\begin{itemize}
+  \item Note, requires a table that keeps track of the pairs
+  \item Test name: McNemar's Test
+  \item Test Statistic: $z = \frac{b-c}{\sqrt{b+c}}$
+  \item Test Reference Distribution: $z \sim N(0,1)$, $z^2 \sim \chi_1^2$
+  \item Critical Value/ Rejection region
+  \item Confidence interval
+  \item Note equivalent to performing a paired t-test on the differences:
+  $$ t = \frac{b-c}{\sqrt{\frac{n}{n-1}(b + c - \frac{(b-c)^2}{40})}} $$ compare to $t_{n-1}$
+\end{itemize}
+\end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting: $n$ observations, record Group 1 and Group 2, where each group takes on > 2 values, Test if there is an association between the groups
+    \begin{itemize}
+      \item Test name:
+      \item Test Statistic:
+      \item Test Reference Distribution
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting: $n$ observations, record Group 1 ($r$ values) and Group 2$(c)$ values, Test if there is an association between the groups
+    \begin{itemize}
+      \item Test name: Pearsons $\chi^2$
+      \item Test Statistic: $X = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$, where $E_{ij} = \frac{n_in_j}{N}$
+      \item Test Reference Distribution: Under $H_0$, $X$ approx $\sim \chi^2_{(r-1)(c-1)}$
+      \item Note not FSE, but performance is good if $E_{ij} > 5$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+
+
+  \begin{note}
+    \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+    \begin{itemize}
+      \item Test name:
+      \item Process
+      \item pvalue
+      \item Test Statistic:
+      \item Test Reference Distribution
+    \end{itemize}
+  \end{field}
+  \begin{field}
+  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+  \begin{itemize}
+    \item Test name: Wilcoxon Rank-Sum (Mann-Whitney U-test)
+    \item Note this is only a test of medians only if just additive effect - G1 is just a shift from G2 (shame and scale must be same ) (but then just the same as a test of mean, 10th percentile, min, $F_x = F_y$ etc )
+    \item If No additive assumption - test of $H_0: P(X > Y) = .5$
+    \item Process:
+    \begin{itemize}
+      \item Combine samples
+      \item Rank the observations in combined sample from smalles to largest (1 to $n + m$)
+      \item Add ranks of the smaller group
+    \end{itemize}
+    \item pvalue: Calculate using permutations: Count number of permutations that lead to a R value more extreme than observed out of total permutations ($\binom{n+m}{m}$)
+    \item Test Statistic: $R$ sum of the ranks, or $z = \frac{R - \frac{m(m+n+1)}{2}}{\sqrt{\frac{mn(m+n+1)}{12}}}$
+    \item Test Reference Distribution: If there was no difference between two populations, then each rank has equal chance of being assigned to group 1 (belongs to $X$: $p = \frac{m}{n+m}$)
+    Normal approximation: $R \dot\sim N( \frac{m(m+n+1)}{2}, \frac{mn(m+n+1)}{12})$, $z \dot\sim N(0,1)$
+    \item Notes: If ranks, assign ranks, and then average ranks of tied values
+    \item Continuity correction to normal distribution: add .5 to R if lower probability, subtract .5 from R if upper probability (ie 1 - pnorm())
+    \item Not consistent test unless under additive assumption. IS consistent test of $H_0: P(X > Y) = .5$
+  \end{itemize}
+\end{field}
+  \end{note}
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+    \begin{itemize}
+      \item Test name:
+      \item Process
+      \item Test statistic:
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+    \begin{itemize}
+      \item Test name: Mood's Test for Equality of Population Medians
+      \item Process:
+      \begin{itemize}
+        \item Find combined sample median $\hat{m}$
+        \item Calculate $\hat{p}_x = $ proportion of $X$s greater than $\hat{m}$, $\hat{p}_y$, proportion of $Ys$ greater than $\hat{m}$
+        \item Conduct two sample binomial z-test( Pearsons chi-squared test) or Fisher's exact test
+        \item  Test statistic: $$ z = \frac{\hat{p}_x - \hat{p}_y}{\sqrt{\hat{p}_c(1 - \hat{p}_c(\frac{1}{m} + \frac{1}{n}))}} $$ Where $\hat{p_c} = \frac{m\hat{p}_x + n\hat{p}_y}{m+n} = \frac{b + d}{N}$
+      \end{itemize}
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test some statistic $W$
+    \begin{itemize}
+      \item Test name:
+      \item Process
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test some statistic $W$
+    \begin{itemize}
+      \item Test name: Permutation test
+      \item Process: Permute group labels across observations and recalculate statistic for each permutation to create permutation distribution - calculate p-values using the permutation distribution
+      \item Performance: Many settings (like medians equal), will not reject correctly (even in large samples) if the medians are equal, but the distributions differ
+      \item Permutation hypothesis is that the observations from the two pouplations are exchangable (ie same population distributions, not just equal medians )
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting: Estimate value of nuisance parameter
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item Test name: Bootstrap
+      \item Process: Since the empirical distribution function converges to the true distribution function, we can use samples from the empirical distribution to approximate how samples from the true distribution would behave.
+      \item Confidence interval: $100 (\alpha/2)$ largest resampled statistic $100(1 - (\alpha/2))$ largest resampled statistic
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N$. $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r$
+  \end{field}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r$
+    \begin{itemize}
+      \item Test name: F
+      \item Recall $s_x^2 = \frac{1}{n-1}\sum_{i=1}^m(X_i - \bar{X})^2$
+      \item Note that $\frac{(m-1)s_x^2}{\sigma_x^2} \sim \chi^2_{m-1}, \frac{(n-1)s_y^2}{\sigma_y^2} \sim \chi^2_{n-1},$
+      \item Test Statistic: $F(r) = \frac{s_x^2/\sigma_x^2}{s_y^2/\sigma_y^2} = \frac{s_x^2}{s_y^2} \frac{1}{r}$
+      \item Test Reference Distribution: Under $H_0: F(r) \sim F_{m-1,n-1}$
+      \item Critical Value/ Rejection region
+      \begin{itemize}
+        \item $\sigma_x^2/\sigma_y^2 > r$ Reject for $F(r) > F_{m-1,n-1}(1-\alpha)$
+        \item $\sigma_x^2/\sigma_y^2 > r$ Reject for $F(r) > F_{m-1,n-1}(\alpha)$
+        \item $\sigma_x^2/\sigma_y^2 \neq r$ Reject for $F(r) > F_{m-1,n-1}(1-\alpha/2)$ or $F(r) < F_{m-1,n-1}(\alpha/2)$
+      \end{itemize}
+      \item Performance: Not Well if underlying population is not normal: Not FSE or AE (but is consistent ) - don't use if population is not normal
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$
+    \begin{itemize}
+      \item Test name:
+      \item Process:
+      \item Interpretation
+      \item Assumptions
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$
+    \begin{itemize}
+      \item Test name: Levene's Test
+      \item Process:
+      \begin{itemize}
+        \item Construct new variables:
+        \begin{itemize}
+          \item $U_i = |X_i - med(X)|$ or $(X_i - med(X))^2$ or $|X_i - \bar{X}|$ or $(X_i - \bar{X})^2$
+          \item $V_i = |Y_i - med(Y)|$ or $(Y_i - med(Y))^2$ or $|Y_i - \bar{Y}|$ or $(Y_i - \bar{Y})^2$
+        \end{itemize}
+        \item Perform two-sample $t$ test on $U_i$ and $V_i$ (use Welch)
+      \end{itemize}
+      \item Interpretation: If last option used, can be a test in difference in population variances
+      \item Assumptions:
+      \begin{itemize}
+        \item Independence
+        \item Large sample sizes, so t-test assumptions are met
+      \end{itemize}
+      \item Note: dont use as a test to determine which t-test version to use
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $H_0: F_x = F_y$
+    \begin{itemize}
+      \item Test name
+      \item Test statistic
+
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $H_0: F_x = F_y$
+    \begin{itemize}
+      \item Test name: Two-sample Kolmogorov-Smirnov Test
+      \item Test statistic: $D = sup_x|\hat{F}_x(x) - \hat{F}_y(y)|$ ie the largest distance between the empirical CDF for $X$ and $Y$
+      \item Reject for large values of $\sqrt{\frac{mn}{m+n}}$
+      \item Only for continuous distributions, for discrete distributions, use Pearsons $\chi^2$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Multiple 2x2 tables under $k$ different conditions $p_{xj} = P(X = 1 \text{ in Table }j), p_{yj} = P(Y = 1 \text{ in Table }j)$ $H_0: p_{xj} = p_{yj}$ for all $j$
+  \end{field}
+
+  \begin{field}
+    \begin{itemize}
+      \item Test name: Mantel-Haenszel Test
+      \item Test statistic: $\omega_j = \frac{p_{xj}(1 - p_{xj})}{p_{yj}(1 - p_{yj})}$, $H_0: \omega_j = 1$ for all $j$
+      $$E(n_{X1j}) = \mu_{X1j} = \frac{n_{X\cdot j}n_{\cdot 1 j}}{n_{\cdot j}}, V(n_{X1j}) = \sigma^2_{X1j} = \frac{n_{X\cdot j}n_{Y\cdot j}n_{\cdot 1j} n_{\cdot 0j}}{n^2_{\cdot \cdot j}(n_{\cdot \cdot j} -1)} $$
+      $$ C = \frac{[\sum_{j}(n_{X1j} - \mu_{X1j})]^2}{\sum_j \sigma^2_{X1j}}$$
+      \item Under $H_0$ $C \dot\sim \chi^2(1)$
+      \item Assumes the odds-ratios are the same in all $k$ tables
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Sample 1: $X_{1,1}, \ldots , X_{1n_1}$ from population 1 with mean $\mu_1$, Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$, $\ldots $ Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
+    \begin{itemize}
+      \item Independence within and between groups
+      \item Populations (approximately ) normal
+      \item Equal variances
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item Test name: ANOVA
+      \item Estimate of common variance $s_p = \frac{(n_1-1)s_1^2 + \cdots + (n_M -1)s_M^2}{(n_1-1) + \cdots + (n_M-1)}$
+      \item Could use two-sample-t test on two population means
+      \item Could test are population means 1 through M equal to each other?
+      \item Compare the variability between groups to the variability withing groups
+      \item Sum of squares within groups:
+      $$ SSW = (n-M)s_p^2  = \sum_{i=1}^{n_1}(X_{1i} - \bar{X}_1)^2 + \cdots +  \sum_{i=1}^{n_M}(X_{Mi} - \bar{X}_M)^2$$
+      degrees of freedom: $n-M$
+      \item Sum of squares total
+       $$ SST  = \sum_{i=1}^{n_1}(X_{1,i} - \bar{X})^2 + \cdots + \sum_{i=1}^{n_M} (X_{M,i} - \bar{X})^2$$
+       degrees of freedom: $n-1$
+       \item Sum of squares between groups: $ SSB = SST - SSW = \sum_{j=1}^Mn_j(\bar{X}_j - \bar{X})^2$ df: $(n-1) - (n-M) = M-1$
+       \item Test statistic: $$ F = \frac{MSB}{MSW} = \frac{SSB/(M-1)}{SSW/(n-M)} $$
+       \item Reference distribution: Under $H_0, F \sim F_{M-1, n-M}$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+%%end_tag
+
 
 \end{document}

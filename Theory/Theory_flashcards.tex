@@ -446,7 +446,7 @@
 
 \begin{note}
   \begin{field}
-    $$ X \sim \beta(1,1) \overset{?}{\sim}$$
+    $$ X \sim beta(1,1) \overset{?}{\sim}$$
   \end{field}
   \begin{field}
     $$ X \sim Unif(0,1)$$
@@ -458,7 +458,7 @@
     $$ X \sim Unif(0,1) \overset{?}{\sim}$$
   \end{field}
   \begin{field}
-    $$ X \sim \beta(1,1)$$
+    $$ X \sim beta(1,1)$$
   \end{field}
 \end{note}
 
@@ -664,11 +664,64 @@
 
 \begin{note}
   \begin{field}
+    Inverted Gamma
+    $X \sim Gamma(\alpha,\beta)$ $Y = 1/X$
+  \end{field}
+  \begin{field}
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Bernoulii$(p), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+    \item Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Discrete Uniform $N, E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+    Discrete Uniform $N, E(X) = \frac{N+1}{2}, V(X) = \frac{(N+1)(N-1)}{12}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Cauchy($\theta,\sigma), E(X) = ,V(X)=$
+  \end{field}
+  \begin{field}
+    Cauchy($\theta,\sigma), E(X) = na,V(X)=na$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+    Double Exponential$(\mu,\sigma), E(X) = \mu, V(X) = 2\sigma^2$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    F($v_1,v_2), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\frac{(v_1+v_2-2)}{v_1(v)2-4}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
     Mean and Variance for Distributions not on bible (but in CB)
       \begin{itemize}
-        \item Bernoulii$(p), E(X) = , V(X) = $
-        \item Discrete Uniform $N, E(X) = , V(X) = $
-        \item Cauchy($\theta,\sigma), E(X) = ,V(X)=$
+
         \item Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
         \item F($v_1,v_2), E(X) = , V(X) = $
         \item Logistic$(\mu,\beta), E(X) = , V(X) = $
@@ -679,13 +732,9 @@
       \end{itemize}
   \end{field}
   \begin{field}
-    Mean and Variance for Distributions not on bible (but in CB)
+    Mean and Variance. for Distributions not on bible (but in CB)
       \begin{itemize}
-        \item Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
-        \item Discrete Uniform $N, E(X) = \frac{N+1}{2}, V(X) = \frac{(N+1)(N-1)}{12}$
-        \item Cauchy($\theta,\sigma), E(X) = na,V(X)=na$
-        \item Double Exponential$(\mu,\sigma), E(X) = \mu, V(X) = 2\sigma^2$
-        \item F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\frac{(v_1+v_2-2)}{v_1(v)2-4}$
+
         \item Logistic$(\mu,\beta), E(X) = \mu, V(X) = \frac{\phi^2\beta^2}{3}$
         \item Lognormal$(\mu,\sigma^2), E(X)=e^{\mu + (\sigma^2/2)}) V(X) = e^{2(\mu+\sigma^2)} - e^{2\mu + \sigma^2}$
         \item Pareto$(\alpha,\beta), E(X) = \frac{\beta\alpha}{\beta-1}, V(X) = \frac{\beta\alpha^2}{(\beta-1)^2(\beta-2)}$
@@ -698,8 +747,7 @@
 %%end_tag
 
 %%start_tag Casella Berger
-
-
+%%start_tag Casella Ch1
 \tags{CasellaCh1}
 
 \begin{note}
@@ -856,21 +904,12 @@
 
 \begin{note}
     \begin{field}
-        \text{Theorem }1.2.6
-    \end{field}
-    \begin{field}
-        \text{Let} $S = \{ s_1, \ldots, s_n \}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \ldots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
-            $$ P(A) = \sum_{\{i:s_i \in A\}} $$
-            (The sum over an empty set is defined to be 0) Then $P$ is a probability function on $\mathcal{B}$ This remains true if $S = \{s_1, s_2, \ldots \}$ is a countable set.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
+      If $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
+          $$P(A\cup B) = P(A) + P(B) $$
         \text{Axiom of Finite Additivity}
     \end{field}
     \begin{field}
-        \text{If} $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
+        If $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
             $$P(A\cup B) = P(A) + P(B) $$
     \end{field}
 \end{note}
@@ -878,6 +917,11 @@
 \begin{note}
     \begin{field}
         \text{Properties of probability functions}
+        \begin{enumerate}
+              \item $P(\emptyset) = $
+              \item $P(A) $
+              \item $P(A^c) = $
+            \end{enumerate}
     \end{field}
     \begin{field}
       \text{Properties of probability functions}
@@ -900,10 +944,10 @@
 
 \begin{note}
     \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = $
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(A\cup B) = $$
     \end{field}
     \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $P(A\cup B) = P(A) + P(B) - P(A \cap B)$
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(A\cup B) = P(A) + P(B) - P(A \cap B)$$
     \end{field}
 \end{note}
 
@@ -918,10 +962,11 @@
 
 \begin{note}
     \begin{field}
-        \text{Bonferroni's Inequality}
+        Bonferroni's Inequality
+        $$P(A\cap B)  $$
     \end{field}
     \begin{field}
-      \text{Bonferroni's Inequality:}
+      Bonferroni's Inequality:
         $$P(A\cap B) \geq P(A) + P(B) -1 $$
     \end{field}
 \end{note}
@@ -937,7 +982,8 @@
 
 \begin{note}
     \begin{field}
-        \text{Boole's Inequality}
+        Boole's Inequality
+        $$P(\cup_{i=1}^\infty A_i)$$
     \end{field}
     \begin{field}
         \text{If} $P$ is a probability function,
@@ -950,7 +996,7 @@
         \text{Fundamental Theorem of Counting}
     \end{field}
     \begin{field}
-        \text{If} a job consists of $k$ seperate tasks, the ith of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
+        \text{If} a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
     \end{field}
 \end{note}
 
@@ -1006,13 +1052,124 @@
 
 \begin{note}
     \begin{field}
-        \text{Binomial Coefficient} $\binom{n}{r}$
+        Binomial Coefficient $\binom{n}{r}$
     \end{field}
     \begin{field}
-      \text{Binomial Coefficient}
+      Binomial Coefficient
         $$\binom{n}{r} = \frac{n!}{r!(n-r)!}$$
     \end{field}
 \end{note}
+
+\begin{note}
+  \begin{field}
+    $$P(A|B)=$$
+  \end{field}
+  \begin{field}
+    $$ P(A|B) = \frac{P(A \cap B)}{P(B)} $$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Statistically independent
+    $P(A \cap B) = $
+  \end{field}
+  \begin{field}
+    Statistically independent
+    $P(A \cap B) = P(A)P(B)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    If $A$ and $B$ are independent events, what else is independent?
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item $A $ and $B^c$
+      \item $A^c$ and $B$
+      \item $A^c$ and $B^c$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Mutually independent
+  \end{field}
+  \begin{field}
+    A collection of events $A_1, \ldots , A_n$ are mutually independent for any subcollection $A_{i1}, \ldots , A_{ik}$, we have
+    $$ P((\cap_{j=1}^k A_{ij})) = \prod_{j=1}^k P(A_{ij}) $$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Random variable
+  \end{field}
+  \begin{field}
+    A random variable is a function from a sample space $S$ into the real numbers
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Definition of a pdf
+  \end{field}
+  \begin{field}
+    A function $f_X(x)$ is a pdf (or pmf) of a random variable $X$ if and only if
+    \begin{enumerate}
+      \item $f_x(x) \geq 0$ for all $x$
+      \item $\sum_x f_x(x) = 1$ or $\int_{-\infty}^\infty f_x(x) dx = 1$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+
+%%end_tag
+
+
+%%start_tag Casella Ch2
+\tags{CasellaCh2}
+\begin{note}
+  \begin{field}
+    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
+    \begin{enumerate}
+      \item If $g$ is an increasing function on $X$, $F_Y(y) = $ for $y \in Y$
+      \item If $g$ is a decreasing function on $X$ and $X$ is a continuous random variable, $F_y(y) = $ for $y \in Y$
+    \end{enumerate}
+  \end{field}
+  \begin{field}
+    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
+    \begin{enumerate}
+      \item If $g$ is an increasing function on $X$, $F_Y(y) = F_X(g^{-1}(y))$ for $y \in Y$
+      \item If $g$ is a decreasing function on $X$ and $X$ is a continuous random variable, $F_y(y) = 1 - F_X(g^{-1}(y))$ for $y \in Y$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Method of pdf
+  \end{field}
+  \begin{field}
+    Conditions:
+    \begin{enumerate}
+      \item $g$ is a monotone function
+      \item $f_X(x)$ is continuous on $X$
+      \item $g^{-1}(y)$ has a continuous derivative
+    \end{enumerate}
+    Let $X$ have pdf $f_x(x)$ and let $Y = g(Y)$
+
+    $$f_Y(y) = f_x(g^{-1}(y))\big|\frac{d}{dy}g^{-1}(y)$$
+  \end{field}
+\end{note}
+
+
+
+%%end_tag
+
 
 %%end_tag
 

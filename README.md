@@ -12,11 +12,24 @@ The desktop version is needed to open a .tex document, and requires a local LaTe
 
 The pdf files have an overview of all the flashcards, but are not intended to be used to study
 
+## In progress flashcards
+### Theory
+ - Theory 1
+ - Theory 2
+ - Theory 3
+ - Useful math facts
+ - Distribution relationships
+
+ ## Methods
+ - Methods 1 (done up to two sample binary response )
+ - Methods 2
+ - Methods 3
+
 ## My workflow to use these flashcards:
 - Make sure the latex header matches the document: Go Tools>Manage Note Types> Options, and paste the correct latex header in the Header section
 - Import the .tex flashcard file from the main screen by clicking Import file
 - Make sure the "Deck" selected is the one intended to import to - You can either select or add a deck at this time
-- Make sure all LaTeX has been rendered by Tools>Check Media...
+- Make sure all LaTeX has been rendered by Tools>Check Media... Click Render LaTeX
 - Click Sync
 - You should be able to access these flashcards anywhere!
 
@@ -36,3 +49,8 @@ The pdf files have an overview of all the flashcards, but are not intended to be
 
  ### Methods
  - Methods 1 (Methods1)
+
+
+
+
+Feel free to open issues with mistakes/spelling/suggestions
