@@ -112,20 +112,22 @@
 
 \begin{note}
   \begin{field}
-    \text{Law of total probability}
+    Law of total probability
   \end{field}
   \begin{field}
-    \text{Law of total probability}
+    Law of total probability
     $$P(B) = \sum_{i=1}^n P(B|A_i)P(A_i) \quad \Omega = \cup_{i=1}^n A_i$$
+
+    $$P(B) = P(A \cup B) + P(A^c \cup B) $$
    \end{field}
 \end{note}
 
 \begin{note}
   \begin{field}
-    \text{Bayes Theorem}
+    Bayes Theorem
   \end{field}
   \begin{field}
-    \text{Bayes Theorem}
+    Bayes Theorem
     $$P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{j=1}^n P(B|A_j)P(A_j)} \quad \Omega = \cup_{i=1}^n A_i$$
   \end{field}
 \end{note}
@@ -278,7 +280,7 @@
       \item $Cov(X,Y) = $
       \item $Cov(X,c) = $
       \item $Cov(Y,X) = $
-      \item $Cov(aX+bY) =$
+      \item $Cov(aX,bY) =$
       \item $Cov(X + a, Y + b) =$
       \item $Cov\bigg(\sum_{i=1}^n X_i, \sum_{j=1}^m Y_j\bigg) = $
     \end{itemize}
@@ -289,7 +291,7 @@
       \item $Cov(X,Y) = E[(X - E(X)(Y - E(Y)))] = E(XY) - E(X)E(Y)$
       \item $Cov(X,c) = 0$
       \item $Cov(Y,X) = Cov(X,Y)$
-      \item $Cov(aX+bY) = abCov(X,Y)$
+      \item $Cov(aX,bY) = abCov(X,Y)$
       \item $Cov(X + a, Y + b) = Cov(X,Y)$
       \item $Cov\bigg(\sum_{i=1}^n X_i, \sum_{j=1}^m Y_j\bigg) = \sum_{i=1}^n \sum_{j=1}^m Cov(X_i,Y_j)$
     \end{itemize}
@@ -328,6 +330,20 @@
 
 %%start_tag Distribution Relationships
 \tags{distributionrelationships}
+
+\begin{note}
+  \begin{field}
+    $X \sim Gamma(a,b)$
+    $P(X \leq X) = $
+  \end{field}
+  \begin{field}
+    $X \sim Gamma(a,b)$
+    $P(X \leq X) = P(Y \geq a)$
+    Where $Y \sim Pois (x/b)$
+  \end{field}
+\end{note}
+
+
 \begin{note}
   \begin{field}
     $$X_1, \ldots, X_n \sim iid N(0,1)$$
@@ -677,7 +693,7 @@
     Bernoulii$(p), E(X) = , V(X) = $
   \end{field}
   \begin{field}
-    \item Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
+     Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
   \end{field}
 \end{note}
 
@@ -747,8 +763,37 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 %%end_tag
 
 %%start_tag Casella Berger
+\tags{Theory1}
 %%start_tag Casella Ch1
-\tags{CasellaCh1}
+\begin{note}
+  \begin{field}
+    \begin{tabular}{|c| c c |}
+    \hline \\
+    & replace & no replacement \\
+    number of trials &  &  \\
+    Draw till nth success & & \\
+    \hline
+    \end{tabular}
+  \end{field}
+  \begin{field}
+    \begin{tabular}{|c| c c |}
+    \hline \\
+    & replace & no replacement \\
+    number of trials & Binom & Hypergeometric \\
+    Draw till nth success & Nbinom & Negative hypergeometric \\
+    \hline
+    \end{tabular}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Plug uniform into inverse CDF
+  \end{field}
+  \begin{field}
+    Get cdf
+  \end{field}
+\end{note}
 
 \begin{note}
   \begin{field}
@@ -823,12 +868,12 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note}
   \begin{field}
-    \text{Distributive Laws}
+    Distributive Laws
     $$A \cap ( B \cup C) = $$
     $$ A \cup ( B \cap C) = $$
   \end{field}
     \begin{field}
-      \text{Distributive Laws}
+      Distributive Laws
         $$A \cap ( B \cup C) = (A \cap B) \cup (A \cap C)$$
         $$ A \cup ( B \cap C) = (A \cup B) \cap ( A \cup C)$$
     \end{field}
@@ -855,6 +900,35 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
         Disjoint: Two events $A$ and $B$ are disjoint ( or mutually exclusive) if $ A \cap B = \emptyset $
     \end{field}
 \end{note}
+
+\begin{note}
+  \begin{field}
+    $$P(A_1 \cap A_2 \cap \cdots \cap A_n)  = $$
+  \end{field}
+  \begin{field}
+    $$P(A_1)P(A_2|A_1)P(A_3|A_1A_2) \ldots P(A_n|A_1\cdots A_{n-1}) $$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ P(A,B,C) = $$
+  \end{field}
+  \begin{field}
+    $$ P(A,B,C) = P(A)P(B|A)P(C|A,B)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$P(A \cup B \cup C) =  $$
+  \end{field}
+  \begin{field}
+    $$P(A \cup B \cup C) =  P(A) + P(B) + P(C) - P(A \cap B) - P(B\cap C) - P(A \cap C) + P(A \cap B \cap C)$$
+  \end{field}
+\end{note}
+
+
 
 \begin{note}
   \begin{field}
@@ -1002,53 +1076,78 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note}
     \begin{field}
-        \text{Ordered without} replacement: outcomes of choosing $r$ from $n$ objects
+        Ordered without replacement: number of arrangements of size $r$ from $n$ objects
     \end{field}
     \begin{field}
         $$\frac{n!}{(n-r)!}$$
+
+        eg lottery with $n=44$ choices for $r=6$ values, cant use same number twice, order matters
     \end{field}
 \end{note}
 
 \begin{note}
     \begin{field}
-        \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
+        Unordered without replacement: number of arrangements of size $r$ from $n$ objects
       \end{field}
     \begin{field}
-      \text{Unordered without replacement chose } $r$ \text{from} $n$ \text{ objects}
-        $$\binom{n}{r}$$
+        $$\binom{n}{r} = \frac{n!}{r!(n-r!)}$$
+
+        eg lottery with $n=44$ choices for $r=6$ values, cant use same number twice, order does not matter (Use ordered without replacement and divide by redundant orderings )
     \end{field}
 \end{note}
 
 
 \begin{note}
     \begin{field}
-        \text{Ordered with replacement: choose} $r$ from $n$ objects:
+        Ordered with replacement: number of arrangements of size $r$ from $n$ objects
     \end{field}
     \begin{field}
-      \text{Ordered with replacement: choose} $r$ from $n$ objects:
+      Ordered with replacement: number of arrangements of size $r$ from $n$ objects
         $$n^r$$
+        eg lottery with $n=44$ choices for $r=6$ values, can use same number twice, order matters
     \end{field}
 \end{note}
 
 \begin{note}
     \begin{field}
-        \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects }
+        Unordered with replacement: number of arrangements of size $r$ from $n$ objects
     \end{field}
     \begin{field}
-      \text{Unordered without replacement choose } $r$ \text{ from } $n$ \text{ objects: }
-        $$\binom{n}{r}$$
+      Unordered with replacement: number of arrangements of size $r$ from $n$ objects
+        $$\binom{n+r-1}{r} = \frac{(n+r-1)!}{r!(n-1)!}$$
+
+        eg lottery with $n=44$ choices for $r=6$ values, can use same number twice, order does not matters
     \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \text{Unordered with replacement choose} $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-      \text{Unordered with replacement choose} $r$ from $n$ objects:
-        $$\binom{n+1-1}{r}$$
-    \end{field}
+  \begin{field}
+    Number of arrangements of size $r$ from $n$ objects
+
+    \begin{tabular}{|c| c c|}
+      \hline \\
+       & Without Replacement & With replacement\\
+       \hline \\
+       Ordered & & \\
+       Unordered & & \\
+       \hline
+    \end{tabular}
+  \end{field}
+  \begin{field}
+    Number of arrangements of size $r$ from $n$ objects
+
+    \begin{tabular}{|c| c c|}
+      \hline \\
+       & Without Replacement & With replacement\\
+       \hline \\
+       Ordered & $\frac{n!}{(n-r)!}$ & $n^r$ \\
+       Unordered & $\binom{n}{r}$& $\binom{n+r-1}{r}$ \\
+       \hline
+    \end{tabular}
+  \end{field}
 \end{note}
+
+
 
 \begin{note}
     \begin{field}
@@ -1127,10 +1226,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 
 %%end_tag
-
-
 %%start_tag Casella Ch2
-\tags{CasellaCh2}
 \begin{note}
   \begin{field}
     (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
@@ -1166,16 +1262,1228 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
   \end{field}
 \end{note}
 
+\begin{note}
+  \begin{field}
+    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
+    \begin{itemize}
+      \item If $g$ is an increasing function, $F_Y(y) = $
+      \item If $g$ is a decreasing function, and $X$ is a continuous random variable, $F_Y(y) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
+    \begin{itemize}
+      \item If $g$ is an increasing function, $F_Y(y) = F_x(g^{-1}(y))$
+      \item If $g$ is a decreasing function, and $X$ is a continuous random variable, $F_Y(y) = 1 - F_X(g^{-1}(y))$
+    \end{itemize}
+  \end{field}
+\end{note}
 
+\begin{note}
+  \begin{field}
+    eg: $X \sim Unif(0,1)$, $Y = -log(X)$
+    $F_Y(y) = $
+  \end{field}
+  \begin{field}
+    $F_Y(y) = 1 - F_x(g^{-1}(y)) = 1 - F_X(e^{-y}) = 1 - e^{-y}$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $X$ is a continuous random variable. For $y > 0$,
+    $F_Y(y) = $
+  \end{field}
+  \begin{field}
+    \begin{align*}
+      F_Y(y) &= P(Y \leq y)\\
+      &= P(X^2 \leq y)\\
+      &= P(- \sqrt{y} \leq X \leq \sqrt{y})\\
+      &= P(X \leq \sqrt{y}) - P(X \leq -\sqrt{y})\\
+      &= F_X(\sqrt{y}) - F_X( - \sqrt{y})
+    \end{align*}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Pdf of $F_X(g(X))$, where $Y = g(X)$
+  \end{field}
+  \begin{field}
+    Chain rule:
+    $f_Y(y) = g'(y)f(g(y))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Method of pdf if $g$ is not monotone all entire domain
+  \end{field}
+  \begin{field}
+    $f_Y = \sum f_x(g_i^{-1}(y))|\frac{d}{dy}g_i^{-1}(y)|$ $y \in Y$, 0 otherwise
+
+    eg: $Y = X^2$,
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $P(Y  \leq y)$ when $Y = F_X(x)$
+  \end{field}
+  \begin{field}
+    \begin{align*}
+      P(Y \leq y) &= P(X \leq F_x^{-1}(y))\\
+      &= F_X(F_X^{-1}(y))\\
+      &= y
+    \end{align*}
+    $Y$ is uniformly distributed
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $M_x(t) = $ (discrete )
+  \end{field}
+  \begin{field}
+    $M_x(t) = E(e^{tX}) = \sum_x e^{tX}P(X)$ (discrete )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $M_x(t) = $ (continuous)
+  \end{field}
+  \begin{field}
+    $M_x(t) = E(e^{tX}) = \int_{-\infty}^\infty e^{tX}f_x(x)dx$ (continuous)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $E(X^n) = $
+  \end{field}
+  \begin{field}
+    $E(X^n) = M_x^n(0) = \frac{d^n}{dt^n}M_x(t)|_{t=0}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $M(aX + b)(t) = $
+  \end{field}
+  \begin{field}
+    $M(aX + b)(t) = e^{bt}M_x(at)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    If $E(X^n)$ exists then...
+  \end{field}
+  \begin{field}
+    If $E(X^n)$ exists then $E(X^m)$ exists for $m \leq n$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    If $X_i$ are independent and $Y = a_1X_1 + \cdots + a_nX_n + b$, then $M_Y(t) = $
+  \end{field}
+  \begin{field}
+    If $X_i$ are independent and $Y = a_1X_1 + \cdots + a_nX_n$, then $M_Y(t) = e^{bt}\prod_{i=1}^n M_{X_i}(a_i t) $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Example of using MGF for finding expected value:
+    MGF gamma: $(\frac{1}{1 - \beta t})^\alpha$: $E(X) = $
+  \end{field}
+  \begin{field}
+    $E(X) = \frac{\alpha\beta}{(1 - \beta t)^{\alpha+1}}|_{t=0} = \alpha \beta$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Using MGF to relate distributions: MGF exp = $( 1 - \beta t)^{-1}$
+  \end{field}
+  \begin{field}
+    $Y = \sum X_i$ is gamma as MGF gamma is $(1 - \beta t)^{-\alpha}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    First step in transforming a RV
+  \end{field}
+  \begin{field}
+    Determine support
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $nth$ Moment of X
+  \end{field}
+  \begin{field}
+    $E(X^n)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $n$th central moment of $X$
+  \end{field}
+  \begin{field}
+    $E(X - \mu)^n$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $(a + b)^n = $
+  \end{field}
+  \begin{field}
+    $(a + b)^n = \sum_{x = 0}^n \binom{n}{x}a^xb^{n-x}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\sum_{x = 0}^n \binom{n}{x}a^xb^{n-x} = $
+  \end{field}
+  \begin{field}
+    $(a + b)^n$
+  \end{field}
+\end{note}
+
+%%end_tag
+%%start_tag Casella Ch3
+\begin{note}
+  \begin{field}
+    $N$ balls $r$ red $N - r$ green. Select $n$ balls. Probability that $y$ are red?
+  \end{field}
+  \begin{field}
+    Hypergeometric distribution($N,r,n$)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Hypergeometric distribution description $(N,r,n)$
+  \end{field}
+  \begin{field}
+    $N$ is total balls, $r$ is number red balls, $n$ is number balls selected.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Negative binomial description
+  \end{field}
+  \begin{field}
+    Number of Bernoulli trials required to get a fixed number of successes. $r$ being the $r$th success
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Geometric description
+  \end{field}
+  \begin{field}
+    Modeling waiting time. $X$ is the trial at which the first success occurs.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Location-scale family for $f(x)$
+  \end{field}
+  \begin{field}
+    $1/\sigma f((x - \mu)/\sigma)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Given $X$ give the mean and variance for the location-scale random $Y= 1/\sigma f((y - \mu)/\sigma)$ variable
+  \end{field}
+  \begin{field}
+    $E(Y) = \sigma E(X) + \mu$, $V(Y) = \sigma^2 V(X)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $X \sim Pois(\lambda)$ $P(X = x+1) = $
+  \end{field}
+  \begin{field}
+    $X \sim Pois(\lambda)$ $P(X = x+1) = \frac{\lambda}{x + 1}P(X = x)$
+  \end{field}
+\end{note}
 
 %%end_tag
 
+%%start_tag Casella Ch4
+
+\begin{note}
+  \begin{field}
+    $f(y|x) = $
+  \end{field}
+  \begin{field}
+    $f(y|x) = \frac{f(x,y)}{f_x(x)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $E(g(Y)|x) = $
+  \end{field}
+  \begin{field}
+    $E(g(Y)|x) = \int_{-\infty}^\infty g(y)f(y|x) dy $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Example of calculating donditional pdfs
+$f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
+
+  \end{field}
+  \begin{field}
+    \begin{align*}
+      f_x(x) = \int_{-\infty}^\infty f(x,y) dy \\
+      &= e^{-x}\\
+      \\
+      f(y|x) &= \frac{f(x,y)}{f_x(x)}\\
+      &= \frac{e^{-y}}{e^{-x}} \text{ if } y > x\\
+      &= \frac{0}{e^{-x}} \text{ if } y \leq x
+    \end{align*}
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Let ($X,Y$) be given as $f(x,y)$. Then $X$ and $Y$ are independent if
+  \end{field}
+  \begin{field}
+    Let ($X,Y$) be given as $f(x,y)$. Then $X$ and $Y$ are independent if there exist functions $g(x), h(y)$ such that $f(x,y) = g(x)h(y)$ (factorization - don't need to compute marginals )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Let $X,Y$ be independent. Then $E(g(X)h(Y)) = $
+  \end{field}
+  \begin{field}
+    $E(g(X)h(Y)) = (E(g(X)))(E(h(Y)))$
+
+    example: $E(X^2Y) = E(X^2)E(Y)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X,Y$ independent\\ $Z = X + Y$  \\ $M_Z(t) = $
+  \end{field}
+  \begin{field}
+    $M_Z(t) = M_x(t)M_Y(t)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Method of pdf bivariate
+  \end{field}
+  \begin{field}
+    $f_{u,v}(u,v) = f_{x,y}(h_1(u,v),h_2(u,v))|J|$\\
+    Where $|J| = \begin{vmatrix}
+      \frac{\partial  x}{\partial  u} & \frac{\partial  x }{\partial v }\\ \frac{\partial  y }{\partial u } & \frac{\partial  y }{\partial v }
+    \end{vmatrix} = \frac{\partial  x }{\partial u } \frac{\partial  y}{\partial v } - \frac{\partial  y }{\partial u } \frac{\partial  x }{\partial v }$
+
+    and $u = g_1(x,y), v = g_2(x,y)$ and $x = h_1(x,y), y = h_2(x,y)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $X,Y$ independent, $g(X)$ a function only of $X$ and $h(Y)$ a function only of $Y$. Then
+  \end{field}
+  \begin{field}
+    $g(X)$ and $g(Y)$ are independent.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Correlation
+  \end{field}
+  \begin{field}
+    $\rho_{XY} = \frac{Cov(X,Y)}{\sigma_X\sigma_Y}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $m$ independent trials, each trial resulting in one of $n$ outcomes, with probabilities $p_1, \ldots, p_n$. $X_i$ is the count of the number of times the $i$th outcome occured in the $m$ trials.
+  \end{field}
+  \begin{field}
+    Multinomial distribution
+    $f(x_1, \ldots, x_n) = \frac{m!}{x_1! \cdots x_n!}p_1^{x_i} \cdots p_n^{x_n}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $|E(XY)| \leq $ (Cauchy-Schwartz)
+  \end{field}
+  \begin{field}
+    $|E(XY)| \leq E(|XY|) \leq (E(|X|^2))^{1/2}(E(|Y|^2))^{1/2}$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $E(g(X)) \geq $ where $g$ is a convex function
+  \end{field}
+  \begin{field}
+    $E(g(X)) \geq g(E(X))$ where $g$ is a convex function (Jensen's inequlity)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Ranking of types of means
+  \end{field}
+  \begin{field}
+    $\mu_{\text{harmonic}} \leq \mu_{\text{geometric}} \leq \mu_{\text{arithmetic}}$ By Jensens inequality (using logs )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Linear transformations of multivariate normal $X \sim N(\vec{\mu},\Sigma) $\\
+    $A \vec{X} + \vec{b}$
+  \end{field}
+  \begin{field}
+    $A \vec{X} + \vec{b} \sim N(A \vec{\mu} + \vec{v}, A \Sigma A^t)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim N(\vec{\mu},\Sigma) $\\
+
+    $\vec{X}_a | \vec{X}_b \sim $
+  \end{field}
+  \begin{field}
+    $\vec{X}_a | \vec{X}_b \sim N\big(\vec{\mu_a} + \Sigma_{ab} \Sigma^{-1}_{bb}(\vec{x}_b - \vec{\mu}_b), \Sigma_{ba} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}$\\
+
+ex: $(X_1,X_2,X_3), \vec{\mu} = (1,2,3)^t, \Sigma = \begin{pmatrix}
+  3 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 3
+\end{pmatrix}$
+$X1,X_3 | X_2 = 1$\\
+$a = \{1,3\}, b = \{2\}$\\
+$\mu_a = (1,3)^t, \mu_b = 1$\\
+$\Sigma_{aa} = \begin{pmatrix}
+  3 & 0 \\ 0 & 3
+\end{pmatrix}, \Sigma_{ab} = (1,1)^t$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $(X,Y)$ multinomial \\
+    $aX + bY \sim $
+  \end{field}
+  \begin{field}
+    $aX + bY \sim N(a \mu_x + b\mu_y, a^2 \sigma_x^2 + b^2 \sigma_y^2 + 2 ab \rho \sigma_x \sigma_y)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $(X,Y)$ multinomial \\
+    $Y|X\sim $
+  \end{field}
+  \begin{field}
+    $Y|X\sim  N(\mu_y + \rho \frac{\sigma_y}{\sigma_x}(x - \mu_x), \sigma_Y^2(1 - \rho^2))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    CDF for Max order statistic
+  \end{field}
+  \begin{field}
+    $(F(x))^n$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    PDF for Max order statistic
+  \end{field}
+  \begin{field}
+    $n(F(x))^{n-1}f(x)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    CDF for Min order statistic
+  \end{field}
+  \begin{field}
+    $1 - (1 - F(x))^n$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    PDF for Min order statistic
+  \end{field}
+  \begin{field}
+    $n(1 - F(x))^{n-1}f(x)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    CDF for $k$th order statistic
+  \end{field}
+  \begin{field}
+    $F_{(k)}(x) = \sum_{j = k}^n \binom{n}{j}(F(x))^j(1 -F(x))^{n-j}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    PDF for $k$th order statistic
+  \end{field}
+  \begin{field}
+    $f_{(k)}(x) = k \binom{n}{k}f(x)F(x)^{k-1}(1 - F(x))^{n-k}$
+  \end{field}
+\end{note}
 
 %%end_tag
 
+%%end_tag
 
+%%start_tag Undergrad_Textbook
+
+\tags{UndergradTextbook}
+%Chapter 2
+
+\begin{note}
+  \begin{field}
+    Law of total probability $k=2$ (using conditional probability)
+  \end{field}
+  \begin{field}
+    $P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Bayes formula in terms of law of total probability,
+  \end{field}
+  \begin{field}
+    $P(B|A) = \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $P(A \text{ and }B)$
+  \end{field}
+  \begin{field}
+    $P(A \text{ and }B) = P(A|B)P(B) = P(B|A)P(A)$
+  \end{field}
+\end{note}
+
+
+% Chapter 3
+
+\begin{note}
+  \begin{field}
+    Events $A$ and $B$ are independent if
+  \end{field}
+  \begin{field}
+    $P(A|B) = P(A)$ equivalently $P(A \text{ and } B)  = P(A)P(B)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Poisson setting
+  \end{field}
+  \begin{field}
+    The Poisson setting arises in the context of discrete counts of events that occur over space or time with the small probability and where successive events are independent
+
+    Eg: 2 on average calls a minute, $X$ is number of calls a minute, $X \sim Pois $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Poisson approximation of binomial distribution
+  \end{field}
+  \begin{field}
+    Suppose $X \sim Binom(n,p)$, $Y \sim Pois (\lambda)$. If $n\to \infty$, and $p \to 0$, in such a way that $np \to \lambda > 0$, then for all $k$, $P(X = k) \to P(Y = k)$. The Poisson distribution with parameter $\lambda = np$ serves as a good approiximation for the binomial distribution when $n$ is large and $p$ is small.
+  \end{field}
+\end{note}
+
+% Chapter 4
+
+
+\begin{note}
+  \begin{field}
+    $E(f(X,Y))$ when $X,Y$ are discrete
+  \end{field}
+  \begin{field}
+    $E(f(X,Y)) = \sum_x \sum_y f(x,y)P(X=x,Y=y)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    If $X,Y$ are independent, then $f(X),g(Y)$
+  \end{field}
+  \begin{field}
+    are also independent
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    If $X,Y$ independent, $E(XY) = , E(f(X)g(Y)) = $
+  \end{field}
+  \begin{field}
+    If $X,Y$ independent, $E(XY) = E(X)E(Y), E(f(X)g(Y)) = E(f(X))E(g(Y))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Sum of independent discrete random variables $X,Y$: $P(X+Y = k)$
+  \end{field}
+  \begin{field}
+    $P(X+Y = k) = \sum_i P(X=i)P(Y=k-i)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $V(X) = 0$
+  \end{field}
+  \begin{field}
+    If and only if $X $ is a constant
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $E(I_A) = , V(I_A)$ Where $I_A$ is an indicator function
+  \end{field}
+  \begin{field}
+    $E(I_A) = P(A), V(I_A) = P(A)P(A^c)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    For discrete jointly distributed random variables,
+    $$ P(X = y | X = x) = $$
+  \end{field}
+  \begin{field}
+    For discrete jointly distributed random variables,
+    $$ P(X = y | X = x) = \frac{P(X=x,Y=y)}{P(X=x)}$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    For discrete random variables
+    $E(Y|X=x) = $
+  \end{field}
+  \begin{field}
+    For discrete random variables
+    $E(Y|X=x) = \sum_y y P(Y = y | X = x)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Problem solving strategy for expected value of counting
+  \end{field}
+  \begin{field}
+    Use indicator functions for each trial , where $X = \sum I$ and use linearity of expectation
+  \end{field}
+\end{note}
+
+ % Chapter 5
+
+\begin{note}
+  \begin{field}
+    $P(X > s + t|X > t)$ for geometric, exponential
+  \end{field}
+  \begin{field}
+    $P(X > s + t|X > t) = P(X > s)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Distribution for: A bag of $N$ balls which conatins $r$ red balls and $N-r$ blue balls, $X$ is number of red balls in a sample of size $n$ taken without replacement.
+  \end{field}
+  \begin{field}
+    Hypergeometric.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Distribution for modeling arrival time
+  \end{field}
+  \begin{field}
+    Exponential
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $E(g(X,Y)) = $ (continuous )
+  \end{field}
+  \begin{field}
+    $E(g(X,Y)) = \int_{y = - \infty}^\infty \int_{x = -\infty}^\infty g(x,y)f(x,y)dx dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $Cov(X,Y) = $ (integration )
+  \end{field}
+  \begin{field}
+    $Cov(X,Y) = \int_{y = - \infty}^\infty \int_{x = -\infty}^\infty (x - E(X))(y - E(Y))dx dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Problem solving strategies for functions of random variables
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item Methods of cdf: $Y = g(X)$, find cdf $P(Y \leq y) = P(g(X) \leq y) = P(X \leq g^{-1}(y))$
+      \item For finding $P(X < Y)$, set up integrals that cover
+      \item For finding probabilities of independent uniform random variables, use geometric (area) properties
+    \end{itemize}
+  \end{field}
+\end{note}
+
+% Chapter 7
+
+\begin{note}
+  \begin{field}
+    Quantile
+  \end{field}
+  \begin{field}
+    If $X$ is a continuous random variable, then the $p$th quantile is is the number $q$ that satisfies $P(X \leq q) = p/100 $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Poisson process
+  \end{field}
+  \begin{field}
+    Times between arrivals are modeled as iid exponential random variables with parameter $\lambda = 1/\beta$. Let $N_t$ be the number of arrivals up to time $t$. Then $N_t \sim Pois(\lambda t)$
+% go back and do properties of poisson process
+  \end{field}
+\end{note}
+
+% Chapter 8
+
+\begin{note}
+  \begin{field}
+    Conditional density function $f_{Y|X}(y|x) = $
+  \end{field}
+  \begin{field}
+    $f_{Y|X}(y|x) = \frac{f(x,y)}{f_x(x)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Continuous bayes formula
+  \end{field}
+  \begin{field}
+    $f_{X|Y}(x|y)  = \frac{f_{Y|X}(y|x)f_x(x)}{\int_{t = -\infty}^\infty f_{Y|X}(y|t)f_x(t)dt}$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Conditional expectation for continuous random variables
+    $E(Y|X = x)$
+  \end{field}
+  \begin{field}
+    $E(Y|X = x) = \int_y y f_{Y|X}(y|x)dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Law of total expectation
+  \end{field}
+  \begin{field}
+    $E(Y) = E(E(Y|X))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Properties of conditional expectation
+    \begin{itemize}
+      \item $E(aY + bZ | X) = $
+      \item $E(g(Y)|X=x) = $
+      \item If $X,Y$ independent, $E(Y|X) = $
+      \item If $Y = g(X)$, then $E(Y|X) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Properties of conditional expectation
+    \begin{itemize}
+      \item $E(aY + bZ | X) = a E(Y|X) + bE(Z|X)$
+      \item $E(g(Y)|X=x) = \int_y g(y) f_{Y|X}(y|x)dy$
+      \item If $X,Y$ independent, $E(Y|X) = E(Y)$
+      \item If $Y = g(X)$, then $E(Y|X) = Y$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Law of total probability, continuous
+  \end{field}
+  \begin{field}
+    $P(A) = \int_{-\infty}^\infty P(A|X=x)f_x(x)dx$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Conditional variance $V(Y|X = x)$
+  \end{field}
+  \begin{field}
+    $$V(Y|X = x) = \sum_y (y - E(Y|X=x))^2P(Y=y|X=x)$$ discrete
+    $$V(Y|X = x) = \int_y (y - E(Y|X=x))^2 f_{Y|X}(y|x)dy$$ continuous
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Properties of conditional variance
+    \begin{itemize}
+      \item $V(Y|X=x) = $
+      \item $V(aY + b | X = x) = $
+      \item If $Y,Z$ independent, $V(Y+Z | X=x) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Properties of conditional variance
+    \begin{itemize}
+      \item $V(Y|X=x) = E(Y^2 | X=x) - (E(Y|X=x))^2$
+      \item $V(aY + b | X = x) = a^2 V(Y|X=x)$
+      \item If $Y,Z$ independent, $V(Y+Z | X=x) = V(Y|X=x) + V(Z|X=x)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+% Chapter 9
+
+\begin{note}
+  \begin{field}
+    $P(X \geq \epsilon)$
+  \end{field}
+  \begin{field}
+    $P(X \geq \epsilon) \leq E(X) / \epsilon$ (Markov's Inequality )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $P(|X-\mu| \geq \epsilon)$
+  \end{field}
+  \begin{field}
+    $P(|X-\mu| \geq \epsilon) \leq \sigma^2/\epsilon^2$ (Chebyshev's inequality, if mean and variance finite )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $P(\lim_{n\to \infty} S_n/n = \mu) = $
+  \end{field}
+  \begin{field}
+  $P(\lim_{n\to \infty} S_n/n = \mu) = 1$ (Strong law of large numbers )
+\end{field}
+\end{note}
+
+%%end_tag
 % Todo
 % Gamma properties
 % Exponential families
 % Approximate (limit ) relationships from wiki page
+
+
+%%start_tag Calculus
+
+\tags{Calculus}
+
+\begin{note}
+  \begin{field}
+    $\int_0^\infty e^{-x^2/2} = $
+  \end{field}
+  \begin{field}
+    $\int_0^\infty e^{-x^2/2} = \sqrt{\pi/2}$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $\int_0^\infty x^{a-1}e^{-x/b} = $
+  \end{field}
+  \begin{field}
+    $\int_0^\infty x^{a-1}e^{-x/b} = \Gamma(a)b^a$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int_0^1 x^{a - 1}(1 - x)^{b-1} = $
+  \end{field}
+  \begin{field}
+    $\int_0^1 x^{a - 1}(1 - x)^{b-1} = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a + b)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\log(x) = y , x = $
+  \end{field}
+  \begin{field}
+    $\log(x) = y , x = e^y$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = $
+  \end{field}
+    \begin{field}
+      $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = e^a$
+    \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = e^a$
+  \end{field}
+  \begin{field}
+    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx}f(g(x)) = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx}f(g(x)) = f'(g(x))g'(x)$ (Chain rule)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} \int_{a}^x f(t)dt = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} \int_{a}^x f(t)dt = f(x)$ (fundamental theorem of calculus )
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $\int_a^b u dv = $
+
+    ex: $\int x e^{-x}$
+  \end{field}
+  \begin{field}
+    $\int_a^b u dv = uv|_a^b - \int_a^b v du $
+
+    ex: $u = x, dv = e^{-x}, du = dx, v = -e^{-x}$
+    \begin{align*}
+      \int x e^{-x} &= -x e^{-x} + \int e^{-x} \\
+      &= -x e^{-x}  -e^{-x} + c
+    \end{align*}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\sum_{k=0}^\infty \frac{x^k}{k!} = $
+  \end{field}
+  \begin{field}
+    $\sum_{k=0}^\infty \frac{x^k}{k!} = e^x$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $e^x = $
+  \end{field}
+  \begin{field}
+    $e^x = \sum_{k=0}^\infty \frac{x^k}{k!}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\sum_{k=0}^\infty x^k = $
+  \end{field}
+  \begin{field}
+    $\sum_{k=0}^\infty x^k = \frac{1}{1-x}$ for $|x| < 1$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $\sum_{k=0}^n x^k =$
+  \end{field}
+  \begin{field}
+    $\sum_{k=0}^n x^k = \frac{1 - x^{n+1}}{1-x}$ for $x \neq 1$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\lim_{x \to -\infty} e^{-x} = $
+  \end{field}
+  \begin{field}
+    $\lim_{x \to -\infty} e^{-x} = \infty$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\lim_{x \to \infty} e^{-x} = $
+  \end{field}
+  \begin{field}
+    $\lim_{x \to -\infty} e^{-x} = 0$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ (fg)' = $$
+  \end{field}
+  \begin{field}
+    $$ (fg)' = f'g + g'f$$ (product rule )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} x^n = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} x^n = nx^{n-1}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} a^x = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} a^x = a^x ln(a)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} ln(x) = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} ln(x) = \frac{1}{x}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} (f(x))^n = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} (f(x))^n = n(f(x))^{n-1}f'(x)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $ \frac{d}{dx} ln(f(x)) = $
+  \end{field}
+  \begin{field}
+    $ \frac{d}{dx} ln(f(x)) = \frac{f'(x)}{f(x)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\frac{d}{dx} e^{f(x)} = $
+  \end{field}
+  \begin{field}
+    $\frac{d}{dx} e^{f(x)} = f'(x)e^{f(x)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int x^n = $
+  \end{field}
+  \begin{field}
+    $\int x^n = \frac{1}{n+1}x^{n+1}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int \frac{1}{x} = $
+  \end{field}
+  \begin{field}
+    $\int \frac{1}{x} = ln(|x|)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int \frac{1}{ax + b} = $
+  \end{field}
+  \begin{field}
+    $\int \frac{1}{ax + b} = \frac{1}{a}ln(|ax + b|)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int e^{cx} = $
+  \end{field}
+  \begin{field}
+    $\int e^{cx} = \frac{1}{c}e^{cx}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int x e^{-cx^2} = $
+  \end{field}
+  \begin{field}
+    $\int x e^{-cx^2} = -\frac{1}{2c}e^{-cx^2}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    U substitution:
+
+    example; $\int_1^2 5x^2\cos(x^3)$
+  \end{field}
+  \begin{field}
+    $\int_a^bf(g(x))g'(x) = \int_{g(a)}^g(b) f(u)du$
+
+    Where $u = g(x), du = g' dx$
+
+    Ex: $u = x^3, du = 3x^2, x^2 du = 1/3 du$
+    $\int_1^2 5x^2\cos(x^3) = \int_{1}^8 5/3 \cos(u)du$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\Gamma(a) = $
+  \end{field}
+  \begin{field}
+    $\int_0^\infty t^{a-1}e^{-t}dt $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\int_0^\infty t^{a-1}e^{-t}dt $
+  \end{field}
+  \begin{field}
+    $= \Gamma(a) $
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $\Gamma(a + 1) = $
+  \end{field}
+  \begin{field}
+    $\Gamma(a + 1) = a\Gamma(a)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\Gamma(n) = $
+  \end{field}
+  \begin{field}
+    $\Gamma(n) = (n-1)!$ (for $n$ an integer)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\Gamma(1/2) = $
+  \end{field}
+  \begin{field}
+    $\Gamma(1/2) = \sqrt{\pi}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $\Gamma(1) = $
+  \end{field}
+  \begin{field}
+    $\Gamma(1) = 1$
+  \end{field}
+\end{note}
+
+
+
+
+
+
+
+%%end_tag
+
 \end{document}
