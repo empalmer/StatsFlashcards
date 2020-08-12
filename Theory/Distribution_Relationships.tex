@@ -1,0 +1,449 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\newenvironment{note}{\paragraph{NOTE:}}{}
+\newenvironment{field}{\paragraph{field:}}{}
+\newenvironment{tags}{\paragraph{tags:}}{}
+
+\begin{document}
+
+
+
+%%start_tag Distribution Relationships
+\tags{distributionrelationships}
+
+\begin{note}
+  \begin{field}
+    $X \sim Gamma(a,b)$
+    $P(X \leq X) = $
+  \end{field}
+  \begin{field}
+    $X \sim Gamma(a,b)$
+    $P(X \leq X) = P(Y \geq a)$
+    Where $Y \sim Pois (x/b)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $$X_1, \ldots, X_n \sim iid N(0,1)$$
+    $$ \sum X_i \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$X_1, \ldots, X_n \sim iid N(0,1)$$
+    $$ \sum X_i \sim N(0,n)$$
+  \end{field}
+\end{note}
+\begin{note}
+  \begin{field}
+    $$X_1, \ldots, X_n \sim iid N(\mu_i,\sigma_i^2)$$
+    $$ \sum X_i \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$X_1, \ldots, X_n \sim iid N(\mu_i,\sigma_i^2)$$
+    $$ \sum X_i \sim N(\sum \mu_i,\sum \sigma^2_i)$$
+  \end{field}
+\end{note}
+\begin{note}
+  \begin{field}
+    $$X  \sim N(\mu,\sigma^2)$$
+    $$ aX + b \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ aX + Y \sim N(a\mu + b, a^2\sigma^2)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim Binom(1,p) \overset{?}{\sim}$
+  \end{field}
+  \begin{field}
+    $X \sim Bern(p)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim NegBinom(1,p) \overset{?}{\sim}$
+  \end{field}
+  \begin{field}
+    $X \sim Geom(p)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim Gamma(1,\theta) \overset{?}{\sim}$
+  \end{field}
+  \begin{field}
+    $X \sim Exp(\theta)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim Exp(\theta) \overset{?}{\sim}$
+  \end{field}
+  \begin{field}
+    $X \sim Gamma(1,\theta)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim Gamma(v/2,1/2) \overset{?}{\sim} $
+  \end{field}
+  \begin{field}
+    $X \sim \chi^2(v)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$X \sim \chi^2(v) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$X \sim Gamma(v/2,1/2)$$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ X \sim \chi^2(2) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ X \sim exp(2)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ X \sim Weibull(1,\beta) \overset{?}{\sim} $$
+  \end{field}
+  \begin{field}
+    $$X \sim Exp(\beta)$$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $X_1, X_2 \sim \chi^2(v_i)$ independent
+    $ \frac{X_1/v_1}{X_2/v_2}$
+  \end{field}
+  \begin{field}
+    $$ \frac{(X_1/v_1)}{(X_2/v_2)} \sim F(v_1,v_2)$$
+  \end{field}
+\end{note}
+
+
+
+\begin{note}
+  \begin{field}
+    $$ X \sim beta(1,1) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ X \sim Unif(0,1)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ X \sim Unif(0,1) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ X \sim beta(1,1)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Special case of t
+    $$ X \sim t(1) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ X \sim Caucy(0,1)$$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Scaled Gamma
+    $$X \sim Gamma(\alpha,\beta), Y = aX \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ Y \sim Gamma(\alpha,a\beta)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Scaled Exponential
+    $$ X \sim Exp(\lambda), Y = aX \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$ Y \sim Exp(a\lambda)$$
+  \end{field}
+\end{note}
+
+%check
+\begin{note}
+  \begin{field}
+    Sum of Exponential, equal rate
+    $X_i \sim Exp(\lambda), Y = \sum X_i$
+  \end{field}
+  \begin{field}
+    $$Y \sim Gamma(n,\lambda)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ X \sim Exp(\lambda), Y  = e^{-x}$$
+  \end{field}
+  \begin{field}
+    $$Y \sim Beta(\lambda,1)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Min of Exponential
+    $$X_1, \ldots , X_n Exp(\lambda_i), Y = \min(X_i) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $Y \sim exp(\sum \lambda_i)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Min of Uniform
+    $$ X_i \sim Unif(0,1), Y = \lim n \min(X_i) \overset{?}{\sim}$$
+  \end{field}
+  \begin{field}
+    $$Y \sim Exp(1)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $$ X \sim Beta(\alpha,\beta), Y = (1-X)$$
+  \end{field}
+  \begin{field}
+    $$ Y \sim Beta(\beta,\alpha)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim F_X(X), Y = F^{-1}_X(X)$
+  \end{field}
+  \begin{field}
+    $Y \sim Unif(0,1)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim N(\mu,\sigma^2), Y = e^X$
+  \end{field}
+  \begin{field}
+    $Y \sim lognormal(\mu,\sigma^2)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X \sim exp(\beta), Y = X^{1/z}$
+  \end{field}
+  \begin{field}
+    $Y \sim Weibull(z,\beta)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Square of Normal
+    $X \sim N(0,1), Y = X^2$
+  \end{field}
+  \begin{field}
+    $Y \sim \chi^2(1)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Square of t
+    $X \sim t(v), Y = X^2$
+  \end{field}
+  \begin{field}
+    $Y \sim F(1,v)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Sum of Poisson
+    $X_i \sim Poisson(\mu_i) Y = \sum X_i$
+  \end{field}
+  \begin{field}
+    $Y \sim Poisson(\sum \mu_i)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Sum of Gamma
+    $X_i \sim Gamma(\alpha_i, \beta), Y = \sum X_i$
+  \end{field}
+  \begin{field}
+    $Y \sim Gamma(\sum \alpha_i, \beta)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Sum of independent Chi-squared
+    $ X_i \sim \chi^2(v_i) Y = \sum X_i$
+  \end{field}
+  \begin{field}
+    $Y \sim \chi^2(\sum v_i)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    $X,Y$ independent
+    $X,Y \sim N(0,1), X/Y$
+  \end{field}
+  \begin{field}
+    $X/Y \sim Cauchy(0,1)$
+  \end{field}
+\end{note}
+
+
+
+
+
+\begin{note}
+  \begin{field}
+    $X_1,X_2 \sim gamma(\alpha_i,1)$ independent, $\frac{X_1}{X_1 + X_2} $
+  \end{field}
+  \begin{field}
+    $$ \frac{X_1}{X_1 + X_2} \sim beta(\alpha_1,\alpha_2)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X_1,X_2 \sim gamma(\alpha_i,\beta_i)$ independent, $\frac{\beta_2X_1}{\beta_2X_1 + \beta_1X_2} $
+  \end{field}
+  \begin{field}
+    $$ \frac{\beta_2X_1}{\beta_2X_1 + \beta_1X_2}\sim beta(\alpha_1,\alpha_2)$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    $X,Y $ independent $exp(\mu)$ $X-Y$
+  \end{field}
+  \begin{field}
+    $X-Y \sim $ double exponential$(0,\mu)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    Inverted Gamma
+    $X \sim Gamma(\alpha,\beta)$ $Y = 1/X$
+  \end{field}
+  \begin{field}
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Bernoulii$(p), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+     Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Discrete Uniform $N, E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+    Discrete Uniform $N, E(X) = \frac{N+1}{2}, V(X) = \frac{(N+1)(N-1)}{12}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Cauchy($\theta,\sigma), E(X) = ,V(X)=$
+  \end{field}
+  \begin{field}
+    Cauchy($\theta,\sigma), E(X) = na,V(X)=na$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+    Double Exponential$(\mu,\sigma), E(X) = \mu, V(X) = 2\sigma^2$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    F($v_1,v_2), E(X) = , V(X) = $
+  \end{field}
+  \begin{field}
+F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\frac{(v_1+v_2-2)}{v_1(v)2-4}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Mean and Variance for Distributions not on bible (but in CB)
+      \begin{itemize}
+
+        \item Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
+        \item F($v_1,v_2), E(X) = , V(X) = $
+        \item Logistic$(\mu,\beta), E(X) = , V(X) = $
+        \item Lognormal$(\mu,\sigma^2), E(X)=, V(X) = $
+        \item Pareto$(\alpha,\beta), E(X) =, V(X) =$
+        \item t$(v), E(X) = , V(X) = $
+        \item Weibull$(\gamma,\beta), E(X) =, V(X) = $
+      \end{itemize}
+  \end{field}
+  \begin{field}
+    Mean and Variance. for Distributions not on bible (but in CB)
+      \begin{itemize}
+
+        \item Logistic$(\mu,\beta), E(X) = \mu, V(X) = \frac{\phi^2\beta^2}{3}$
+        \item Lognormal$(\mu,\sigma^2), E(X)=e^{\mu + (\sigma^2/2)}) V(X) = e^{2(\mu+\sigma^2)} - e^{2\mu + \sigma^2}$
+        \item Pareto$(\alpha,\beta), E(X) = \frac{\beta\alpha}{\beta-1}, V(X) = \frac{\beta\alpha^2}{(\beta-1)^2(\beta-2)}$
+        \item t$(v), E(X) = 0, V(X) = \frac{v}{v-2}$
+        \item Weibull$(\gamma,\beta), E(X) = \beta^{1/\gamma}\Gamma(1 + 1/\gamma), V(X) = \beta^{2/\gamma}(\Gamma(1 + 2/\gamma) - \Gamma^2(1 + 1/\gamma))$
+      \end{itemize}
+  \end{field}
+\end{note}
+
+%%end_tag
+
+
+
+
+\end{document }

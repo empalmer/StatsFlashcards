@@ -67,7 +67,7 @@
 
 \begin{note}
   \begin{field}
-    \text{Probability Set intersection}
+    Probability Set intersection
     \begin{itemize}
       \item $P(\bigcup_n A_n)
         = 1 - P(\bigcap_n A_n^c)$
@@ -79,7 +79,7 @@
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Probability Set intersection}
+    Probability Set intersection
     \begin{itemize}
       \item $P(\bigcup_n A_n)
         = 1 - P(\bigcap_n \mathsf{A_n})$
@@ -134,10 +134,10 @@
 
 \begin{note}
   \begin{field}
-    \text{CDF Laws}
+    CDF Laws
   \end{field}
   \begin{field}
-    \text{CDF Laws}
+    CDF Laws
     \begin{enumerate}
       \item Nondecreasing: $x_1 < x_2 \implies F(x_1) \leq F(x_2)$
       \item Limits: $\lim_{x \to -\infty}=0$ and $\lim_{x\to \infty} = 1$
@@ -174,7 +174,7 @@
 
 \begin{note}
   \begin{field}
-     \text{Transformations }$Z = \phi(X)$
+     Transformations $Z = \phi(X)$
 
     \begin{itemize}
       \item Discrete: $f_Z(z) = $
@@ -184,7 +184,7 @@
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Transformations }$Z = \phi(X)$
+    Transformations $Z = \phi(X)$
   \begin{itemize}
     \item Discrete: $$f_Z(z) = P(\phi(X) = z) = P(X \in \phi^{-1}(z)) = \sum_{x \in \phi^{-1}(z)}f_x(x) $$
     \item Continuous (Method of CDF): $$F_Z(z)= P(\phi(X)\leq z) = \int_{x:\phi(x)\leq z} f(x) dx$$
@@ -196,16 +196,16 @@
 
 \begin{note}
   \begin{field}
-     \text{Rule of the Lazy Statistician: }$ E[g(x)] = $
+     Rule of the Lazy Statistician: $ E[g(x)] = $
   \end{field}
   \begin{field}
-    \text{Rule of the Lazy Statistician: } $E[g(x)] = \int g(x)f_x(x)dx$
+    Rule of the Lazy Statistician:  $E[g(x)] = \int g(x)f_x(x)dx$
   \end{field}
 \end{note}
 
 \begin{note}
   \begin{field}
-    \text{Expectation rules}
+    Expectation rules
     \begin{itemize}
       \item $E(c) = $
       \item $E(cX) = $
@@ -214,7 +214,7 @@
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Expectation rules}
+    Expectation rules
     \begin{itemize}
       \item $E(c) = c$
       \item $E(cX) = cE(X)$
@@ -226,7 +226,7 @@
 
 \begin{note}
   \begin{field}
-    \text{Conditional expectation}
+    Conditional expectation
       \begin{itemize}
         \item $E(Y|X = x) = $
         \item $E(X) = $
@@ -235,7 +235,7 @@
       \end{itemize}
   \end{field}
   \begin{field}
-    \text{Conditional expectation}
+    Conditional expectation
       \begin{itemize}
         \item $E(Y|X = x) = \int y f(y|x) dy$
         \item $E(X) = E(E(X|Y))$
@@ -249,7 +249,7 @@
 
 \begin{note}
   \begin{field}
-    \text{Variance}
+    Variance
     \begin{itemize}
       \item $V(X) = \sigma_x^2 = $
       \item $V(X+Y) =$
@@ -257,7 +257,7 @@
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Variance}
+    Variance
     \begin{itemize}
       \item $V(X) = \sigma_x^2 = E[(X - E(X))^2] = E(X^2) - E(X)^2$
       \item $V(X+Y) = V(X) + V(Y) + Cov(X,Y)$
@@ -275,7 +275,7 @@
 
 \begin{note}
   \begin{field}
-    \text{Covariance}
+    Covariance
     \begin{itemize}
       \item $Cov(X,Y) = $
       \item $Cov(X,c) = $
@@ -286,7 +286,7 @@
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Covariance}
+    Covariance
     \begin{itemize}
       \item $Cov(X,Y) = E[(X - E(X)(Y - E(Y)))] = E(XY) - E(X)E(Y)$
       \item $Cov(X,c) = 0$
@@ -300,10 +300,10 @@
 
 \begin{note}
   \begin{field}
-    \text{Correlation: }$\rho(X,Y)$
+    Correlation: $\rho(X,Y)$
   \end{field}
   \begin{field}
-    \text{Correlation: }$\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{V(X)V(Y)}}$
+    Correlation: $\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{V(X)V(Y)}}$
   \end{field}
 \end{note}
 
@@ -311,14 +311,14 @@
 
 \begin{note}
   \begin{field}
-    \text{Conditional Variance}
+    Conditional Variance
     \begin{itemize}
       \item $V(Y|X) = $
       \item $V(Y) = $
     \end{itemize}
   \end{field}
   \begin{field}
-    \text{Conditional Variance}
+    Conditional Variance
     \begin{itemize}
       \item $V(Y|X) = E\big[(Y - E(Y|X))^2|X\big] = E(Y^2|X) - E(Y|X)^2$
       \item $V(Y) = E(V(Y|X)) + V(E(Y|X))$
@@ -327,1455 +327,6 @@
 \end{note}
 
 %%end_tag
-
-%%start_tag Distribution Relationships
-\tags{distributionrelationships}
-
-\begin{note}
-  \begin{field}
-    $X \sim Gamma(a,b)$
-    $P(X \leq X) = $
-  \end{field}
-  \begin{field}
-    $X \sim Gamma(a,b)$
-    $P(X \leq X) = P(Y \geq a)$
-    Where $Y \sim Pois (x/b)$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $$X_1, \ldots, X_n \sim iid N(0,1)$$
-    $$ \sum X_i \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$X_1, \ldots, X_n \sim iid N(0,1)$$
-    $$ \sum X_i \sim N(0,n)$$
-  \end{field}
-\end{note}
-\begin{note}
-  \begin{field}
-    $$X_1, \ldots, X_n \sim iid N(\mu_i,\sigma_i^2)$$
-    $$ \sum X_i \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$X_1, \ldots, X_n \sim iid N(\mu_i,\sigma_i^2)$$
-    $$ \sum X_i \sim N(\sum \mu_i,\sum \sigma^2_i)$$
-  \end{field}
-\end{note}
-\begin{note}
-  \begin{field}
-    $$X  \sim N(\mu,\sigma^2)$$
-    $$ aX + b \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ aX + Y \sim N(a\mu + b, a^2\sigma^2)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim Binom(1,p) \overset{?}{\sim}$
-  \end{field}
-  \begin{field}
-    $X \sim Bern(p)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim NegBinom(1,p) \overset{?}{\sim}$
-  \end{field}
-  \begin{field}
-    $X \sim Geom(p)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim Gamma(1,\theta) \overset{?}{\sim}$
-  \end{field}
-  \begin{field}
-    $X \sim Exp(\theta)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim Exp(\theta) \overset{?}{\sim}$
-  \end{field}
-  \begin{field}
-    $X \sim Gamma(1,\theta)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim Gamma(v/2,1/2) \overset{?}{\sim} $
-  \end{field}
-  \begin{field}
-    $X \sim \chi^2(v)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$X \sim \chi^2(v) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$X \sim Gamma(v/2,1/2)$$
-
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ X \sim \chi^2(2) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ X \sim exp(2)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ X \sim Weibull(1,\beta) \overset{?}{\sim} $$
-  \end{field}
-  \begin{field}
-    $$X \sim Exp(\beta)$$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $X_1, X_2 \sim \chi^2(v_i)$ independent
-    $ \frac{X_1/v_1}{X_2/v_2}$
-  \end{field}
-  \begin{field}
-    $$ \frac{(X_1/v_1)}{(X_2/v_2)} \sim F(v_1,v_2)$$
-  \end{field}
-\end{note}
-
-
-
-\begin{note}
-  \begin{field}
-    $$ X \sim beta(1,1) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ X \sim Unif(0,1)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ X \sim Unif(0,1) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ X \sim beta(1,1)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Special case of t
-    $$ X \sim t(1) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ X \sim Caucy(0,1)$$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    Scaled Gamma
-    $$X \sim Gamma(\alpha,\beta), Y = aX \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ Y \sim Gamma(\alpha,a\beta)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Scaled Exponential
-    $$ X \sim Exp(\lambda), Y = aX \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$ Y \sim Exp(a\lambda)$$
-  \end{field}
-\end{note}
-
-%check
-\begin{note}
-  \begin{field}
-    Sum of Exponential, equal rate
-    $X_i \sim Exp(\lambda), Y = \sum X_i$
-  \end{field}
-  \begin{field}
-    $$Y \sim Gamma(n,\lambda)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ X \sim Exp(\lambda), Y  = e^{-x}$$
-  \end{field}
-  \begin{field}
-    $$Y \sim Beta(\lambda,1)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Min of Exponential
-    $$X_1, \ldots , X_n Exp(\lambda_i), Y = \min(X_i) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $Y \sim exp(\sum \lambda_i)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Min of Uniform
-    $$ X_i \sim Unif(0,1), Y = \lim n \min(X_i) \overset{?}{\sim}$$
-  \end{field}
-  \begin{field}
-    $$Y \sim Exp(1)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ X \sim Beta(\alpha,\beta), Y = (1-X)$$
-  \end{field}
-  \begin{field}
-    $$ Y \sim Beta(\beta,\alpha)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim F_X(X), Y = F^{-1}_X(X)$
-  \end{field}
-  \begin{field}
-    $Y \sim Unif(0,1)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim N(\mu,\sigma^2), Y = e^X$
-  \end{field}
-  \begin{field}
-    $Y \sim lognormal(\mu,\sigma^2)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim exp(\beta), Y = X^{1/z}$
-  \end{field}
-  \begin{field}
-    $Y \sim Weibull(z,\beta)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Square of Normal
-    $X \sim N(0,1), Y = X^2$
-  \end{field}
-  \begin{field}
-    $Y \sim \chi^2(1)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Square of t
-    $X \sim t(v), Y = X^2$
-  \end{field}
-  \begin{field}
-    $Y \sim F(1,v)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Sum of Poisson
-    $X_i \sim Poisson(\mu_i) Y = \sum X_i$
-  \end{field}
-  \begin{field}
-    $Y \sim Poisson(\sum \mu_i)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Sum of Gamma
-    $X_i \sim Gamma(\alpha_i, \beta), Y = \sum X_i$
-  \end{field}
-  \begin{field}
-    $Y \sim Gamma(\sum \alpha_i, \beta)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Sum of independent Chi-squared
-    $ X_i \sim \chi^2(v_i) Y = \sum X_i$
-  \end{field}
-  \begin{field}
-    $Y \sim \chi^2(\sum v_i)$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $X,Y$ independent
-    $X,Y \sim N(0,1), X/Y$
-  \end{field}
-  \begin{field}
-    $X/Y \sim Cauchy(0,1)$
-  \end{field}
-\end{note}
-
-
-
-
-
-\begin{note}
-  \begin{field}
-    $X_1,X_2 \sim gamma(\alpha_i,1)$ independent, $\frac{X_1}{X_1 + X_2} $
-  \end{field}
-  \begin{field}
-    $$ \frac{X_1}{X_1 + X_2} \sim beta(\alpha_1,\alpha_2)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X_1,X_2 \sim gamma(\alpha_i,\beta_i)$ independent, $\frac{\beta_2X_1}{\beta_2X_1 + \beta_1X_2} $
-  \end{field}
-  \begin{field}
-    $$ \frac{\beta_2X_1}{\beta_2X_1 + \beta_1X_2}\sim beta(\alpha_1,\alpha_2)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X,Y $ independent $exp(\mu)$ $X-Y$
-  \end{field}
-  \begin{field}
-    $X-Y \sim $ double exponential$(0,\mu)$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    Inverted Gamma
-    $X \sim Gamma(\alpha,\beta)$ $Y = 1/X$
-  \end{field}
-  \begin{field}
-
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Bernoulii$(p), E(X) = , V(X) = $
-  \end{field}
-  \begin{field}
-     Bernoulii$(p), E(X) = p, V(X) = p(1-p)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Discrete Uniform $N, E(X) = , V(X) = $
-  \end{field}
-  \begin{field}
-    Discrete Uniform $N, E(X) = \frac{N+1}{2}, V(X) = \frac{(N+1)(N-1)}{12}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Cauchy($\theta,\sigma), E(X) = ,V(X)=$
-  \end{field}
-  \begin{field}
-    Cauchy($\theta,\sigma), E(X) = na,V(X)=na$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
-  \end{field}
-  \begin{field}
-    Double Exponential$(\mu,\sigma), E(X) = \mu, V(X) = 2\sigma^2$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    F($v_1,v_2), E(X) = , V(X) = $
-  \end{field}
-  \begin{field}
-F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\frac{(v_1+v_2-2)}{v_1(v)2-4}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Mean and Variance for Distributions not on bible (but in CB)
-      \begin{itemize}
-
-        \item Double Exponential$(\mu,\sigma), E(X) = , V(X) = $
-        \item F($v_1,v_2), E(X) = , V(X) = $
-        \item Logistic$(\mu,\beta), E(X) = , V(X) = $
-        \item Lognormal$(\mu,\sigma^2), E(X)=, V(X) = $
-        \item Pareto$(\alpha,\beta), E(X) =, V(X) =$
-        \item t$(v), E(X) = , V(X) = $
-        \item Weibull$(\gamma,\beta), E(X) =, V(X) = $
-      \end{itemize}
-  \end{field}
-  \begin{field}
-    Mean and Variance. for Distributions not on bible (but in CB)
-      \begin{itemize}
-
-        \item Logistic$(\mu,\beta), E(X) = \mu, V(X) = \frac{\phi^2\beta^2}{3}$
-        \item Lognormal$(\mu,\sigma^2), E(X)=e^{\mu + (\sigma^2/2)}) V(X) = e^{2(\mu+\sigma^2)} - e^{2\mu + \sigma^2}$
-        \item Pareto$(\alpha,\beta), E(X) = \frac{\beta\alpha}{\beta-1}, V(X) = \frac{\beta\alpha^2}{(\beta-1)^2(\beta-2)}$
-        \item t$(v), E(X) = 0, V(X) = \frac{v}{v-2}$
-        \item Weibull$(\gamma,\beta), E(X) = \beta^{1/\gamma}\Gamma(1 + 1/\gamma), V(X) = \beta^{2/\gamma}(\Gamma(1 + 2/\gamma) - \Gamma^2(1 + 1/\gamma))$
-      \end{itemize}
-  \end{field}
-\end{note}
-
-%%end_tag
-
-%%start_tag Casella Berger
-\tags{Theory1}
-%%start_tag Casella Ch1
-\begin{note}
-  \begin{field}
-    \begin{tabular}{|c| c c |}
-    \hline \\
-    & replace & no replacement \\
-    number of trials &  &  \\
-    Draw till nth success & & \\
-    \hline
-    \end{tabular}
-  \end{field}
-  \begin{field}
-    \begin{tabular}{|c| c c |}
-    \hline \\
-    & replace & no replacement \\
-    number of trials & Binom & Hypergeometric \\
-    Draw till nth success & Nbinom & Negative hypergeometric \\
-    \hline
-    \end{tabular}
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Plug uniform into inverse CDF
-  \end{field}
-  \begin{field}
-    Get cdf
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    \text{Sample Space}
-  \end{field}
-  \begin{field}
-    \text{The set}, $S$, of all possible outcomes of a particular experiment is called the \textit{sample space} for the experiment.
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    \text{Event}
-  \end{field}
-  \begin{field}
-    \text{An} \textit{event} is any collection of possible outcomes of an experiment, that is, any subset of $S$ (including $S$ itself).
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Union
-  \end{field}
-  \begin{field}
-    $ A \cup B = \{x:x \in A \text{ or } x \in B\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Intersection
-  \end{field}
-  \begin{field}
-    $A \cap B = \{x:x \in A \text{ and } x \in B\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Complementation
-  \end{field}
-  \begin{field}
-    $A^c = \{x:x\notin A\}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Commutativity
-    $$ A \cup B = $$
-    $$ A \cap B = $$
-  \end{field}
-  \begin{field}
-    Commutativity
-    $$ A \cup B = B \cup A$$
-    $$ A \cap B = B \cap A$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Associativity
-    $$ A \cup (B \cup C) = $$
-    $$ A \cap (B \cap C) = $$
-  \end{field}
-    \begin{field}
-      \text{Associativity}
-        $$ A \cup (B \cup C) = (A \cup B) \cup C$$
-        $$ A \cap (B \cap C) = (A \cap B) \cap C$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Distributive Laws
-    $$A \cap ( B \cup C) = $$
-    $$ A \cup ( B \cap C) = $$
-  \end{field}
-    \begin{field}
-      Distributive Laws
-        $$A \cap ( B \cup C) = (A \cap B) \cup (A \cap C)$$
-        $$ A \cup ( B \cap C) = (A \cup B) \cap ( A \cup C)$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    DeMorgan's Laws
-    $$(A \cup B)^c = $$
-    $$(A \cap B)^c = $$
-  \end{field}
-    \begin{field}
-      DeMorgan's Laws
-        $$(A \cup B)^c = A^c \cap B^c$$
-        $$(A \cap B)^c = A^c \cup B^c$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Disjoint
-  \end{field}
-    \begin{field}
-        Disjoint: Two events $A$ and $B$ are disjoint ( or mutually exclusive) if $ A \cap B = \emptyset $
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$P(A_1 \cap A_2 \cap \cdots \cap A_n)  = $$
-  \end{field}
-  \begin{field}
-    $$P(A_1)P(A_2|A_1)P(A_3|A_1A_2) \ldots P(A_n|A_1\cdots A_{n-1}) $$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$ P(A,B,C) = $$
-  \end{field}
-  \begin{field}
-    $$ P(A,B,C) = P(A)P(B|A)P(C|A,B)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$P(A \cup B \cup C) =  $$
-  \end{field}
-  \begin{field}
-    $$P(A \cup B \cup C) =  P(A) + P(B) + P(C) - P(A \cap B) - P(B\cap C) - P(A \cap C) + P(A \cap B \cap C)$$
-  \end{field}
-\end{note}
-
-
-
-\begin{note}
-  \begin{field}
-    Pairwise disjoint
-  \end{field}
-    \begin{field}
-        Two Events $A_1, A_2$ are pairwise disjoint ( or mutually exclusive) if $A_i \cap A_j = \emptyset $ for all $i \neq j$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-      Partition
-    \end{field}
-    \begin{field}
-        If $A_1, A_2, \ldots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the collection $A_1, A_2, \ldots$ forms a partition of $S$.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Sigma Algebra}
-    \end{field}
-    \begin{field}
-        \text{A} collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
-            \begin{enumerate}
-              \item $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
-              \item If $A \in \mathcal{B}$, then $A^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation)
-              \item If $A_1, A_2, \ldots \in \mathcal{B}$, then $\cup_{i-1}^\infty A_i \in \mathcal{B} \mathcal{B}$ is closed under countable unions)
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Probability Function / Kolmogorov Axioms}
-    \end{field}
-    \begin{field}
-        \text{Given a sample space} $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies:
-            \begin{enumerate}
-              \item $P(A) \geq 0$ for all $A \in \mathcal{B}$
-              \item $P(S) = 1$
-              \item If $A_1, A_2, \ldots \mathcal{B}$ are pairwise disjoint, then $P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$ (Axiom of Countable Additivity)
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-      If $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
-          $$P(A\cup B) = P(A) + P(B) $$
-        \text{Axiom of Finite Additivity}
-    \end{field}
-    \begin{field}
-        If $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
-            $$P(A\cup B) = P(A) + P(B) $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Properties of probability functions}
-        \begin{enumerate}
-              \item $P(\emptyset) = $
-              \item $P(A) $
-              \item $P(A^c) = $
-            \end{enumerate}
-    \end{field}
-    \begin{field}
-      \text{Properties of probability functions}
-        \begin{enumerate}
-              \item $P(\emptyset) = 0$
-              \item $P(A) \leq 1$
-              \item $P(A^c) = 1 - P(A)$
-            \end{enumerate}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = $$
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = P(B) - P(A \cap B)$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(A\cup B) = $$
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(A\cup B) = P(A) + P(B) - P(A \cap B)$$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then $P(A) \leq P(B)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        Bonferroni's Inequality
-        $$P(A\cap B)  $$
-    \end{field}
-    \begin{field}
-      Bonferroni's Inequality:
-        $$P(A\cap B) \geq P(A) + P(B) -1 $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = $
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = \sum_{i=1}^\infty P(A \cap C_i)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        Boole's Inequality
-        $$P(\cup_{i=1}^\infty A_i)$$
-    \end{field}
-    \begin{field}
-        \text{If} $P$ is a probability function,
-            $$P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i) \text{ for any sets } A_1, A_2, \ldots $$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \text{Fundamental Theorem of Counting}
-    \end{field}
-    \begin{field}
-        \text{If} a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        Ordered without replacement: number of arrangements of size $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-        $$\frac{n!}{(n-r)!}$$
-
-        eg lottery with $n=44$ choices for $r=6$ values, cant use same number twice, order matters
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        Unordered without replacement: number of arrangements of size $r$ from $n$ objects
-      \end{field}
-    \begin{field}
-        $$\binom{n}{r} = \frac{n!}{r!(n-r!)}$$
-
-        eg lottery with $n=44$ choices for $r=6$ values, cant use same number twice, order does not matter (Use ordered without replacement and divide by redundant orderings )
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        Ordered with replacement: number of arrangements of size $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-      Ordered with replacement: number of arrangements of size $r$ from $n$ objects
-        $$n^r$$
-        eg lottery with $n=44$ choices for $r=6$ values, can use same number twice, order matters
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        Unordered with replacement: number of arrangements of size $r$ from $n$ objects
-    \end{field}
-    \begin{field}
-      Unordered with replacement: number of arrangements of size $r$ from $n$ objects
-        $$\binom{n+r-1}{r} = \frac{(n+r-1)!}{r!(n-1)!}$$
-
-        eg lottery with $n=44$ choices for $r=6$ values, can use same number twice, order does not matters
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Number of arrangements of size $r$ from $n$ objects
-
-    \begin{tabular}{|c| c c|}
-      \hline \\
-       & Without Replacement & With replacement\\
-       \hline \\
-       Ordered & & \\
-       Unordered & & \\
-       \hline
-    \end{tabular}
-  \end{field}
-  \begin{field}
-    Number of arrangements of size $r$ from $n$ objects
-
-    \begin{tabular}{|c| c c|}
-      \hline \\
-       & Without Replacement & With replacement\\
-       \hline \\
-       Ordered & $\frac{n!}{(n-r)!}$ & $n^r$ \\
-       Unordered & $\binom{n}{r}$& $\binom{n+r-1}{r}$ \\
-       \hline
-    \end{tabular}
-  \end{field}
-\end{note}
-
-
-
-\begin{note}
-    \begin{field}
-        Binomial Coefficient $\binom{n}{r}$
-    \end{field}
-    \begin{field}
-      Binomial Coefficient
-        $$\binom{n}{r} = \frac{n!}{r!(n-r)!}$$
-    \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $$P(A|B)=$$
-  \end{field}
-  \begin{field}
-    $$ P(A|B) = \frac{P(A \cap B)}{P(B)} $$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Statistically independent
-    $P(A \cap B) = $
-  \end{field}
-  \begin{field}
-    Statistically independent
-    $P(A \cap B) = P(A)P(B)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    If $A$ and $B$ are independent events, what else is independent?
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $A $ and $B^c$
-      \item $A^c$ and $B$
-      \item $A^c$ and $B^c$
-    \end{itemize}
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Mutually independent
-  \end{field}
-  \begin{field}
-    A collection of events $A_1, \ldots , A_n$ are mutually independent for any subcollection $A_{i1}, \ldots , A_{ik}$, we have
-    $$ P((\cap_{j=1}^k A_{ij})) = \prod_{j=1}^k P(A_{ij}) $$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Random variable
-  \end{field}
-  \begin{field}
-    A random variable is a function from a sample space $S$ into the real numbers
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Definition of a pdf
-  \end{field}
-  \begin{field}
-    A function $f_X(x)$ is a pdf (or pmf) of a random variable $X$ if and only if
-    \begin{enumerate}
-      \item $f_x(x) \geq 0$ for all $x$
-      \item $\sum_x f_x(x) = 1$ or $\int_{-\infty}^\infty f_x(x) dx = 1$
-    \end{enumerate}
-  \end{field}
-\end{note}
-
-
-%%end_tag
-%%start_tag Casella Ch2
-\begin{note}
-  \begin{field}
-    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
-    \begin{enumerate}
-      \item If $g$ is an increasing function on $X$, $F_Y(y) = $ for $y \in Y$
-      \item If $g$ is a decreasing function on $X$ and $X$ is a continuous random variable, $F_y(y) = $ for $y \in Y$
-    \end{enumerate}
-  \end{field}
-  \begin{field}
-    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
-    \begin{enumerate}
-      \item If $g$ is an increasing function on $X$, $F_Y(y) = F_X(g^{-1}(y))$ for $y \in Y$
-      \item If $g$ is a decreasing function on $X$ and $X$ is a continuous random variable, $F_y(y) = 1 - F_X(g^{-1}(y))$ for $y \in Y$
-    \end{enumerate}
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    Method of pdf
-  \end{field}
-  \begin{field}
-    Conditions:
-    \begin{enumerate}
-      \item $g$ is a monotone function
-      \item $f_X(x)$ is continuous on $X$
-      \item $g^{-1}(y)$ has a continuous derivative
-    \end{enumerate}
-    Let $X$ have pdf $f_x(x)$ and let $Y = g(Y)$
-
-    $$f_Y(y) = f_x(g^{-1}(y))\big|\frac{d}{dy}g^{-1}(y)$$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
-    \begin{itemize}
-      \item If $g$ is an increasing function, $F_Y(y) = $
-      \item If $g$ is a decreasing function, and $X$ is a continuous random variable, $F_Y(y) = $
-    \end{itemize}
-  \end{field}
-  \begin{field}
-    (Theorem) Let $X$ have cdf $F_X(x)$, let $Y = g(X)$
-    \begin{itemize}
-      \item If $g$ is an increasing function, $F_Y(y) = F_x(g^{-1}(y))$
-      \item If $g$ is a decreasing function, and $X$ is a continuous random variable, $F_Y(y) = 1 - F_X(g^{-1}(y))$
-    \end{itemize}
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    eg: $X \sim Unif(0,1)$, $Y = -log(X)$
-    $F_Y(y) = $
-  \end{field}
-  \begin{field}
-    $F_Y(y) = 1 - F_x(g^{-1}(y)) = 1 - F_X(e^{-y}) = 1 - e^{-y}$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $X$ is a continuous random variable. For $y > 0$,
-    $F_Y(y) = $
-  \end{field}
-  \begin{field}
-    \begin{align*}
-      F_Y(y) &= P(Y \leq y)\\
-      &= P(X^2 \leq y)\\
-      &= P(- \sqrt{y} \leq X \leq \sqrt{y})\\
-      &= P(X \leq \sqrt{y}) - P(X \leq -\sqrt{y})\\
-      &= F_X(\sqrt{y}) - F_X( - \sqrt{y})
-    \end{align*}
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Pdf of $F_X(g(X))$, where $Y = g(X)$
-  \end{field}
-  \begin{field}
-    Chain rule:
-    $f_Y(y) = g'(y)f(g(y))$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Method of pdf if $g$ is not monotone all entire domain
-  \end{field}
-  \begin{field}
-    $f_Y = \sum f_x(g_i^{-1}(y))|\frac{d}{dy}g_i^{-1}(y)|$ $y \in Y$, 0 otherwise
-
-    eg: $Y = X^2$,
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $P(Y  \leq y)$ when $Y = F_X(x)$
-  \end{field}
-  \begin{field}
-    \begin{align*}
-      P(Y \leq y) &= P(X \leq F_x^{-1}(y))\\
-      &= F_X(F_X^{-1}(y))\\
-      &= y
-    \end{align*}
-    $Y$ is uniformly distributed
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $M_x(t) = $ (discrete )
-  \end{field}
-  \begin{field}
-    $M_x(t) = E(e^{tX}) = \sum_x e^{tX}P(X)$ (discrete )
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $M_x(t) = $ (continuous)
-  \end{field}
-  \begin{field}
-    $M_x(t) = E(e^{tX}) = \int_{-\infty}^\infty e^{tX}f_x(x)dx$ (continuous)
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $E(X^n) = $
-  \end{field}
-  \begin{field}
-    $E(X^n) = M_x^n(0) = \frac{d^n}{dt^n}M_x(t)|_{t=0}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $M(aX + b)(t) = $
-  \end{field}
-  \begin{field}
-    $M(aX + b)(t) = e^{bt}M_x(at)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    If $E(X^n)$ exists then...
-  \end{field}
-  \begin{field}
-    If $E(X^n)$ exists then $E(X^m)$ exists for $m \leq n$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    If $X_i$ are independent and $Y = a_1X_1 + \cdots + a_nX_n + b$, then $M_Y(t) = $
-  \end{field}
-  \begin{field}
-    If $X_i$ are independent and $Y = a_1X_1 + \cdots + a_nX_n$, then $M_Y(t) = e^{bt}\prod_{i=1}^n M_{X_i}(a_i t) $
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Example of using MGF for finding expected value:
-    MGF gamma: $(\frac{1}{1 - \beta t})^\alpha$: $E(X) = $
-  \end{field}
-  \begin{field}
-    $E(X) = \frac{\alpha\beta}{(1 - \beta t)^{\alpha+1}}|_{t=0} = \alpha \beta$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Using MGF to relate distributions: MGF exp = $( 1 - \beta t)^{-1}$
-  \end{field}
-  \begin{field}
-    $Y = \sum X_i$ is gamma as MGF gamma is $(1 - \beta t)^{-\alpha}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    First step in transforming a RV
-  \end{field}
-  \begin{field}
-    Determine support
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $nth$ Moment of X
-  \end{field}
-  \begin{field}
-    $E(X^n)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $n$th central moment of $X$
-  \end{field}
-  \begin{field}
-    $E(X - \mu)^n$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $(a + b)^n = $
-  \end{field}
-  \begin{field}
-    $(a + b)^n = \sum_{x = 0}^n \binom{n}{x}a^xb^{n-x}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $\sum_{x = 0}^n \binom{n}{x}a^xb^{n-x} = $
-  \end{field}
-  \begin{field}
-    $(a + b)^n$
-  \end{field}
-\end{note}
-
-%%end_tag
-%%start_tag Casella Ch3
-\begin{note}
-  \begin{field}
-    $N$ balls $r$ red $N - r$ green. Select $n$ balls. Probability that $y$ are red?
-  \end{field}
-  \begin{field}
-    Hypergeometric distribution($N,r,n$)
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Hypergeometric distribution description $(N,r,n)$
-  \end{field}
-  \begin{field}
-    $N$ is total balls, $r$ is number red balls, $n$ is number balls selected.
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Negative binomial description
-  \end{field}
-  \begin{field}
-    Number of Bernoulli trials required to get a fixed number of successes. $r$ being the $r$th success
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Geometric description
-  \end{field}
-  \begin{field}
-    Modeling waiting time. $X$ is the trial at which the first success occurs.
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Location-scale family for $f(x)$
-  \end{field}
-  \begin{field}
-    $1/\sigma f((x - \mu)/\sigma)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Given $X$ give the mean and variance for the location-scale random $Y= 1/\sigma f((y - \mu)/\sigma)$ variable
-  \end{field}
-  \begin{field}
-    $E(Y) = \sigma E(X) + \mu$, $V(Y) = \sigma^2 V(X)$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $X \sim Pois(\lambda)$ $P(X = x+1) = $
-  \end{field}
-  \begin{field}
-    $X \sim Pois(\lambda)$ $P(X = x+1) = \frac{\lambda}{x + 1}P(X = x)$
-  \end{field}
-\end{note}
-
-%%end_tag
-
-%%start_tag Casella Ch4
-
-\begin{note}
-  \begin{field}
-    $f(y|x) = $
-  \end{field}
-  \begin{field}
-    $f(y|x) = \frac{f(x,y)}{f_x(x)}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $E(g(Y)|x) = $
-  \end{field}
-  \begin{field}
-    $E(g(Y)|x) = \int_{-\infty}^\infty g(y)f(y|x) dy $
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Example of calculating donditional pdfs
-$f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
-
-  \end{field}
-  \begin{field}
-    \begin{align*}
-      f_x(x) = \int_{-\infty}^\infty f(x,y) dy \\
-      &= e^{-x}\\
-      \\
-      f(y|x) &= \frac{f(x,y)}{f_x(x)}\\
-      &= \frac{e^{-y}}{e^{-x}} \text{ if } y > x\\
-      &= \frac{0}{e^{-x}} \text{ if } y \leq x
-    \end{align*}
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    Let ($X,Y$) be given as $f(x,y)$. Then $X$ and $Y$ are independent if
-  \end{field}
-  \begin{field}
-    Let ($X,Y$) be given as $f(x,y)$. Then $X$ and $Y$ are independent if there exist functions $g(x), h(y)$ such that $f(x,y) = g(x)h(y)$ (factorization - don't need to compute marginals )
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Let $X,Y$ be independent. Then $E(g(X)h(Y)) = $
-  \end{field}
-  \begin{field}
-    $E(g(X)h(Y)) = (E(g(X)))(E(h(Y)))$
-
-    example: $E(X^2Y) = E(X^2)E(Y)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X,Y$ independent\\ $Z = X + Y$  \\ $M_Z(t) = $
-  \end{field}
-  \begin{field}
-    $M_Z(t) = M_x(t)M_Y(t)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Method of pdf bivariate
-  \end{field}
-  \begin{field}
-    $f_{u,v}(u,v) = f_{x,y}(h_1(u,v),h_2(u,v))|J|$\\
-    Where $|J| = \begin{vmatrix}
-      \frac{\partial  x}{\partial  u} & \frac{\partial  x }{\partial v }\\ \frac{\partial  y }{\partial u } & \frac{\partial  y }{\partial v }
-    \end{vmatrix} = \frac{\partial  x }{\partial u } \frac{\partial  y}{\partial v } - \frac{\partial  y }{\partial u } \frac{\partial  x }{\partial v }$
-
-    and $u = g_1(x,y), v = g_2(x,y)$ and $x = h_1(x,y), y = h_2(x,y)$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $X,Y$ independent, $g(X)$ a function only of $X$ and $h(Y)$ a function only of $Y$. Then
-  \end{field}
-  \begin{field}
-    $g(X)$ and $g(Y)$ are independent.
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Correlation
-  \end{field}
-  \begin{field}
-    $\rho_{XY} = \frac{Cov(X,Y)}{\sigma_X\sigma_Y}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $m$ independent trials, each trial resulting in one of $n$ outcomes, with probabilities $p_1, \ldots, p_n$. $X_i$ is the count of the number of times the $i$th outcome occured in the $m$ trials.
-  \end{field}
-  \begin{field}
-    Multinomial distribution
-    $f(x_1, \ldots, x_n) = \frac{m!}{x_1! \cdots x_n!}p_1^{x_i} \cdots p_n^{x_n}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $|E(XY)| \leq $ (Cauchy-Schwartz)
-  \end{field}
-  \begin{field}
-    $|E(XY)| \leq E(|XY|) \leq (E(|X|^2))^{1/2}(E(|Y|^2))^{1/2}$
-  \end{field}
-\end{note}
-
-
-\begin{note}
-  \begin{field}
-    $E(g(X)) \geq $ where $g$ is a convex function
-  \end{field}
-  \begin{field}
-    $E(g(X)) \geq g(E(X))$ where $g$ is a convex function (Jensen's inequlity)
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Ranking of types of means
-  \end{field}
-  \begin{field}
-    $\mu_{\text{harmonic}} \leq \mu_{\text{geometric}} \leq \mu_{\text{arithmetic}}$ By Jensens inequality (using logs )
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    Linear transformations of multivariate normal $X \sim N(\vec{\mu},\Sigma) $\\
-    $A \vec{X} + \vec{b}$
-  \end{field}
-  \begin{field}
-    $A \vec{X} + \vec{b} \sim N(A \vec{\mu} + \vec{v}, A \Sigma A^t)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $X \sim N(\vec{\mu},\Sigma) $\\
-
-    $\vec{X}_a | \vec{X}_b \sim $
-  \end{field}
-  \begin{field}
-    $\vec{X}_a | \vec{X}_b \sim N\big(\vec{\mu_a} + \Sigma_{ab} \Sigma^{-1}_{bb}(\vec{x}_b - \vec{\mu}_b), \Sigma_{ba} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}$\\
-
-ex: $(X_1,X_2,X_3), \vec{\mu} = (1,2,3)^t, \Sigma = \begin{pmatrix}
-  3 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 3
-\end{pmatrix}$
-$X1,X_3 | X_2 = 1$\\
-$a = \{1,3\}, b = \{2\}$\\
-$\mu_a = (1,3)^t, \mu_b = 1$\\
-$\Sigma_{aa} = \begin{pmatrix}
-  3 & 0 \\ 0 & 3
-\end{pmatrix}, \Sigma_{ab} = (1,1)^t$
-
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $(X,Y)$ multinomial \\
-    $aX + bY \sim $
-  \end{field}
-  \begin{field}
-    $aX + bY \sim N(a \mu_x + b\mu_y, a^2 \sigma_x^2 + b^2 \sigma_y^2 + 2 ab \rho \sigma_x \sigma_y)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    $(X,Y)$ multinomial \\
-    $Y|X\sim $
-  \end{field}
-  \begin{field}
-    $Y|X\sim  N(\mu_y + \rho \frac{\sigma_y}{\sigma_x}(x - \mu_x), \sigma_Y^2(1 - \rho^2))$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    CDF for Max order statistic
-  \end{field}
-  \begin{field}
-    $(F(x))^n$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    PDF for Max order statistic
-  \end{field}
-  \begin{field}
-    $n(F(x))^{n-1}f(x)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    CDF for Min order statistic
-  \end{field}
-  \begin{field}
-    $1 - (1 - F(x))^n$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    PDF for Min order statistic
-  \end{field}
-  \begin{field}
-    $n(1 - F(x))^{n-1}f(x)$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    CDF for $k$th order statistic
-  \end{field}
-  \begin{field}
-    $F_{(k)}(x) = \sum_{j = k}^n \binom{n}{j}(F(x))^j(1 -F(x))^{n-j}$
-  \end{field}
-\end{note}
-
-\begin{note}
-  \begin{field}
-    PDF for $k$th order statistic
-  \end{field}
-  \begin{field}
-    $f_{(k)}(x) = k \binom{n}{k}f(x)F(x)^{k-1}(1 - F(x))^{n-k}$
-  \end{field}
-\end{note}
-
-%%end_tag
-
-%%end_tag
-
 %%start_tag Undergrad_Textbook
 
 \tags{UndergradTextbook}
@@ -2141,11 +692,6 @@ $\Sigma_{aa} = \begin{pmatrix}
 \end{note}
 
 %%end_tag
-% Todo
-% Gamma properties
-% Exponential families
-% Approximate (limit ) relationships from wiki page
-
 
 %%start_tag Calculus
 
@@ -2479,11 +1025,11 @@ $\Sigma_{aa} = \begin{pmatrix}
 \end{note}
 
 
-
-
-
-
-
 %%end_tag
 
+
+
+% Todo
+% Exponential families
+% Approximate (limit ) relationships from wiki page
 \end{document}

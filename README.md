@@ -4,7 +4,7 @@
 
 Created for studying for my OSU grad stats comps
 
-Two folders are Methods and Theory, for the first year year-long sequences.
+Two folders are Methods and Theory, for the first year year-long sequences. Each has several .tex files corresponding to the topic the flashcards cover (which correspond to tags in anki). To have a full deck of flashcards, import each file. (Note this conversion of 1 file overall to multiple separate files corresponding to different tags is in progress ) Note the tags contain a version number so old or updated cards can be easily deleted. 
 
 These flashcards are intended to use with the free Anki software https://apps.ankiweb.net
 
@@ -14,15 +14,12 @@ The pdf files have an overview of all the flashcards, but are not intended to be
 
 ## In progress flashcards
 ### Theory
- - Theory 1
  - Theory 2
  - Theory 3
  - Useful math facts
  - Distribution relationships
 
  ## Methods
- - Methods 1 (done up to two sample binary response )
- - Methods 2
  - Methods 3
 
 ## My workflow to use these flashcards:
@@ -40,15 +37,19 @@ The pdf files have an overview of all the flashcards, but are not intended to be
  - Select tag of interest
  - This will create a new deck with only the flashcards of interest
 
- ## Current tags/topics available
+ ## Current Files/tags/topics available
 
  ### Theory
+ - File: Theory2.tex tag: Theory2
  - Distribution Relationships (distributionrelationshps)
- - From Casella Berger (CasellaCh1)
+ - From Theory 1
+ - Calculus
  - From online stats cheatsheet (FromStatCheatsheet)
+ - From my undergraduate probability textbook
 
  ### Methods
  - Methods 1 (Methods1)
+ - Methods 2
 
 
 
