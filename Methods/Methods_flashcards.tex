@@ -623,7 +623,7 @@
   \begin{itemize}
    \item Test name: Asymptotic $t$-test for population variance
    \item Test Statistic: $Y = (X_i - \bar{X})^2$, $$ t(\sigma_0^2)  = \frac{\bar{Y - \frac{n-1}{n}\sigma_0^2}}{\sqrt{s_y^2/n}} \to N(0,1)$$
-   Note $\bar{Y} = \frac{n-1}{n}s^2$
+         Note $\bar{Y} = \frac{n-1}{n}s^2$
    \item Tests that the population mean of the $Y_i$ is $\frac{n-1}{n}\sigma_0^2$
    \item Test Reference Distribution $ \frac{\frac{n-1}{n}s^2 - \frac{n-1}{n}\sigma^2}{\sqrt{Var(\frac{n-1}{n}s^2)}} = \frac{\bar{Y}- \frac{n-1}{n}\sigma^2}{\sqrt{Var(\bar{Y})}} \to N(0,1)$, so we can use t-test
    \item Critical Value/ Rejection region
@@ -809,11 +809,11 @@
 
 \begin{note} \begin{field} \tiny 100041 \end{field}
  \begin{field}
-   Data setting $X_1, \ldots , X_n$ iid $F_x$,\\
-    $Y_1, \ldots, Y_n$ iid $F_y$,\\
-     $X_i$ not independent $Y_i$,\\
-      $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$. \\
-      Estimate $d = \mu_x - \mu_y$, when $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
+  Data setting $X_1, \ldots , X_n$ iid $F_x$,\\
+  $Y_1, \ldots, Y_n$ iid $F_y$,\\
+  $X_i$ not independent $Y_i$,\\
+  $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$. \\
+  Estimate $d = \mu_x - \mu_y$, when $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
   \begin{itemize}
    \item Test name:
    \item Test Statistic
@@ -824,10 +824,10 @@
  \end{field}
  \begin{field}
   Data setting $X_1, \ldots , X_n$ iid $F_x$,\\
-   $Y_1, \ldots, Y_n$ iid $F_y$,\\
-    $X_i$ not independent $Y_i$,\\
-     $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$. \\
-     Estimate $d = \mu_x - \mu_y$, when $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
+  $Y_1, \ldots, Y_n$ iid $F_y$,\\
+  $X_i$ not independent $Y_i$,\\
+  $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$. \\
+  Estimate $d = \mu_x - \mu_y$, when $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ known
   \begin{itemize}
    \item Test name: Paired z-test
    \item Test Statistic: $z(d_0) = \frac{(\bar{X} - \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{n} + \frac{\sigma_Y^2}{n} - 2 \frac{\sigma_{XY}}{n}}} = \frac{\bar{D} - d_0}{\sqrt{\frac{\sigma_D^2}{n}}}$
@@ -1037,16 +1037,16 @@
   \begin{itemize}
 
    \item Note, requires a table that keeps track of the pairs
-   \begin{tabular}{|c|c c|c|}
-     & Measurement 1 & & \\
-     Measurement 2 & No & Yes & Total \\
-     \hline\\
-     No & a & b & $R_1$\\
-     Yes & c & d & $R_2$\\
-     \hline \\
-     Total & $C_1$ & $C_2$ & n\\
-     \hline
-  \end{tabular}
+         \begin{tabular}{|c|c c|c|}
+                        & Measurement 1 &       &       \\
+          Measurement 2 & No            & Yes   & Total \\
+          \hline                                        \\
+          No            & a             & b     & $R_1$ \\
+          Yes           & c             & d     & $R_2$ \\
+          \hline                                        \\
+          Total         & $C_1$         & $C_2$ & n     \\
+          \hline
+         \end{tabular}
    \item Test name: McNemar's Test
    \item Test Statistic: $z = \frac{b-c}{\sqrt{b+c}}$
    \item Test Reference Distribution: $z \sim N(0,1)$, $z^2 \sim \chi_1^2$
@@ -1275,7 +1275,7 @@
 \begin{note} \begin{field} \tiny 100063 \end{field}
  \begin{field}
   Test for data setting: Sample 1: $X_{1,1}, \ldots , X_{1n_1}$ from population 1 with mean $\mu_1$,\\
-   Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$,\\ $\ldots $ Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
+  Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$,\\ $\ldots $ Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
   \begin{itemize}
    \item Independence within and between groups
    \item Populations (approximately ) normal
@@ -1308,453 +1308,453 @@
 \tags{Methods2}
 
 \begin{note} \begin{field} \tiny 100064 \end{field}
-  \begin{field}
-    Vectors $\mathbf{x}$ and $\mathbf{y}$ orthogonal
-  \end{field}
-  \begin{field}
-    Vectors $\mathbf{x}$ and $\mathbf{y}$ orthogonal (perpendicular) if $(x,y) = \mathbf{x}^t \mathbf{y} = 0$
-  \end{field}
+ \begin{field}
+  Vectors $\mathbf{x}$ and $\mathbf{y}$ orthogonal
+ \end{field}
+ \begin{field}
+  Vectors $\mathbf{x}$ and $\mathbf{y}$ orthogonal (perpendicular) if $(x,y) = \mathbf{x}^t \mathbf{y} = 0$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100065 \end{field}
-  \begin{field}
-    A matrix $\mathbf{A}$ is orthogonal if:
-  \end{field}
-  \begin{field}
-    A matrix $\mathbf{A}$ is orthogonal if $\mathbf{A}^t \mathbf{A} = \mathbf{A} \mathbf{A}^t = \mathbf{I}_n$
-  \end{field}
+ \begin{field}
+  A matrix $\mathbf{A}$ is orthogonal if:
+ \end{field}
+ \begin{field}
+  A matrix $\mathbf{A}$ is orthogonal if $\mathbf{A}^t \mathbf{A} = \mathbf{A} \mathbf{A}^t = \mathbf{I}_n$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100066 \end{field}
-  \begin{field}
-    A set of $n$ vectors are linearly dependent
-  \end{field}
-  \begin{field}
-    A set of $n$ vectors are linearly dependent if there exist constants $c_1, \ldots c_n$ not all 0 such that $\sum_{j=1}^n c_j \mathbf{x})j = 0$
-  \end{field}
+ \begin{field}
+  A set of $n$ vectors are linearly dependent
+ \end{field}
+ \begin{field}
+  A set of $n$ vectors are linearly dependent if there exist constants $c_1, \ldots c_n$ not all 0 such that $\sum_{j=1}^n c_j \mathbf{x})j = 0$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100067 \end{field}
-  \begin{field}
-    Inverse of a square matrix: $\mathbf{A}_{n\times n}$
-  \end{field}
-  \begin{field}
-    The matrix that will satisfy $AA^{-1} = I$
-  \end{field}
+ \begin{field}
+  Inverse of a square matrix: $\mathbf{A}_{n\times n}$
+ \end{field}
+ \begin{field}
+  The matrix that will satisfy $AA^{-1} = I$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100068 \end{field}
-  \begin{field}
-    Inverse of $\mathbf{A}$, $\mathbf{A}^{-1}$ where $\mathbf{A}$ is $2 \times 2$
-  \end{field}
-  \begin{field}
-    $\mathbf{A}^{-1} = \begin{pmatrix}
-      a & b \\ c & d
-    \end{pmatrix}^{-1} = \frac{1}{ad - bc}\begin{pmatrix}
-      d & -b \\ -c & a
-    \end{pmatrix}$
-  \end{field}
+ \begin{field}
+  Inverse of $\mathbf{A}$, $\mathbf{A}^{-1}$ where $\mathbf{A}$ is $2 \times 2$
+ \end{field}
+ \begin{field}
+  $\mathbf{A}^{-1} = \begin{pmatrix}
+    a & b \\ c & d
+   \end{pmatrix}^{-1} = \frac{1}{ad - bc}\begin{pmatrix}
+    d & -b \\ -c & a
+   \end{pmatrix}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100069 \end{field}
-  \begin{field}
-    A square matrix is invertible if:
-  \end{field}
-  \begin{field}
-    A square matrix is invertible if the columns (rows) are linearly independent. (If the columns are not independent, the matrix is called singular)
-  \end{field}
+ \begin{field}
+  A square matrix is invertible if:
+ \end{field}
+ \begin{field}
+  A square matrix is invertible if the columns (rows) are linearly independent. (If the columns are not independent, the matrix is called singular)
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100071 \end{field}
-  \begin{field}
-    Square of matrix $\mathbf{A}$
-  \end{field}
-  \begin{field}
-    $\mathbf{AA}^t$
-  \end{field}
+ \begin{field}
+  Square of matrix $\mathbf{A}$
+ \end{field}
+ \begin{field}
+  $\mathbf{AA}^t$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100072 \end{field}
-  \begin{field}
-    Norm of a vector $|\mathbf{x}|$
-  \end{field}
-  \begin{field}
-    $|\mathbf{x}| = \sqrt{\sum_{j=1}^p x_j^2}$
-  \end{field}
+ \begin{field}
+  Norm of a vector $|\mathbf{x}|$
+ \end{field}
+ \begin{field}
+  $|\mathbf{x}| = \sqrt{\sum_{j=1}^p x_j^2}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100073 \end{field}
-  \begin{field}
-    Determinant of a $2\times 2 $ matrix
-  \end{field}
-  \begin{field}
-    $\bigg| \begin{pmatrix}
-      a & b \\ c & d
-    \end{pmatrix}\bigg| = ad - bc $
-  \end{field}
+ \begin{field}
+  Determinant of a $2\times 2 $ matrix
+ \end{field}
+ \begin{field}
+  $\bigg| \begin{pmatrix}
+    a & b \\ c & d
+   \end{pmatrix}\bigg| = ad - bc $
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100074 \end{field}
-  \begin{field}
-    Trace of a square matrix
-  \end{field}
-  \begin{field}
-    Sum of the diagonal elements
-  \end{field}
+ \begin{field}
+  Trace of a square matrix
+ \end{field}
+ \begin{field}
+  Sum of the diagonal elements
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100075 \end{field}
-  \begin{field}
-    Rank of a matrix
-  \end{field}
-  \begin{field}
-    Number of linearly independent columns
-  \end{field}
+ \begin{field}
+  Rank of a matrix
+ \end{field}
+ \begin{field}
+  Number of linearly independent columns
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100076 \end{field}
-  \begin{field}
-    Eigenvalue and eigenvector
-  \end{field}
-    \begin{field}
-      $\lambda $ is an eigen value and  $\mathbf{u}_{n \times 2}$ is the eigen vector of $\mathbf{A}_{n \times n}$ if $\mathbf{Au} = \lambda \mathbf{u}$
-      \begin{itemize}
-        \item A real symmetric matrix has $n$ eigen values  and $n$ eigen vectors, and each are orthogonal to each other
-        \item Roots of $det(\mathbf{A} - \lambda  \mathbf{I})$ determine the eigenvalues of $A$
-      \end{itemize}
-    \end{field}
+ \begin{field}
+  Eigenvalue and eigenvector
+ \end{field}
+ \begin{field}
+  $\lambda $ is an eigen value and  $\mathbf{u}_{n \times 2}$ is the eigen vector of $\mathbf{A}_{n \times n}$ if $\mathbf{Au} = \lambda \mathbf{u}$
+  \begin{itemize}
+   \item A real symmetric matrix has $n$ eigen values  and $n$ eigen vectors, and each are orthogonal to each other
+   \item Roots of $det(\mathbf{A} - \lambda  \mathbf{I})$ determine the eigenvalues of $A$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 % Come back to lecture 1 for more linear algebra notes
 
 \begin{note} \begin{field} \tiny 100077 \end{field}
-  \begin{field}
-    Matrix properties
-    \begin{itemize}
-      \item $(AB)^{t} = $
-      \item $(A+B)^t = $
-      \item $(AB)^{-1} = $
-      \item $(\mathbf{A}^{-1})^t = $
-    \end{itemize}
-  \end{field}
-  \begin{field}
-    Matrix properties
-    \begin{itemize}
-      \item $(AB)^{t} = B^tA^t$
-      \item $(A+B)^t = A^t + B^t$
-      \item For invertible matrices $(AB)^{-1} = B^{-1}A^{-1}$
-      \item For invertible matrices $(\mathbf{A}^{-1})^t = (\mathbf{A}^t)^{-1}$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Matrix properties
+  \begin{itemize}
+   \item $(AB)^{t} = $
+   \item $(A+B)^t = $
+   \item $(AB)^{-1} = $
+   \item $(\mathbf{A}^{-1})^t = $
+  \end{itemize}
+ \end{field}
+ \begin{field}
+  Matrix properties
+  \begin{itemize}
+   \item $(AB)^{t} = B^tA^t$
+   \item $(A+B)^t = A^t + B^t$
+   \item For invertible matrices $(AB)^{-1} = B^{-1}A^{-1}$
+   \item For invertible matrices $(\mathbf{A}^{-1})^t = (\mathbf{A}^t)^{-1}$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100078 \end{field}
-  \begin{field}
+ \begin{field}
 
-  \end{field}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100079 \end{field}
-  \begin{field}
-    $$ E(Y_i | X_{i1}, \ldots , X_{ip}) = $$
-    Where $Y_i$ is the $i$th response and $X_{ij}$ is the $i$th value of the $j$th predictor
-  \end{field}
-  \begin{field}
-    Since the error terms $\epsilon_i$ are independent and normally distributed with mean 0,
-    $$ E(Y_i | X_{i1}, \ldots , X_{ip}) = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_pX_{ip}$$
-  \end{field}
+ \begin{field}
+  $$ E(Y_i | X_{i1}, \ldots , X_{ip}) = $$
+  Where $Y_i$ is the $i$th response and $X_{ij}$ is the $i$th value of the $j$th predictor
+ \end{field}
+ \begin{field}
+  Since the error terms $\epsilon_i$ are independent and normally distributed with mean 0,
+  $$ E(Y_i | X_{i1}, \ldots , X_{ip}) = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_pX_{ip}$$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100080 \end{field}
-  \begin{field}
-    Matrix form of linear Model and data
-  \end{field}
-  \begin{field}
-    $$ \begin{pmatrix}
-      Y_1 \\ Y_2 \\ \vdots \\ Y_n
-    \end{pmatrix}  = \begin{pmatrix}
-      1 & X_{11} & X_{12} & \cdots & X_{1p}\\
-      1 & X_{21} & X_{22} & \cdots & X_{2p}\\
-      \vdots & \vdots & \vdots & & \vdots \\
-      1 & X_{n1} & X_{n2} & \cdots & X_{np}
-    \end{pmatrix} \begin{pmatrix}
-      \beta_0 \\ \beta_1 \\ \vdots \\ \beta_p
-    \end{pmatrix} + \begin{pmatrix}
-      \epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n
-    \end{pmatrix}$$
-  \end{field}
+ \begin{field}
+  Matrix form of linear Model and data
+ \end{field}
+ \begin{field}
+  $$ \begin{pmatrix}
+    Y_1 \\ Y_2 \\ \vdots \\ Y_n
+   \end{pmatrix}  = \begin{pmatrix}
+    1      & X_{11} & X_{12} & \cdots & X_{1p} \\
+    1      & X_{21} & X_{22} & \cdots & X_{2p} \\
+    \vdots & \vdots & \vdots &        & \vdots \\
+    1      & X_{n1} & X_{n2} & \cdots & X_{np}
+   \end{pmatrix} \begin{pmatrix}
+    \beta_0 \\ \beta_1 \\ \vdots \\ \beta_p
+   \end{pmatrix} + \begin{pmatrix}
+    \epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n
+   \end{pmatrix}$$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100081 \end{field}
-  \begin{field}
-    Assumptions of a linear model
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Linearity: $E(\epsilon_i) = 0$ or $E(\epsilon) = \mathbf{0}$ or $E(\mathbf{Y}) = \mathbf{X}\beta$
-      \item Constant variance $V(Y_i) = \sigma^2 = Var(\epsilon_i)$ or $V(\epsilon) = \sigma^2 \mathbf{I}_n$
-      \item Normality $Y_i$ follows normal distribution, equivalently, $\epsilon_i$ follows normal distribution
-      \item Independence $Y_i$ are indepednent equivalently under normality $Cov(\epsilon_i, \epsilon_j) = 0$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Assumptions of a linear model
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Linearity: $E(\epsilon_i) = 0$ or $E(\epsilon) = \mathbf{0}$ or $E(\mathbf{Y}) = \mathbf{X}\beta$
+   \item Constant variance $V(Y_i) = \sigma^2 = Var(\epsilon_i)$ or $V(\epsilon) = \sigma^2 \mathbf{I}_n$
+   \item Normality $Y_i$ follows normal distribution, equivalently, $\epsilon_i$ follows normal distribution
+   \item Independence $Y_i$ are indepednent equivalently under normality $Cov(\epsilon_i, \epsilon_j) = 0$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100082 \end{field}
-  \begin{field}
-    Interpretation of intercept of linear model
-  \end{field}
-  \begin{field}
-    Mean response when all explanatory variables are 0
-  \end{field}
+ \begin{field}
+  Interpretation of intercept of linear model
+ \end{field}
+ \begin{field}
+  Mean response when all explanatory variables are 0
+ \end{field}
 \end{note}
 
 
 
 \begin{note} \begin{field} \tiny 100083 \end{field}
-  \begin{field}
-    Interpretation of slopes of linear model
-  \end{field}
-  \begin{field}
-    Change in mean response for 1 unit change in the value of the explanatory, keeping all other variables constant. When $p = 2$
-    $$ E(Y|X_1 + 1, X_2) - E(Y|X_1,X_2) = \beta_1$$
-  \end{field}
+ \begin{field}
+  Interpretation of slopes of linear model
+ \end{field}
+ \begin{field}
+  Change in mean response for 1 unit change in the value of the explanatory, keeping all other variables constant. When $p = 2$
+  $$ E(Y|X_1 + 1, X_2) - E(Y|X_1,X_2) = \beta_1$$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100084 \end{field}
-  \begin{field}
-    Reason for $g-1$ indicator variables for a variable with $g$ values
-  \end{field}
-  \begin{field}
-    The model matrix $X_{n \times(p+1)}$ needs to be full column rank - $\mathbf{X}^t \mathbf{X}$ needs to be non-singular
-    If there is no intercept, we can include all groups, but interpretation will be different
-  \end{field}
+ \begin{field}
+  Reason for $g-1$ indicator variables for a variable with $g$ values
+ \end{field}
+ \begin{field}
+  The model matrix $X_{n \times(p+1)}$ needs to be full column rank - $\mathbf{X}^t \mathbf{X}$ needs to be non-singular
+  If there is no intercept, we can include all groups, but interpretation will be different
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100085 \end{field}
-  \begin{field}
-    Interpretation of slope coefficient for indicator variable $\beta$
-  \end{field}
-  \begin{field}
-    Difference in expected value of $Y$ between group value $a$ and $b$ where $a$ is the associated value for $\beta_j$ and $b$ is the base category
-  \end{field}
+ \begin{field}
+  Interpretation of slope coefficient for indicator variable $\beta$
+ \end{field}
+ \begin{field}
+  Difference in expected value of $Y$ between group value $a$ and $b$ where $a$ is the associated value for $\beta_j$ and $b$ is the base category
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100086 \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $E(\textbf{AU} + \textbf{b}) = $
-      \item $V(\mathbf{AU + \mathbf{b}}) = $
-    \end{itemize}
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $E(\textbf{AU} + \textbf{b}) = \mathbf{A} E(\mathbf{U}) + \mathbf{b}$
-      \item $V(\mathbf{AU + \mathbf{B}}) = \mathbf{A}V(\mathbf{U}) \mathbf{A}^t$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $E(\textbf{AU} + \textbf{b}) = $
+   \item $V(\mathbf{AU + \mathbf{b}}) = $
+  \end{itemize}
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $E(\textbf{AU} + \textbf{b}) = \mathbf{A} E(\mathbf{U}) + \mathbf{b}$
+   \item $V(\mathbf{AU + \mathbf{B}}) = \mathbf{A}V(\mathbf{U}) \mathbf{A}^t$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100087 \end{field}
-  \begin{field}
-    Least squares estimate of $\beta$ (process to find )
-  \end{field}
-  \begin{field}
-    Minimize the squared error loss ($L(\beta)$) with respect to $\beta$
+ \begin{field}
+  Least squares estimate of $\beta$ (process to find )
+ \end{field}
+ \begin{field}
+  Minimize the squared error loss ($L(\beta)$) with respect to $\beta$
 
-      $$ L(\beta ) = \sum_{i=1}^n Y_i - (\beta_0 + \beta_1 X_{i1} + \cdots + \beta_p X_{ip}))^2 = (\mathbf{Y} - \mathbf{X}\beta)^t(\mathbf{Y} - \mathbf{X}\beta)$$
-  \end{field}
+  $$ L(\beta ) = \sum_{i=1}^n Y_i - (\beta_0 + \beta_1 X_{i1} + \cdots + \beta_p X_{ip}))^2 = (\mathbf{Y} - \mathbf{X}\beta)^t(\mathbf{Y} - \mathbf{X}\beta)$$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100088 \end{field}
-  \begin{field}
-    $$  \frac{\partial}{\partial \beta} L(\beta) = $$
-  \end{field}
-  \begin{field}
-    \begin{align*}
-       \frac{\partial}{\partial \beta} L(\beta)  &= \frac{\partial}{\partial \beta} (\mathbf{Y} - \mathbf{X}\beta)^t(\mathbf{Y} - \mathbf{X}\beta)\\
-       &= \frac{\partial}{\partial \beta}  \mathbf{Y}^t \mathbf{Y} - \beta^t \mathbf{X}^t
-\textbf{Y} - \mathbf{Y}^t \mathbf{X}\beta - \beta^t \mathbf{X}^t \mathbf{X} \beta \\
-&= 0 - \mathbf{X}^t \mathbf{Y} - \mathbf{X}^t \mathbf{Y} + 2 \mathbf{X}^t \mathbf{X} \beta  \\
-\mathbf{X^t}\mathbf{X}\beta = \mathbf{X}^t \mathbf{Y}
-    \end{align*}
-  \end{field}
+ \begin{field}
+  $$  \frac{\partial}{\partial \beta} L(\beta) = $$
+ \end{field}
+ \begin{field}
+  \begin{align*}
+   \frac{\partial}{\partial \beta} L(\beta) & = \frac{\partial}{\partial \beta} (\mathbf{Y} - \mathbf{X}\beta)^t(\mathbf{Y} - \mathbf{X}\beta) \\
+                                            & = \frac{\partial}{\partial \beta}  \mathbf{Y}^t \mathbf{Y} - \beta^t \mathbf{X}^t
+   \textbf{Y} - \mathbf{Y}^t \mathbf{X}\beta - \beta^t \mathbf{X}^t \mathbf{X} \beta                                                           \\
+                                            & = 0 - \mathbf{X}^t \mathbf{Y} - \mathbf{X}^t \mathbf{Y} + 2 \mathbf{X}^t \mathbf{X} \beta        \\
+   \mathbf{X^t}\mathbf{X}\beta = \mathbf{X}^t \mathbf{Y}
+  \end{align*}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100089 \end{field}
-  \begin{field}
-    Least squares estimate of $\hat{\beta}$
-  \end{field}
-  \begin{field}
-    $$ \hat{\beta} = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y} $$ (if $\mathbf{X}^t \mathbf{X}$ is invertible )
-  \end{field}
+ \begin{field}
+  Least squares estimate of $\hat{\beta}$
+ \end{field}
+ \begin{field}
+  $$ \hat{\beta} = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y} $$ (if $\mathbf{X}^t \mathbf{X}$ is invertible )
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100090 \end{field}
-  \begin{field}
-    Residual
-  \end{field}
-  \begin{field}
-    $e_i = Y_i - \hat{Y}_i$, $\mathbf{e}_{n\times 1} = \mathbf{Y} - \hat{\mathbf{Y}}$
-  \end{field}
+ \begin{field}
+  Residual
+ \end{field}
+ \begin{field}
+  $e_i = Y_i - \hat{Y}_i$, $\mathbf{e}_{n\times 1} = \mathbf{Y} - \hat{\mathbf{Y}}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100091 \end{field}
-  \begin{field}
-    Vector of fitted values
-  \end{field}
-  \begin{field}
-    $\hat{\mathbf{Y}} = \mathbf{X}\hat{\beta} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y}$
-  \end{field}
+ \begin{field}
+  Vector of fitted values
+ \end{field}
+ \begin{field}
+  $\hat{\mathbf{Y}} = \mathbf{X}\hat{\beta} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100092 \end{field}
-  \begin{field}
-    Projection matrix
-  \end{field}
-  \begin{field}
-    Hat matrix
-    $$\mathbf{H_{n \times n}} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t$$
-  \end{field}
+ \begin{field}
+  Projection matrix
+ \end{field}
+ \begin{field}
+  Hat matrix
+  $$\mathbf{H_{n \times n}} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t$$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100093 \end{field}
-  \begin{field}
-    Properties of projection matrix
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $H$ and $\mathbf{I} - \mathbf{H}$ are symmetric matrices
-      \item $\mathbf{HX} = X$
-      item $(\mathbf{I} - \mathbf{X})\mathbf{X} = \mathbf{0}$
-      \item $\mathbf{H}^2 = \mathbf{H}$
-      \item $(\mathbf{I} - \mathbf{H})\mathbf{H} = 0$
-      \item $\mathbf{X}^t \mathbf{e} = 0$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Properties of projection matrix
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $H$ and $\mathbf{I} - \mathbf{H}$ are symmetric matrices
+   \item $\mathbf{HX} = X$
+         item $(\mathbf{I} - \mathbf{X})\mathbf{X} = \mathbf{0}$
+   \item $\mathbf{H}^2 = \mathbf{H}$
+   \item $(\mathbf{I} - \mathbf{H})\mathbf{H} = 0$
+   \item $\mathbf{X}^t \mathbf{e} = 0$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100094 \end{field}
-  \begin{field}
-    Unbiased estimate of $\sigma^2$
-  \end{field}
-  \begin{field}
-    $\hat{\sigma}^2 = \frac{1}{n- (p+1)} \sum_{i=1}^n e_i^2 = \frac{1}{n- (p+1)} \mathbf{e}^t \mathbf{e}$
-  \end{field}
+ \begin{field}
+  Unbiased estimate of $\sigma^2$
+ \end{field}
+ \begin{field}
+  $\hat{\sigma}^2 = \frac{1}{n- (p+1)} \sum_{i=1}^n e_i^2 = \frac{1}{n- (p+1)} \mathbf{e}^t \mathbf{e}$
+ \end{field}
 \end{note}
 
 
 
 \begin{note} \begin{field} \tiny 100095 \end{field}
-  \begin{field}
-    $\mathbf{e}^t \mathbf{e} = $
-  \end{field}
-  \begin{field}
-    $\mathbf{e}^t \mathbf{e} = \mathbf{Y}^t \mathbf{Y} - \mathbf{Y}^t \mathbf{HY}$
-  \end{field}
+ \begin{field}
+  $\mathbf{e}^t \mathbf{e} = $
+ \end{field}
+ \begin{field}
+  $\mathbf{e}^t \mathbf{e} = \mathbf{Y}^t \mathbf{Y} - \mathbf{Y}^t \mathbf{HY}$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100096 \end{field}
-  \begin{field}
-    $E(\hat{\beta}) = $
-  \end{field}
-  \begin{field}
-    $E(\hat{\beta}) = E((\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y}) = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t E(\mathbf{Y}) = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{X}\beta  = \beta$
+ \begin{field}
+  $E(\hat{\beta}) = $
+ \end{field}
+ \begin{field}
+  $E(\hat{\beta}) = E((\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y}) = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t E(\mathbf{Y}) = (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{X}\beta  = \beta$
 
-    So $\hat{\beta}$ is an unbiased estimate
-  \end{field}
+  So $\hat{\beta}$ is an unbiased estimate
+ \end{field}
 \end{note}
 
 
 
 \begin{note} \begin{field} \tiny 100097 \end{field}
-  \begin{field}
-    Gauss - Markov Theorem
-  \end{field}
-  \begin{field}
-    If $E(\mathbf{Y}) = \mathbf{X}\beta$ and $V(\mathbf{Y}) = \sigma^2 \mathbf{I}$, then the least squares estimate $\hat{\beta}$ has the least variance among all linear unbiased estimators of $\beta$. (BLUE)
-  \end{field}
+ \begin{field}
+  Gauss - Markov Theorem
+ \end{field}
+ \begin{field}
+  If $E(\mathbf{Y}) = \mathbf{X}\beta$ and $V(\mathbf{Y}) = \sigma^2 \mathbf{I}$, then the least squares estimate $\hat{\beta}$ has the least variance among all linear unbiased estimators of $\beta$. (BLUE)
+ \end{field}
 \end{note}
 
 % add proof of gauss markov
 
 
 \begin{note} \begin{field} \tiny 100098 \end{field}
-  \begin{field}
-    $V(\hat{\beta}) = $
-  \end{field}
-  \begin{field}
-    $V(\hat{\beta}) = \sigma^2 (\mathbf{X}^t \mathbf{X})^{-1}$
-  \end{field}
+ \begin{field}
+  $V(\hat{\beta}) = $
+ \end{field}
+ \begin{field}
+  $V(\hat{\beta}) = \sigma^2 (\mathbf{X}^t \mathbf{X})^{-1}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100099 \end{field}
-  \begin{field}
-    $E(\hat{\sigma}^2) = $
-  \end{field}
-  \begin{field}
-    $E(\hat{\sigma}^2) = \sigma^2$
-  \end{field}
+ \begin{field}
+  $E(\hat{\sigma}^2) = $
+ \end{field}
+ \begin{field}
+  $E(\hat{\sigma}^2) = \sigma^2$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100100 \end{field}
-  \begin{field}
-    If $\mathbf{X}_{p \times 1}$ has a multivariate normal distribution $N(\mu_{p\times 1}, \Sigma_{p \times p})$, then $\mathbf{AX} + b \sim $
-  \end{field}
-  \begin{field}
-    If $\mathbf{X}_{p \times 1}$ has a multivariate normal distribution $N(\mu_{p\times 1}, \Sigma_{p \times p})$, then $\mathbf{AX} + \mathbf{b} \sim N(\mathbf{A}\mu + \mathbf{b}, \mathbf{A}\Sigma \mathbf{A}^t)$
+ \begin{field}
+  If $\mathbf{X}_{p \times 1}$ has a multivariate normal distribution $N(\mu_{p\times 1}, \Sigma_{p \times p})$, then $\mathbf{AX} + b \sim $
+ \end{field}
+ \begin{field}
+  If $\mathbf{X}_{p \times 1}$ has a multivariate normal distribution $N(\mu_{p\times 1}, \Sigma_{p \times p})$, then $\mathbf{AX} + \mathbf{b} \sim N(\mathbf{A}\mu + \mathbf{b}, \mathbf{A}\Sigma \mathbf{A}^t)$
 
 
 
-  \end{field}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100101 \end{field}
-  \begin{field}
-    Multivariate normal properties for $\mathbf{X}_{p \times 1} \sim N(\mu_{p\times 1}, \Sigma_{p \times p})$
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $Cov(X_j,X_k) = 0$ if and only if $X_j,X_k$ are independent (two way due to multivariate normal )
-      \item All subsets of elements of $\mathbf{X}$ have a multivarite normal distribution
-      \item All linear combinations of the components of $X$ are normally distributed
-      \item $\mathbf{a}^t \mathbf{X} \sim N(\mathbf{a}^t, \mathbf{a}^t \Sigma \mathbf{a})$ for a vector $a$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Multivariate normal properties for $\mathbf{X}_{p \times 1} \sim N(\mu_{p\times 1}, \Sigma_{p \times p})$
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $Cov(X_j,X_k) = 0$ if and only if $X_j,X_k$ are independent (two way due to multivariate normal )
+   \item All subsets of elements of $\mathbf{X}$ have a multivarite normal distribution
+   \item All linear combinations of the components of $X$ are normally distributed
+   \item $\mathbf{a}^t \mathbf{X} \sim N(\mathbf{a}^t, \mathbf{a}^t \Sigma \mathbf{a})$ for a vector $a$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100102 \end{field}
-  \begin{field}
-    Linear Hypothesis testing single parameter $H_0: \mathbf{c}^t \beta = d$
-  \end{field}
-  \begin{field}
-    For a vector $\mathbf{c}_{(p+1)\times 1}$, we have that
-    \begin{itemize}
-      \item $E(\textbf{c}^t\hat{\beta}) = \mathbf{c}^t \beta$, $V(\mathbf{c}^t \hat{\beta}) = \sigma^2 \mathbf{c}^t (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}$
-      \item Thus $$ \frac{\mathbf{c}^t \hat{\beta} - \mathbf{c}^t \beta }{\sigma \sqrt{\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim N(0,1)$$ and under $H_0$
-      $$ T = \frac{\mathbf{c}^t \hat{\beta} - d}{ \sqrt{\hat{\sigma}^2\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim t_{n - (p+1)}$$
-      \item Example: testing $H_0: \beta_1 = \beta_2, \mathbf{c} = (0,1,-1)^t, d = 0$
-      \item Reject $H_a: c^t \beta \neq d:  |T| > t_{n - (p+1)}(1-\alpha/2)$, $c^t \beta > d, T > t_{n-(p+1)}(\alpha), c^t\beta < d: T < t(1 - \alpha)$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Linear Hypothesis testing single parameter $H_0: \mathbf{c}^t \beta = d$
+ \end{field}
+ \begin{field}
+  For a vector $\mathbf{c}_{(p+1)\times 1}$, we have that
+  \begin{itemize}
+   \item $E(\textbf{c}^t\hat{\beta}) = \mathbf{c}^t \beta$, $V(\mathbf{c}^t \hat{\beta}) = \sigma^2 \mathbf{c}^t (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}$
+   \item Thus $$ \frac{\mathbf{c}^t \hat{\beta} - \mathbf{c}^t \beta }{\sigma \sqrt{\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim N(0,1)$$ and under $H_0$
+         $$ T = \frac{\mathbf{c}^t \hat{\beta} - d}{ \sqrt{\hat{\sigma}^2\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim t_{n - (p+1)}$$
+   \item Example: testing $H_0: \beta_1 = \beta_2, \mathbf{c} = (0,1,-1)^t, d = 0$
+   \item Reject $H_a: c^t \beta \neq d:  |T| > t_{n - (p+1)}(1-\alpha/2)$, $c^t \beta > d, T > t_{n-(p+1)}(\alpha), c^t\beta < d: T < t(1 - \alpha)$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100103 \end{field}
-  \begin{field}
-    Confidence interval for a single parameter
-  \end{field}
-  \begin{field}
-    $$ \hat{\beta}_j \pm t_{n-(p-1)}(1 - \alpha/2)\sqrt{\hat{\sigma}^2((\mathbf{X}^t \mathbf{X})^{-1})_{j+1,j+1}} $$
-    $$ \mathbf{c}^t \beta \pm t_{n-(p-1)}(1 - \alpha/2)\sqrt{\hat{\sigma}^2 \mathbf{c}^t((\mathbf{X}^t \mathbf{X})^{-1})\mathbf{c}}  $$
-    eg if we were testing $\beta_1 - \beta_2, c = (0,1,-1)$
-  \end{field}
+ \begin{field}
+  Confidence interval for a single parameter
+ \end{field}
+ \begin{field}
+  $$ \hat{\beta}_j \pm t_{n-(p-1)}(1 - \alpha/2)\sqrt{\hat{\sigma}^2((\mathbf{X}^t \mathbf{X})^{-1})_{j+1,j+1}} $$
+  $$ \mathbf{c}^t \beta \pm t_{n-(p-1)}(1 - \alpha/2)\sqrt{\hat{\sigma}^2 \mathbf{c}^t((\mathbf{X}^t \mathbf{X})^{-1})\mathbf{c}}  $$
+  eg if we were testing $\beta_1 - \beta_2, c = (0,1,-1)$
+ \end{field}
 \end{note}
 
 
@@ -1762,322 +1762,322 @@
 
 
 \begin{note} \begin{field} \tiny 100104 \end{field}
-  \begin{field}
-    F statistic in matrix form
-  \end{field}
-  \begin{field}
+ \begin{field}
+  F statistic in matrix form
+ \end{field}
+ \begin{field}
   \begin{itemize}
-    \item $\mathbf{K}$  is $p\times k$, $\mathbf{m}$ is $k\times 1$
-    \item Testing $H_0: \mathbf{K}^t\beta = \mathbf{m}$
-    \item $F = \frac{\big((\mathbf{K}\hat{\beta} - \mathbf{m})^t (\mathbf{K}(\mathbf{X}^t \mathbf{X})^{-1}\mathbf{K}^{-1})(\mathbf{K}\hat{\beta} - \mathbf{m})\big)}{k\hat{\sigma}^2} \sim F_{k,n-p}$
-    \item Eg$K = \begin{pmatrix}
-      0 \\ 1 \\ \vdots \\ 0
-    \end{pmatrix}$, $m = 0$
-    \item Tests $\beta_1 = 0$
-    \item Note the $\mathbf{K}^t$ matrix is the coefficients of the system of linear equations for the the null hypothesis, and $m$ is what they are equal to
+   \item $\mathbf{K}$  is $p\times k$, $\mathbf{m}$ is $k\times 1$
+   \item Testing $H_0: \mathbf{K}^t\beta = \mathbf{m}$
+   \item $F = \frac{\big((\mathbf{K}\hat{\beta} - \mathbf{m})^t (\mathbf{K}(\mathbf{X}^t \mathbf{X})^{-1}\mathbf{K}^{-1})(\mathbf{K}\hat{\beta} - \mathbf{m})\big)}{k\hat{\sigma}^2} \sim F_{k,n-p}$
+   \item Eg$K = \begin{pmatrix}
+           0 \\ 1 \\ \vdots \\ 0
+          \end{pmatrix}$, $m = 0$
+   \item Tests $\beta_1 = 0$
+   \item Note the $\mathbf{K}^t$ matrix is the coefficients of the system of linear equations for the the null hypothesis, and $m$ is what they are equal to
   \end{itemize}
-  \end{field}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100105 \end{field}
-  \begin{field}
-    Overall regression F-test
-  \end{field}
-  \begin{field}
-    Tests if any predictors are related to the response
-    \begin{itemize}
-      \item Full model: $\mathbf{Y} = \mathbf{X}\beta + \epsilon$
-      \item Reduced model a nested model with $q$ estimated parameters
-      \item eg: Reduced model: $\mathbf{Y} = \beta_0 + \epsilon$, $q = 1$
-      \item $H_0: \beta_1 =  \ldots = \beta_p = 0$
-      \item $F = \frac{(RSS_\omega - RSS_\Omega)/(p-q)}{RSS_\Omega/(n-p)}$
-      \item
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Overall regression F-test
+ \end{field}
+ \begin{field}
+  Tests if any predictors are related to the response
+  \begin{itemize}
+   \item Full model: $\mathbf{Y} = \mathbf{X}\beta + \epsilon$
+   \item Reduced model a nested model with $q$ estimated parameters
+   \item eg: Reduced model: $\mathbf{Y} = \beta_0 + \epsilon$, $q = 1$
+   \item $H_0: \beta_1 =  \ldots = \beta_p = 0$
+   \item $F = \frac{(RSS_\omega - RSS_\Omega)/(p-q)}{RSS_\Omega/(n-p)}$
+   \item
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100106 \end{field}
-  \begin{field}
-    Analysis of Variance Table and calculated F stat
-  \end{field}
-  \begin{field}
-\begin{tabular}{|c|c|c|c|}
-  \hline \\
-  Type & df & Sum of Squares & Mean SS\\
-  \hline \\
-  Regression & $p$ & SS(Reg) & SS(Reg)/p\\
-  Residual & $n-p+1$ & SS(Res) & $\hat{\sigma}^2 =$ SS(Res)/$n-p-1$\\
-  Total & $n-1$ & SS(Total) = SS(Reg) + SS(Res) & $\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y})^2$\\
-  \hline
-\end{tabular}
-and $F = \frac{Mean(SSREG)}{Mean(SSRES)}$
-\end{field}
+ \begin{field}
+  Analysis of Variance Table and calculated F stat
+ \end{field}
+ \begin{field}
+  \begin{tabular}{|c|c|c|c|}
+   \hline                                                                                                \\
+   Type       & df      & Sum of Squares                & Mean SS                                        \\
+   \hline                                                                                                \\
+   Regression & $p$     & SS(Reg)                       & SS(Reg)/p                                      \\
+   Residual   & $n-p+1$ & SS(Res)                       & $\hat{\sigma}^2 =$ SS(Res)/$n-p-1$             \\
+   Total      & $n-1$   & SS(Total) = SS(Reg) + SS(Res) & $\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y})^2$ \\
+   \hline
+  \end{tabular}
+  and $F = \frac{Mean(SSREG)}{Mean(SSRES)}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100107 \end{field}
-  \begin{field}
-    Distribution of $\hat{\beta}$, where $\hat{\beta}$ are the estimated coefficients of linear regression.
-  \end{field}
-  \begin{field}
-    $\hat{\beta} \sim N(\beta, \sigma^2(\mathbf{X}^t \mathbf{X})^{-1})$
-  \end{field}
+ \begin{field}
+  Distribution of $\hat{\beta}$, where $\hat{\beta}$ are the estimated coefficients of linear regression.
+ \end{field}
+ \begin{field}
+  $\hat{\beta} \sim N(\beta, \sigma^2(\mathbf{X}^t \mathbf{X})^{-1})$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100108 \end{field}
-  \begin{field}
-    RSS (in terms of $\Omega$ and $\omega$)
-  \end{field}
-  \begin{field}
-    $$RSS_\Omega = \sum_{i=1}^n e_i^2$$
-    $$RSS_\omega = \sum_{i=1}^n (Y_i - \bar{Y})^2$$
-  \end{field}
+ \begin{field}
+  RSS (in terms of $\Omega$ and $\omega$)
+ \end{field}
+ \begin{field}
+  $$RSS_\Omega = \sum_{i=1}^n e_i^2$$
+  $$RSS_\omega = \sum_{i=1}^n (Y_i - \bar{Y})^2$$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100109 \end{field}
-  \begin{field}
-    $R^2$
-  \end{field}
-  \begin{field}
-    $R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$
-  \end{field}
+ \begin{field}
+  $R^2$
+ \end{field}
+ \begin{field}
+  $R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$
+ \end{field}
 \end{note}
 
 
 
 \begin{note} \begin{field} \tiny 100110 \end{field}
-  \begin{field}
-    Properties of the estimate of $\sigma^2$
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item   $\hat{\sigma}^2 = \frac{|\mathbf{e}|^2}{n - (p+1)}$
-      \item Under normality: $\frac{(n - (p+1))\hat{\sigma}^2}{\sigma^2} \sim \chi^2_{n - (p+1)}$
-      \item $\hat{\sigma}^2$ is independent from $\hat{\beta}$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Properties of the estimate of $\sigma^2$
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item   $\hat{\sigma}^2 = \frac{|\mathbf{e}|^2}{n - (p+1)}$
+   \item Under normality: $\frac{(n - (p+1))\hat{\sigma}^2}{\sigma^2} \sim \chi^2_{n - (p+1)}$
+   \item $\hat{\sigma}^2$ is independent from $\hat{\beta}$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100111 \end{field}
-  \begin{field}
-    Prediction Interval
-  \end{field}
-  \begin{field}
-    Predicting a future response
-    $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
+ \begin{field}
+  Prediction Interval
+ \end{field}
+ \begin{field}
+  Predicting a future response
+  $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
 
-    A 95\% prediction interval for a response with (list values) is between and
-  \end{field}
+  A 95\% prediction interval for a response with (list values) is between and
+ \end{field}
 \end{note}
 
 
 
 \begin{note} \begin{field} \tiny 100112 \end{field}
-  \begin{field}
-    Confidence interval
-  \end{field}
-  \begin{field}
-    Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{x_0^t(X^tX)^{-1}x_0}$
-    With 95\% confidence, the expected mean response
-  \end{field}
+ \begin{field}
+  Confidence interval
+ \end{field}
+ \begin{field}
+  Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{x_0^t(X^tX)^{-1}x_0}$
+  With 95\% confidence, the expected mean response
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100113 \end{field}
-  \begin{field}
-    Residual Plot
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Plot residuals against fitted values (so there is only 1 plot vs against explanatory variables)
-      \item Verifies linearity and constant variance
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Residual Plot
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Plot residuals against fitted values (so there is only 1 plot vs against explanatory variables)
+   \item Verifies linearity and constant variance
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100114 \end{field}
-  \begin{field}
-    Leverege
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item An obervarion has high leverage if the explanatory variable values of the observation are different from general pattern
-      \item $h_i = H_{ii} = (X(X^tX)^{-1}X^t)_{ii}$
-      \item High leverage $h_i > \frac{2(p+1)}{n}$
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Leverege
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item An obervarion has high leverage if the explanatory variable values of the observation are different from general pattern
+   \item $h_i = H_{ii} = (X(X^tX)^{-1}X^t)_{ii}$
+   \item High leverage $h_i > \frac{2(p+1)}{n}$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100115 \end{field}
-  \begin{field}
-    Standardized Residual
-  \end{field}
-  \begin{field}
-    $r_i = \frac{e_i}{\hat{\sigma}\sqrt{1 - h_i}}$
-    Large if $|r_i| > 2$ - indicates outlier
-  \end{field}
+ \begin{field}
+  Standardized Residual
+ \end{field}
+ \begin{field}
+  $r_i = \frac{e_i}{\hat{\sigma}\sqrt{1 - h_i}}$
+  Large if $|r_i| > 2$ - indicates outlier
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100116 \end{field}
-  \begin{field}
-    Influential - if fitted model depends highly on the value
-  \end{field}
-  \begin{field}
-    Measure using cook's distance
-    $$ D_i = \frac{(\hat{Y} - \hat{Y}_{(i)})^t(\hat{Y} - \hat{Y}_{(i)})}{(p+1)\hat{\sigma}^2} = \frac{1}{p+1}r_i^2 \frac{h_i}{(1 - h_i)}$$
-    Where $Y_{i}$ is the vector of fitted values when the model is fitted to the data without the $i$ ths observationl Moderate if $>1 $ Large if $>6$
-  \end{field}
+ \begin{field}
+  Influential - if fitted model depends highly on the value
+ \end{field}
+ \begin{field}
+  Measure using cook's distance
+  $$ D_i = \frac{(\hat{Y} - \hat{Y}_{(i)})^t(\hat{Y} - \hat{Y}_{(i)})}{(p+1)\hat{\sigma}^2} = \frac{1}{p+1}r_i^2 \frac{h_i}{(1 - h_i)}$$
+  Where $Y_{i}$ is the vector of fitted values when the model is fitted to the data without the $i$ ths observationl Moderate if $>1 $ Large if $>6$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100117 \end{field}
-  \begin{field}
-    Multicollinearity
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item $X^tX$ is close to singular
-      \item Some columns are highly correlated
-      \item there is a relationship between predictors \item leads to large standard errors
-      \item Not a violation of assumptions, but leads to issues in interpretations
-      \item Calculate using Condition number if $>30$ than large , or Variance inflation factors $VIF_j = \frac{1}{1 - R^2_j}$ where $R^2_j$ is $R^2$ from regression of the $j$th explanatory variable on all the other explanatory variables
-      \item Not a problem for prediction
-      \item Fix using selection of explanatory variables, generalized inverse, ridge regression
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Multicollinearity
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $X^tX$ is close to singular
+   \item Some columns are highly correlated
+   \item there is a relationship between predictors \item leads to large standard errors
+   \item Not a violation of assumptions, but leads to issues in interpretations
+   \item Calculate using Condition number if $>30$ than large , or Variance inflation factors $VIF_j = \frac{1}{1 - R^2_j}$ where $R^2_j$ is $R^2$ from regression of the $j$th explanatory variable on all the other explanatory variables
+   \item Not a problem for prediction
+   \item Fix using selection of explanatory variables, generalized inverse, ridge regression
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100118 \end{field}
-  \begin{field}
-    Ridge Regression
-  \end{field}
-  \begin{field}
-    $\hat{\beta} = (X^tX + \lambda I)^{-1} X^t Y$, where $\lambda$ is chosen. Note these are biased estimators
-  \end{field}
+ \begin{field}
+  Ridge Regression
+ \end{field}
+ \begin{field}
+  $\hat{\beta} = (X^tX + \lambda I)^{-1} X^t Y$, where $\lambda$ is chosen. Note these are biased estimators
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100119 \end{field}
-  \begin{field}
-    Fix non-constant spread/variance
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Transform response (box-cox)
-      \item Use more complicated model (glm)
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Fix non-constant spread/variance
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Transform response (box-cox)
+   \item Use more complicated model (glm)
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100120 \end{field}
-  \begin{field}
-    Fix non-linearity
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Transform response
-      \item Transform predictor
-      \item allow for curvature: predictor squared, splines, gam
-      \item use a non linear model
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Fix non-linearity
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Transform response
+   \item Transform predictor
+   \item allow for curvature: predictor squared, splines, gam
+   \item use a non linear model
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100121 \end{field}
-  \begin{field}
-    Fix Non-normality
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Transform response
-      \item more complicated models : glm
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Fix Non-normality
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Transform response
+   \item more complicated models : glm
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100122 \end{field}
-  \begin{field}
-    Missing data completely at random (MCAR)
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Throwing out cases with missing data does not bias inferences
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Missing data completely at random (MCAR)
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Throwing out cases with missing data does not bias inferences
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100123 \end{field}
-  \begin{field}
-    Missing at random (MAR)
-  \end{field}
-  \begin{field}
-    Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
-  \end{field}
+ \begin{field}
+  Missing at random (MAR)
+ \end{field}
+ \begin{field}
+  Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100124 \end{field}
-  \begin{field}
-    Model Selection methods
-  \end{field}
-  \begin{field}
-    \begin{itemize}
-      \item Sequential Methods: Backward/Forward (eliminate untill all values have p-value below critical value) Elimination
-      \item Penalized Regression: Ridge and Lasso
-    \end{itemize}
-  \end{field}
+ \begin{field}
+  Model Selection methods
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Sequential Methods: Backward/Forward (eliminate untill all values have p-value below critical value) Elimination
+   \item Penalized Regression: Ridge and Lasso
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100125 \end{field}
-  \begin{field}
-    AIC
-  \end{field}
-  \begin{field}
-    Estimate the distance of a candidate model from the true model (small good)
-    $$ n \log (RSS/n) + 2(p+1)$$
-  \end{field}
+ \begin{field}
+  AIC
+ \end{field}
+ \begin{field}
+  Estimate the distance of a candidate model from the true model (small good)
+  $$ n \log (RSS/n) + 2(p+1)$$
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100126 \end{field}
-  \begin{field}
-    BIC
-  \end{field}
-  \begin{field}
-    Estimate the best parsimonious model, using a prior distribution on the parameters (small good)
-    $$  n \log (RSS/n) + \log(n)(p+1)$$
+ \begin{field}
+  BIC
+ \end{field}
+ \begin{field}
+  Estimate the best parsimonious model, using a prior distribution on the parameters (small good)
+  $$  n \log (RSS/n) + \log(n)(p+1)$$
 
-    Where $n$ is the number of observations, $p$ is the number of predictors (not including intercept), and $RSS = \sum (Y_i - \hat{Y})^2 = \sum e_i^2 $
-  \end{field}
+  Where $n$ is the number of observations, $p$ is the number of predictors (not including intercept), and $RSS = \sum (Y_i - \hat{Y})^2 = \sum e_i^2 $
+ \end{field}
 \end{note}
 
 
 \begin{note} \begin{field} \tiny 100127 \end{field}
-  \begin{field}
-    Adjusted $R^2$
-  \end{field}
-  \begin{field}
-    $$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
-    $\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
-  \end{field}
+ \begin{field}
+  Adjusted $R^2$
+ \end{field}
+ \begin{field}
+  $$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
+  $\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100128 \end{field}
-  \begin{field}
-    Mallow's Cp
-  \end{field}
-  \begin{field}
-    $$ RSS/\hat{\sigma^2} + 2p - n $$ (small good)
-  \end{field}
+ \begin{field}
+  Mallow's Cp
+ \end{field}
+ \begin{field}
+  $$ RSS/\hat{\sigma^2} + 2p - n $$ (small good)
+ \end{field}
 \end{note}
 
 \begin{note} \begin{field} \tiny 100129 \end{field}
-  \begin{field}
-    Box-Cox Transformation
-  \end{field}
-  \begin{field}
-    Transform so model is $g(Y) = X\beta + \epsilon$
-    where $g(y) = \frac{y^\lambda -1}{\lambda} if \lambda \neq 0, 0 $ otherwise
-  \end{field}
+ \begin{field}
+  Box-Cox Transformation
+ \end{field}
+ \begin{field}
+  Transform so model is $g(Y) = X\beta + \epsilon$
+  where $g(y) = \frac{y^\lambda -1}{\lambda} if \lambda \neq 0, 0 $ otherwise
+ \end{field}
 \end{note}
 
 
