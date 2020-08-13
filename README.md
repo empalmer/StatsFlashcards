@@ -4,7 +4,7 @@
 
 Created for studying for my OSU grad stats comps
 
-Feel free to open issues with mistakes/spelling/suggestions
+Feel free to open issues with mistakes/spelling/suggestions - please include the card number - the ID field.
 
 Two folders are Methods and Theory, for the first year year-long sequences. Each has several .tex files corresponding to the topic the flashcards cover (which correspond to tags in anki). To have a full deck of flashcards, import each file separately, or import the Theory_flashcards file to import all at once. (Note this conversion of 1 file overall to multiple separate files corresponding to different tags is in progress). I've been having some glitches with tags, so they might have to be
 
@@ -16,11 +16,20 @@ The pdf files have an overview of all the flashcards, but are not intended to be
 
 Make sure to install the latex importer add on before trying to import .tex files. https://ankiweb.net/shared/info/1199027445. Go to Tools > Get Add ons > Get Add ons, and paste the code found on the website.
 
+## Support for updating flashcards
+Anki doesn't do a great job of tracking changes and updating notes with new imports.
+Go to Tools > Manage Note Types > Add > Select Add:Basic
+ and name it something like Basic-uniqueID
+ Then select it and click "Fields" > Add > name it ID > Reposition, and move the id field to the top.
+
+ Save your new card type. Now make sure to always import using this note type so that updates can match correctly.
+
 
 ## My workflow to use these flashcards:
 - Make sure the latex header matches the document: Go Tools>Manage Note Types> Options, and paste the correct latex header in the Header section
 - Import the .tex flashcard file from the main screen by clicking Import file
 - Make sure the "Deck" selected is the one intended to import to - You can either select or add a deck at this time
+- Make sure the Note type is the Basic-ID type you created above
 - Make sure all LaTeX has been rendered by Tools>Check Media... Click Render LaTeX
 - Click Sync
 - You should be able to access these flashcards anywhere!
