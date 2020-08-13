@@ -4,6 +4,8 @@
 
 Created for studying for my OSU grad stats comps
 
+Feel free to open issues with mistakes/spelling/suggestions
+
 Two folders are Methods and Theory, for the first year year-long sequences. Each has several .tex files corresponding to the topic the flashcards cover (which correspond to tags in anki). To have a full deck of flashcards, import each file separately, or import the Theory_flashcards file to import all at once. (Note this conversion of 1 file overall to multiple separate files corresponding to different tags is in progress). I've been having some glitches with tags, so they might have to be
 
 These flashcards are intended to use with the free Anki software https://apps.ankiweb.net
@@ -54,7 +56,3 @@ Make sure to install the latex importer add on before trying to import .tex file
 ### Methods
 
 - Methods_flashcards.tex (Contains Methods1 and Methods2 tags)(working on splitting this into two files)
-
-
-
-Feel free to open issues with mistakes/spelling/suggestions

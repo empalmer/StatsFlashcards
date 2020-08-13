@@ -900,7 +900,7 @@
 
 \begin{note}
  \begin{field}
-  $P(X = x | G = g)$ with binomial sampling
+  Can we estimate $P(X = x | G = g)$ with binomial sampling
  \end{field}
  \begin{field}
   Cannot estimate
@@ -1067,10 +1067,12 @@
   Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name:
+   \item Assumptions
    \item Process
    \item pvalue
-   \item Test Statistic:
    \item Test Reference Distribution
+   \item Test Statistic:
+   \item Consistency
   \end{itemize}
  \end{field}
  \begin{field}
@@ -1089,7 +1091,7 @@
    \item Test Statistic: $R$ sum of the ranks, or $z = \frac{R - \frac{m(m+n+1)}{2}}{\sqrt{\frac{mn(m+n+1)}{12}}}$
    \item Test Reference Distribution: If there was no difference between two populations, then each rank has equal chance of being assigned to group 1 (belongs to $X$: $p = \frac{m}{n+m}$)
          Normal approximation: $R \dot\sim N( \frac{m(m+n+1)}{2}, \frac{mn(m+n+1)}{12})$, $z \dot\sim N(0,1)$
-   \item Notes: If ranks, assign ranks, and then average ranks of tied values
+   \item Notes: If ties, assign ranks, and then average ranks of tied values
    \item Continuity correction to normal distribution: add .5 to R if lower probability, subtract .5 from R if upper probability (ie 1 - pnorm())
    \item Not consistent test unless under additive assumption. IS consistent test of $H_0: P(X > Y) = .5$
   \end{itemize}
