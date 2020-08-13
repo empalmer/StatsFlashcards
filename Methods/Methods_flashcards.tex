@@ -233,7 +233,7 @@
 
 \begin{note} \begin{field} \tiny 100022 \end{field}
  \begin{field}
-  Test for data setting: $X_1, X_2, \ldots X_n$ iid with sample mean $\bar{X}$, and known population variance $\sigma^2$, Null hypothesis $mu = \mu_0$
+  Test for data setting: $X_1, X_2, \ldots X_n$ iid with sample mean $\bar{X}$, and known population variance $\sigma^2$, Null hypothesis $\mu = \mu_0$
 
   \begin{itemize}
    \item Test name
@@ -495,7 +495,7 @@
    \item Confidence interval: cant use the binomial proportion CI
          Set of values of $M_0$ that wouldn't be rejected at level $\alpha$
 
-         $$ \bigg( \frac{n - z_{1 - \alpha/2 \sqrt{n}}}{2}\bigg)^{th} \text{ Smallest Observation}, \bigg( \frac{n - z_{1 - \alpha/2 \sqrt{n}}}{2}\bigg)^{th}\text{ Smallest Observation} $$
+         $$ \bigg( \frac{n - z_{1 - \alpha/2} \sqrt{n}}{2}\bigg)^{th} \text{ Smallest Observation}, \bigg( \frac{n - z_{1 - \alpha/2} \sqrt{n}}{2}\bigg)^{th}\text{ Smallest Observation} $$
    \item pvalue (binomial test on proportion)
          \begin{itemize}
           \item upper: 1 - $\Phi(z(p_0))$ = 1 - pnorm($z(p_0)$)
@@ -606,7 +606,8 @@
 \begin{note} \begin{field} \tiny 100035 \end{field}
  \begin{field}
   Data Setting: $X_1, \ldots, X_n$, iid \\
-  Parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, \\
+  Parameter of interest: $\sigma^2 = Var(X)$,\\
+  Sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, \\
   $H_0: \sigma^2 = \sigma_0^2$ (asymptotic)
   \begin{itemize}
    \item Test name:
@@ -1097,7 +1098,7 @@
   Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name: Wilcoxon Rank-Sum (Mann-Whitney U-test)
-   \item Note this is only a test of medians only if just additive effect - G1 is just a shift from G2 (shame and scale must be same ) (but then just the same as a test of mean, 10th percentile, min, $F_x = F_y$ etc )
+   \item Note this is only a test of medians only if just additive effect - $F_x$ is just a shift from $F_y$ (shape and scale must be same ) (but then just the same as a test of mean, 10th percentile, min, $F_x = F_y$ etc )
    \item If No additive assumption - test of $H_0: P(X > Y) = .5$
    \item Process:
          \begin{itemize}
@@ -1338,7 +1339,7 @@
     Inverse of a square matrix: $\mathbf{A}_{n\times n}$
   \end{field}
   \begin{field}
-
+    The matrix that will satisfy $AA^{-1} = I$
   \end{field}
 \end{note}
 
@@ -1432,8 +1433,8 @@
     \begin{itemize}
       \item $(AB)^{t} = $
       \item $(A+B)^t = $
-      \item For invertible matrices $(AB)^{-1} = $
-      \item For invertible matrices $(\mathbf{A}^{-1})^t = $
+      \item $(AB)^{-1} = $
+      \item $(\mathbf{A}^{-1})^t = $
     \end{itemize}
   \end{field}
   \begin{field}
@@ -1544,13 +1545,13 @@
   \begin{field}
     \begin{itemize}
       \item $E(\textbf{AU} + \textbf{b}) = $
-      \item $V(\mathbf{AU + \mathbf{B}}) = $
+      \item $V(\mathbf{AU + \mathbf{b}}) = $
     \end{itemize}
   \end{field}
   \begin{field}
     \begin{itemize}
       \item $E(\textbf{AU} + \textbf{b}) = \mathbf{A} E(\mathbf{U}) + \mathbf{b}$
-      \item $V(\mathbf{AU + \mathbf{B}}) = \mathbf{A}V(\mathbf{U}+ \mathbf{A}^t$
+      \item $V(\mathbf{AU + \mathbf{B}}) = \mathbf{A}V(\mathbf{U}) \mathbf{A}^t$
     \end{itemize}
   \end{field}
 \end{note}
@@ -1815,7 +1816,7 @@ and $F = \frac{Mean(SSREG)}{Mean(SSRES)}$
 
 \begin{note} \begin{field} \tiny 100107 \end{field}
   \begin{field}
-    Distribution of $\hat{\beta}$
+    Distribution of $\hat{\beta}$, where $\hat{\beta}$ are the estimated coefficients of linear regression.
   \end{field}
   \begin{field}
     $\hat{\beta} \sim N(\beta, \sigma^2(\mathbf{X}^t \mathbf{X})^{-1})$
