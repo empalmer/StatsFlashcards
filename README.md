@@ -4,7 +4,7 @@
 
 Created for studying for my OSU grad stats comps
 
-Two folders are Methods and Theory, for the first year year-long sequences. Each has several .tex files corresponding to the topic the flashcards cover (which correspond to tags in anki). To have a full deck of flashcards, import each file. (Note this conversion of 1 file overall to multiple separate files corresponding to different tags is in progress ) Note the tags contain a version number so old or updated cards can be easily deleted. 
+Two folders are Methods and Theory, for the first year year-long sequences. Each has several .tex files corresponding to the topic the flashcards cover (which correspond to tags in anki). To have a full deck of flashcards, import each file separately, or import the Theory_flashcards file to import all at once. (Note this conversion of 1 file overall to multiple separate files corresponding to different tags is in progress). I've been having some glitches with tags, so they might have to be
 
 These flashcards are intended to use with the free Anki software https://apps.ankiweb.net
 
@@ -12,15 +12,8 @@ The desktop version is needed to open a .tex document, and requires a local LaTe
 
 The pdf files have an overview of all the flashcards, but are not intended to be used to study
 
-## In progress flashcards
-### Theory
- - Theory 2
- - Theory 3
- - Useful math facts
- - Distribution relationships
+Make sure to install the latex importer add on before trying to import .tex files. https://ankiweb.net/shared/info/1199027445. Go to Tools > Get Add ons > Get Add ons, and paste the code found on the website.
 
- ## Methods
- - Methods 3
 
 ## My workflow to use these flashcards:
 - Make sure the latex header matches the document: Go Tools>Manage Note Types> Options, and paste the correct latex header in the Header section
@@ -30,6 +23,17 @@ The pdf files have an overview of all the flashcards, but are not intended to be
 - Click Sync
 - You should be able to access these flashcards anywhere!
 
+
+
+## In progress flashcards
+### Theory
+ - Theory 3
+ - Useful math facts
+ - Distribution relationships
+
+### Methods
+ - Methods 3
+
 ## If you want to study a specific topic (eg Distribution Relationships)
  - On desktop version, click on deck
  - At bottom, click Custom Study
@@ -37,20 +41,19 @@ The pdf files have an overview of all the flashcards, but are not intended to be
  - Select tag of interest
  - This will create a new deck with only the flashcards of interest
 
- ## Current Files/tags/topics available
+## Current Files/tags/topics available
 
- ### Theory
+### Theory
+ - File: Theory1.tex tag: Theory1
  - File: Theory2.tex tag: Theory2
  - Distribution Relationships (distributionrelationshps)
- - From Theory 1
- - Calculus
+ - File: Calculus.tex tag: Calculus
  - From online stats cheatsheet (FromStatCheatsheet)
  - From my undergraduate probability textbook
 
- ### Methods
- - Methods 1 (Methods1)
- - Methods 2
+### Methods
 
+- Methods_flashcards.tex (Contains Methods1 and Methods2 tags)(working on splitting this into two files)
 
 
 
