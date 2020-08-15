@@ -460,7 +460,7 @@
 
 \begin{note} \begin{field} \tiny 100031 \end{field}
  \begin{field}
-  Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 1)
+  Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$
   \begin{itemize}
    \item Test name:
    \item Test Statistic
@@ -478,6 +478,7 @@
           \item lower:
           \item two-sided
          \end{itemize}
+   \item If ties?
    \item Consistent/Finite Sample Exact/ Asymptotically Exact
   \end{itemize}
  \end{field}
@@ -678,6 +679,7 @@
    \item Test Statistic
    \item Test Reference Distribution
    \item Critical Value/ Rejection region
+   \item If parameter values of discrete distribution are not known
   \end{itemize}
  \end{field}
  \begin{field}
@@ -707,7 +709,7 @@
 
 \begin{note} \begin{field} \tiny 100038 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with known $\sigma_x, \sigma_y$. Estimate $d$
+  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with known $\sigma_x, \sigma_y$. Estimate $d = \mu_x - \mu_y$
   \begin{itemize}
    \item Test name:
    \item Test Statistic
@@ -774,12 +776,13 @@
 
 \begin{note} \begin{field} \tiny 100040 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with unknown not equal equal  $\sigma_x, \sigma_y$ Estimate $d$
+  Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with unknown not equal  $\sigma_x, \sigma_y$ Estimate $d = \mu_x - \mu_y$
   \begin{itemize}
    \item Test name:
    \item Estimate of $Var(\bar{X} - \bar{Y})$
    \item Test Statistic
    \item Test Reference Distribution
+   \item Degrees of freedom
    \item Critical Value/ Rejection region
    \item Confidence interval
    \item Compare to equal variance
@@ -1083,7 +1086,7 @@
 
 \begin{note} \begin{field} \tiny 100055 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name:
    \item Assumptions
@@ -1091,6 +1094,8 @@
    \item pvalue
    \item Test Reference Distribution
    \item Test Statistic:
+   \item Ties
+   \item Continuity correction
    \item Consistency
   \end{itemize}
  \end{field}
@@ -1103,8 +1108,8 @@
    \item Process:
          \begin{itemize}
           \item Combine samples
-          \item Rank the observations in combined sample from smalles to largest (1 to $n + m$)
-          \item Add ranks of the smaller group
+          \item Rank the observations in combined sample from smallest to largest (1 to $n + m$)
+          \item Add ranks of the smaller group (assume wlog that $X$ is the smaller group)
          \end{itemize}
    \item pvalue: Calculate using permutations: Count number of permutations that lead to a R value more extreme than observed out of total permutations ($\binom{n+m}{m}$)
    \item Test Statistic: $R$ sum of the ranks, or $z = \frac{R - \frac{m(m+n+1)}{2}}{\sqrt{\frac{mn(m+n+1)}{12}}}$
@@ -1248,7 +1253,7 @@
   \begin{itemize}
    \item Test name: Two-sample Kolmogorov-Smirnov Test
    \item Test statistic: $D = sup_x|\hat{F}_x(x) - \hat{F}_y(y)|$ ie the largest distance between the empirical CDF for $X$ and $Y$
-   \item Reject for large values of $\sqrt{\frac{mn}{m+n}}$
+   \item Reject for large values of $\sqrt{\frac{mn}{m+n}} D$
    \item Only for continuous distributions, for discrete distributions, use Pearsons $\chi^2$
   \end{itemize}
  \end{field}
@@ -1599,7 +1604,7 @@
 
 \begin{note} \begin{field} \tiny 100091 \end{field}
  \begin{field}
-  Vector of fitted values
+  Vector of fitted values (linear regression )
  \end{field}
  \begin{field}
   $\hat{\mathbf{Y}} = \mathbf{X}\hat{\beta} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t \mathbf{Y}$
@@ -1753,7 +1758,7 @@
 
 \begin{note} \begin{field} \tiny 100103 \end{field}
  \begin{field}
-  Confidence interval for a single parameter
+  Confidence interval for a single parameter (linear regression slope estimate)
  \end{field}
  \begin{field}
   $$ \hat{\beta}_j \pm t_{n-(p-1)}(1 - \alpha/2)\sqrt{\hat{\sigma}^2((\mathbf{X}^t \mathbf{X})^{-1})_{j+1,j+1}} $$
@@ -2074,8 +2079,11 @@
   Adjusted $R^2$
  \end{field}
  \begin{field}
-  $$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
-  $\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
+  Adjusts for multiple parameters
+$$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
+(where p includes the intercept)
+
+$\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
  \end{field}
 \end{note}
 
@@ -2250,7 +2258,7 @@
       \end{pmatrix} \begin{pmatrix}
             \beta_0 \\ \beta_1 \\ \beta_2
       \end{pmatrix} + \begin{pmatrix}
-            \epsilon_{11} \\ \vdots \epsilon_{32}
+            \epsilon_{11} \\ \vdots \\ \epsilon_{32}
       \end{pmatrix}$$
     \end{field}
 \end{note}
@@ -2735,6 +2743,7 @@
         \begin{itemize}
           \item Identifies either $max(\mu_i)$ or $min(\mu_i)$
           \item Intervals either contain 0 (not different from best) or have 0 as an endpoint, which implies they are different from the best.
+          \item Usually done with ANOVA
         \end{itemize}
     \end{field}
 \end{note}
@@ -3001,7 +3010,7 @@ Uses contrasts
         \tiny 100175
     \end{field}
     \begin{field}
-        Design matrix for $2 \times 2$ factorial design
+        Design matrix for $2 \times 2$ factorial design, where each group has 2 options
     \end{field}
     \begin{field}
         $$ \begin{pmatrix}
@@ -3010,7 +3019,7 @@ Uses contrasts
               \\ y_{22n}
         \end{pmatrix} =
         \begin{pmatrix}
-              1 & 1 & 1 & \\
+              1 & 1 & 1 & 1\\
               \vdots & \vdots & \vdots & \vdots \\
               1 & 1 & -1 & -1 \\
               \vdots & \vdots & \vdots & \vdots \\
@@ -3059,7 +3068,7 @@ Uses contrasts
           \item $\hat{\mu} = \bar{y}_{\cdot\cdot \cdot}$
           \item $\hat{\alpha}_i = \hat{\mu}_{i\cdot} - \hat{\mu} = \bar{y}_{i\cdot \cdot} - \bar{y}_{\cdot \cdot \cdot }$
           \item $\hat{\beta}_j =\hat{\mu}_{\cdot j} - \hat{\mu} = \bar{y}_{\cdot j \cdot} - \bar{y}_{\cdot \cdot \cdot } $
-          \item $\hat{(\alpha\beta)}_{ij} = \hat{\mu}_{ij} - \hat{\alpha}_i - \hat{\beta}_j - \hat{mu}$
+          \item $\hat{(\alpha\beta)}_{ij} = \hat{\mu}_{ij} - \hat{\alpha}_i - \hat{\beta}_j - \hat{\mu}$
           \item Where :
 
 
@@ -3133,7 +3142,7 @@ Uses contrasts
   \begin{tabular}{|c|c|c|c|}
     Type & SS & Effects in full model & Effects in reduced model \\
     \hline \\
-    I & A & A & inetercept only \\
+    I & A & A & intercept only \\
     III & A & A,B,C,AB,AC,BC,ABC & B,C,AB,AC,BC,ABC \\
     II & A& A,B,C,BC & B,C,BC \\
     III & AB & A,B,C,AB,AC,BC,ABC & A,B,C,AC,BC,ABC \\
