@@ -1448,11 +1448,7 @@
  \end{field}
 \end{note}
 
-\begin{note} \begin{field} \tiny 100078 \end{field}
- \begin{field}
 
- \end{field}
-\end{note}
 
 
 \begin{note} \begin{field} \tiny 100079 \end{field}
@@ -1617,6 +1613,7 @@
  \begin{field}
   Hat matrix
   $$\mathbf{H_{n \times n}} = \mathbf{X} (\mathbf{X}^t \mathbf{X})^{-1} \mathbf{X}^t$$
+  $H_{ij}$ is the rate at which the $i$th fitted value changes as we vary the $j$th observation (influence )
  \end{field}
 \end{note}
 
@@ -1678,6 +1675,8 @@
  \end{field}
  \begin{field}
   If $E(\mathbf{Y}) = \mathbf{X}\beta$ and $V(\mathbf{Y}) = \sigma^2 \mathbf{I}$, then the least squares estimate $\hat{\beta}$ has the least variance among all linear unbiased estimators of $\beta$. (BLUE)
+
+  Note that non-normal (or iid) residuals is not nescessary, just must be uncorrelated.
  \end{field}
 \end{note}
 
@@ -1732,6 +1731,12 @@
 \begin{note} \begin{field} \tiny 100102 \end{field}
  \begin{field}
   Linear Hypothesis testing single parameter $H_0: \mathbf{c}^t \beta = d$
+  \begin{itemize}
+    \item $E(\mathbf{c}^t \beta)$, $V(\mathbf{c}^t \beta)= $
+    \item Test statistic and distribution
+    \item Item of setting up hypothesis test
+    \item Rejection Region
+  \end{itemize}
  \end{field}
  \begin{field}
   For a vector $\mathbf{c}_{(p+1)\times 1}$, we have that
@@ -1740,7 +1745,7 @@
    \item Thus $$ \frac{\mathbf{c}^t \hat{\beta} - \mathbf{c}^t \beta }{\sigma \sqrt{\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim N(0,1)$$ and under $H_0$
          $$ T = \frac{\mathbf{c}^t \hat{\beta} - d}{ \sqrt{\hat{\sigma}^2\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim t_{n - (p+1)}$$
    \item Example: testing $H_0: \beta_1 = \beta_2, \mathbf{c} = (0,1,-1)^t, d = 0$
-   \item Reject $H_a: c^t \beta \neq d:  |T| > t_{n - (p+1)}(1-\alpha/2)$, $c^t \beta > d, T > t_{n-(p+1)}(\alpha), c^t\beta < d: T < t(1 - \alpha)$
+   \item Reject $H_a: c^t \beta \neq d:  |T| > t_{n - (p+1)}(1-\alpha/2)$\\ $c^t \beta > d, T > t_{n-(p+1)}(\alpha)$\\ $c^t\beta < d: T < t(1 - \alpha)$
   \end{itemize}
  \end{field}
 \end{note}
@@ -1840,6 +1845,12 @@
  \end{field}
  \begin{field}
   $R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$
+
+  Where SS(Reg) is the regression sum of square: $\sum_{i} (\hat{y}_i - \bar{y})^2$ (fitted minus mean)
+  and SS(Tot) or TSS is the total sum of squares $\sum_{i} (y_i - \bar{y})^2$
+  and SS(Res) (or error sum of squares) $SS_E$ or RSS is the residual sum of squares $\sum_i (y_i - \hat{y}_i)^2 = \sum_{i} e_i$
+
+  And SS(Tot) = SS(Res) + SS(Reg)
  \end{field}
 \end{note}
 
@@ -1865,7 +1876,7 @@
  \end{field}
  \begin{field}
   Predicting a future response
-  $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
+  $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
 
   A 95\% prediction interval for a response with (list values) is between and
  \end{field}
@@ -2002,6 +2013,8 @@
  \begin{field}
   \begin{itemize}
    \item Throwing out cases with missing data does not bias inferences
+   \item There’s no relationship between whether a data point is missing and any values in the data set, missing or observed.
+   \item The missing data are just a random subset of the data.
   \end{itemize}
  \end{field}
 \end{note}
@@ -2011,7 +2024,12 @@
   Missing at random (MAR)
  \end{field}
  \begin{field}
-  Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
+   \begin{itemize}
+     \item the propensity for a data point to be missing is not related to the missing data, but it is related to some of the observed data.
+     \item Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
+     \item A better name would actually be Missing Conditionally at Random, because the missingness is conditional on another variable.
+   \end{itemize}
+
  \end{field}
 \end{note}
 
