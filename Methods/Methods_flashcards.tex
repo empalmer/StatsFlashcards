@@ -1737,10 +1737,10 @@
  \begin{field}
   Linear Hypothesis testing single parameter $H_0: \mathbf{c}^t \beta = d$
   \begin{itemize}
-    \item $E(\mathbf{c}^t \beta)$, $V(\mathbf{c}^t \beta)= $
-    \item Test statistic and distribution
-    \item Item of setting up hypothesis test
-    \item Rejection Region
+   \item $E(\mathbf{c}^t \beta)$, $V(\mathbf{c}^t \beta)= $
+   \item Test statistic and distribution
+   \item Item of setting up hypothesis test
+   \item Rejection Region
   \end{itemize}
  \end{field}
  \begin{field}
@@ -2029,11 +2029,11 @@
   Missing at random (MAR)
  \end{field}
  \begin{field}
-   \begin{itemize}
-     \item the propensity for a data point to be missing is not related to the missing data, but it is related to some of the observed data.
-     \item Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
-     \item A better name would actually be Missing Conditionally at Random, because the missingness is conditional on another variable.
-   \end{itemize}
+  \begin{itemize}
+   \item the propensity for a data point to be missing is not related to the missing data, but it is related to some of the observed data.
+   \item Probability of missingness depends only on available information, like the explanatory variables and the response variables present in the regression - impute missing data
+   \item A better name would actually be Missing Conditionally at Random, because the missingness is conditional on another variable.
+  \end{itemize}
 
  \end{field}
 \end{note}
@@ -2080,10 +2080,10 @@
  \end{field}
  \begin{field}
   Adjusts for multiple parameters
-$$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
-(where p includes the intercept)
+  $$ 1 - \frac{n-1}{n-p}(1 - R^2)$$ (large is good)
+  (where p includes the intercept)
 
-$\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
+  $\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
  \end{field}
 \end{note}
 
@@ -2118,1041 +2118,1038 @@ $\frac{MS(Reg)}{MS(Total)} = 1 - \frac{SS(Reg)/(n - p - 1)}{SS(Tot)/(n-1)}$
   \tiny 100130
  \end{field}
  \begin{field}
-   Components of an experiment
+  Components of an experiment
  \end{field}
  \begin{field}
-    Experimental units, treatment, design (how eus are allocated to treatments)
+  Experimental units, treatment, design (how eus are allocated to treatments)
  \end{field}
 \end{note}
 
 
 
 \begin{note}
-\begin{field}
+ \begin{field}
   \tiny 100130
-\end{field}
-\begin{field}
+ \end{field}
+ \begin{field}
   Model and assumptions for CRD
-\end{field}
-\begin{field}
+ \end{field}
+ \begin{field}
   Model and assumptions for Completely randomized design
   $$y_{ij} = \mu_i + \epsilon_{ij}$$
 
   Where
   \begin{itemize}
-    \item $y_{ij}$ is the response on the $j$th eu in the $i$th group
-    \item $\mu_i$ is the population mean in the $i$th group
-    \item $\epsilon_{ij}$ is the random error for the $j$th eu in the $i$th group
-    \item Assume $\epsilon_{ij} \sim iid N(0,\sigma^2)$
+   \item $y_{ij}$ is the response on the $j$th eu in the $i$th group
+   \item $\mu_i$ is the population mean in the $i$th group
+   \item $\epsilon_{ij}$ is the random error for the $j$th eu in the $i$th group
+   \item Assume $\epsilon_{ij} \sim iid N(0,\sigma^2)$
   \end{itemize}
-\end{field}
+ \end{field}
 \end{note}
 
 
 \begin{note}
-\begin{field}
+ \begin{field}
   \tiny 100131
-\end{field}
-\begin{field}
+ \end{field}
+ \begin{field}
   Point estimate of $\hat{\mu}_i$
-\end{field}
-\begin{field}
+ \end{field}
+ \begin{field}
   $\hat{\mu}_i = \bar{y}_i$ = mean in the $i$th group
-\end{field}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100132
-    \end{field}
-    \begin{field}
-        Point estimate of
-        $\hat{\sigma}^2$
-    \end{field}
-    \begin{field}
-        \begin{align}
-          \hat{\sigma}^2 &= MSE = \frac{\text{error sum of squares}}{df} = \frac{\text{residual SS}}{df}\\
-          &= \frac{\sum_{i=1}^g \sum_{j=1}^{n_i}(y_{ij} - \bar{y}_{i\cdot})^2}{N-g}\\
-          &= s^2
-        \end{align}
+ \begin{field}
+  \tiny 100132
+ \end{field}
+ \begin{field}
+  Point estimate of
+  $\hat{\sigma}^2$
+ \end{field}
+ \begin{field}
+  \begin{align}
+   \hat{\sigma}^2 & = MSE = \frac{\text{error sum of squares}}{df} = \frac{\text{residual SS}}{df} \\
+                  & = \frac{\sum_{i=1}^g \sum_{j=1}^{n_i}(y_{ij} - \bar{y}_{i\cdot})^2}{N-g}       \\
+                  & = s^2
+  \end{align}
 
-        Where
-        \begin{itemize}
-          \item $g$ is the number of groups
-          \item $N$ is the overall sample size
-          \item $n_i$ the number of eus in the $i$th group
-          \item Df = sample size - number of parameters = $N-g$
-          \item $i$th residual = $y_{ij} - \hat{y}_{ij} = y_{ij} - \bar{y}_{i\cdot }$
-        \end{itemize}
-    \end{field}
+  Where
+  \begin{itemize}
+   \item $g$ is the number of groups
+   \item $N$ is the overall sample size
+   \item $n_i$ the number of eus in the $i$th group
+   \item Df = sample size - number of parameters = $N-g$
+   \item $i$th residual = $y_{ij} - \hat{y}_{ij} = y_{ij} - \bar{y}_{i\cdot }$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100133
-    \end{field}
-    \begin{field}
-        Hypothesis test and interval estimates for $\mu_i$ in CRD
-    \end{field}
-    \begin{field}
-        $\hat{\mu}_i = \bar{y}_i$ = sample mean of $y_{i1}, \cdots y_{in_{i}} \sim iid N(\mu_i,\sigma^2)$
+ \begin{field}
+  \tiny 100133
+ \end{field}
+ \begin{field}
+  Hypothesis test and interval estimates for $\mu_i$ in CRD
+ \end{field}
+ \begin{field}
+  $\hat{\mu}_i = \bar{y}_i$ = sample mean of $y_{i1}, \cdots y_{in_{i}} \sim iid N(\mu_i,\sigma^2)$
 
-        $$ \bar{y}_i \sim N(\mu_i, \frac{\sigma^2}{n_i})$$
+  $$ \bar{y}_i \sim N(\mu_i, \frac{\sigma^2}{n_i})$$
 
-        $SE(\bar{y}_i) = \sqrt{\frac{s^2}{n_i}}$
+  $SE(\bar{y}_i) = \sqrt{\frac{s^2}{n_i}}$
 
-        CI: $\bar{y}_i \pm t_{(a/2,N-g)} \sqrt{\frac{s^2}{n_i}}$
+  CI: $\bar{y}_i \pm t_{(a/2,N-g)} \sqrt{\frac{s^2}{n_i}}$
 
-        $H_0: \mu_i = 0$
-        $t = \frac{\bar{y}_i}{\sqrt{s^2/n_i}} \sim t_{(N-g)}$
+  $H_0: \mu_i = 0$
+  $t = \frac{\bar{y}_i}{\sqrt{s^2/n_i}} \sim t_{(N-g)}$
 
-    \end{field}
+ \end{field}
 \end{note}
 
 % Lecture 3
 \begin{note}
-    \begin{field}
-        \tiny 100134
-    \end{field}
-    \begin{field}
-        Cell Means Parametrization
-        (eg $g = 3, n_i = 2$)
-    \end{field}
-    \begin{field}
-        $$ \begin{pmatrix}
-              y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
-        \end{pmatrix}  = \begin{pmatrix}
-              1 & 0 & 0 \\
-              1 & 0 & 0 \\
-              0 & 1 & 0 \\
-              0 & 1 & 0 \\
-              0 & 0 & 1 \\
-              0 & 0 & 1
-        \end{pmatrix} \begin{pmatrix}
-              \mu_{1} \\ \mu_2 \\ \mu_3
-        \end{pmatrix} + \begin{pmatrix}
-              \epsilon_{11} \\ \vdots \epsilon_{32}
-        \end{pmatrix}$$
-    \end{field}
+ \begin{field}
+  \tiny 100134
+ \end{field}
+ \begin{field}
+  Cell Means Parametrization
+  (eg $g = 3, n_i = 2$)
+ \end{field}
+ \begin{field}
+  $$ \begin{pmatrix}
+    y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
+   \end{pmatrix}  = \begin{pmatrix}
+    1 & 0 & 0 \\
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & 0 & 1
+   \end{pmatrix} \begin{pmatrix}
+    \mu_{1} \\ \mu_2 \\ \mu_3
+   \end{pmatrix} + \begin{pmatrix}
+    \epsilon_{11} \\ \vdots \epsilon_{32}
+   \end{pmatrix}$$
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100135
-    \end{field}
-    \begin{field}
-        Regression parametrization (eg $g = 3, n_i = 2$)
-    \end{field}
-    \begin{field}
-      Code categorical variables using indicators
-      $y_{ij} = \beta_0 + \beta_1X_{1,ij} + \beta_2X_{2,ij} + \epsilon_{ij}$
-      $$ \begin{pmatrix}
-            y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
-      \end{pmatrix}  = \begin{pmatrix}
-            1 & 1 & 0 \\
-            1 & 1 & 0 \\
-            1 & 0 & 1 \\
-            1 & 0 & 1 \\
-            1 & 0 & 0 \\
-            1 & 0 & 0
-      \end{pmatrix} \begin{pmatrix}
-            \beta_0 \\ \beta_1 \\ \beta_2
-      \end{pmatrix} + \begin{pmatrix}
-            \epsilon_{11} \\ \vdots \\ \epsilon_{32}
-      \end{pmatrix}$$
-    \end{field}
+ \begin{field}
+  \tiny 100135
+ \end{field}
+ \begin{field}
+  Regression parametrization (eg $g = 3, n_i = 2$)
+ \end{field}
+ \begin{field}
+  Code categorical variables using indicators
+  $y_{ij} = \beta_0 + \beta_1X_{1,ij} + \beta_2X_{2,ij} + \epsilon_{ij}$
+  $$ \begin{pmatrix}
+    y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
+   \end{pmatrix}  = \begin{pmatrix}
+    1 & 1 & 0 \\
+    1 & 1 & 0 \\
+    1 & 0 & 1 \\
+    1 & 0 & 1 \\
+    1 & 0 & 0 \\
+    1 & 0 & 0
+   \end{pmatrix} \begin{pmatrix}
+    \beta_0 \\ \beta_1 \\ \beta_2
+   \end{pmatrix} + \begin{pmatrix}
+    \epsilon_{11} \\ \vdots \\ \epsilon_{32}
+   \end{pmatrix}$$
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100136
-    \end{field}
-    \begin{field}
-        Factor (Treatment) Effects Parametrization
-    \end{field}
-    \begin{field}
-      $$ y_{ij} = \mu + \alpha_i + \epsilon_{ij}$$
-      Where
-      \begin{itemize}
-        \item $\mu$ = overall mean: average of $\mu_i$
-        \item $\alpha_i$ = effect of level $i$ of the treatment factor, deviation away from $\mu$ associated with the $i$th treatment
-      \end{itemize}
+ \begin{field}
+  \tiny 100136
+ \end{field}
+ \begin{field}
+  Factor (Treatment) Effects Parametrization
+ \end{field}
+ \begin{field}
+  $$ y_{ij} = \mu + \alpha_i + \epsilon_{ij}$$
+  Where
+  \begin{itemize}
+   \item $\mu$ = overall mean: average of $\mu_i$
+   \item $\alpha_i$ = effect of level $i$ of the treatment factor, deviation away from $\mu$ associated with the $i$th treatment
+  \end{itemize}
 
-      $$ \begin{pmatrix}
-            y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
-      \end{pmatrix}  = \begin{pmatrix}
-            1 & 1 & 0 \\
-            1 & 1 & 0 \\
-            1 & 0 & 1 \\
-            1 & 0 & 1 \\
-            1 & -1 & -1 \\
-            1 & -1 & -1
-      \end{pmatrix} \begin{pmatrix}
-            \mu \\ \alpha_1 \\ \alpha_2
-      \end{pmatrix} + \begin{pmatrix}
-            \epsilon_{11} \\ \vdots \epsilon_{32}
-      \end{pmatrix} $$
+  $$ \begin{pmatrix}
+    y_{11} \\ y_{12} \\ y_{21} \\ y_{22} \\ y_{31} \\y_{32}
+   \end{pmatrix}  = \begin{pmatrix}
+    1 & 1  & 0  \\
+    1 & 1  & 0  \\
+    1 & 0  & 1  \\
+    1 & 0  & 1  \\
+    1 & -1 & -1 \\
+    1 & -1 & -1
+   \end{pmatrix} \begin{pmatrix}
+    \mu \\ \alpha_1 \\ \alpha_2
+   \end{pmatrix} + \begin{pmatrix}
+    \epsilon_{11} \\ \vdots \epsilon_{32}
+   \end{pmatrix} $$
 
-      Note that $\alpha_3 = -\alpha_1 - \alpha_2$
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100137
-    \end{field}
-    \begin{field}
-        Extra Sum of Squares $F$- test
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Compares full and reduced models
-          $$ F = \frac{(SS_E(\text{red}) - SS_E(\text{full}))/(df(\text{red}) - df(\text{full}))}{SS_E(\text{full})/df(\text{full})}$$
-          \item Can use to test for differences across the group means
-          $$ H_0: \mu_1 = \ldots = \mu_g = \mu$$
-          $$H_A: \mu_i \neq \mu_j  \text{ for some } i \neq j$$
-          \item Reduced model: $y_{ij} = \mu + \epsilon_{ij}$
-          \item Full model: $y_{ij} = \mu_i + \epsilon_{ij}$
-          \item $SS_E = \sum_{j}(y_j - \hat{y}_j)^2 = $ residual SS
-          \item $SS_E(\text{full}) = \sum_{i = 1}^g \sum_{j = 1}^{n_i}(y_{ij} - \bar{y}_{i\cdot})^2$ Where $\bar{y}_{i\cdot}$ is the fitted value for obs in $i$th group
-          \item $SS_E(\text{red}) = \sum_{i=1}^g \sum_{j=1}^{n_i}(y_{ij} - \bar{y}_{\cdot \cdot})^2$ where $\bar{y}_{\cdot\cdot} = \sum_{i}\sum_j y_{ij}/N$ mean of all obs
-          \item df(full) = $N-g$
-          \item df(red) = $N-1$
-          \item SSE(red) - SSE(full) = SSTreatment for CRD
-          \item Reduced model will have more unexplained variation
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100138
-    \end{field}
-    \begin{field}
-        CRD ANOVA Table
-    \end{field}
-    \begin{field}
-        \begin{tabular}{c|c c c c}
-          & DF & SS & MS & F \\
-          \hline \\
-          Treatment & $g-1$ & SS(Trt) & SS(Trt)/$(g-1)$ & MS(trt)/MS(E) $\sim F_{g-1,N-g}$\\
-          Error & $N-g$ & SS(E) & SS(E)/$(N-g)$ & \\
-          \hline \\
-          Total & $N-1$ & SS(T) & &
-        \end{tabular}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100139
-    \end{field}
-    \begin{field}
-        Distribution of SS(Total)/$\sigma^2$, SS(Treatment)/$\sigma^2$ and SS(E)/$\sigma^2$
-    \end{field}
-    \begin{field}
-        $\chi^2_{N-1}$, $\chi^2_{g-1}$ , $\chi^2_{N-g}$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100140
-    \end{field}
-    \begin{field}
-        $E(MS_{\text{Trt}}) = $
-    \end{field}
-    \begin{field}
-        $$E(MS_{\text{Trt}}) = $$
-        \begin{itemize}
-          \item If $H_0$ true, then $E(MS_{\text{Trt}}) = \sigma^2$
-          \item If $H_A$ true, then $E(MS_{\text{Trt}})> E(MS_E)$
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100141
-    \end{field}
-    \begin{field}
-        $E(MS_{\text{E}}) = $
-    \end{field}
-    \begin{field}
-        $E(MS_{\text{E}}) = \sigma^2$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100142
-    \end{field}
-    \begin{field}
-        Contrast
-    \end{field}
-    \begin{field}
-        A contrast is a linear combination of treatment means where the coefficients sum to 0
-        $C = \sum_{i=1}^g w_i \mu_i$ where $\sum_{i=1}^g w_i = 0$
-        Examples:
-        \begin{itemize}
-          \item $\frac{\mu_1+\mu_2 +\mu_3 }{3} - \mu_4$, $C = 1/3,1/3,1/3,-1$
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100143
-    \end{field}
-    \begin{field}
-        Hypothesis test of contrast
-    \end{field}
-    \begin{field}
-      \begin{itemize}
-        \item $\hat{C} = \sum_{i=1}^g w_i \bar{y}_{i\cdot}$
-        \item $V(\hat{C}) = V\bigg(\sum_{i=1}^g w_i\bar{y}_{i\cdot}\bigg) = \sum_{i=1}^g w_i^2 \frac{\sigma^2}{n_i}$
-        \item $\hat{V}(\hat{C}) = \sum_{i=1}^g w_i^2 \frac{MS_E}{n_i} =  \sum_{i=1}^g w_i^2 \frac{\hat{\sigma}^2}{n_i} $
-        \item CI: $\hat{C} \pm t_{(1 - \alpha/2, N-g)}SE(\hat{C})$
-        \item $t = \frac{\hat{C} - 0}{SE(\hat{C})} \sim t_{N-g}$
-        \item Eg if $C = \mu_1 - \mu_4$ a test of $C = 0$ is testing $\mu_1 = \mu_4$
-      \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100144
-    \end{field}
-    \begin{field}
-        Contrast sums of squares
-    \end{field}
-    \begin{field}
-        $SS_{\text{Contrast}} = SS_E(\text{reduced}) - SS_E(\text{full})$
-
-        \begin{itemize}
-          \item The full model is the separate means model $y_{ij} = \mu_i + \epsilon_{ij}$
-          \item The reduced model is the full model with the restriction $H_0: C = 0$ imposed on the $\mu_i$
-          \item Eg: $C = \frac{\mu_1 + \mu_2 + \mu_3}{3} = \mu_4$
-          Full model parameter vecotr $(\mu_1, \cdots, \mu_4)^t$, reduced model parameter vector: $(\mu_1, \mu_2, \mu_3)$ with $\mu_4 = \frac{\mu_1+ \mu_2 + \mu_3}{3}$
-          \item df full = $N-4$, df reduced = $N-3$, df contrast = 1 = $(N-3) - (N-4)$
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100145
-    \end{field}
-    \begin{field}
-        Orthogonal contrasts
-    \end{field}
-    \begin{field}
-        Contrasts $C_1$ and $C_2$ are orthogonal if $\sum_{i=1}^g \frac{w_i w_i^*}{n_i} = 0$
-
-        We usually only consider orthogonal contrasts when $n_i = n$ (balanced design)
-
-        With $g$ treatments, we can have at most $g-1$ orthogonal contrasts
-
-        If contrasts are orthogonal $SS(trt) = SS(C1) + \ldots + SS(C_{g-1})$
-    \end{field}
+  Note that $\alpha_3 = -\alpha_1 - \alpha_2$
+ \end{field}
 \end{note}
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100146
-    \end{field}
-    \begin{field}
-        Orthogonal polynomial contrasts and polynomial regression
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item When data are balanced and treatments are incremental and equally spaced, we can use orthogonal polynomial contrasts
-          \item With $g$ treatments, fit a $g-1$ degree polynomial model. Fitted polynomial will fit each treatment mean exactly
-          \item The $g-1$ degree polynomial is another parametrization of the separate means model
-          \item The cell means model ignores the incremental nature of treatment - polynomial one doesnt
-          \item Polynomial models imply something about interpolation
-          \item ex: $y_{ij}  = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + \beta_3 X_i^3 + \epsilon_{ij}$ $X_i$ is the amount of treatment in the $i$th group.
-          \item SS(trt) = SS(linar) + SS(quad) + SS(cubic)
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100137
+ \end{field}
+ \begin{field}
+  Extra Sum of Squares $F$- test
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Compares full and reduced models
+         $$ F = \frac{(SS_E(\text{red}) - SS_E(\text{full}))/(df(\text{red}) - df(\text{full}))}{SS_E(\text{full})/df(\text{full})}$$
+   \item Can use to test for differences across the group means
+         $$ H_0: \mu_1 = \ldots = \mu_g = \mu$$
+         $$H_A: \mu_i \neq \mu_j  \text{ for some } i \neq j$$
+   \item Reduced model: $y_{ij} = \mu + \epsilon_{ij}$
+   \item Full model: $y_{ij} = \mu_i + \epsilon_{ij}$
+   \item $SS_E = \sum_{j}(y_j - \hat{y}_j)^2 = $ residual SS
+   \item $SS_E(\text{full}) = \sum_{i = 1}^g \sum_{j = 1}^{n_i}(y_{ij} - \bar{y}_{i\cdot})^2$ Where $\bar{y}_{i\cdot}$ is the fitted value for obs in $i$th group
+   \item $SS_E(\text{red}) = \sum_{i=1}^g \sum_{j=1}^{n_i}(y_{ij} - \bar{y}_{\cdot \cdot})^2$ where $\bar{y}_{\cdot\cdot} = \sum_{i}\sum_j y_{ij}/N$ mean of all obs
+   \item df(full) = $N-g$
+   \item df(red) = $N-1$
+   \item SSE(red) - SSE(full) = SSTreatment for CRD
+   \item Reduced model will have more unexplained variation
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100138
+ \end{field}
+ \begin{field}
+  CRD ANOVA Table
+ \end{field}
+ \begin{field}
+  \begin{tabular}{c|c c c c}
+             & DF    & SS      & MS              & F                                \\
+   \hline                                                                           \\
+   Treatment & $g-1$ & SS(Trt) & SS(Trt)/$(g-1)$ & MS(trt)/MS(E) $\sim F_{g-1,N-g}$ \\
+   Error     & $N-g$ & SS(E)   & SS(E)/$(N-g)$   &                                  \\
+   \hline                                                                           \\
+   Total     & $N-1$ & SS(T)   &                 &
+  \end{tabular}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100139
+ \end{field}
+ \begin{field}
+  Distribution of SS(Total)/$\sigma^2$, SS(Treatment)/$\sigma^2$ and SS(E)/$\sigma^2$
+ \end{field}
+ \begin{field}
+  $\chi^2_{N-1}$, $\chi^2_{g-1}$ , $\chi^2_{N-g}$
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100140
+ \end{field}
+ \begin{field}
+  $E(MS_{\text{Trt}}) = $
+ \end{field}
+ \begin{field}
+  $$E(MS_{\text{Trt}}) = $$
+  \begin{itemize}
+   \item If $H_0$ true, then $E(MS_{\text{Trt}}) = \sigma^2$
+   \item If $H_A$ true, then $E(MS_{\text{Trt}})> E(MS_E)$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100141
+ \end{field}
+ \begin{field}
+  $E(MS_{\text{E}}) = $
+ \end{field}
+ \begin{field}
+  $E(MS_{\text{E}}) = \sigma^2$
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100142
+ \end{field}
+ \begin{field}
+  Contrast
+ \end{field}
+ \begin{field}
+  A contrast is a linear combination of treatment means where the coefficients sum to 0
+  $C = \sum_{i=1}^g w_i \mu_i$ where $\sum_{i=1}^g w_i = 0$
+  Examples:
+  \begin{itemize}
+   \item $\frac{\mu_1+\mu_2 +\mu_3 }{3} - \mu_4$, $C = 1/3,1/3,1/3,-1$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100143
+ \end{field}
+ \begin{field}
+  Hypothesis test of contrast
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $\hat{C} = \sum_{i=1}^g w_i \bar{y}_{i\cdot}$
+   \item $V(\hat{C}) = V\bigg(\sum_{i=1}^g w_i\bar{y}_{i\cdot}\bigg) = \sum_{i=1}^g w_i^2 \frac{\sigma^2}{n_i}$
+   \item $\hat{V}(\hat{C}) = \sum_{i=1}^g w_i^2 \frac{MS_E}{n_i} =  \sum_{i=1}^g w_i^2 \frac{\hat{\sigma}^2}{n_i} $
+   \item CI: $\hat{C} \pm t_{(1 - \alpha/2, N-g)}SE(\hat{C})$
+   \item $t = \frac{\hat{C} - 0}{SE(\hat{C})} \sim t_{N-g}$
+   \item Eg if $C = \mu_1 - \mu_4$ a test of $C = 0$ is testing $\mu_1 = \mu_4$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100144
+ \end{field}
+ \begin{field}
+  Contrast sums of squares
+ \end{field}
+ \begin{field}
+  $SS_{\text{Contrast}} = SS_E(\text{reduced}) - SS_E(\text{full})$
+
+  \begin{itemize}
+   \item The full model is the separate means model $y_{ij} = \mu_i + \epsilon_{ij}$
+   \item The reduced model is the full model with the restriction $H_0: C = 0$ imposed on the $\mu_i$
+   \item Eg: $C = \frac{\mu_1 + \mu_2 + \mu_3}{3} = \mu_4$
+         Full model parameter vecotr $(\mu_1, \cdots, \mu_4)^t$, reduced model parameter vector: $(\mu_1, \mu_2, \mu_3)$ with $\mu_4 = \frac{\mu_1+ \mu_2 + \mu_3}{3}$
+   \item df full = $N-4$, df reduced = $N-3$, df contrast = 1 = $(N-3) - (N-4)$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100145
+ \end{field}
+ \begin{field}
+  Orthogonal contrasts
+ \end{field}
+ \begin{field}
+  Contrasts $C_1$ and $C_2$ are orthogonal if $\sum_{i=1}^g \frac{w_i w_i^*}{n_i} = 0$
+
+  We usually only consider orthogonal contrasts when $n_i = n$ (balanced design)
+
+  With $g$ treatments, we can have at most $g-1$ orthogonal contrasts
+
+  If contrasts are orthogonal $SS(trt) = SS(C1) + \ldots + SS(C_{g-1})$
+ \end{field}
 \end{note}
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100147
-    \end{field}
-    \begin{field}
-        Design matrix for orthogonal polynomial contrasts
-    \end{field}
-    \begin{field}
-        $$ X = \begin{pmatrix}
-              1 & 0 & 0^2 & 0^3\\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & 50 & 50^2 & 50^3 \\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & 100 & 100^2 & 100^3 \\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & 150 & 150^2 & 150^3 \\
-              \vdots & \vdots & \vdots & \vdots \\
-        \end{pmatrix}$$
-        $ \beta = (\beta_0, \beta_1, \beta_2, \beta_3)^t$
-    \end{field}
+ \begin{field}
+  \tiny 100146
+ \end{field}
+ \begin{field}
+  Orthogonal polynomial contrasts and polynomial regression
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item When data are balanced and treatments are incremental and equally spaced, we can use orthogonal polynomial contrasts
+   \item With $g$ treatments, fit a $g-1$ degree polynomial model. Fitted polynomial will fit each treatment mean exactly
+   \item The $g-1$ degree polynomial is another parametrization of the separate means model
+   \item The cell means model ignores the incremental nature of treatment - polynomial one doesnt
+   \item Polynomial models imply something about interpolation
+   \item ex: $y_{ij}  = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + \beta_3 X_i^3 + \epsilon_{ij}$ $X_i$ is the amount of treatment in the $i$th group.
+   \item SS(trt) = SS(linar) + SS(quad) + SS(cubic)
+  \end{itemize}
+ \end{field}
+\end{note}
+
+
+\begin{note}
+ \begin{field}
+  \tiny 100147
+ \end{field}
+ \begin{field}
+  Design matrix for orthogonal polynomial contrasts
+ \end{field}
+ \begin{field}
+  $$ X = \begin{pmatrix}
+    1      & 0      & 0^2    & 0^3    \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & 50     & 50^2   & 50^3   \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & 100    & 100^2  & 100^3  \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & 150    & 150^2  & 150^3  \\
+    \vdots & \vdots & \vdots & \vdots \\
+   \end{pmatrix}$$
+  $ \beta = (\beta_0, \beta_1, \beta_2, \beta_3)^t$
+ \end{field}
 \end{note}
 
 % Lecture 8
 
 \begin{note}
-    \begin{field}
-        \tiny 100148
-    \end{field}
-    \begin{field}
-        Per comparison error rate
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item P(reject $H_{0i}$) when $H_{0i}$ is true
-          \item Usual $\alpha$
-          \item No correction for multiple comparisons
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100148
+ \end{field}
+ \begin{field}
+  Per comparison error rate
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item P(reject $H_{0i}$) when $H_{0i}$ is true
+   \item Usual $\alpha$
+   \item No correction for multiple comparisons
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100149
-    \end{field}
-    \begin{field}
-        Experimentwise error rate
-    \end{field}
-    \begin{field}
-        $\alpha_E = $ P(reject at least one $H_{0i}$) when $H_0$ is true (all $H_{0i}$ true )
-    \end{field}
+ \begin{field}
+  \tiny 100149
+ \end{field}
+ \begin{field}
+  Experimentwise error rate
+ \end{field}
+ \begin{field}
+  $\alpha_E = $ P(reject at least one $H_{0i}$) when $H_0$ is true (all $H_{0i}$ true )
+ \end{field}
 \end{note}
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100150
-    \end{field}
-    \begin{field}
-        False Discovery rate (FDR)
-    \end{field}
-    \begin{field}
-        $FDR = \frac{\text{number false rejections}}{total number rejections}$,
-        or 0 when no rejections
+ \begin{field}
+  \tiny 100150
+ \end{field}
+ \begin{field}
+  False Discovery rate (FDR)
+ \end{field}
+ \begin{field}
+  $FDR = \frac{\text{number false rejections}}{total number rejections}$,
+  or 0 when no rejections
 
-        Allows more incorrect rejections as the number of true rejections increases
-    \end{field}
-\end{note}
-
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100151
-    \end{field}
-    \begin{field}
-        Strong familywise error rate
-    \end{field}
-    \begin{field}
-        $\alpha_F = P(\text{at least one false rejection}) = P(FDR > 0)$
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100152
-    \end{field}
-    \begin{field}
-        Tradeoff of multiple comparisons
-    \end{field}
-    \begin{field}
-        Stronger error control - less powerful test
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100153
-    \end{field}
-    \begin{field}
-        Bonferroni correction
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item $K$ comparisons
-          \item Fix $\alpha_F = P(\text{at least one false rejection})$ and set per comparison error rate $\alpha = \alpha_F/K$
-          \item Reject $H_{0i}$ if its p value is less than $\alpha_F/K$
-          \item Very strict, but easy test
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100154
-    \end{field}
-    \begin{field}
-        Holm multiple comparison
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item $K$ comparisons
-          \item Sort individual p-values from small to large $p_1, \ldots, p_k$
-          \item Reject $H_{0i}$ if $p_i < \frac{\alpha_F}{K-i+1}$
-          \item Note $\frac{\alpha_F}{K-i+1} \geq \frac{\alpha_F}{K}$, so Holm is more powerful than Bonferroni , but still conservative
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100155
-    \end{field}
-    \begin{field}
-        Multiple comparison method: FDR
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item $K$ comparisons
-          \item Sort p-values
-          \item Reject $H_{0i}$ if $p_i < \frac{i \cdot FDR}{K}$
-          \item Controls the false discovery rate
-        \end{itemize}
-    \end{field}
+  Allows more incorrect rejections as the number of true rejections increases
+ \end{field}
 \end{note}
 
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100156
-    \end{field}
-    \begin{field}
-        Scheffes method
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Only method that controls $\alpha_F$ if we've snooped the data
-          \item Tests all possible contrasts (all are 0 )
-          \item very conservative
-          \item Reject $H_{0i}: C_i = 0$ if $$\frac{SS_{C_i}(g-1)}{MS_E} > F_{\alpha_F, g-1, N-g} $$
-          \item Confidence interval: $$\hat{C_i} \pm \sqrt{(g-1)F_{\alpha_F, g-1, N-g}}SE(\hat{C_i}) $$
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100151
+ \end{field}
+ \begin{field}
+  Strong familywise error rate
+ \end{field}
+ \begin{field}
+  $\alpha_F = P(\text{at least one false rejection}) = P(FDR > 0)$
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100157
-    \end{field}
-    \begin{field}
-        Multiple comparison for pairwise comparisons
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Contrasts of the form $\mu_i - \mu_j$
-          \item For $g$ treatment groups there are $\binom{g}{2}$ possible pairwise comparisons
-          \item Tukey's Honestly Significant Difference (balanced)
-          \item Tukey-Kramer (not balanced )
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100152
+ \end{field}
+ \begin{field}
+  Tradeoff of multiple comparisons
+ \end{field}
+ \begin{field}
+  Stronger error control - less powerful test
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100157
-    \end{field}
-    \begin{field}
-        Tukey's Honestly Significant Difference (HSD)
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Pairwise comparisons
-          \item Simultaneous tests and CIs of all $C = \mu_i - \mu_j$
-          \item Controls $\alpha_F$
-          \item CI: $$\bar{y}_{i\cdot} - \bar{y}_{j\cdot} \pm q_{\alpha_F, g, N-g}\sqrt{\frac{MS_E}{n}} $$
-          \item Assumes $n$ observations in each group (balanced)
-          \item Where $q$ is the studentized range distribution - dividing a statistic by the estimate of its standard error
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100153
+ \end{field}
+ \begin{field}
+  Bonferroni correction
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $K$ comparisons
+   \item Fix $\alpha_F = P(\text{at least one false rejection})$ and set per comparison error rate $\alpha = \alpha_F/K$
+   \item Reject $H_{0i}$ if its p value is less than $\alpha_F/K$
+   \item Very strict, but easy test
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100154
+ \end{field}
+ \begin{field}
+  Holm multiple comparison
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $K$ comparisons
+   \item Sort individual p-values from small to large $p_1, \ldots, p_k$
+   \item Reject $H_{0i}$ if $p_i < \frac{\alpha_F}{K-i+1}$
+   \item Note $\frac{\alpha_F}{K-i+1} \geq \frac{\alpha_F}{K}$, so Holm is more powerful than Bonferroni , but still conservative
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100155
+ \end{field}
+ \begin{field}
+  Multiple comparison method: FDR
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $K$ comparisons
+   \item Sort p-values
+   \item Reject $H_{0i}$ if $p_i < \frac{i \cdot FDR}{K}$
+   \item Controls the false discovery rate
+  \end{itemize}
+ \end{field}
+\end{note}
+
+
+
+\begin{note}
+ \begin{field}
+  \tiny 100156
+ \end{field}
+ \begin{field}
+  Scheffes method
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Only method that controls $\alpha_F$ if we've snooped the data
+   \item Tests all possible contrasts (all are 0 )
+   \item very conservative
+   \item Reject $H_{0i}: C_i = 0$ if $$\frac{SS_{C_i}(g-1)}{MS_E} > F_{\alpha_F, g-1, N-g} $$
+   \item Confidence interval: $$\hat{C_i} \pm \sqrt{(g-1)F_{\alpha_F, g-1, N-g}}SE(\hat{C_i}) $$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100157
+ \end{field}
+ \begin{field}
+  Multiple comparison for pairwise comparisons
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Contrasts of the form $\mu_i - \mu_j$
+   \item For $g$ treatment groups there are $\binom{g}{2}$ possible pairwise comparisons
+   \item Tukey's Honestly Significant Difference (balanced)
+   \item Tukey-Kramer (not balanced )
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100157
+ \end{field}
+ \begin{field}
+  Tukey's Honestly Significant Difference (HSD)
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Pairwise comparisons
+   \item Simultaneous tests and CIs of all $C = \mu_i - \mu_j$
+   \item Controls $\alpha_F$
+   \item CI: $$\bar{y}_{i\cdot} - \bar{y}_{j\cdot} \pm q_{\alpha_F, g, N-g}\sqrt{\frac{MS_E}{n}} $$
+   \item Assumes $n$ observations in each group (balanced)
+   \item Where $q$ is the studentized range distribution - dividing a statistic by the estimate of its standard error
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100158
-    \end{field}
-    \begin{field}
-        Tukey-Kramer
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Pairwise comparison
-          \item If the data are not balanced (but close)
-          \item Replace $\sqrt{\frac{MS_E}{n}}$ with $\sqrt{MS_E \frac{n_i + n_j}{2n_in_j}}$ in
-          \item  CI: $$\bar{y}_{i\cdot} - \bar{y}_{j\cdot} \pm q_{\alpha_F, g, N-g}\sqrt{\frac{MS_E}{n}} $$
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100158
+ \end{field}
+ \begin{field}
+  Tukey-Kramer
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Pairwise comparison
+   \item If the data are not balanced (but close)
+   \item Replace $\sqrt{\frac{MS_E}{n}}$ with $\sqrt{MS_E \frac{n_i + n_j}{2n_in_j}}$ in
+   \item  CI: $$\bar{y}_{i\cdot} - \bar{y}_{j\cdot} \pm q_{\alpha_F, g, N-g}\sqrt{\frac{MS_E}{n}} $$
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100159
-    \end{field}
-    \begin{field}
-        Ryan-Einot-Gabriel-Welsch Range (REGWR) test
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Controls $\alpha_F$
-          \item Stepdown procedure
-          \item Order sample means from small to large
-          \item Test ranges, starting with largest range $\mu_{(1)} = \mu_{(g)}$
-          \item If fail to reject, stop, conclude that no means differ. Otherwise stop down and test next largest ranges. etc
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100159
+ \end{field}
+ \begin{field}
+  Ryan-Einot-Gabriel-Welsch Range (REGWR) test
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Controls $\alpha_F$
+   \item Stepdown procedure
+   \item Order sample means from small to large
+   \item Test ranges, starting with largest range $\mu_{(1)} = \mu_{(g)}$
+   \item If fail to reject, stop, conclude that no means differ. Otherwise stop down and test next largest ranges. etc
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100160
-    \end{field}
-    \begin{field}
-        Dunnett's Procedure
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Compare all treatments to control
-          \item
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100160
+ \end{field}
+ \begin{field}
+  Dunnett's Procedure
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Compare all treatments to control
+   \item
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100161
-    \end{field}
-    \begin{field}
-        Multiple Comparisons with the best $MCB$
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Identifies either $max(\mu_i)$ or $min(\mu_i)$
-          \item Intervals either contain 0 (not different from best) or have 0 as an endpoint, which implies they are different from the best.
-          \item Usually done with ANOVA
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100161
+ \end{field}
+ \begin{field}
+  Multiple Comparisons with the best $MCB$
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Identifies either $max(\mu_i)$ or $min(\mu_i)$
+   \item Intervals either contain 0 (not different from best) or have 0 as an endpoint, which implies they are different from the best.
+   \item Usually done with ANOVA
+  \end{itemize}
+ \end{field}
 \end{note}
 
 
 \begin{note}
-    \begin{field}
-        \tiny 100162
-    \end{field}
-    \begin{field}
-        Difference between Type I and Type III Sum of Squares
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Type I is a nested model - variables are added
-          \item Type III removes one variable
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100162
+ \end{field}
+ \begin{field}
+  Difference between Type I and Type III Sum of Squares
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Type I is a nested model - variables are added
+   \item Type III removes one variable
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100163
-    \end{field}
-    \begin{field}
-        Effect of non-normality ("Robustness")
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item If tails are too long (compared to normal) estimate of variance will be too large, inference will be conservative (CI to wide, p-values too big, type I error smaller than $\alpha$, lower power)
-          \item If tails are too short, reverse is true
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100163
+ \end{field}
+ \begin{field}
+  Effect of non-normality ("Robustness")
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item If tails are too long (compared to normal) estimate of variance will be too large, inference will be conservative (CI to wide, p-values too big, type I error smaller than $\alpha$, lower power)
+   \item If tails are too short, reverse is true
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100164
-    \end{field}
-    \begin{field}
-        Equal variance diagnostics
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Levene's test
-          \item Plot residuals vs fitted values
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100164
+ \end{field}
+ \begin{field}
+  Equal variance diagnostics
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Levene's test
+   \item Plot residuals vs fitted values
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100165
-    \end{field}
-    \begin{field}
-        Effect of non-constant variance + Remedy
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item If data are balance and variances are not too unequal, standard procedures work pretty well
-          \item If data are unbalanced and large $n_i$ corresponds to larger variances, procedures too conservative
-          \item Small $n_i$ correspond to large variances, opposite
-          \item Remedy using Welch's ANOVA/weighted least squares, larger balanced sample
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100165
+ \end{field}
+ \begin{field}
+  Effect of non-constant variance + Remedy
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item If data are balance and variances are not too unequal, standard procedures work pretty well
+   \item If data are unbalanced and large $n_i$ corresponds to larger variances, procedures too conservative
+   \item Small $n_i$ correspond to large variances, opposite
+   \item Remedy using Welch's ANOVA/weighted least squares, larger balanced sample
+  \end{itemize}
+ \end{field}
 \end{note}
 
 % Lecture 12
 
 \begin{note}
-    \begin{field}
-        \tiny 100166
-    \end{field}
-    \begin{field}
-        RF Plot
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item Residual-Fit Spread plot
-          \item Left plot has sorted centered fits $\hat{y}_{ij} - \hat{\bar{y}}_{ij}$
-          \item Right plot has sorted residuals $y_{ij} - \hat{y}_{ij}$
-          \item Left plot shows variability explained by the model
-          \item Right plot shows unexplained variability
-          \item Want spread of left plot to be larger than right plot - indicates we have a good model
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100166
+ \end{field}
+ \begin{field}
+  RF Plot
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item Residual-Fit Spread plot
+   \item Left plot has sorted centered fits $\hat{y}_{ij} - \hat{\bar{y}}_{ij}$
+   \item Right plot has sorted residuals $y_{ij} - \hat{y}_{ij}$
+   \item Left plot shows variability explained by the model
+   \item Right plot shows unexplained variability
+   \item Want spread of left plot to be larger than right plot - indicates we have a good model
+  \end{itemize}
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100167
-    \end{field}
-    \begin{field}
-        Sample size to perform a 2 sample z test
-    \end{field}
-    \begin{field}
-      For a 2 sample $z$ test $H_0: \mu_1 = \mu_2$ with $\sigma^2$ known
-        $$ n \geq 2(z_{\alpha/2} + z_{\beta})^2 \frac{\sigma^2}{\delta^2}$$
-        \begin{itemize}
-          \item $n$ sample size in each group
-          \item $\alpha = $ Type I error rate
-          \item $\beta = $ Type II error rate = 1-Power
-          \item $z_{\alpha/2}= $ standard normal $1 - \alpha/2$ quantile
-          \item $z_{\beta} = $ standard normal $1 - \beta$ quantile
-          \item $\sigma^2 = $ common variance
-          \item $\delta = \mu_1 - \mu_2 $
-        \end{itemize}
-    \end{field}
+ \begin{field}
+  \tiny 100167
+ \end{field}
+ \begin{field}
+  Sample size to perform a 2 sample z test
+ \end{field}
+ \begin{field}
+  For a 2 sample $z$ test $H_0: \mu_1 = \mu_2$ with $\sigma^2$ known
+  $$ n \geq 2(z_{\alpha/2} + z_{\beta})^2 \frac{\sigma^2}{\delta^2}$$
+  \begin{itemize}
+   \item $n$ sample size in each group
+   \item $\alpha = $ Type I error rate
+   \item $\beta = $ Type II error rate = 1-Power
+   \item $z_{\alpha/2}= $ standard normal $1 - \alpha/2$ quantile
+   \item $z_{\beta} = $ standard normal $1 - \beta$ quantile
+   \item $\sigma^2 = $ common variance
+   \item $\delta = \mu_1 - \mu_2 $
+  \end{itemize}
+ \end{field}
 \end{note}
 
 % Lecture 13
 
 \begin{note}
-    \begin{field}
-        \tiny 100168
-    \end{field}
-    \begin{field}
-        Sample size for one-way ANOVA
-    \end{field}
-    \begin{field}
-        Depends on the distribution when $H_A$ is the case - non central F distribution - to find sample size, simulate repeated sampling under $H_A$ to calculate power for different $N$
-    \end{field}
+ \begin{field}
+  \tiny 100168
+ \end{field}
+ \begin{field}
+  Sample size for one-way ANOVA
+ \end{field}
+ \begin{field}
+  Depends on the distribution when $H_A$ is the case - non central F distribution - to find sample size, simulate repeated sampling under $H_A$ to calculate power for different $N$
+ \end{field}
 \end{note}
 
 \begin{note}
-    \begin{field}
-        \tiny 100169
-    \end{field}
-    \begin{field}
-        $2\times 2$ Factorial design difference from ANOVA
-    \end{field}
-    \begin{field}
-        ANOVA fits a model like, for group 1 with treatments C,F and group2 treatments HL
-        \begin{tabular}{|c |c |c |c |}
-          CH & CL & FH & FL \\
-          \hline \\
-          & & & \\
-          \hline
-        \end{tabular}
-
-(ignores the structure of treatments )
-
-Factorial design:
-\begin{tabular}{c|c|c|c|}
-  & & Liquid & \\
-  & & L & H \\
-  \hline \\
-  Screen & C & & \\
-  & F & & \\
-  \hline
-\end{tabular}
-
-Uses contrasts
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100170
-    \end{field}
-    \begin{field}
-        Interaction plot
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item If the interaction contrast is 0, then the lines will be parallel
-          \item If we see non parallel lines, it indicates there is an interaction
-          \item Parallel lines associated with large p values of interaction term
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100171
-    \end{field}
-    \begin{field}
-        Model for a $2\times 2$ factorial design
-    \end{field}
-    \begin{field}
-        $y_{ijk}$ is response from the $k$th replicate with $i$th level of factor A, and $j$th level of factor B
-
-
-        eg:
-
-        \begin{center}
-          \begin{tabular}{|c|c|c|c|}
-          \hline \\
-          & & B &\\
-          & & $j=1$ & $j = 2$\\
-          \hline \\
-          A & $i = 1$ & $y_{11k}$ & $y_{12k}$\\
-          & $i=2$ & $y_{21k}$ & $y_{22k}$\\
-          \hline
-          \end{tabular}
-        \end{center}
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100172
-    \end{field}
-    \begin{field}
-        Cell means parametrization for $2 \times 2$ factorial design
-    \end{field}
-    \begin{field}
-        $$y_{ijk} = \mu_{ij} + \epsilon_{ijk}$$
-
-
-
-        $y_{ijk}$ is response from the $k$th replicate with $i$th level of factor A, and $j$th level of factor B
-
-        $\epsilon_{ijk} \sim N(0,\sigma^2)$
-    \end{field}
-\end{note}
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100173
-    \end{field}
-    \begin{field}
-        Factor effects parametrization for $2 \times 2$ design
-    \end{field}
-    \begin{field}
-        $$y_{ijk} = \mu + \alpha_i +\beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}$$
-        Where
-        \begin{itemize}
-          \item $\mu$ is the overall mean
-          \item $\alpha_i$ effect of $i$th level of factor A
-          \item $\beta_j$ effect of $j$th level of factor B
-          \item $(\alpha\beta)_{ij}$ interaction of $i$th level of A and $j$th level of B
-          \item Where $\epsilon_{ijk} \sim N(0,\sigma^2)$
-          \item $0 = \sum_{i=1}^2 \alpha_i = \sum_{j=1}^2\beta_j = \sum_{i=1}^2 (\alpha\beta)_{ij} = \sum_{i=1}^2(\alpha\beta)_{ij}$
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100174
-    \end{field}
-    \begin{field}
-        Equivalence of cell means and factor effects parametrizations
-    \end{field}
-    \begin{field}
-        \begin{center}
-          \begin{tabular}{c| c | c | }
-            & $j=1$ & $j=2$\\
-            \hline \\
-            $i=1$ & $\mu_{11} = \mu + \alpha_1 + \beta_1 + (\alpha\beta)_{11}$ & $\mu_{12} = \mu + \alpha_1 + \beta_2 + (\alpha\beta)_{12}
-              = \mu + \alpha_1 - \beta_1 - (\alpha\beta)_{11}$\\
-              $i=1$ & $\mu_{21} = \mu + \alpha_2 + \beta_1 + (\alpha\beta)_{21} = \mu - \alpha_1 + \beta_1 - (\alpha\beta)_{11}$ & $\mu_{22} = \mu + \alpha_2 + \beta_2 + (\alpha\beta)_{22} = \mu - \alpha_1 - \beta_1 + (\alpha\beta)_{11}$
-          \end{tabular}
-        \end{center}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100175
-    \end{field}
-    \begin{field}
-        Design matrix for $2 \times 2$ factorial design, where each group has 2 options
-    \end{field}
-    \begin{field}
-        $$ \begin{pmatrix}
-              y_{111} \\ \vdots \\ y_{11n} \\ y_{121} \\ \vdots \\
-              y_{12n}\\ y_{211}\\ \vdots \\ y_{21n} \\ y_{221} \\ \vdots \\
-              \\ y_{22n}
-        \end{pmatrix} =
-        \begin{pmatrix}
-              1 & 1 & 1 & 1\\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & 1 & -1 & -1 \\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & -1 & 1 & -1 \\
-              \vdots & \vdots & \vdots & \vdots \\
-              1 & -1 & -1 & 1 \\
-              \vdots & \vdots & \vdots & \vdots \\
-        \end{pmatrix}
-        \begin{pmatrix}
-              \mu \\ \alpha_1 \\ \beta_1 \\ (\alpha\beta)_{11}
-        \end{pmatrix} + \epsilon $$
-    \end{field}
-\end{note}
-
-
-
-\begin{note}
-    \begin{field}
-        \tiny 100176
-    \end{field}
-    \begin{field}
-        General model for a 2-factor design
-    \end{field}
-    \begin{field}
-        $y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}$
-        \begin{itemize}
-          \item A has levels $1 \cdots a$
-          \item B has levels $1 \cdots b$
-          \item $\epsilon_{ijk} \sim N(0,\sigma^2)$
-          \item $0 = \sum_{i=1}^a \alpha_i = \sum_{j=1}^b \beta_j = \sum_{i=1}^a (\alpha\beta)_{ij} = \sum_{j=1}^b (\alpha\beta)_{ij}$
-          \item There are $a \times b $ parameters to estimate
-          \item $a-1 \alpha_i$s , $b-1 \beta_j$s, $(a-1)(b-1) (\alpha\beta)_{ij}$s = ab total parameters
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100177
-    \end{field}
-    \begin{field}
-        Parameter estimates for $2 \times 2$ factorial design
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item $\hat{\mu} = \bar{y}_{\cdot\cdot \cdot}$
-          \item $\hat{\alpha}_i = \hat{\mu}_{i\cdot} - \hat{\mu} = \bar{y}_{i\cdot \cdot} - \bar{y}_{\cdot \cdot \cdot }$
-          \item $\hat{\beta}_j =\hat{\mu}_{\cdot j} - \hat{\mu} = \bar{y}_{\cdot j \cdot} - \bar{y}_{\cdot \cdot \cdot } $
-          \item $\hat{(\alpha\beta)}_{ij} = \hat{\mu}_{ij} - \hat{\alpha}_i - \hat{\beta}_j - \hat{\mu}$
-          \item Where :
-
-
-          \item $\mu_{i\cdot }$ population mean for $i$th level of factor A
-          \item $\mu_{\cdot j}$ population mean for $j$th level of factor B
-          \item $\alpha_i$ deviation from the overall mean associated with $i$th level of factor A
-          \item $(\alpha\beta)_{ij}$ deviation of cell mean from the row column and overall mean
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100178
-    \end{field}
-    \begin{field}
-        ANOVA for 2 factor design - Hypothesis test interpretation
-    \end{field}
-    \begin{field}
-      Degrees of freedom:
-        \begin{itemize}
-          \item $A: a - 1$
-          \item $B: b-1$
-          \item $AB: (a-1)(b-1)$
-          \item Error $N - ab$
-          \item Total $N-1$
-        \end{itemize}
-        Each row in anova sum of squares table gives the F value for if that row was zero, ie test all $\alpha_i = 0$ indicates that that factor has no effect
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100179
-    \end{field}
-    \begin{field}
-        General factorial design (eg $8 \times 2 \times 2$)
-    \end{field}
-    \begin{field}
-        $$ y_{ijkl} = \mu + \alpha_i + \beta_j + \gamma_k + (\alpha\beta)_{ij} + (\alpha\gamma)_{ik} + (\beta\gamma)_{jk} + (\alpha\beta\gamma)_{ijk} + \epsilon_{ijkl} $$
-
-
-        Where
-        \begin{itemize}
-          \item $y_{ijkl}$ response for $l$th replicate at $i$th level of A, $j$th level of $B$ and $k$th level of C
-          \item $\mu$ overall mean
-          \item $\alpha_i$ effect of $i$th level of A
-          \item $(\alpha\beta)_{ij}$ interaction of A and B
-          \item $(\alpha\beta\gamma)$ interaction of A and B and C
-          \item $\epsilon_{ijkl} iid \sim N(0,\sigma^2)$
-        \end{itemize}
-    \end{field}
-\end{note}
-
-\begin{note}
-    \begin{field}
-        \tiny 100180
-    \end{field}
-    \begin{field}
-        Type I Type II Type III Sum of squares (unbalanced )
-    \end{field}
-    \begin{field}
-        \begin{itemize}
-          \item When data are unbalanced Type I and Type III SS are different
-          \item I is sequential
-          \item II is partial
-          \item III is hierarchical
-        \end{itemize}
-
-\begin{center}
-  \begin{tabular}{|c|c|c|c|}
-    Type & SS & Effects in full model & Effects in reduced model \\
-    \hline \\
-    I & A & A & intercept only \\
-    III & A & A,B,C,AB,AC,BC,ABC & B,C,AB,AC,BC,ABC \\
-    II & A& A,B,C,BC & B,C,BC \\
-    III & AB & A,B,C,AB,AC,BC,ABC & A,B,C,AC,BC,ABC \\
-    II & AB & A,B,C,AB,AC,BC & A,B,C,AC,BC
-
+ \begin{field}
+  \tiny 100169
+ \end{field}
+ \begin{field}
+  $2\times 2$ Factorial design difference from ANOVA
+ \end{field}
+ \begin{field}
+  ANOVA fits a model like, for group 1 with treatments C,F and group2 treatments HL
+  \begin{tabular}{|c |c |c |c |}
+   CH & CL & FH & FL \\
+   \hline            \\
+      &    &    &    \\
+   \hline
   \end{tabular}
-\end{center}
+
+  (ignores the structure of treatments )
+
+  Factorial design:
+  \begin{tabular}{c|c|c|c|}
+          &   & Liquid &   \\
+          &   & L      & H \\
+   \hline                  \\
+   Screen & C &        &   \\
+          & F &        &   \\
+   \hline
+  \end{tabular}
+
+  Uses contrasts
+ \end{field}
+\end{note}
 
 
-    \end{field}
+\begin{note}
+ \begin{field}
+  \tiny 100170
+ \end{field}
+ \begin{field}
+  Interaction plot
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item If the interaction contrast is 0, then the lines will be parallel
+   \item If we see non parallel lines, it indicates there is an interaction
+   \item Parallel lines associated with large p values of interaction term
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100171
+ \end{field}
+ \begin{field}
+  Model for a $2\times 2$ factorial design
+ \end{field}
+ \begin{field}
+  $y_{ijk}$ is response from the $k$th replicate with $i$th level of factor A, and $j$th level of factor B
+
+
+  eg:
+
+  \begin{center}
+   \begin{tabular}{|c|c|c|c|}
+    \hline                              \\
+      &         & B         &           \\
+      &         & $j=1$     & $j = 2$   \\
+    \hline                              \\
+    A & $i = 1$ & $y_{11k}$ & $y_{12k}$ \\
+      & $i=2$   & $y_{21k}$ & $y_{22k}$ \\
+    \hline
+   \end{tabular}
+  \end{center}
+ \end{field}
+\end{note}
+
+
+\begin{note}
+ \begin{field}
+  \tiny 100172
+ \end{field}
+ \begin{field}
+  Cell means parametrization for $2 \times 2$ factorial design
+ \end{field}
+ \begin{field}
+  $$y_{ijk} = \mu_{ij} + \epsilon_{ijk}$$
+
+
+
+  $y_{ijk}$ is response from the $k$th replicate with $i$th level of factor A, and $j$th level of factor B
+
+  $\epsilon_{ijk} \sim N(0,\sigma^2)$
+ \end{field}
+\end{note}
+
+
+\begin{note}
+ \begin{field}
+  \tiny 100173
+ \end{field}
+ \begin{field}
+  Factor effects parametrization for $2 \times 2$ design
+ \end{field}
+ \begin{field}
+  $$y_{ijk} = \mu + \alpha_i +\beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}$$
+  Where
+  \begin{itemize}
+   \item $\mu$ is the overall mean
+   \item $\alpha_i$ effect of $i$th level of factor A
+   \item $\beta_j$ effect of $j$th level of factor B
+   \item $(\alpha\beta)_{ij}$ interaction of $i$th level of A and $j$th level of B
+   \item Where $\epsilon_{ijk} \sim N(0,\sigma^2)$
+   \item $0 = \sum_{i=1}^2 \alpha_i = \sum_{j=1}^2\beta_j = \sum_{i=1}^2 (\alpha\beta)_{ij} = \sum_{i=1}^2(\alpha\beta)_{ij}$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100174
+ \end{field}
+ \begin{field}
+  Equivalence of cell means and factor effects parametrizations
+ \end{field}
+ \begin{field}
+  \begin{center}
+   \begin{tabular}{c| c | c | }
+          & $j=1$                                                                                                      & $j=2$                                                                                                      \\
+    \hline                                                                                                                                                                                                                          \\
+    $i=1$ & $\mu_{11} = \mu + \alpha_1 + \beta_1 + (\alpha\beta)_{11}$                                                 & $\mu_{12} = \mu + \alpha_1 + \beta_2 + (\alpha\beta)_{12}
+     = \mu + \alpha_1 - \beta_1 - (\alpha\beta)_{11}$                                                                                                                                                                               \\
+    $i=1$ & $\mu_{21} = \mu + \alpha_2 + \beta_1 + (\alpha\beta)_{21} = \mu - \alpha_1 + \beta_1 - (\alpha\beta)_{11}$ & $\mu_{22} = \mu + \alpha_2 + \beta_2 + (\alpha\beta)_{22} = \mu - \alpha_1 - \beta_1 + (\alpha\beta)_{11}$
+   \end{tabular}
+  \end{center}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100175
+ \end{field}
+ \begin{field}
+  Design matrix for $2 \times 2$ factorial design, where each group has 2 options
+ \end{field}
+ \begin{field}
+  $$ \begin{pmatrix}
+    y_{111} \\ \vdots \\ y_{11n} \\ y_{121} \\ \vdots \\
+    y_{12n} \\ y_{211}\\ \vdots \\ y_{21n} \\ y_{221} \\ \vdots \\
+    \\ y_{22n}
+   \end{pmatrix} =
+   \begin{pmatrix}
+    1      & 1      & 1      & 1      \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & 1      & -1     & -1     \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & -1     & 1      & -1     \\
+    \vdots & \vdots & \vdots & \vdots \\
+    1      & -1     & -1     & 1      \\
+    \vdots & \vdots & \vdots & \vdots \\
+   \end{pmatrix}
+   \begin{pmatrix}
+    \mu \\ \alpha_1 \\ \beta_1 \\ (\alpha\beta)_{11}
+   \end{pmatrix} + \epsilon $$
+ \end{field}
+\end{note}
+
+
+
+\begin{note}
+ \begin{field}
+  \tiny 100176
+ \end{field}
+ \begin{field}
+  General model for a 2-factor design
+ \end{field}
+ \begin{field}
+  $y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}$
+  \begin{itemize}
+   \item A has levels $1 \cdots a$
+   \item B has levels $1 \cdots b$
+   \item $\epsilon_{ijk} \sim N(0,\sigma^2)$
+   \item $0 = \sum_{i=1}^a \alpha_i = \sum_{j=1}^b \beta_j = \sum_{i=1}^a (\alpha\beta)_{ij} = \sum_{j=1}^b (\alpha\beta)_{ij}$
+   \item There are $a \times b $ parameters to estimate
+   \item $a-1 \alpha_i$s , $b-1 \beta_j$s, $(a-1)(b-1) (\alpha\beta)_{ij}$s = ab total parameters
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100177
+ \end{field}
+ \begin{field}
+  Parameter estimates for $2 \times 2$ factorial design
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item $\hat{\mu} = \bar{y}_{\cdot\cdot \cdot}$
+   \item $\hat{\alpha}_i = \hat{\mu}_{i\cdot} - \hat{\mu} = \bar{y}_{i\cdot \cdot} - \bar{y}_{\cdot \cdot \cdot }$
+   \item $\hat{\beta}_j =\hat{\mu}_{\cdot j} - \hat{\mu} = \bar{y}_{\cdot j \cdot} - \bar{y}_{\cdot \cdot \cdot } $
+   \item $\hat{(\alpha\beta)}_{ij} = \hat{\mu}_{ij} - \hat{\alpha}_i - \hat{\beta}_j - \hat{\mu}$
+   \item Where :
+
+
+   \item $\mu_{i\cdot }$ population mean for $i$th level of factor A
+   \item $\mu_{\cdot j}$ population mean for $j$th level of factor B
+   \item $\alpha_i$ deviation from the overall mean associated with $i$th level of factor A
+   \item $(\alpha\beta)_{ij}$ deviation of cell mean from the row column and overall mean
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100178
+ \end{field}
+ \begin{field}
+  ANOVA for 2 factor design - Hypothesis test interpretation
+ \end{field}
+ \begin{field}
+  Degrees of freedom:
+  \begin{itemize}
+   \item $A: a - 1$
+   \item $B: b-1$
+   \item $AB: (a-1)(b-1)$
+   \item Error $N - ab$
+   \item Total $N-1$
+  \end{itemize}
+  Each row in anova sum of squares table gives the F value for if that row was zero, ie test all $\alpha_i = 0$ indicates that that factor has no effect
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100179
+ \end{field}
+ \begin{field}
+  General factorial design (eg $8 \times 2 \times 2$)
+ \end{field}
+ \begin{field}
+  $$ y_{ijkl} = \mu + \alpha_i + \beta_j + \gamma_k + (\alpha\beta)_{ij} + (\alpha\gamma)_{ik} + (\beta\gamma)_{jk} + (\alpha\beta\gamma)_{ijk} + \epsilon_{ijkl} $$
+
+
+  Where
+  \begin{itemize}
+   \item $y_{ijkl}$ response for $l$th replicate at $i$th level of A, $j$th level of $B$ and $k$th level of C
+   \item $\mu$ overall mean
+   \item $\alpha_i$ effect of $i$th level of A
+   \item $(\alpha\beta)_{ij}$ interaction of A and B
+   \item $(\alpha\beta\gamma)$ interaction of A and B and C
+   \item $\epsilon_{ijkl} iid \sim N(0,\sigma^2)$
+  \end{itemize}
+ \end{field}
+\end{note}
+
+\begin{note}
+ \begin{field}
+  \tiny 100180
+ \end{field}
+ \begin{field}
+  Type I Type II Type III Sum of squares (unbalanced )
+ \end{field}
+ \begin{field}
+  \begin{itemize}
+   \item When data are unbalanced Type I and Type III SS are different
+   \item I is sequential
+   \item II is partial
+   \item III is hierarchical
+  \end{itemize}
+
+  \begin{center}
+   \begin{tabular}{|c|c|c|c|}
+    Type & SS & Effects in full model & Effects in reduced model \\
+    \hline                                                       \\
+    I    & A  & A                     & intercept only           \\
+    III  & A  & A,B,C,AB,AC,BC,ABC    & B,C,AB,AC,BC,ABC         \\
+    II   & A  & A,B,C,BC              & B,C,BC                   \\
+    III  & AB & A,B,C,AB,AC,BC,ABC    & A,B,C,AC,BC,ABC          \\
+    II   & AB & A,B,C,AB,AC,BC        & A,B,C,AC,BC
+   \end{tabular}
+  \end{center}
+ \end{field}
 \end{note}
 
 
