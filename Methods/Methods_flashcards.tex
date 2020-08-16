@@ -3152,7 +3152,711 @@
  \end{field}
 \end{note}
 
+% Lecture 17
 
+\begin{note}
+    \begin{field}
+        \tiny 100181
+    \end{field}
+    \begin{field}
+        Issues with Unbalanced Data for overall mean estimate and sum of squares
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item The fitted value for $y_{ijk}$ is still the observed cell mean with unbalanced data
+          \item Estimate of overall mean is not the average of all y values $\hat{\mu} \neq \bar{y}_{\cdot \cdot \cdot }$
+          \item Issues with row and cell means
+          \item $\bar{y}_{1\cdot \cdot }\neq \frac{\bar{y}_{11}+ \bar{y}_{12}}{}$
+          \item Type I still sums to Model Sum of Squares, but Type II and III does not (but it does for balanced data)
+          \item Type II useful for model building
+          \item Type III SS useful for hypothesis testing
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100182
+    \end{field}
+    \begin{field}
+        Full and Reduced Type II Sum of squares, with factors $A$, $B$, $C$
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Reduced model for facor A is largest model not containing $A$ in any terms (ie remove interactions with a), full model adds A, but not interactions of A
+          \item Sum of Squares for A
+          \item Full: A,B,C,BC
+          \item Reduced: B,C,BC
+          \item Sum of Squares for AB
+          \item Full: A,B,C,AB,AC,BC
+          \item Reduced: A,B,C,AC,BC
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100183
+    \end{field}
+    \begin{field}
+        Type I sum of squares, full and reduced model, with factors A,B,C
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Note we could get different values depending on the order of the factors in the specified model (even p-values)
+          \item Sequential
+          \item Full model AB: A,B,C,AB
+          \item Reduced model: A,B,C
+          \item Full model: A:, A
+          \item Reduced model: intercept only
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100184
+    \end{field}
+    \begin{field}
+        Predicted values for different type of SS for factor A
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c }
+          & Reduced model & Full model \\
+          Type I & $\hat{y}_{ijk} = \hat{\mu}$ & $\hat{y}_{ijk} = \hat{\mu} +\hat{\alpha}_i$\\
+          Type II & $\hat{y}_{ijk} = \hat{\mu} + \hat{\beta}_j$ & $\hat{y}_{ijk} = \hat{mu} + \hat{\alpha}_i + \hat{\beta}_j$\\
+          Type II & $\hat{y}_{ijk} = \hat{\mu} + \hat{\beta}_j + (\hat{\alpha\beta})_{ij}$ &  $\hat{y}_{ijk} = \hat{\mu} + \hat{\alpha}_i \hat{\beta}_j + (\hat{\alpha\beta})_{ij}$
+        \end{tabular}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100185
+    \end{field}
+    \begin{field}
+        Estimates for 2-factor means and interactions
+    \end{field}
+    \begin{field}
+        \begin{align*}
+          \hat{\mu} &= \bar{y}_{\cdot\cdot\cdot}\\
+          \hat{\alpha}_i &= \bar{y}_{i\cdot\cdot} - \bar{y}_{\cdot\cdot\cdot} \quad \text{group mean - overall mean}\\
+          \hat{\beta}_j &= \hat{y}_{\cdot j \cdot } - \bar{y}_{\cdot \cdot \cdot }\\
+          (\hat{\alpha\beta})_{ij} &= \bar{y}_{ij\cdot} - \bar{y}_{i\cdot\cdot} - \bar{y}_{\cdot j \cdot } + \bar{y}_{\cdot\cdot\cdot } \quad \text{cell mean - row and col means + overall mean }
+        \end{align*}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 100186
+    \end{field}
+    \begin{field}
+        Contrasts, balanced data and orthogonal
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item When data are balanced, a contrast for one main effect or interaction is orthogonal to a contrast for any other main effect
+          \item Because of orthogonality, we can estimate effects and compute SS one term at a time, and the results for that term dont depend on what other terms are in the model.
+          \item With unbalanced data, we dont have orthogonality
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+
+% Lecture 18
+\begin{note}
+    \begin{field}
+        \tiny 100187
+    \end{field}
+    \begin{field}
+        Example of converting a categorical variable into numeric
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item We should know at design stage if we want to treat variable as categorical or numeric
+          \item Linear model will be less complicated than categorical - lower model degrees of freedom
+        \end{itemize}
+    \end{field}
+\end{note}
+
+% Lecture 19
+
+\begin{note}
+    \begin{field}
+        \tiny 100188
+    \end{field}
+    \begin{field}
+        Missing cell
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Factorial structure is missing
+          \item Can analyze using cell means model and look at contrasts
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100189
+    \end{field}
+    \begin{field}
+        When to use random effects
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Levels of a factor are sampled from a larger population
+          \item Repeating experiment would use different factor levels (ie if the choice of levels are drawn using a random sample from larger popluation)
+          \item Need to model dependence among observations from the same level of a factor
+          \item key word - batch
+          \item Not all observations independent (ie boxes from same machine are similar )
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100190
+    \end{field}
+    \begin{field}
+        Random effects Dependence among observations in a single group- covariance
+    \end{field}
+    \begin{field}
+        \begin{align*}
+          Cov(y_{11},y_{12}) &= Cov(\mu + \alpha_1 + \epsilon_{11}, \mu + \alpha_1 + \epsilon_{12})\\
+          &= Cov(\alpha_1,\alpha_1) + Cov(\alpha_1,\epsilon_{12}) + Cov(\epsilon_{11},\epsilon_{12})\\
+          &= \sigma_\alpha^2
+        \end{align*}
+        \begin{itemize}
+          \item Last three terms are 0 because independence assumptions within and between
+          \item $\alpha_1$ and $\epsilon_{ij}$ are random, $\mu$ is fixed
+          \item Note this model assumes positive covariance
+          \item Note that covariance between observations in different groups is 0
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100191
+    \end{field}
+    \begin{field}
+        Random Effects Model and Assumptions (1 factors)
+    \end{field}
+    \begin{field}
+        $$y_{ij} + \alpha_i + \epsilon_{ij} $$
+        Where
+        \begin{itemize}
+          \item $y_{ij} = $ strength of $j$th box made by $i$th machine
+          \item $\mu = $ overall mean
+          \item $\alpha_i$ = effect of $i$th machine (allows boxes made by two different machines to systematically differ)
+          \item $\epsilon_{ij} = $ random error
+        \end{itemize}
+
+        Assumptions:
+        \begin{itemize}
+          \item $\epsilon_{ij} \sim iid N(0,\sigma^2)$
+          \item $\alpha_i \sim iid N(0,\sigma_\alpha^2)$
+          \item $\epsilon $ independent from $\alpha $
+          \item Different condition from fixed effects $\sum_i \alpha = 0$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100192
+    \end{field}
+    \begin{field}
+        Estimates for $\mu$ for random effects model (1 factor ) to make inference
+    \end{field}
+    \begin{field}
+        \begin{align*}
+          \hat{mu} &= \bar{y}_{\cdot\cdot\cdot} \\
+          E(\hat{\mu}) &= \mu \\
+          Var(\hat{\mu}) &= \frac{n \sigma_\alpha^2 + \sigma^2}{N}\\
+          \hat{\mu} &\sim N(\mu, \frac{n \sigma_\alpha^2 + \sigma^2}{N})
+        \end{align*}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100193
+    \end{field}
+    \begin{field}
+        Random effects model - how to test differences among levels of the factor
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item If $\alpha_i$ were fixed, test $H_0: \alpha_i = 0$
+          \item If random effect, cant use this $H_0$ since the hypotheses must be about the parameters, and $\alpha_i$ are random variables
+          \item Instead test $H_0: \sigma_\alpha^2 = 0$ - no machine effect
+          \item Estimated $\sigma^2, \sigma_\alpha^2$ are called variance components
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100194
+    \end{field}
+    \begin{field}
+        Anova for one random factor design (A)
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c c }
+          Source & df & SS & EMS\\
+          A & $\alpha-1$ & $\sum_i \sum_j(\bar{y}_{i\cdot} - \bar{y}_{\cdot\cdot})^2$ & $\sigma^2 + n\sigma_\alpha^2$\\
+          Error & $N - \alpha$ & $\sum_i\sum_j (\bar{y_{ij}} - \bar{y}_{i\cdot})^2$ & $\sigma^2$\\
+          Total & $N-1$ & $\sum_i\sum_j (\bar{y}_{ij} - \bar{y}_{\cdot\cdot})^2$ &
+        \end{tabular}
+        $$ \frac{SS_A/(\alpha-1)}{SS_E/(N-\alpha)} \sim F_{\alpha-1,N-\alpha}$$
+        Where $\alpha$ is the number of factors in A
+
+    \end{field}
+\end{note}
+
+%Lecture 20
+
+\begin{note}
+    \begin{field}
+        \tiny 100195
+    \end{field}
+    \begin{field}
+        Expected Mean Squares in one random factor ANOVA
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item $H_0 = \alpha_i$ is true, then $E(MS_{trt}) = \sigma^2 = E(MS_E)$
+          \item $H_0 = \alpha_i$ is false, then $E(MS_{trt}) > E(MS_E)$
+          \item F statistic is $\frac{MS_{trt}}{MS_E}$, and we reject $H_0$ if the F statistic is large
+          \item $E(MS_A) = \sigma^2 + n\sigma_\alpha^2$. If $H_0: \sigma_\alpha^2 = 0$ true, $E(MS_A) = \sigma^2$
+          \item Expected mean squares tell us how to form the F statistic,
+          \item The denominator is the MS whose expectation is equal to the numerator $E(MS)$ under $H_0$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100196
+    \end{field}
+    \begin{field}
+        $MS_{trt}$ in factor design
+    \end{field}
+    \begin{field}
+        $MS_{trt}$ is $MS_A$ for the $A$ treatment. or $MS_B$ if testing $B$ treatment so $F = \frac{MS_{trt}}{MS_E}$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100197
+    \end{field}
+    \begin{field}
+        Two random factors Model and assumptions
+    \end{field}
+    \begin{field}
+        $$y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk} $$
+        Where
+        \begin{itemize}
+          \item $y_{ijk} = $ strength of $k$th box from the $i$th machine made by $j$th operator
+          \item $\mu = $ overall mean (fixed)
+          \item $\alpha_i = $ effect of $i$th machine
+          \item $\beta_j  =$ effect of $j$th operator
+          \item $(\alpha\beta)_{ij} = $ interaction between $i$th machine and $j$th operator
+          \item $\epsilon_{ijk} = $ random error
+        \end{itemize}
+        Assumptions:
+        \begin{itemize}
+          \item $\alpha_i \sim iid N(0,\sigma_\alpha^2)$
+          \item $\beta_j \sim iid N(0,\sigma_\beta^2)$
+          \item $(\alpha\beta) \sim iid N(0,\sigma_{\alpha\beta}^2)$
+          \item $\epsilon_{ijk} \sim iid N(0,\sigma^2)$
+          \item $\alpha,\beta,(\alpha\beta),\epsilon$ all independent
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100198
+    \end{field}
+    \begin{field}
+        ANOVA for two random factor model
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c}
+          Source & DF & EMS\\
+          A & $a-1$ & $\sigma^2 + n\sigma_{\alpha\beta}^2 + nb \sigma_{\alpha}^2$ \\
+          B & $b-1$ & $\sigma^2 + n\sigma_{\alpha\beta}^2 + na \sigma_\beta^2$\\
+          AB & $(a-1)(b-1)$ & $\sigma^2 + n\sigma_{\alpha\beta}^2$\\
+          Error & $N-ab = ab(n-1)$ & $\sigma^2$
+        \end{tabular}
+        \begin{itemize}
+          \item Balanced design $N = abn$
+          \item To construct test for treatment X, find $MS_X$, and find EMS under $H_0$ for denominator in f test
+          \item Interpretation: If we have significatn pvalue, there is evidence that response varies due to random effect A (if testing A)
+        \end{itemize}
+    \end{field}
+\end{note}
+
+%Lecture 21
+
+\begin{note}
+    \begin{field}
+        \tiny 100199
+    \end{field}
+    \begin{field}
+        Estimate variance components
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Can either use MoM or REML (restricted maximum likelihood)
+          \item For MoM, set MS sample quantities equal to their expectation (EMS) from ANOVA table
+          \item Solve system of equations
+          \item Note MoM estimates may not be in parameter estimates (ie variances negative, can just set to 0 if case), although this may indicate that model is inadequate
+          \item If data are (approximately) balanced, and model is good, MoM and REML estimates should be close
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100200
+    \end{field}
+    \begin{field}
+        Model and assumptions for 3 random factors design
+    \end{field}
+    \begin{field}
+        $$y_{ijkl} = \mu + \alpha_i + \beta_j + \gamma_k + (\alpha\beta)_{ij} + (\alpha\gamma)_{ik} + (\beta\gamma)_{ik} + (\alpha\beta\gamma)_{ijk} + \epsilon_{ijkl}$$
+        Where
+        \begin{itemize}
+          \item $y_{ijkl}$: strength of $l$th box from $i$th machine, $j$th operator and $k$th batch of glue
+          \item $\mu$ = overall mean (fixed)
+          \item $\alpha_i$: effect of $i$th machine
+          \item $\beta_j$: effect of $j$th operator
+          \item $\gamma_k$: effect of $k$th batch of glue
+          \item $(\alpha\beta)_{ij}$: machine $\times$ operator interaction
+          \item $(\alpha\gamma)_{ik}$: machine $\times$ glue interaction
+          \item $(\beta\gamma)_{jk}$: operator $\times$ glue interaction
+          \item $(\alpha\beta\gamma)_{ijk}$: three way interaction
+          \item $\epsilon_{ijkl}$: random error
+        \end{itemize}
+        Assumptions
+        \begin{itemize}
+          \item Each random quantity $X$ is independent from others and distributed iid $N(0,\sigma_X^2)$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100201
+    \end{field}
+    \begin{field}
+        Anova for 3 factor random effects
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Needs approximate F test
+          \item there is no MS with expectation of $MS_X$ under $H_0$, so we must find a linear combination of the MS that has the right expectation: $\sum_s g_s MS_s$
+          \item Since the denominator of $F$ statistic is a linear combination of the MSs, the F test is approximate, so we have to approximate the degrees of freedom too
+          \item Denominator df: $$ v^* = \frac{(\sum_sg_sMS_s)^2}{\sum_sg_s^2 MS_s^2/v_s}$$
+          where $v_s = $df for $MS_s$ (same as Satterthwaite approximation for Welch t-test)
+          \item Generally dont estimate variance components (ie for a confidence interval), since these tests are asymptotic (unlike F -test )
+        \end{itemize}
+    \end{field}
+\end{note}
+
+% Lecture 22
+\begin{note}
+    \begin{field}
+        \tiny 100202
+    \end{field}
+    \begin{field}
+        Crossed factors: model and assumptions $A$ is fixed $B $ is random
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Mixed effects model
+          \item All combos of factors are tested
+          \item Each machine is used by all operators
+          \item Each operator produces boxes using both machines
+        \end{itemize}
+        $$y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk} $$
+        \begin{itemize}
+          \item $y_{ijk}$: strength of $k$th box, made with $i$th machine and $j$th operator
+          \item $\mu$: overal mean (fixed)
+          \item $\alpha_i$: effect of $i$th machine (fixed)
+          \item $\beta_j$: effect of $j$th operator
+          \item $(\alpha\beta)_{ij}$: machine $\times$ operator interaction
+          \item $\epsilon_{ijk}$: random error
+        \end{itemize}
+        Assumptions
+        \begin{itemize}
+          \item $\sum_{i=1}^2 \alpha_i = 0$
+          \item $\beta_j iid N(0,\sigma_\beta^2)$
+          \item $(\alpha\beta)_{ij} \sim iid N(0,\sigma_{\alpha\beta}^2)$
+          \item $\epsilon_{ijk} \sim N(0,\sigma^2)$
+          \item $\beta,(\alpha,\beta),\epsilon$ all independent
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100203
+    \end{field}
+    \begin{field}
+      Nested factors : Model and Assumptions
+    \end{field}
+    \begin{field}
+      \begin{tabular}{c c c c c c}
+        & & & B & & \\
+        & &  1 & 2 & 3 & 4 \\
+        A & 1 & $A_1B_{1(1)}$ & $A_1 B_{2(1)}$ & $A_1B_{3(1)}$ & $A_1B_{4(1)}$\\
+        & 2 & $A_2B_{1(2)}$ & $A_2B_{2(2)}$ & $A_2B_{3(2)}$ & $A_2B_{4(2)}$
+      \end{tabular}
+       \begin{itemize}
+         \item A is fixed, B is random
+         \item Each operator uses only one machine
+         \item Neither machine is used by all operators
+         \item Can't compare machine effect among operations( because we dont know how boxes would vary if the operator had used the other machine), so we cant model the interaction
+         \item Model does not include $ A \times B$
+       \end{itemize}
+       $$ y_{ijk} = \mu + \alpha_i + \beta_{j(i)} + \epsilon_{ijk} $$
+      \begin{itemize}
+        \item $y_{ijk}$: strength of $k$th box, made with $i$th machine, and $j$th operator
+        \item $\mu$: overall mean
+        \item $\alpha_i$; effect of $i$th machine
+        \item $\beta_{j(i)}$: effect of $j$th operator for the $i$th machine
+        \item $\sum_{i=1}^a \alpha_i = 0$, $\beta_{j(i)} \sim iid N(0,\sigma_\beta^2), \epsilon_{ijk} \sim iid N(0,\sigma^2)$, both independent
+      \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100204
+    \end{field}
+    \begin{field}
+        Comparison between crossed factors and nested factors
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Crossed factors: every level of A saw every level of B, and vice versa,
+          \item Nested factors: if B is nested in A, levels of B only see one level of A
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100205
+    \end{field}
+    \begin{field}
+        Reason for nesting
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Feasibility, if machines are in different locations, we wouldnt want to transport operators around
+          \item Subsampling: Multiple observations on the same experimental unit
+          \begin{itemize}
+            \item Observation is nested in experimental unit
+            \item Experimental units are always nested in treatment (ie fish in temp fish tank), treatment tank, measurement fish
+            \item Usually nested effects are random, but not necessary
+          \end{itemize}
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100206
+    \end{field}
+    \begin{field}
+        Multiple levels of nesting Model and assumption
+    \end{field}
+    \begin{field}
+        A, factory (random), B, machine (random), C = operator (random )
+        \begin{itemize}
+          \item Operator is nested in machine version, nested in factory
+          \item No crossed effects means no interaction term
+          \item $y_{ijkl} = \mu +\alpha_i + \beta_{j(i)} + \gamma_{k(ij)} + \epsilon_{ijkl}$
+          \item Assume each term iid Normal with associated variance, all independent.
+          \item $Cov(y_{ijkl}, y_{ijkl'}) = \sigma_\alpha^2 + \sigma_\beta^2 + \sigma_\gamma^2$, covariance within same levels of each factor
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100207
+    \end{field}
+    \begin{field}
+        Crossed and nested factors
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item All random
+          \item Operator nested in machine (operators make boxes using only one machine
+          \item Operator crossed with glue (operators make boxes using both batches of glue )
+          \item So glue sees all operators and all machines
+          \item $y_{ijkl} = \mu + \alpha_i + \beta_{j(i)} + \gamma_k + (\alpha\gamma)_{ik} + (\beta\gamma)_{j(i)k} + \epsilon_{ijkl}$
+          \item All normality and independence assumptions
+          \item No three way interaction or machine times operator interaction
+        \end{itemize}
+    \end{field}
+\end{note}
+
+%lecture 23
+
+\begin{note}
+    \begin{field}
+        \tiny 100208
+    \end{field}
+    \begin{field}
+        Estimating means and contrasts for a mixed model
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item A (machine) fixed, B (operator) random
+          \item $V(\bar{y}_{1\cdot\cdot}) = V\bigg( \frac{\sum_{j=1}^b\sum_{k=1}^n y_{1jk}}{bn}\bigg)\frac{1}{bn}(n\sigma_\beta^2 + n\sigma_{\alpha\beta}^2 + \sigma^2)$
+          \item Calculated using independence assumptions, $\mu,\alpha_1$ fixed
+          \item $\hat{C} = \sum_{i=1}^g w_i \bar{y}_{i\cdot}$
+          \item To compare machine 1 and 2, let $w_1 =1$, $w_2 = -1$
+          \item Compute point estimate $\hat{C} - \bar{y}_{1\cdot\cdot} - \bar{y}_{2\cdot\cdot}$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100209
+    \end{field}
+    \begin{field}
+        Complete Block Designs (RCB,RCBD)
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Grouping observations into groups that are homogeneous
+          \item Generalized pair - observations in a group not independent,
+          \item Example: litter of animals, locations
+          \item Experimental units stratified into blocks
+          \item Within each block, randomly assign experimental units to treatments
+          \item At least one replicate of each combination in each block
+          \item In a balanced design, each block will have the same number of replicates for each treatment combination
+          \item Draw out experimental design to identify blocked designs
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100210
+    \end{field}
+    \begin{field}
+        Why use blocking
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Account for non-independence
+          \item Explain some of the variability in the response (blocking as a nuisence parameter )
+          \item If experimental units can be grouped into homogeneous blocks, then blocks explain some of the variability
+          \item variance reduction design
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+% Lecture 24
+
+\begin{note}
+    \begin{field}
+        \tiny 100211
+    \end{field}
+    \begin{field}
+        Model and assumptions for RCBD (with $n=1$ observations per cell)
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Resembles a factorial design
+          \item $y_i = \mu + \alpha_i + \beta_j + \epsilon_{ij}$
+          \item $y_{ij}$: response for the $i$th level of the treatment in the $j$th block
+          \item $\mu$: overall mean
+          \item $\alpha_i$: treatment effect
+          \item $\beta_j$: block effect
+          \item $\epsilon_{ij}$; random error
+          \item Assume: $\sum_i \alpha_i = \sum_j\beta_j = 0, \epsilon_{ij} \sim iid N(0,\sigma^2)$
+          \item Note no interaction term - we dont want a blocking factor that interacts with treatments
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 200212
+    \end{field}
+    \begin{field}
+        ANOVA for RCBD ($n=1$ replicate )
+    \end{field}
+    \begin{field}
+      With a treatment with $g$ gropus, and $r$ blocks
+        \begin{tabular}{c c c }
+          Source & DF & SS \\
+          Treatment & $g-1$ & \\
+          Block & $r-1$ &  \\
+          Error & $(g-1)(r-1)$ & \\
+          Total & $gr-1 = N-1$ &
+        \end{tabular}
+
+        Note usually dont test block effect (but cant infer causation since not randomly assigned to blocks )
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 200213
+    \end{field}
+    \begin{field}
+        Relative efficiecy
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Want to compare the amount of information captured from the data by two designs.
+          \item Note a more complicated model (eg RCBD) would have a smaller $SS_E$ but also a smaller $df_{error}$
+          \item For a single observation from a normal distribution $I = \frac{1}{\sigma^2}$
+          \item Information increases as variance decreases
+          \item $RE = \frac{I_1}{I_2} = \frac{\sigma_2^2}{\sigma_1^2}$
+          \item By convention: $I_2$ is the simpler design.
+          \item Where $\sigma_i^2$ is the error variance in design $i$ (which is assumed Normal)
+          \item Since variances are not known, they must be estimated
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 200214
+    \end{field}
+    \begin{field}
+        Calculating and interpreting relative efficiency
+    \end{field}
+    \begin{field}
+      EG for comparing CRD and RCBD
+        \begin{itemize}
+          \item $\widehat{RE} = \frac{\hat{\sigma}_{CRD}^2}{\hat{\sigma}^2_{RCBD}} \cdot \frac{(v_{RCBD}+1)(v_{CRD} + 3)}{(v_{RCBD}+3)(v_{CRD} + 1)}$
+          \item Where $v_{design}$ is the degrees of freedom for that design ($v_{CRD} = N - g$)
+          \item IF RE = 2, then the RCBD is twice as efficient as CRD, so we should only need half as many replicates in the blocked design.
+        \end{itemize}
+    \end{field}
+\end{note}
 %%end_tag
 
 \end{document}
