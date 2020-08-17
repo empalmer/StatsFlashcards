@@ -2616,6 +2616,7 @@
  \end{field}
  \begin{field}
   Multiple comparison method: FDR
+  (edit: define FDR)
  \end{field}
  \begin{field}
   \begin{itemize}
@@ -4115,7 +4116,13 @@
       Example model (fixed effects):
       $$y_{ijk} = \mu + \alpha_i + \epsilon_{k(i)} + \beta_j + (\alpha\beta)_{ij} + (\epsilon\beta)_{k(i)j} $$
       \begin{itemize}
-        \item All assumptions for fixed/random factors
+        \item $\mu$: overall mean
+        \item $\alpha_i$: formula effect (fixed)
+        \item $\epsilon_{k(i)}$: random baby effect
+        \item $\beta_j$: time effect
+        \item $(\alpha\beta)_{ij}$: formula times time interaction
+        \item $(\epsilon\beta)_{k(i)j}$; baby $\times$ time interaction
+        \item All assumptions for fixed/random factors (Here: $0 = \sum_i \alpha_i = \sum_j \beta_j = \sum_i (\alpha\beta)_{ij} = \sum_j(\alpha\beta)_{ij}$)
         \item $\epsilon_{k(i)} \sim iid N(0,\sigma^2)$ independent from $(\epsilon\beta)_{k(i)j} \sim iid N(0,\sigma_{\alpha\beta}^2)$
         \item Note assumes constant correlation over time, Correlation matrix R of one EU is 1 on diagonal and $\rho$ everywhere else Correlation matrix overall is blocks of R on diagonal, 0 everywhere else.
       \end{itemize}
