@@ -1124,7 +1124,7 @@
 
 \begin{note} \begin{field} \tiny 100056 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name:
    \item Process
@@ -1132,7 +1132,7 @@
   \end{itemize}
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name: Mood's Test for Equality of Population Medians
    \item Process:
@@ -1335,7 +1335,7 @@
   A set of $n$ vectors are linearly dependent
  \end{field}
  \begin{field}
-  A set of $n$ vectors are linearly dependent if there exist constants $c_1, \ldots c_n$ not all 0 such that $\sum_{j=1}^n c_j \mathbf{x})j = 0$
+  A set of $n$ vectors are linearly dependent if there exist constants $c_1, \ldots c_n$ not all 0 such that $\sum_{j=1}^n c_j \mathbf{x}_j = 0$
  \end{field}
 \end{note}
 
@@ -1579,7 +1579,8 @@
                                             & = \frac{\partial}{\partial \beta}  \mathbf{Y}^t \mathbf{Y} - \beta^t \mathbf{X}^t
    \textbf{Y} - \mathbf{Y}^t \mathbf{X}\beta - \beta^t \mathbf{X}^t \mathbf{X} \beta                                                           \\
                                             & = 0 - \mathbf{X}^t \mathbf{Y} - \mathbf{X}^t \mathbf{Y} + 2 \mathbf{X}^t \mathbf{X} \beta        \\
-   \mathbf{X^t}\mathbf{X}\beta = \mathbf{X}^t \mathbf{Y}
+   \mathbf{X^t}\mathbf{X}\beta &= \mathbf{X}^t \mathbf{Y}\\
+   \beta &= (X^tX)^{-1}X^tY
   \end{align*}
  \end{field}
 \end{note}
@@ -1894,7 +1895,7 @@
   Confidence interval
  \end{field}
  \begin{field}
-  Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma^2} \sqrt{x_0^t(X^tX)^{-1}x_0}$
+  Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma} \sqrt{x_0^t(X^tX)^{-1}x_0}$
   With 95\% confidence, the expected mean response
  \end{field}
 \end{note}
@@ -1937,9 +1938,10 @@
 
 \begin{note} \begin{field} \tiny 100116 \end{field}
  \begin{field}
-  Influential - if fitted model depends highly on the value
+  Influential
  \end{field}
  \begin{field}
+    if fitted model depends highly on the value
   Measure using cook's distance
   $$ D_i = \frac{(\hat{Y} - \hat{Y}_{(i)})^t(\hat{Y} - \hat{Y}_{(i)})}{(p+1)\hat{\sigma}^2} = \frac{1}{p+1}r_i^2 \frac{h_i}{(1 - h_i)}$$
   Where $Y_{i}$ is the vector of fitted values when the model is fitted to the data without the $i$ ths observationl Moderate if $>1 $ Large if $>6$
@@ -2999,7 +3001,7 @@
     \hline                                                                                                                                                                                                                          \\
     $i=1$ & $\mu_{11} = \mu + \alpha_1 + \beta_1 + (\alpha\beta)_{11}$                                                 & $\mu_{12} = \mu + \alpha_1 + \beta_2 + (\alpha\beta)_{12}
      = \mu + \alpha_1 - \beta_1 - (\alpha\beta)_{11}$                                                                                                                                                                               \\
-    $i=1$ & $\mu_{21} = \mu + \alpha_2 + \beta_1 + (\alpha\beta)_{21} = \mu - \alpha_1 + \beta_1 - (\alpha\beta)_{11}$ & $\mu_{22} = \mu + \alpha_2 + \beta_2 + (\alpha\beta)_{22} = \mu - \alpha_1 - \beta_1 + (\alpha\beta)_{11}$
+    $i=2$ & $\mu_{21} = \mu + \alpha_2 + \beta_1 + (\alpha\beta)_{21} = \mu - \alpha_1 + \beta_1 - (\alpha\beta)_{11}$ & $\mu_{22} = \mu + \alpha_2 + \beta_2 + (\alpha\beta)_{22} = \mu - \alpha_1 - \beta_1 + (\alpha\beta)_{11}$
    \end{tabular}
   \end{center}
  \end{field}
