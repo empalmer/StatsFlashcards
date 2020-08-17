@@ -3837,6 +3837,7 @@
           \item By convention: $I_2$ is the simpler design.
           \item Where $\sigma_i^2$ is the error variance in design $i$ (which is assumed Normal)
           \item Since variances are not known, they must be estimated
+          \item The variance of the design not performed will have to be calculated differently
         \end{itemize}
     \end{field}
 \end{note}
@@ -3853,10 +3854,293 @@
         \begin{itemize}
           \item $\widehat{RE} = \frac{\hat{\sigma}_{CRD}^2}{\hat{\sigma}^2_{RCBD}} \cdot \frac{(v_{RCBD}+1)(v_{CRD} + 3)}{(v_{RCBD}+3)(v_{CRD} + 1)}$
           \item Where $v_{design}$ is the degrees of freedom for that design ($v_{CRD} = N - g$)
+          \item $\hat{\sigma}_{CRD} = \frac{(r-1)MS_{block} + ((g-1)+(r-1)(g-1)MS_E)}{(r-1) + (g-1) + (r-1)(g-1)}$ Weighted average of $MS_{block}$ and $MS_E$
           \item IF RE = 2, then the RCBD is twice as efficient as CRD, so we should only need half as many replicates in the blocked design.
         \end{itemize}
     \end{field}
 \end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100215
+    \end{field}
+    \begin{field}
+        Latin squares design
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item If we have multiple blockign factors, this requires many eus.
+          \item For a RCBD need at least one experiment unit in each cell for each treatment
+          \item LS design is incomplete block design
+          \item A Latin square design has $g$ levels of the treatment, and 2 blocking factors, each with $g$ levels. Each treatment level occurs exactlky once for each level of the blockign factor. (like sudoku )
+          \item To randomize a LS experiment pick one LS at random from all possible LS designs of appropriate size. For $g=3$, there are 12
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100216
+    \end{field}
+    \begin{field}
+        Model and assumptions for Latin squares design
+    \end{field}
+    \begin{field}
+        $$y_{ijk} = \mu +\alpha_i + \beta_j + \gamma_k + \epsilon_{ijk} $$
+        \begin{itemize}
+          \item $y_{ijk}$ response for $i$th level of treatment, $j$th row(level of blocking factor 1), $k$th column (level of blocking factor 2)
+          \item $\mu = $ overall mean
+          \item $\alpha_i$ effect of level $i$ of treatment
+          \item $\beta_j$ effect of level $j$ of blocking factor (row effect)
+          \item $\gamma_k$ effect of level $k$ of blocking factor 2 (column effect)
+          \item Assumptions: Sum to zero constraints or normality/independence constraints if fixed/random. $\epsilon_{ijk} \sim N(0,\sigma^2)$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100217
+    \end{field}
+    \begin{field}
+        ANOVA for Latin Squares design
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c c }
+          Source & DF & MS & F \\
+          Treatment & (g-1) & MS(treat) & MS(treat)/MS(E)\\
+          Row & (g-1) & MS(row) & \\
+          Column & (g-1) & MS(col) & \\
+          Error & (g-1)(g-2) & MS(E) & \\
+          Total & $g^2-1= N-1$ & &
+        \end{tabular}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100218
+    \end{field}
+    \begin{field}
+        Relative efficiency of LS design compared to RCBD
+    \end{field}
+    \begin{field}
+        $$ \widehat{RE}_{LS,RCBD} = \frac{\hat{\sigma}_{RCBD}^2}{\hat{\sigma}_{LS}^2} \frac{(v_{LS} + 1)(v_{RCBD} + 3)}{(v_{LS} + 3)(v_{RCBD} + 1)}$$
+        \begin{itemize}
+          \item Where $\hat{\sigma}_{RCBD} = \frac{(g-1)MS(row) + ((g-1) + (g-1)(g-2)MS(E))}{2(g-1) + (g-1)(g-2)}$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+% Lecture 26
+
+\begin{note}
+    \begin{field}
+        \tiny 100219
+    \end{field}
+    \begin{field}
+        Split-plot design description
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Choose a split-plot design when some factors are more difficult or expensive to vary than others
+          \item Example A - irrigation (large plot) and B - variety (small subplot of each large plot )
+          \item Randomize assignment of levels of A
+          \item In each level of A, randomize the subplots and assign levels of factor B
+          \item Whole plots are experimental units wrt A, subplots are eus wrt B
+          \item $n$ - number of replicates for each level of A. If we want to replicate, we need an entire other set of levels of A.
+          \item Assume whole plots are independent of each other
+          \item Observations within a single whole plot are not assumed independent
+          \item Whole plots nested in A, A and B are crossed
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100220
+    \end{field}
+    \begin{field}
+        Model and assumptions for split plot design
+    \end{field}
+    \begin{field}
+      example when fixed factors
+        $$y_{ijk} = \mu + \alpha_i \eta_{k(i)} + \beta_j + (\alpha\beta)_{ij} + \epsilon_{k(i)j} $$
+        \begin{itemize}
+          \item $\alpha_i$ effect of $i$th level of A
+          \item $\eta_{k(i)}$ whole plot error , random effect for whole plot nested in A
+          \item $\beta_j$ effect of $j$th level of B
+          \item $(\alpha\beta)_{ij}$ interaction of irrigation and variety
+          \item $\epsilon_{k(i)j}$ random subplot error
+          \item $\alpha,\beta$, interaction assumptions based on fixed/random
+          \item $\epsilon_{k(i)j} \sim iid N(0,\sigma^2)$ independent from $\eta_{k(i)} \sim N(0,\sigma_{\eta}^2)$
+          \item Note that the first terms are a CRD model, which reflects we did a CRD at whole-plot level, if we did a more complicated design at whole-plot level, our model would reflect that.
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100221
+    \end{field}
+    \begin{field}
+        Difference between split-plot design and complete factorial, blocking
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Between complete factorial
+          \begin{itemize}
+            \item Split plot has two stages of randomization
+            \item Complete factorial has one stage where combinations of factors are assigned to units
+          \end{itemize}
+          \item Blocking
+          \begin{itemize}
+            \item Randomization occurred at two stages, RDBD units are not randomly assigned to blocks
+            \item Dont care about inference for blocks, do care about inference for whole plot factor
+          \end{itemize}
+          \item Nesting
+          \begin{itemize}
+            \item Subplots are nested in whole plot, each level of A sees all level of B and each level of B sees all levels of A
+            \item Includes an interaction for A and B
+          \end{itemize}
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 100222
+    \end{field}
+    \begin{field}
+        ANOVA for split-plot design
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c }
+          Source & DF & EMS \\
+          A & a-1 & $\sigma^2 + b \sigma_\eta^2 + nb \frac{\sum_i\alpha_i^2}{a-1}$\\
+          Whole plot error & $a(n-1)$ & $\sigma^2 + b \sigma_\eta^2$\\
+          B & $b-1$& $\sigma^2 + na \frac{\sum_j \beta_j^2}{b-1}$\\
+          AB & $(a-1)(b-1)$ & $\sigma^2 + n \frac{\sum_i\sum_j (\alpha\beta)_{ij}^2}{(a-1)(b-1)}$\\
+          Subplot error & $a(n-1)(b-1)$ & $\sigma^2$
+        \end{tabular}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100223
+    \end{field}
+    \begin{field}
+        Hypothesis tests for a split-plot design
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item For fixed effects,
+          \item A effect: $H_0: \alpha_i = 0$: $F = \frac{MS_A}{MS_{\text{whole plot}}}$
+          \item B effect: $H_0: \beta_j = 0$: $F = \frac{MS_B}{MS_{\text{sub plot}}}$
+          \item AB effect $H_0: (\alpha\beta)_{ij} = 0, F = \frac{MS_{AB}}{MS_{\text{subplot}}}$
+          \item Under the null hypothesis, use the EMS for treatment factor to find the associated denominator EMS
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100224
+    \end{field}
+    \begin{field}
+        Dependence between subplots of same whole plot - Cov and Corr
+    \end{field}
+    \begin{field}
+        \begin{align*}
+          Cov(y_{ijk},y_{ij'k}) &= Cov(\eta_{k(i)}+ \epsilon_{k(i)j}, \eta_{k(i)} + \epsilon_{k(i)j'})\\
+          &= \sigma_\eta^2\\
+          Corr(y_{ijk},y_{ij'k}) &= \frac{Cov(y_{ijk},y_{ij'k}) }{\sqrt{Var(y_{ijk})Var(y_{ij'k})}}\\
+          &= \frac{\sigma_\eta^2}{\sigma_\eta^2 + \sigma^2}
+        \end{align*}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 100225
+    \end{field}
+    \begin{field}
+        Split plot design, estimate difference and CI (example)
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Eg, CI for difference in 2 factors of B : $\beta_1 - \beta_2$: $\bar{y}_{\cdot 1 \cdot} - \bar{y}_{\cdot 2 \cdot }$
+          \item Calculate variance by using model equation to find average, and use independence, and fixed variance rules.
+          \item Replace $MS_X$ as the estimate for $\sigma_X^2$
+          \item Use $t$ as reference distribution with DF for MS that gives us the variance estimate.
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100226
+    \end{field}
+    \begin{field}
+        Repeated measures
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Multiple observations on the SAME experimental unit
+          \item Often repeated measurements in time.
+          \item Questions to ask to use repeated measure
+          \begin{itemize}
+            \item Ignoring repeated measurements, what is experimental design?
+            \item Are observations on the same EU independent?
+            \item What are research objective? (ie does it want an interaction between time and treatment )
+          \end{itemize}
+          \item Use split-plot design, but time is not randomized
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 100227
+    \end{field}
+    \begin{field}
+        Repeated measures model and assumptions
+    \end{field}
+    \begin{field}
+      Example model (fixed effects):
+      $$y_{ijk} = \mu + \alpha_i + \epsilon_{k(i)} + \beta_j + (\alpha\beta)_{ij} + (\epsilon\beta)_{k(i)j} $$
+      \begin{itemize}
+        \item All assumptions for fixed/random factors
+        \item $\epsilon_{k(i)} \sim iid N(0,\sigma^2)$ independent from $(\epsilon\beta)_{k(i)j} \sim iid N(0,\sigma_{\alpha\beta}^2)$
+        \item Note assumes constant correlation over time, Correlation matrix R of one EU is 1 on diagonal and $\rho$ everywhere else Correlation matrix overall is blocks of R on diagonal, 0 everywhere else.
+      \end{itemize}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 100228
+    \end{field}
+    \begin{field}
+        ANCOVA
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Same as regression parametrization for interaction terms - seperate intercepts equal slopes
+          \item $y_{ij} = \mu + \alpha_i + \beta x_{ij} + \epsilon_{ij}$
+          \item Assumes relationships between $x_{ij}$ and $y_{ij}$ is the same for all three groups (equal slopes ) Or we could have had $\beta_i$ to have different slopes
+          \item Cant compare $\bar{y}_{1 \cdot}, \bar{y}_{2 \cdot},\bar{y}_{3 \cdot}$ since $\bar{x}_1 \neq \bar{x}_2 \neq \bar{x}_3$ (ie if we draw over mean y for mean $x_i$) these arent comparable.
+          \item Compare mean ys by having common x value (often $\bar{x}$)
+          \item Covariate adusted means: $y_{ij} = \tilde{mu} + \alpha_i + \beta(x_{ij} - \bar{x}_{\cdot\cdot}) + \epsilon_{ij}$
+          \item $\tilde{\mu} - \beta\bar{x}_{\cdot\cdot} = \mu$
+        \end{itemize}
+    \end{field}
+\end{note}
+
 %%end_tag
 
 \end{document}
