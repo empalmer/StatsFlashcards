@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
 \newenvironment{note}{\paragraph{NOTE:}}{}
 \newenvironment{field}{\paragraph{field:}}{}
 %\newenvironment{tags}{\paragraph{tags:}}{}
@@ -1317,8 +1317,6 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 \end{note}
 
 %%end_tag
-
-
 %%start_tag Calculus
 
 \tags{Calculus calc}
@@ -1652,7 +1650,6 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 
 %%end_tag
-
 %%start_tag Theory1
 \tags{Theory1}
 %%start_tag Casella Ch1
@@ -4072,7 +4069,734 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 
 %%end_tag
-% Todo
-% Exponential families
-% Approximate (limit ) relationships from wiki page
+
+
+%%start_tag Theory 3
+\tags{Theory3}
+
+\begin{note}
+    \begin{field}
+        \tiny 311
+    \end{field}
+    \begin{field}
+        Data summaries vs Prediciton vs Inference
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Data summaries: descriptive statistics summarizing a dataset (ie sample mean)
+          \item Prediction: Use patterns in a data-set to make predictions regarding values of new observations
+          \begin{itemize}
+            \item Prediction setting is more flexible than inference setting, as we are not trying to make probabilistic inference, assumptions only matter if they affect prediction quality.
+          \end{itemize}
+          \item Inference: Use observations in data set to infer information concerning population parameters
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 312
+    \end{field}
+    \begin{field}
+        Parametric Inference
+    \end{field}
+    \begin{field}
+        Inference (estimation and/or hypothesis testing performed under the assumption taht the data come from a popluation distribution that belongs to some family of distributions $F(x;\theta)$) parametrized by a finite-dimensional parameter $\theta$
+
+
+        Parameter space: The set $\Theta$ of all possible values of the parameter $\theta$
+
+        Vs Nonparametric Inference - where no or limited assumptions or specifications of the form of the population distributions
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 313
+    \end{field}
+    \begin{field}
+        Are the following tests parametric, semiparametric, or nonparametric
+        \begin{itemize}
+          \item F-test
+          \item Exact binomial test
+          \item Fisher's exact test
+          \item t-test
+          \item Wilcoxon rank sum
+          \item Permutation tests
+          \item Sign test
+          \item Mood's test
+          \item KS test
+          \item t-test
+        \end{itemize}
+    \end{field}
+    \begin{field}
+      \begin{itemize}
+        \item F-test - Parametric
+        \item Exact binomial test
+        \item Fisher's exact test
+        \item t-test
+        \item Wilcoxon rank sum: semiparametric
+        \item Permutation tests
+        \item Sign test: nonparametric
+        \item Mood's test
+        \item KS test
+        \item t-test
+      \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 314
+    \end{field}
+    \begin{field}
+        Definition: Simple hypothesis, composite hypothesis
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Simple hypothesis: Completely specifies the parameter value and therefore the population distribution. Simple hypothesis have the form $H_0: \theta = \theta_0$ and $H_1: \theta = \theta_1$, for specified values of $\theta_0$ and $\theta_1$
+          \item Composite hypothesis: Includes more than one possible parameter value. Composite hypotheses have the form $H_0: \theta \in \Theta_0$ and $H_1: \theta \in \Theta_1$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 315
+    \end{field}
+    \begin{field}
+        Test procedure:
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Random Sample (data): $X_1, \cdots, X_n$
+          \item Sample Space $\mathscr{X}$ the set of all possible observed samples $X_1 = x_1, X_2 = x_2, \cdots, X_n = x_n$
+          \item Hypothesis $H_0: \theta \in \Theta_0$ and $H_1: \theta \in \Theta_1$ with $\Theta_0 \cap \Theta_1 = \emptyset$
+          \item Rejection Region $\mathscr{R} \subset \mathscr{X}$:
+          \begin{itemize}
+            \item If ($X_1, \ldots , X_n \in \mathscr{R}$, Reject $H_0$ )
+            \item If $X_1, \ldots , X_n \not\in \mathscr{R}$, Fail to reject $H_0$
+          \end{itemize}
+        \end{itemize}
+
+        Equivalently
+
+        \begin{itemize}
+          \item Random Sample (data): $X_1, \cdots, X_n$
+          \item Test statistic $ T(X_1, \cdots, X_n)$ is some function of the data, which is itself a random variable
+          \item Test Statistic Sample Space $\mathscr{T}$ the set of all possible observed samples $T = t$
+          \item Rejection Region $\mathscr{R}_T \subset \mathscr{T}$:
+          \begin{itemize}
+            \item If $T(X_1, \ldots , X_n) \in \mathscr{R}_t$, Reject $H_0$ )
+            \item If $T(X_1, \ldots , X_n) \not\in \mathscr{R}_t$, Fail to reject $H_0$
+          \end{itemize}
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+
+
+\begin{note}
+    \begin{field}
+        \tiny 316
+    \end{field}
+    \begin{field}
+        Power function (definition)
+    \end{field}
+    \begin{field}
+        We can summarize the performance of a test procedure through the power function:
+        \begin{align*}
+          \text{Power}(\theta) = \beta(\theta) &= P_\theta(\text{Reject } H_0 \text{ when } \theta \text{is the true value of the parameter of interest})\\
+          &= P_\theta((X_1, \ldots X_n) \in \mathscr{R}) \\
+          &= P_\theta(T(X_1, \ldots, X_n) \in \mathscr{R}_t)
+        \end{align*}
+
+        Equivalently, for a critical function $\psi$, $$\beta(\theta) = E_\theta(\psi(x_1, \ldots, x_n)) $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 317
+    \end{field}
+    \begin{field}
+        Calculating Type I and Type II errors from the power function
+    \end{field}
+    \begin{field}
+        $$P( \text{Type I Error when } \theta = \theta_0 \in \Theta_0) = \beta(\theta_0) $$
+        $$P(\text{Type II Error when } \theta = \theta_1 \in \Theta_1)  = 1 - \beta(\theta_1)$$
+
+        (Note these are for simple hypotheses), for complex hypothesis, we want to look a the maximum possible error
+
+        To work out these probabilities, we need to know the distribution of the test statistics under the null (For type I error) and alternative (For type II error )
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 318
+    \end{field}
+    \begin{field}
+        Size of a test procedure
+    \end{field}
+    \begin{field}
+        The size of a test procedure for a null hypothesis $H_0: \theta \in \Theta_0$ is the value $$ sup_{\theta \in \Theta_0}P_{\theta}(\text{Reject } H_0) = sup_{\theta \in \Theta_0} \beta(\theta)$$
+        That is, the size of a test procedure is the largest value of the probability of a Type I Error, across all values of $\theta$ in the null hypothesis set $\Theta_0$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 319
+    \end{field}
+    \begin{field}
+        Definition of a level $\alpha$ test
+    \end{field}
+    \begin{field}
+        A hypothesis test procedure is said to be a level $\alpha$ test if
+        $$ sup_{\theta \in \Theta_0}P_{\theta}(\text{Reject } H_0) = sup_{\theta \in \Theta_0} \beta(\theta) \leq \alpha$$
+
+        That is if the size of the test is less than or equal to $\alpha$, the test is a level $\alpha$ test.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 320
+    \end{field}
+    \begin{field}
+        most powerful level $\alpha$ test (definition)
+    \end{field}
+    \begin{field}
+        Let $\mathscr{C}_\alpha$ be the set of all tests of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ where $\Theta_0 \cap \Theta_1 = \emptyset$ that have level $\alpha$. A test belonging to $\mathscr{C}_\alpha$ is the most powerful level $\alpha$ test at $\theta_1 \in \Theta_1$ if
+        $$\beta(\theta_1) \geq \beta^*(\theta_1)$$
+        for any other test in $\mathscr{C}_\alpha$ with power function $\beta^*(\theta)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 321
+    \end{field}
+    \begin{field}
+        Uniformly most powerful level $\alpha$ test (definition )
+    \end{field}
+    \begin{field}
+        A test belonging to $\mathscr{C}_\alpha$ with power function $\beta(\theta)$ is uniformly most powerful level $\alpha$ if it is the most powerful for every $\theta_1 \in \Theta_1$
+
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 322
+    \end{field}
+    \begin{field}
+        Critical Function / Test Function (definition )
+    \end{field}
+    \begin{field}
+        A function $\psi: \mathscr{X} \to [0,1] $ such that $\psi(x_1, \ldots x_n)$ is the probability of rejecting $H_0$ when the sample $(X_1 = x_1, \ldots X_n = x_n)$ is observed is called a critical function of a test procedure.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 323
+    \end{field}
+    \begin{field}
+        Randomized Test (definition)
+    \end{field}
+    \begin{field}
+        A test procedure with critical function $\psi$ for which there are some points in the sample space such that $0 < \psi < 1$ is called a randomized test
+
+        (often used in discrete cases)
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 324
+    \end{field}
+    \begin{field}
+        Finding the most powerful level $\alpha$ test of a simple null hypothesis vs a simple alternative hypothesis
+    \end{field}
+    \begin{field}
+        $(Neyman-Pearson)$
+        The most powerful level $\alpha$ test of a simple null hypothesis $H_0$ vs a simple alternative hypothesis $H_1$ based on data $\mathbf{X}$ is given by the critical function
+
+          \[
+          \psi(\mathbf{X}) =
+          \begin{cases}
+              1 & \text{if } \frac{L(H_0:x)}{L(H_1:x)} < k  \\
+              c & \text{if } \frac{L(H_0:x)}{L(H_1:x)} = k\\
+              0 & \text{if } \frac{L(H_0:x)}{L(H_1:x)} > k
+          \end{cases}
+        \]
+
+
+         Where the constants $k$ and $c$ are chosen to ensure that $E_{H_0}(\phi(\mathbf{X})) = \alpha$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 325
+    \end{field}
+    \begin{field}
+        Steps for using Neyman-Pearson to obtain most powerful tests for simple and alternative hypotheses:
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Identify the likelihood under the null $L(H_0:x)$ and alternative $L(H_0: x)$
+          \item Determine how the ratio of the likelihoods $ \frac{L(H_0:x)}{L(H_1:x)}$ depends on the observed data $\mathbf{x}$ (ie is it an increasing or decreasing function of $T(\mathbf{X})$)?
+          \item Identify the null distribution of the statistic $T(\mathbf{X})$
+          \begin{enumerate}
+            \item If $\frac{L(H_0:x)}{L(H_1:x)}$ is an increasing function of $T(\mathbf{x})$, rejecting for small values of $\frac{L(H_0:x)}{L(H_1:x)}$ is equivalent to rejecting for small values of $T(\mathbf{x})$, so find $k$ such that
+            $$P_{H_0}(T(\mathbf{x}) < k) = \alpha $$
+            \item If $\frac{L(H_0:x)}{L(H_1:x)}$ is a decreasing  function of $T(\mathbf{x})$, rejecting for large values of $\frac{L(H_0:x)}{L(H_1:x)}$ is equivalent to rejecting for large values of $T(\mathbf{x})$, so find $k$ such that
+            $$P_{H_0}(T(\mathbf{x}) > k) = \alpha $$
+          \end{enumerate}
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 326
+    \end{field}
+    \begin{field}
+        Uniformly most powerful (UMP) level $\alpha$ test procedure
+    \end{field}
+    \begin{field}
+        Uniformly most powerful (UMP) level $\alpha$ test procedure for testing $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ is one with power funciton $\beta(\theta)$ such that for every $\theta_1 \in \Theta_1$ we have
+        $$ \beta(\theta) \geq \beta^*(\theta)$$
+        for any other level $\alpha$ test prodedure with power function $\beta^*(\theta)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 327
+    \end{field}
+    \begin{field}
+        Monotone likelihood ratio
+    \end{field}
+    \begin{field}
+        The family of distributions $\{F(x|theta)\}$ indexed by parmeter $\theta \in \Theta$ has monotone likelihood ratio if there is a statistic $T(\mathbf{X})$ such that for all $\theta^* > \theta \in \Theta$ and $\mathbf{x} \in \mathscr{X}$, the likelihood ratio $$ \frac{L(\theta^*|\mathbf{x})}{L(\theta|\mathbf{x})} \quad \text{ is monotone nondecreasing in } T(\mathbf{x})$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 328
+    \end{field}
+    \begin{field}
+        How to find the UMP test of a simple null hypothesis vs a one sided complex alternative
+    \end{field}
+    \begin{field}
+        See if the family has monotone likelihood ratio in $T(\mathbf{x})$
+        UMP tests of one sided alternative hypothesis exist and are given by the form in Neyman-Pearson (by Karlin Rubin )
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 329
+    \end{field}
+    \begin{field}
+        Karlin-Rubin Theorem
+    \end{field}
+    \begin{field}
+        Suppose the family of distributions $\{F(x|theta)\}$ indexed by parmeter $\theta \in \Theta$ has monotone likelihood ratio Then to test $$ H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta > \theta_0$$
+         the test funciton
+         \[
+           \phi(\mathbf{X}) =
+           \begin{cases}
+                1 & if T(\mathbf{X}) > k  \\
+                \gamma & if T(\mathbf{X}) = k\\
+                0 & if T(\mathbf{X}) < k
+           \end{cases}
+         \]
+         Where $k$ and $\gamma$ are chosen so that $E_{\theta_0}(\phi(\mathbf{X})) = \alpha$ gives a uniformly most powerful (UMP) level $\alpha$ test.
+
+         (note if we have a one sided lower alternative, we flip the direction of the inequalities )
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 330
+    \end{field}
+    \begin{field}
+        Is there a UMP two sided test for $X_1, \ldots , X_n$ iid Exp($\lambda$) where $H_0: \lambda = 2 $ vs $H_1 \lambda \neq 2$?
+    \end{field}
+    \begin{field}
+        No:
+        For $\lambda_1 > \lambda_0 = 2$,the UMP test would have the form
+        \[
+          \psi(\mathbf{X}) =
+          \begin{cases}
+              1 &  \text{if } T(\mathbf{x}) = \sum_{i=1}^n x_i > k_1\\
+              0  & \text{if } T(\mathbf{x}) = \sum_{i=1}^n x_i <k_1
+          \end{cases}
+        \]
+
+        and for $\lambda_1 < \lambda_0 = 2$, the UMP test would have the form
+        \[
+          \psi(\mathbf{X}) =
+          \begin{cases}
+              1 &  \text{if } T(\mathbf{x}) = \sum_{i=1}^n x_i < k_2\\
+              0  & \text{if } T(\mathbf{x}) = \sum_{i=1}^n x_i > k_2
+          \end{cases}
+        \]
+
+
+        Since these forms are not the same, there is no UMP test.
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 331
+    \end{field}
+    \begin{field}
+        Let $X\sim$ Unif($0,\theta$). Is there a UMP test for testing two sided $H_0: \theta = 1$ vs $H_1: \theta \neq 1$
+    \end{field}
+    \begin{field}
+        Yes:  \[
+          \psi(\mathbf{x}) =
+          \begin{cases}
+               1 & x < \alpha or x > 1 \\
+               0 & \alpha < x < 1
+          \end{cases}
+        \]
+
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 332
+    \end{field}
+    \begin{field}
+        Unbiased test (definition)
+    \end{field}
+    \begin{field}
+        A test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ is called unbiased if $\beta(\theta_1) \geq \beta(\theta_0)$ for all $\theta_1 \in \Theta_1$ and  all $\theta_0 \in \Theta_0$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 333
+    \end{field}
+    \begin{field}
+        Uniformly most powerful unbiased (UMPU) level $\alpha$ test (definition )
+    \end{field}
+    \begin{field}
+        A level $\alpha$ test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ with critical function $\psi(\mathbf{x})$ is called uniformly most powerful unbiased (UMPU) if it is unbiased level $\alpha$ and for any other unbiased test with critical function $\psi^*(\mathbf{x})$, we have $$ E_\theta(\psi(\mathbf{x})) \geq E_\theta(\psi^*(\mathbf{x})) \quad \text{for all } \theta \in \Theta_1$$
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 334
+    \end{field}
+    \begin{field}
+        Likelihood Ratio Test (definition)
+    \end{field}
+    \begin{field}
+        Suppose we have the data $\mathbf{X} = X_1, \ldots , X_n$, with joint density $f(x;\theta)$ for some parameter $\theta \in \Theta$, and we wish to perform a level $\alpha$ test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$, where $\Theta_1 \cup \Theta_0 = \Theta$. The likelihood ratio test statistic is given by $$\lambda(\mathbf{x}) = \frac{sup_{\theta\in \Theta_0}L(\theta|x)}{sup_{\theta\in \Theta}L(\theta|x)} = \frac{L(\hat{\theta}_{0,MLE};x)}{L(\hat{\theta}_{MLE};x)}$$
+        and the null hypothesis is rejected for small values of $\lambda$ (indicating that the null hypothesis is relatively 'unlikely')
+
+        We maximize by finding $\theta = \hat{\theta}_{MLE}$ and $\hat{\theta}_{0,MLE}$
+
+
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 335
+    \end{field}
+    \begin{field}
+        If $T(\mathbf{X})$ is a sufficient statistic for $\theta$, then $\lambda(\mathbf{x})$ (the LRT statistic)...
+    \end{field}
+    \begin{field}
+        If $T(\mathbf{X})$ is a sufficient statistic for $\theta$, then $\lambda(\mathbf{x})$ will be a function of $T(\mathbf{x})$. In particular $\lambda(\mathbf{x})$ will be a function of the minimal sufficient statistic
+    \end{field}
+\end{note}
+
+%Lecture 7:
+
+\begin{note}
+    \begin{field}
+        \tiny 336
+    \end{field}
+    \begin{field}
+        Frequentist Probability vs Bayesian probability  (definition)
+    \end{field}
+    \begin{field}
+      \begin{itemize}
+        \item Frequentist: For an event $E$, in our outcome space, $P(E)$ is the long run proportion of experiments that have outcome $E$, the relative frequency with which an event happens is its probability
+        \item Bayesian: For an event $E$ in the outcome space, $P(E)$ is any number between zero and one that you want to assign it, as long as you are coherent about the rules of additivity etc.
+      \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 337
+    \end{field}
+    \begin{field}
+        Treatment of population parameters, frequentist vs bayesian
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Frequentist: A population parameter $\theta$ is some fixed (though generally unknown value) that belongs to some set of possible values $\Theta$
+          \item Bayesian: A population parameter $\theta$ is a random quantity that has a prior distribution
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 338
+    \end{field}
+    \begin{field}
+        Likelihood function (bayesian )
+    \end{field}
+    \begin{field}
+        Given some value of the parameter $\theta$, the distribution of the data $\mathbf{x}$ is $f(\mathbf{x};\theta)$ is the likelihood (a function of both the value $\theta$ and the data $\mathbf{x}$).
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 339
+    \end{field}
+    \begin{field}
+        Posterior Distribution (definition)
+    \end{field}
+    \begin{field}
+        The posterior distribution of theta given the observed data $\mathbf{x}$ is $$k(\theta;\mathbf{x}) = \frac{f(\mathbf{x};\theta)h(\theta)}{\int_\theta f(\mathbf{x};\theta)h(\theta)d\theta} $$
+
+        Note that the posterior distribution is proportional to the numerator.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 340
+    \end{field}
+    \begin{field}
+        Conjugate Priors
+    \end{field}
+    \begin{field}
+        If the prior $h(\theta)$ belongs to some (parametric) family of distributions $\mathscr{P}$ and the likelihood $L(\theta;\mathbf{x})$ (the joint density of the data for any particular value of $\theta$) is such that the posterior $k(\theta;\mathbf{x})$ belongs to the same family $\mathscr{P}$, then this family of priors is said to be conjugate for the likelihood $L(\theta;\mathbf{x})$ (ie the posterior family is the prior family if we choose a conjugate prior. )
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 341
+    \end{field}
+    \begin{field}
+        Noninformative Priors
+    \end{field}
+    \begin{field}
+        A noninformative prior is intended to give as little information as possible about the value of the parameter of interest $\theta$.
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 342
+    \end{field}
+    \begin{field}
+        Improper prior
+    \end{field}
+    \begin{field}
+        an improper prior is a prior that does not integrate to one
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 343
+    \end{field}
+    \begin{field}
+        Bayes Estimator
+    \end{field}
+    \begin{field}
+        A bayes estimator (with respect to the particular prior/likelihood) is the estimator that minimizes the Bayesian Risk
+        $$\delta^* = arg inf_{\delta \in D} \int_\Theta R(\theta,\delta)h(\theta)d\theta $$
+        Where D is the set of all possible estimators for $\theta$
+
+        The Bayes Estimator equivalently minimizes the posterior risk, given the observed data.
+
+        For squared-error loss, the Bayes estimate is the mean of the posterior distriution $k\theta(\mathbf{x})$:
+
+        $$\delta^* = \int_\Theta \theta k(\theta|\mathbf{x})d\theta $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 344
+    \end{field}
+    \begin{field}
+        Maximum A Posteriori (MAP)
+    \end{field}
+    \begin{field}
+        A MAP test selects the hypothesis $H_0$ or $H_1$ that has the highest posterior probability. (Bayesian. )
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 345
+    \end{field}
+    \begin{field}
+        Definition of a p-value
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item For testing null hypothesis $H_0$ vs alternative hypothesis $H_1$, the p-value $p(\mathbf{x})$ corresponding to the observed data, is the smallest value $\alpha$ for which $H_0$ would be rejected by a size $\alpha$ test
+          \item Let $W(\mathbf{X})$ be a test statistic such that large values of $W$ are evidence that $H_1$ is true, and therefore the null hypothesis $H_0$ is rejected for large $W(\mathbf{X})$ then a p-value can be defined as $$p(\mathbf{x}) = sup_{\theta \in \Theta}P_\theta(W(\mathbf{X})\geq W(\mathbf{x}))$$ This says that the p-value is the (largest in the null space) probability of obtaining a test statistic at least as extreme as the observed test statistic value.
+          \item A p-value is just a function of the observed data; a test statistic
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 346
+    \end{field}
+    \begin{field}
+        Validity of p-value
+    \end{field}
+    \begin{field}
+        A p-value is valid (exact) if for every $\theta \in \Theta_0$ and every value of $\alpha \in [0,1]$, we have
+        $$P_\theta(p(\mathbf{X})\leq \alpha )\leq \alpha  $$
+    \end{field}
+\end{note}
+
+
+
+\begin{note}
+    \begin{field}
+        \tiny 347
+    \end{field}
+    \begin{field}
+        Confidence interval (definition)
+    \end{field}
+    \begin{field}
+        Suppose we have data $\mathbf{X}$ such that the (joint) density of our data give information about an unknown parameter $\theta$. Then a $(1-\alpha)100$ confidence interval for $\theta$ is a random interval $[L(\mathbf{X}),U(\mathbf{X})]$ such that $$ inf_{\theta\in\Theta}P_\theta(L(\mathbf{X})\leq \theta \leq U(\mathbf{X})) = 1 - \alpha $$
+
+        It is important to note taht it is the limits of the interval $L(\mathbf{X}), U(\mathbf{X})$ that are the random quantities here.
+    \end{field}
+\end{note}
+
+
+
+
+\begin{note}
+    \begin{field}
+        \tiny 348
+    \end{field}
+    \begin{field}
+        Construct a CI using a hypothesis test
+    \end{field}
+    \begin{field}
+        A level $(1-\alpha)100$ confidence interval can be constructed by inverting a level $\alpha$ hypothesis test. This fact is known as the duality of confidence intervals and hypothesis testing.
+        The confidence region $\mathscr{C}$ $\mathscr{C} = \{\theta_0: H_0: \theta = \theta_0 \text{ would not be rejected at level } \alpha \}$
+
+        (ie solve for $\theta_0$ to be in the center)
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 349
+    \end{field}
+    \begin{field}
+        Pivot
+    \end{field}
+    \begin{field}
+        Suppose $X$ comes from some parametric family $F(\mathbf{x}:\theta)$ indexed by parameter $\theta$. A pivot, or pivotal quantity is a random variable $U = g(\mathbf{X},\theta)$ that depends upon both the sample $\mathbf{X}$ and the unknown parameter $\theta$ for which the distribution of $U$ does not depend on $\theta$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 350
+    \end{field}
+    \begin{field}
+        Finding a confidence interval for $\theta$ using the pivital method
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Identify a pivotal quantity $U$ and its distribution $F_U(u)$
+          \item Find $a$ and $b$ such that $$ P(a < U < b)= 1 - \alpha$$
+          Let $F_U(u)$ denote the cdf of the pivot $U$, so then we can set \begin{align*}
+            a &= F_U^{-1}(c \alpha)\\
+            b &= F_U^{-1}(1 - (1 - c)\alpha)
+        \end{align*}
+        For any $c \in [0,1]$ (usually .5 to split up area on the tails evenly)
+        \item Solve the inequality $a < U < b$ for $\theta$ in the middle.
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 351
+    \end{field}
+    \begin{field}
+        Pivotal CI example: Let $Y \sim exp(\theta)$.
+
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Let $U = Y/\theta$, so $U \sim Exp(1)$. which doesn't depend on $\theta$, so $U$ is a pivotal quantity.
+          \item We must find $a$,$b$, such that $P(a \leq U \leq b) = 1- \alpha$.
+          We then solve $P(U \leq a) = \alpha/2$ and $P(b \leq U) = \alpha/2$
+          Solve for $\theta$
+
+          $$ P(a \leq U \leq b) = P(Y/b \leq \theta \leq Y/a) $$
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 352
+    \end{field}
+    \begin{field}
+        Finding a pivital quantity
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item If $\theta$ is a location parameter, a possible pivot has the form $U = T(\mathbf{X}) - a (\theta)$
+          \item If $\theta$ is a scale parameter, $U = T(\mathbf{X})/b(\theta)$ is a possible pivot
+          \item If $\theta$ is a location-scale parameter, $U = (T(\mathbf{X}) - a(\theta))/b(\theta)$ is a possible pivot
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+
+
 \end{document}
