@@ -4588,6 +4588,8 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \begin{field}
         The posterior distribution of theta given the observed data $\mathbf{x}$ is $$k(\theta;\mathbf{x}) = \frac{f(\mathbf{x};\theta)h(\theta)}{\int_\theta f(\mathbf{x};\theta)h(\theta)d\theta} $$
 
+        Posterior probability $\propto$ Likelihood $\times$ prior probability
+
         Note that the posterior distribution is proportional to the numerator.
     \end{field}
 \end{note}
@@ -4609,10 +4611,10 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \tiny 341
     \end{field}
     \begin{field}
-        Noninformative Priors
+        Non-informative Priors
     \end{field}
     \begin{field}
-        A noninformative prior is intended to give as little information as possible about the value of the parameter of interest $\theta$.
+        A non-informative prior is intended to give as little information as possible about the value of the parameter of interest $\theta$.
     \end{field}
 \end{note}
 
@@ -4638,13 +4640,13 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Bayes Estimator
     \end{field}
     \begin{field}
-        A bayes estimator (with respect to the particular prior/likelihood) is the estimator that minimizes the Ba©yesian Risk
+        A Bayes estimator (with respect to the particular prior/likelihood) is the estimator that minimizes the Bayesian Risk
         $$\delta^* = arg inf_{\delta \in D} \int_\Theta R(\theta,\delta)h(\theta)d\theta $$
         Where D is the set of all possible estimators for $\theta$
 
         The Bayes Estimator equivalently minimizes the posterior risk, given the observed data.
 
-        For squared-error loss, the Bayes estimate is the mean of the posterior distriution $k\theta(\mathbf{x})$:
+        For squared-error loss, the Bayes estimate is the mean of the posterior distribution $k\theta(\mathbf{x})$:
 
         $$\delta^* = \int_\Theta \theta k(\theta|\mathbf{x})d\theta $$
     \end{field}
@@ -4703,7 +4705,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \begin{field}
         Suppose we have data $\mathbf{X}$ such that the (joint) density of our data give information about an unknown parameter $\theta$. Then a $(1-\alpha)100$ confidence interval for $\theta$ is a random interval $[L(\mathbf{X}),U(\mathbf{X})]$ such that $$ inf_{\theta\in\Theta}P_\theta(L(\mathbf{X})\leq \theta \leq U(\mathbf{X})) = 1 - \alpha $$
 
-        It is important to note taht it is the limits of the interval $L(\mathbf{X}), U(\mathbf{X})$ that are the random quantities here.
+        It is important to note that it is the limits of the interval $L(\mathbf{X}), U(\mathbf{X})$ that are the random quantities here.
     \end{field}
 \end{note}
 
@@ -4743,7 +4745,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \tiny 350
     \end{field}
     \begin{field}
-        Finding a confidence interval for $\theta$ using the pivital method
+        Finding a confidence interval for $\theta$ using the pivotal method
     \end{field}
     \begin{field}
         \begin{enumerate}
@@ -4765,7 +4767,6 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Pivotal CI example: Let $Y \sim exp(\theta)$.
-
     \end{field}
     \begin{field}
         \begin{enumerate}
@@ -4796,6 +4797,164 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \end{itemize}
     \end{field}
 \end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 353
+    \end{field}
+    \begin{field}
+        Confidence Interval optimality criteria
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item Length
+          \begin{itemize}
+            \item Length can be a function of sample size and critical value choice (Normal mean with known variance), other cases a random quantity (Normal mean with unknown variance)
+            \item When length is random, we typically want confidence intervals with shortest mean length.
+            \item Ie for normal variance with known mean, the expected length of the confidence interval is $E(L) = c \sigma^2 n$, so a shortest interval would be not using equal tails, but requires numerical computation.
+          \end{itemize}
+          \item Convexity
+          \begin{itemize}
+            \item In the case of a one-dimensional parameter, this means that the region should be a connected interval
+          \end{itemize}
+          \item Agreement with a reasonable estimate and with a reasonable hypothesis test.
+          \begin{itemize}
+            \item Example score test and wald CI
+          \end{itemize}
+          \item Equal coverage probability for all $\theta$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 354
+    \end{field}
+    \begin{field}
+        $1 - \alpha $ credible interval
+    \end{field}
+    \begin{field}
+        (Bayesian) A $1 - \alpha $ credible interval is an interval $[a,b]$ such that the credible probability of that interval is $1 - \alpha$, that is $$\int_{\theta=a}^b k(\theta|\mathbf{x})d\theta = 1 - \alpha $$
+
+        Where the posterior distribution $k(\theta|\mathbf{x}) = \frac{f(\mathbf{x};\theta)h(\theta)}{\int_\theta f(\mathbf{x};\theta)h(\theta)} = \frac{p(\mathbf{x}|\theta)p(\theta)}{p(\mathbf{x})} $, where the posterior is proportional to the likelihood times the prior
+
+        In many cases, we can choose $c=.5$ and let $a = $ the $c \times \alpha$ quantile of the distribution, and $b = $ the $1 - (1-c)\times \alpha$ quantile of the posterior distribution, but in cases when the posterior distribution is unimodal, we can obtain shorter intervals.
+
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 355
+    \end{field}
+    \begin{field}
+        Credible probability
+    \end{field}
+    \begin{field}
+        (Bayesian ) For any region $\mathscr{A} \subset \Theta$, the credible probability of the set $\mathscr{A }$ is
+        $$P(\theta \in \mathscr{A }| \mathbf{x}) = \int_{\theta \in \mathscr{A }} k(\theta| \mathbf{x})d\theta $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 356
+    \end{field}
+    \begin{field}
+        Highest posterior density $1 - \alpha$ credible interval
+    \end{field}
+    \begin{field}
+        For a unimodal posterior distribution $k(\theta|\mathbf{x})$ Highest posterior density $1 - \alpha$ credible interval is the interval $[a,b]$ such that
+        \begin{enumerate}
+          \item $\int_{\theta = 1}^b k(\theta|\mathbf{x})d\theta = 1 - \alpha$
+          \item $k(a|\theta) = k(b|\theta)$
+          \item $a < \theta^* < b$ where $\theta^*$ is the mode of the posterior distribution.
+        \end{enumerate}
+
+        This credible interval will be the shortest. Note it might not contain the Bayes estimator for $\theta$ if the posterior distribution is very highly skewed and has a heavy tail.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 357
+    \end{field}
+    \begin{field}
+        Unimodal pdf
+    \end{field}
+    \begin{field}
+        A pdf is unimodal if there exists some value $x^*$ such that
+        \begin{enumerate}
+          \item For all $x \leq x^*, f(x)$ is non decreasing
+          \item For all $x \geq x^*, f(x)$ is non-increasing.
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 358
+    \end{field}
+    \begin{field}
+        Confidence Intervals for functions of parameters: Obtain a confidence interval for $\tau = g(\theta)$, given a confidence interval for $\theta$
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Invert a test of $H_0: \tau = \tau_0$ vs $H_1: \tau \neq \tau_0$
+          \item Create a pivot $U = h(\mathbf{X},\tau)$, and construct a pivotal interval for $\tau$
+          \item Transform the CI for $\theta$ into an interval for $\tau$
+          \begin{itemize}
+            \item Coverage of this interval: $C_\tau = \{\tau_0 : \tau_0 = g(\theta_0)$ for $\theta_0 \in C_\theta\}$
+            \item NOT the same as $(g(L_\theta(\mathbf{X})), g(U_\theta(\mathbf{X})))$ (unless strictly monotone, otherwise coverage not the same. )
+          \end{itemize}
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 359
+    \end{field}
+    \begin{field}
+        Joint Confidence Intervals for Multivariate parameters
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Construct $(1 - \alpha^*)$ CIs for each component $\theta_j$ separately
+          \item Define $\mathscr{C } = \{\theta_0: \theta_{0,j} \in \mathscr{C}_j$ for all $j = 1, \ldots p\}$
+          \item Chose the univariate coverage levels $(1 - \alpha^*)$ to ensure that the coverage level of the joint confidence region is at least the desired level $(1 - \alpha)$
+          \item Often choose $\alpha^* = \alpha/p$, although this often gives larger CIs - over-coverage
+          \item If parameters independent, if we set $1 - \alpha = (1 - \alpha^{**})^p$
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 360
+    \end{field}
+    \begin{field}
+        Example: Construct a CI for $$ X_1, \ldots , X_n \sim iid Exp(\mu_x,\sigma)$$ $$Y_1, \ldots , Y_n \sim iid Exp(\mu_x,\sigma)$$
+
+
+    \end{field}
+    \begin{field}
+        $\kappa(\theta) = \mu_x - \mu_y$
+        \begin{itemize}
+          \item Sufficient statistic for parameter $(\mu_x,\mu_y,\sigma)$ is
+          $$(X_{(1)}, Y_{(1)}, W = \sum_{i=1}^n (X_i - X_{(1)}) + \sum_{i=1}^n (Y_i - Y_{(1)}) $$
+          \item $X_{(1)} \sim exp(\mu_x, \sigma/n)$
+          \item $Y_{(1)} \sim exp(\mu_y, \sigma/n)$
+          \item $\frac{2W}{\sigma} \sim \chi^2_{4n-4}$
+          \item Construct pivot: $U = \frac{|n(X_{(1)} - Y_{(1)} - \mu_x - \mu_y)}{W/(2n-2)} \sim F_{2,4n-4}$
+        \end{itemize}
+    \end{field}
+\end{note}
+
 
 
 
