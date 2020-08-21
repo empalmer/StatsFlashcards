@@ -974,7 +974,7 @@
 
 \begin{note} \begin{field} \tiny 100051 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$)
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$) (Fisher)
   \begin{itemize}
    \item Test name:
    \item Test Statistic:
@@ -988,7 +988,7 @@
   Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$)
   \begin{itemize}
    \item Test name: Fisher's Exact Test (of homogeneity of proportions)
-   \item Test Statistic: Probability of observed table conditioning on margins: Compute all tables with the same margin totals: $\frac{\binom{C_2}{O_{12}}\binom{C_1}{O_{11}}}{\binom{N}{R_1}}$
+   \item Test Statistic: Probability of observed table conditioning on margins: Compute all tables with the same margin totals: $\frac{\binom{C_1}{O_{11}}\binom{C_2}{O_{12}}}{\binom{N}{R_1}}$
    \item pvalue: Sum of probability of all tables more extreme than observed table
          More Extreme:
          \begin{itemize}
@@ -2934,14 +2934,12 @@
   eg:
 
   \begin{center}
-   \begin{tabular}{|c|c|c|c|}
+   \begin{tabular}{c c c c }
     \hline                              \\
       &         & B         &           \\
       &         & $j=1$     & $j = 2$   \\
-    \hline                              \\
     A & $i = 1$ & $y_{11k}$ & $y_{12k}$ \\
       & $i=2$   & $y_{21k}$ & $y_{22k}$ \\
-    \hline
    \end{tabular}
   \end{center}
  \end{field}
