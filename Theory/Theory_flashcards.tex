@@ -4955,7 +4955,381 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
 \end{note}
 
+% Lecture 13
+\begin{note}
+    \begin{field}
+        \tiny 361
+    \end{field}
+    \begin{field}
+        Determinant of a square matrix
+    \end{field}
+    \begin{field}
+        The determinant of a square matrix $\mathbf{A}$ is denoted by $|\mathbf{A}|$ and is defined recursively
+        \begin{itemize}
+          \item For a $(1 \times 1 )$ matrix $|\mathbf{A}| = a_{11}$
+          \item For a $(p\times p)$ matrix $|\mathbf{A}| = \sum_{j=1}^p a_{ij}(-1)^{i+j}|\mathbf{A}_{-i,-j}|$
+          \item Where $\mathbf{A}_{-i,-j}$ is the matrix obtained by removing the $i$th column and $j$th row from $\mathbf{A}$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 362
+    \end{field}
+    \begin{field}
+        Properties of the determinant
+        \begin{itemize}
+          \item det$(\mathbf{I_p})$
+          \item det$(\mathbf{A}^{-1})$
+          \item $\mathbf{A}$ is invertible iff
+          \item det($AB$)
+          \item det$(\mathbf{A}^t)$
+          \item det$(\mathbf{XAX}^{-1}) = $
+          \item Relationship to eigenvalues
+        \end{itemize}
+    \end{field}
+    \begin{field}
+      \begin{itemize}
+        \item det$(\mathbf{I_p}) = 1$
+        \item det$(\mathbf{A}^{-1}) = $ (det$(\mathbf{A}))^{-1}$
+        \item $\mathbf{A}$ is invertible iff det($\mathbf{A} \neq 0$
+        \item det($\mathbf{AB}$) = det(\textbf{A})det(\textbf{B})
+        \item det$(\mathbf{A}^t) =$ det(\textbf{A})
+        \item det$(\mathbf{XAX}^{-1}) = $ det(\textbf{A})
+        \item The determinant of $\mathbf{A}$ is equal to the product of all eigen values of $\mathbf{A}$
+      \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 363
+    \end{field}
+    \begin{field}
+        Properties of the Multivariate Normal Distribution
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item If $\mathbf{X}$ has a multivariate normal distribution, then each element has a marginal normal distribution
+          \item Random variables $X_1, \ldots X_p$ with marginal normal distributions DO NOT necessarily have a multivariate normal joint distribution
+          \item All subsets of elements of $\mathbf{X}$ have a multivariate normal distribution
+          \item All linear combinations of the components of $X$ are normally distributed
+          \item $\mathbf{X} + c \sim MVN(\mu + c, \Sigma)$
+          \item $\mathbf{AX} \sim MVN(\mathbf{A}\mu, \mathbf{A} \Sigma A^t)$, where each element of $\mathbf{AX}$ is a linear combination of the random vector \textbf{X}
+          \item $Cov(X_j,X_k) = \sigma_{jk} = 0$ iff and only if $X_j,X_k$ independent
+          \item $Z = \Sigma^{-1/2}(\vec{X} - \vec{\mu}) \sim MVN(\vec{0},I_p)$
+          \item $Z^tZ \sim \chi^2_p$
+
+        \end{itemize}
+    \end{field}
+\end{note}
 
 
+\begin{note}
+    \begin{field}
+        \tiny 364
+    \end{field}
+    \begin{field}
+        Distribution of sample mean and variance from Multivariate normal
+    \end{field}
+    \begin{field}
+        \begin{itemize}
+          \item $\mathbf{\bar{X}} \sim MVN(\vec{\mu}, \frac{1}{n}\Sigma)$
+          \item $\mathbf{S} = \frac{1}{n-1}\sum_{i=1}^n(\mathbf{X}_i - \mathbf{\bar{X}})(\mathbf{X}_i - \mathbf{\bar{X}})^t$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 365
+    \end{field}
+    \begin{field}
+        $X \sim \chi^2_{v_1}, Y \sim \chi^2_{v_2}, X + Y \sim $
+    \end{field}
+    \begin{field}
+        $\chi^2_{v_1 + v_2}$
+    \end{field}
+\end{note}
+
+% Lecture 14
+
+\begin{note}
+    \begin{field}
+        \tiny 366
+    \end{field}
+    \begin{field}
+        Definition of consistent sequence of estimators
+    \end{field}
+    \begin{field}
+        Suppose we have random variables $X_1, X_2, \ldots$, such that the collection $\{X_1, \ldots X_n\}$ gives information about a parameter $\theta$. A sequence of estimators $W_n = W_n(X_1, \ldots, X_n)$ is a consistent sequence of estimators of the parameter $\theta$ if FOR EVERY $\theta \in \Theta$,
+        $$W_n \overset{\to}{p} \theta $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 367
+    \end{field}
+    \begin{field}
+        Mean square error
+    \end{field}
+    \begin{field}
+        $$MSE(\hat{\theta},\theta) = E[(\hat{\theta} - \theta)^2] = Bias^2 + V(\hat{\theta})$$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 358
+    \end{field}
+    \begin{field}
+        If a sequence of estimators $W_n$ for a parameter $\theta$ satisfies
+        \begin{itemize}
+          \item $\lim_{n\to\infty} V_\theta(W_n) \to 0$
+          \item $\lim_{n\to\infty} E_{\theta}(W_n) \to \theta$
+          \item Equivalently, if $MSE_\theta(W_n;\theta) \to 0$
+        \end{itemize}
+        for all $\theta \in \Theta$, then
+    \end{field}
+    \begin{field}
+        $W_n$ is a consistent sequence of estimators for the parameter $\theta$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 359
+    \end{field}
+    \begin{field}
+        How to prove consistency:
+    \end{field}
+    \begin{field}
+      If a sequence of estimators $W_n$ for a parameter $\theta$ satisfies
+      \begin{itemize}
+        \item $\lim_{n\to\infty} V_\theta(W_n) \to 0$
+        \item $\lim_{n\to\infty} E_{\theta}(W_n) \to \theta$
+        \item Equivalently, if $MSE_\theta(W_n;\theta) \to 0$
+      \end{itemize}
+      for all $\theta \in \Theta$, then $W_n$ is consistent.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 360
+    \end{field}
+    \begin{field}
+        Definition of asympototic distribution of Estimators
+    \end{field}
+    \begin{field}
+        Suppose that a sequence of random variables $W_n$ satisfies
+        $$k_n(W_n - \theta) \overset{\to}{d} F $$
+        \begin{itemize}
+          \item $k_n$ is the stabilizing constant,
+          \item $F$ is the asympototic distribution
+          \item $\sigma^2(\theta)$ the asymptotic variance (which can't depend on $n$)
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 361
+    \end{field}
+    \begin{field}
+        $X_i \sim Exp(\sigma)$, $\sum X_i \sim $
+    \end{field}
+    \begin{field}
+        $\sum X_i \sim Gamma(n,\sigma)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 362
+    \end{field}
+    \begin{field}
+        Relationship between asymptotic variance and limiting variance
+    \end{field}
+    \begin{field}
+        limiting variance $\geq$ asymptotic variance, where the limiting variance is defined as $\lim_{n \to \infty} V(Y_n)$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 363
+    \end{field}
+    \begin{field}
+        Score function
+    \end{field}
+    \begin{field}
+        $$U(\theta) = \frac{\partial}{\partial \theta} l(\theta;\mathbf{x}) = \sum_{i=1}^n \frac{\frac{\partial}{\partial \theta}f(x_i;\theta)}{f(x_i;\theta)} $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 364
+    \end{field}
+    \begin{field}
+        Notation and test construction $X_1, \ldots, X_n$ iid
+        \begin{itemize}
+          \item Density/Mass Function
+          \item Likelihood
+          \item Log likelihood
+          \item Maximum likelihood estimator
+          \item Score
+          \item Information
+        \end{itemize}
+    \end{field}
+    \begin{field}
+      \begin{itemize}
+        \item Density/Mass Function : $f(x;\theta)$
+        \item Likelihood : $L(\theta;\mathbf{x}) = \prod_{i=1}^n f(x_i;\theta)$
+        \item Log likelihood $l(\theta;\mathbf{x}) = \log L(\theta;\mathbf{x}) = \sum_{i=1}^n \log f(x_i;\theta)$
+        \item Maximum likelihood estimator $\hat{\theta}_n : \frac{\partial}{\partial \theta} l(\theta;\mathbf{x})\bigg|_{\theta = \hat{\theta_n}} = 0$ (except if support depends on parameter of interest)
+        \item Score: $U(\theta) = \frac{\partial}{\partial \theta} l(\theta;\mathbf{x}) = \sum_{i=1}^n \frac{\frac{\partial}{\partial \theta}f(x_i;\theta)}{f(x_i;\theta)} $
+        \item Information: $I_1(\theta) = E\bigg(- \frac{\partial^2}{\partial \theta^2} \log f(x; \theta)\bigg)$
+      \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 365
+    \end{field}
+    \begin{field}
+        Important Distribution of Maximum Likelihood Estimators
+    \end{field}
+    \begin{field}
+        Note these assumptions hold in exponential families, Binomial, Poisson, etc
+        \begin{itemize}
+          \item $X_i$ iid with common density function
+          \item Identifiability: for $\theta_1 \neq \theta_2$, $f(x;\theta_1) \neq f(x;\theta_2)$
+          \item Common support (the one we need to verify ) The set of possible values for $X$ does not depend on the value of the parameter $\theta$
+          \item Open Parameter Space (ie cant include 0 or 1 in bernoulli case)
+        \end{itemize}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 366
+    \end{field}
+    \begin{field}
+        Asymptotic Normality of MLE
+    \end{field}
+    \begin{field}
+        Under the common assumptions, The MLE $\hat{\theta}_n$ for $\theta$ satisfies
+        $$ \frac{\hat{\theta})n -\theta}{\sqrt{\frac{1}{n I_1(\theta)}}} \overset{\to}{d} N(0,1)$$
+        Equivalently,
+        $\hat{\theta}_n \dot\sim N(\theta, \frac{1}{nI_1(\theta)})$
+        This implies that the MLE is asymptotically the UMVUE (as $E(\hat{\theta}_n \approx \theta)$ and $Var(\hat{\theta}_n) \approx \frac{1}{I_n(\theta)}$), the CRLB var of unbiased estimate of $\theta$
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 367
+    \end{field}
+    \begin{field}
+        Mann-Wald Theorem (for MLE)
+    \end{field}
+    \begin{field}
+        For any differentiable $g(\cdot)$ with non-zero first derivative:
+        if $\sqrt{n}(\hat{\theta}_n - \theta) \overset{d}{\to} N(0, \frac{1}{I_1(\theta)})$, then
+        $$\sqrt{n(g(\hat{\theta}_n) - g(\theta))} \overset{d}{\to} N(0,\frac{[g'(\theta)]^2}{I_1(\theta)}) $$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 368
+    \end{field}
+    \begin{field}
+        Wald Hypothesis Tests and Confidence intervals
+    \end{field}
+    \begin{field}
+        Since $\theta$ is not known, we cannot find the value of $I(\theta)$ exactly, but we can use $\hat{I}(\theta) = I(\hat{\theta}_n) \overset{p}{\to} I(\theta)$, where $\hat{\theta}_n$ is the MLE
+        \begin{itemize}
+          \item Test statistic: $$W(\theta_0) = \frac{\hat{\theta}_n - \theta_0}{\sqrt{\frac{1}{nI_1(\hat{\theta}_n)}}} $$
+          \item Two sided alternative: Reject $H_0: \theta = \theta_0$ vs $\theta \neq \theta_0$ if
+          $$|W(\theta_0)| > z_{\alpha/2} $$
+          \item Confidence interval:
+          $$\bigg( \hat{\theta}_n - z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}},\bigg( \hat{\theta}_n + z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}} \bigg) $$
+        \end{itemize}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 369
+    \end{field}
+    \begin{field}
+        Asymptotic Likelihood-Based Test Statistics
+    \end{field}
+    \begin{field}
+        \begin{tabular}{c c c }
+          Test & Test Statistic & Asymptotic Null Distribution \\
+          \hline \\
+          Likelihood Ratio & $G(\theta_0) = 2\big(l(\hat{\theta}_n; \mathbf{x}) - l(\theta_0; \mathbf{x})\big)$ & $\chi^2_1$\\
+          \hline \\
+          Wald & $W(\theta_0) = \frac{(\hat{\theta}_n - \theta_0)^2}{\frac{1}{n I(\hat{\theta}_n)}}$ & $\chi^2_1$\\
+          & $W^*(\theta_0) = \frac{\hat{\theta}_n - \theta_0}{\sqrt{\frac{1}{n I(\hat{\theta}_n)}}}$ \\
+          \hline \\
+          Score & $S(\theta_0) = \frac{U(\theta_0)^2}{nI(\theta_0)}$ (no need to find MLE) & $\chi^2_1$ \\
+          & $S^*(\theta_0) = \frac{U(\theta_0)}{\sqrt{nI(\theta_0)}}$ & $N(0,1)$
+        \end{tabular}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \begin{field}
+        \tiny 370
+    \end{field}
+    \begin{field}
+        Comparison between Likelihood Ratio, Wald and Score tests and intervals
+    \end{field}
+    \begin{field}
+        \begin{enumerate}
+          \item Likelihood Ratio:
+          \begin{itemize}
+            \item Requires computation of $sup_{\theta \in \Theta} L(\hat{\theta};\mathbf{x})$ (likelihood of MLE) and $L(\theta_0; \mathbf{x})$ (likelihood of null hypothesis )
+            \item Generally hardest to invert to form confidence intervals
+          \end{itemize}
+          \item Wald:
+          \begin{itemize}
+            \item Only requires computation of MLE and Information under MLE
+            \item Tends to differ from the Score and LR tests more than they do from each other
+            \item Easiest to invert to form confidence intervals
+          \end{itemize}
+          \item Score:
+          \begin{itemize}
+            \item Only requires computation of Information under Null
+            \item Has best power of the three tests for alternatives close to null
+            \item Typically similar in form to Wald, except variance is estimated under null instead of using MLE
+          \end{itemize}
+        \end{enumerate}
+        All three tests are asymptotically equivalent under the null hypothesis when $n$ is large. If the alternative is true, they may differ substantially, no matter the value of $n$
+    \end{field}
+\end{note}
+
+\begin{note}
+    \begin{field}
+        \tiny 371
+    \end{field}
+    \begin{field}
+        Variance Stabilizing Transformation 
+    \end{field}
+    \begin{field}
+        To potentially improve confidence interval coverage in settings where there is a mean-variance relationship, we can try to find a function $g(\cdot)$ such that $$(g'(\theta))^2V(\hat{\theta}) = 1 $$, That is the asymptotic variance of $g(\hat{\theta})$ does not depend on the value of $\theta$. This function $g(\cdot)$ is called teh variance stabilizing transformation for the estimate $\hat{\theta}$
+    \end{field}
+\end{note}
 
 \end{document}
