@@ -1,15 +1,12 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
 \newenvironment{note}{\paragraph{NOTE:}}{}
 \newenvironment{field}{\paragraph{field:}}{}
 \newenvironment{tags}{\paragraph{tags:}}{}
 
 \begin{document}
-
-
-
-%%start_tag Casella Berger
+%%start_tag Theory1
 \tags{Theory1}
 %%start_tag Casella Ch1
 \begin{note} \begin{field} \tiny 130 \end{field}
@@ -1019,7 +1016,847 @@ $\Sigma_{aa} = \begin{pmatrix}
 \end{note}
 
 %%end_tag
+%%start_tag From Stat Cheatsheet
 
+\begin{note}
+  \begin{field}
+    \tiny 1
+  \end{field}
+  \begin{field}
+    CDF of Geometric ($p$)
+  \end{field}
+  \begin{field}
+    $1 - (1-p)^x$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    \tiny 2
+  \end{field}
+  \begin{field}
+    CDF of Exponential($\beta$)
+  \end{field}
+  \begin{field}
+    $1 - e^{-\frac{x}{\beta}}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 3
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+  \item $P(\varnothing) = $
+  \item $B = \Omega \cap B = (A \cup A^c) \cap B
+    = (A \cap B) \cup (A^c \cap B)$
+  \item $P(A^c) = $
+  \item $P(B) = $
+  \item $P(\Omega) =  \qquad P(\varnothing) = $
+  \item $\left(\bigcup_n A_n\right) =
+    \quad
+    \left(\bigcap_n A_n\right) =
+    \qquad$
+    \textsc{DeMorgan}
+\end{itemize}
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+  \item $P(\varnothing) = 0$
+  \item $B = \Omega \cap B = (A \cup A^c) \cap B
+    = (A \cap B) \cup (A^c \cap B)$
+  \item $P(A^c) = 1 - P(A)$
+  \item $P(B) = P(A \cap B) + P(A^c \cap B)$
+  \item $P(\Omega) = 1 \qquad P(\varnothing) = 0$
+  \item $\left(\bigcup_n A_n\right) = \bigcap_n A_n
+    \quad
+    \left(\bigcap_n A_n\right) = \bigcup_n A_n
+    \qquad$
+    \textsc{DeMorgan}
+\end{itemize}
+  \end{field}
+\end{note}
+
+
+
+
+\begin{note}
+  \begin{field}
+    \tiny 4
+  \end{field}
+  \begin{field}
+    Probability Set intersection
+    \begin{itemize}
+      \item $P(\bigcup_n A_n)
+        = 1 - P(\bigcap_n A_n^c)$
+      \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)
+        \implies P(A \cup B) \leq P(A) + P(B)$
+      \item $P(A \cup B)
+        = $
+      \item $P(A \cap B^c) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Probability Set intersection
+    \begin{itemize}
+      \item $P(\bigcup_n A_n)
+        = 1 - P(\bigcap_n \mathsf{A_n})$
+      \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)\\[1ex]
+        \implies P(A \cup B) \le P(A) + P(B)$
+      \item $P(A \cup B)
+        = P(A \cap B^c) + P(A^c \cap B) + P(A \cap B)$
+      \item $P(A \cap B^c) = P(A) - P(A \cap B)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 5
+  \end{field}
+  \begin{field}
+    $P(A \cap B) =  \text{ when }A \text{ and } B \text{independent}$
+  \end{field}
+  \begin{field}
+    $P(A \cap B) = P(A)P(B) \text{ when }A \text{ and } B \text{independent}$
+  \end{field}
+  \end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 6
+  \end{field}
+  \begin{field}
+    $$P(A|B) = $$
+  \end{field}
+  \begin{field}
+    $$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 7
+  \end{field}
+  \begin{field}
+    Law of total probability
+  \end{field}
+  \begin{field}
+    Law of total probability
+    $$P(B) = \sum_{i=1}^n P(B|A_i)P(A_i) \quad \Omega = \cup_{i=1}^n A_i$$
+
+    $$P(B) = P(A \cup B) + P(A^c \cup B) $$
+   \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 8
+  \end{field}
+  \begin{field}
+    Bayes Theorem
+  \end{field}
+  \begin{field}
+    Bayes Theorem
+    $$P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{j=1}^n P(B|A_j)P(A_j)} \quad \Omega = \cup_{i=1}^n A_i$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 9
+  \end{field}
+  \begin{field}
+    CDF Laws
+  \end{field}
+  \begin{field}
+    CDF Laws
+    \begin{enumerate}
+      \item Nondecreasing: $x_1 < x_2 \implies F(x_1) \leq F(x_2)$
+      \item Limits: $\lim_{x \to -\infty}=0$ and $\lim_{x\to \infty} = 1$
+      \item Right-Continuous $\lim_{y \to x^+}F(y) = F(x)$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 10
+  \end{field}
+  \begin{field}
+    $$f_{y|x}(y|x) = $$
+  \end{field}
+  \begin{field}
+    $$f_{y|x}(y|x) = \frac{f(x,y)}{f_x(x)}$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 11
+  \end{field}
+  \begin{field}
+    $X,Y \text{independent}$
+    \begin{itemize}
+      \item $P(X \leq x, Y \leq y) = $
+      \item $f_{x,y}(x,y) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    $X,Y \text{independent}$
+    \begin{itemize}
+      \item $P(X \leq x, Y \leq y) = P(X \leq x)P(Y \leq y)$
+      \item $f_{x,y}(x,y) = f_x(x)f_y(y)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 12
+  \end{field}
+  \begin{field}
+     Transformations $Z = \phi(X)$
+
+    \begin{itemize}
+      \item Discrete: $f_Z(z) = $
+      \item Continuous: $F_Z(z)=$
+      \item Cont, $\phi$ strictly monotone:
+      $f_z(z)$
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Transformations $Z = \phi(X)$
+  \begin{itemize}
+    \item Discrete: $$f_Z(z) = P(\phi(X) = z) = P(X \in \phi^{-1}(z)) = \sum_{x \in \phi^{-1}(z)}f_x(x) $$
+    \item Continuous (Method of CDF): $$F_Z(z)= P(\phi(X)\leq z) = \int_{x:\phi(x)\leq z} f(x) dx$$
+    \item Cont, $\phi$ strictly monotone: (Method of PDF)
+    $f_z(z) = f_x(\phi^{-1}(z))|\frac{d}{dz} \phi^{-1}(z)|$
+  \end{itemize}
+\end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 13
+  \end{field}
+  \begin{field}
+     Rule of the Lazy Statistician: $ E[g(x)] = $
+  \end{field}
+  \begin{field}
+    Rule of the Lazy Statistician:  $E[g(x)] = \int g(x)f_x(x)dx$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 14
+  \end{field}
+  \begin{field}
+    Expectation rules
+    \begin{itemize}
+      \item $E(c) = $
+      \item $E(cX) = $
+      \item $E(X + Y) = $
+      \item $E(\phi(X)) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Expectation rules
+    \begin{itemize}
+      \item $E(c) = c$
+      \item $E(cX) = cE(X)$
+      \item $E(X + Y) = E(X) + E(Y)$
+      \item $E(\phi(X)) \neq \phi(E(X))$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 15
+  \end{field}
+  \begin{field}
+    Conditional expectation
+      \begin{itemize}
+        \item $E(Y|X = x) = $
+        \item $E(X) = $
+        \item $E(Y+Z|X) = $
+        \item $E(Y|X) = c \implies $
+      \end{itemize}
+  \end{field}
+  \begin{field}
+    Conditional expectation
+      \begin{itemize}
+        \item $E(Y|X = x) = \int y f(y|x) dy$
+        \item $E(X) = E(E(X|Y))$
+        \item $E(Y+Z|X) = E(Y|X) + E(Z|X)$
+        \item $E(Y|X) = c \implies Cov(X,Y) = 0$
+      \end{itemize}
+
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    \tiny 16
+  \end{field}
+  \begin{field}
+    Variance
+    \begin{itemize}
+      \item $V(X) = \sigma_x^2 = $
+      \item $V(X+Y) =$
+      \item $V\bigg[\sum_{i=1}^n X_i\bigg] = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Variance
+    \begin{itemize}
+      \item $V(X) = \sigma_x^2 = E[(X - E(X))^2] = E(X^2) - E(X)^2$
+      \item $V(X+Y) = V(X) + V(Y) + Cov(X,Y)$
+      \item $V\bigg[\sum_{i=1}^n X_i\bigg] = \sum_{i=1}^n V(X_i) + \sum_{i\neq j} Cov(X_i,X_j)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+
+
+
+
+
+
+
+\begin{note}
+  \begin{field}
+    \tiny 17
+  \end{field}
+  \begin{field}
+    Covariance
+    \begin{itemize}
+      \item $Cov(X,Y) = $
+      \item $Cov(X,c) = $
+      \item $Cov(Y,X) = $
+      \item $Cov(aX,bY) =$
+      \item $Cov(X + a, Y + b) =$
+      \item $Cov\bigg(\sum_{i=1}^n X_i, \sum_{j=1}^m Y_j\bigg) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Covariance
+    \begin{itemize}
+      \item $Cov(X,Y) = E[(X - E(X)(Y - E(Y)))] = E(XY) - E(X)E(Y)$
+      \item $Cov(X,c) = 0$
+      \item $Cov(Y,X) = Cov(X,Y)$
+      \item $Cov(aX,bY) = abCov(X,Y)$
+      \item $Cov(X + a, Y + b) = Cov(X,Y)$
+      \item $Cov\bigg(\sum_{i=1}^n X_i, \sum_{j=1}^m Y_j\bigg) = \sum_{i=1}^n \sum_{j=1}^m Cov(X_i,Y_j)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 18
+  \end{field}
+  \begin{field}
+    Correlation: $\rho(X,Y)$
+  \end{field}
+  \begin{field}
+    Correlation: $\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{V(X)V(Y)}}$
+  \end{field}
+\end{note}
+
+
+
+\begin{note}
+  \begin{field}
+    \tiny 19
+  \end{field}
+  \begin{field}
+    Conditional Variance
+    \begin{itemize}
+      \item $V(Y|X) = $
+      \item $V(Y) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Conditional Variance
+    \begin{itemize}
+      \item $V(Y|X) = E\big[(Y - E(Y|X))^2|X\big] = E(Y^2|X) - E(Y|X)^2$
+      \item $V(Y) = E(V(Y|X)) + V(E(Y|X))$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+%%end_tag
+%%start_tag Undergrad_Textbook
+%Chapter 2
+
+\begin{note}
+  \begin{field}
+    \tiny 20
+  \end{field}
+  \begin{field}
+    Law of total probability $k=2$ (using conditional probability)
+  \end{field}
+  \begin{field}
+    $P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 21
+  \end{field}
+  \begin{field}
+    Bayes formula in terms of law of total probability,
+  \end{field}
+  \begin{field}
+    $P(B|A) = \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 22
+  \end{field}
+  \begin{field}
+    $P(A \text{ and }B)$
+  \end{field}
+  \begin{field}
+    $P(A \text{ and }B) = P(A|B)P(B) = P(B|A)P(A)$
+  \end{field}
+\end{note}
+
+
+% Chapter 3
+
+\begin{note}
+  \begin{field}
+    \tiny 23
+  \end{field}
+  \begin{field}
+    Events $A$ and $B$ are independent if
+  \end{field}
+  \begin{field}
+    $P(A|B) = P(A)$ equivalently $P(A \text{ and } B)  = P(A)P(B)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 24
+  \end{field}
+  \begin{field}
+    Poisson setting
+  \end{field}
+  \begin{field}
+    The Poisson setting arises in the context of discrete counts of events that occur over space or time with the small probability and where successive events are independent
+
+    Eg: 2 on average calls a minute, $X$ is number of calls a minute, $X \sim Pois $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 25
+  \end{field}
+  \begin{field}
+    Poisson approximation of binomial distribution
+  \end{field}
+  \begin{field}
+    Suppose $X \sim Binom(n,p)$, $Y \sim Pois (\lambda)$. If $n\to \infty$, and $p \to 0$, in such a way that $np \to \lambda > 0$, then for all $k$, $P(X = k) \to P(Y = k)$. The Poisson distribution with parameter $\lambda = np$ serves as a good approiximation for the binomial distribution when $n$ is large and $p$ is small.
+  \end{field}
+\end{note}
+
+% Chapter 4
+
+
+\begin{note}
+  \begin{field}
+    \tiny 26
+  \end{field}
+  \begin{field}
+    $E(f(X,Y))$ when $X,Y$ are discrete
+  \end{field}
+  \begin{field}
+    $E(f(X,Y)) = \sum_x \sum_y f(x,y)P(X=x,Y=y)$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    \tiny 27
+  \end{field}
+  \begin{field}
+    If $X,Y$ are independent, then $f(X),g(Y)$
+  \end{field}
+  \begin{field}
+    are also independent
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 28
+  \end{field}
+  \begin{field}
+    If $X,Y$ independent, $E(XY) = , E(f(X)g(Y)) = $
+  \end{field}
+  \begin{field}
+    If $X,Y$ independent, $E(XY) = E(X)E(Y), E(f(X)g(Y)) = E(f(X))E(g(Y))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 29
+  \end{field}
+  \begin{field}
+    Sum of independent discrete random variables $X,Y$: $P(X+Y = k)$
+  \end{field}
+  \begin{field}
+    $P(X+Y = k) = \sum_i P(X=i)P(Y=k-i)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 30
+  \end{field}
+  \begin{field}
+    $V(X) = 0$
+  \end{field}
+  \begin{field}
+    If and only if $X $ is a constant
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 31
+  \end{field}
+  \begin{field}
+    $E(I_A) = , V(I_A)$ Where $I_A$ is an indicator function
+  \end{field}
+  \begin{field}
+    $E(I_A) = P(A), V(I_A) = P(A)P(A^c)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 32
+  \end{field}
+  \begin{field}
+    For discrete jointly distributed random variables,
+    $$ P(X = y | X = x) = $$
+  \end{field}
+  \begin{field}
+    For discrete jointly distributed random variables,
+    $$ P(X = y | X = x) = \frac{P(X=x,Y=y)}{P(X=x)}$$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 33
+  \end{field}
+  \begin{field}
+    For discrete random variables
+    $E(Y|X=x) = $
+  \end{field}
+  \begin{field}
+    For discrete random variables
+    $E(Y|X=x) = \sum_y y P(Y = y | X = x)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 34
+  \end{field}
+  \begin{field}
+    Problem solving strategy for expected value of counting
+  \end{field}
+  \begin{field}
+    Use indicator functions for each trial , where $X = \sum I$ and use linearity of expectation
+  \end{field}
+\end{note}
+
+ % Chapter 5
+
+\begin{note}
+  \begin{field}
+    \tiny 35
+  \end{field}
+  \begin{field}
+    $P(X > s + t|X > t)$ for geometric, exponential
+  \end{field}
+  \begin{field}
+    $P(X > s + t|X > t) = P(X > s)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 36
+  \end{field}
+  \begin{field}
+    Distribution for: A bag of $N$ balls which conatins $r$ red balls and $N-r$ blue balls, $X$ is number of red balls in a sample of size $n$ taken without replacement.
+  \end{field}
+  \begin{field}
+    Hypergeometric.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 37
+  \end{field}
+  \begin{field}
+    Distribution for modeling arrival time
+  \end{field}
+  \begin{field}
+    Exponential
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    \tiny 38
+  \end{field}
+  \begin{field}
+    $E(g(X,Y)) = $ (continuous )
+  \end{field}
+  \begin{field}
+    $E(g(X,Y)) = \int_{y = - \infty}^\infty \int_{x = -\infty}^\infty g(x,y)f(x,y)dx dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 39
+  \end{field}
+  \begin{field}
+    $Cov(X,Y) = $ (integration )
+  \end{field}
+  \begin{field}
+    $Cov(X,Y) = \int_{y = - \infty}^\infty \int_{x = -\infty}^\infty (x - E(X))(y - E(Y))dx dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 40
+  \end{field}
+  \begin{field}
+    Problem solving strategies for functions of random variables
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item Methods of cdf: $Y = g(X)$, find cdf $P(Y \leq y) = P(g(X) \leq y) = P(X \leq g^{-1}(y))$
+      \item For finding $P(X < Y)$, set up integrals that cover
+      \item For finding probabilities of independent uniform random variables, use geometric (area) properties
+    \end{itemize}
+  \end{field}
+\end{note}
+
+% Chapter 7
+
+\begin{note}
+  \begin{field}
+    \tiny 41
+  \end{field}
+  \begin{field}
+    Quantile
+  \end{field}
+  \begin{field}
+    If $X$ is a continuous random variable, then the $p$th quantile is is the number $q$ that satisfies $P(X \leq q) = p/100 $
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 42
+  \end{field}
+  \begin{field}
+    Poisson process
+  \end{field}
+  \begin{field}
+    Times between arrivals are modeled as iid exponential random variables with parameter $\lambda = 1/\beta$. Let $N_t$ be the number of arrivals up to time $t$. Then $N_t \sim Pois(\lambda t)$
+% go back and do properties of poisson process
+  \end{field}
+\end{note}
+
+% Chapter 8
+
+\begin{note}
+  \begin{field}
+    \tiny 43
+  \end{field}
+  \begin{field}
+    Conditional density function $f_{Y|X}(y|x) = $
+  \end{field}
+  \begin{field}
+    $f_{Y|X}(y|x) = \frac{f(x,y)}{f_x(x)}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 44
+  \end{field}
+  \begin{field}
+    Continuous bayes formula
+  \end{field}
+  \begin{field}
+    $f_{X|Y}(x|y)  = \frac{f_{Y|X}(y|x)f_x(x)}{\int_{t = -\infty}^\infty f_{Y|X}(y|t)f_x(t)dt}$
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \begin{field}
+    \tiny 45
+  \end{field}
+  \begin{field}
+    Conditional expectation for continuous random variables
+    $E(Y|X = x)$
+  \end{field}
+  \begin{field}
+    $E(Y|X = x) = \int_y y f_{Y|X}(y|x)dy$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 46
+  \end{field}
+  \begin{field}
+    Law of total expectation
+  \end{field}
+  \begin{field}
+    $E(Y) = E(E(Y|X))$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 47
+  \end{field}
+  \begin{field}
+    Properties of conditional expectation
+    \begin{itemize}
+      \item $E(aY + bZ | X) = $
+      \item $E(g(Y)|X=x) = $
+      \item If $X,Y$ independent, $E(Y|X) = $
+      \item If $Y = g(X)$, then $E(Y|X) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Properties of conditional expectation
+    \begin{itemize}
+      \item $E(aY + bZ | X) = a E(Y|X) + bE(Z|X)$
+      \item $E(g(Y)|X=x) = \int_y g(y) f_{Y|X}(y|x)dy$
+      \item If $X,Y$ independent, $E(Y|X) = E(Y)$
+      \item If $Y = g(X)$, then $E(Y|X) = Y$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 48
+  \end{field}
+  \begin{field}
+    Law of total probability, continuous
+  \end{field}
+  \begin{field}
+    $P(A) = \int_{-\infty}^\infty P(A|X=x)f_x(x)dx$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+  \tiny 49
+\end{field}
+  \begin{field}
+    Conditional variance $V(Y|X = x)$
+  \end{field}
+  \begin{field}
+    $$V(Y|X = x) = \sum_y (y - E(Y|X=x))^2P(Y=y|X=x)$$ discrete
+    $$V(Y|X = x) = \int_y (y - E(Y|X=x))^2 f_{Y|X}(y|x)dy$$ continuous
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 50
+  \end{field}
+  \begin{field}
+    Properties of conditional variance
+    \begin{itemize}
+      \item $V(Y|X=x) = $
+      \item $V(aY + b | X = x) = $
+      \item If $Y,Z$ independent, $V(Y+Z | X=x) = $
+    \end{itemize}
+  \end{field}
+  \begin{field}
+    Properties of conditional variance
+    \begin{itemize}
+      \item $V(Y|X=x) = E(Y^2 | X=x) - (E(Y|X=x))^2$
+      \item $V(aY + b | X = x) = a^2 V(Y|X=x)$
+      \item If $Y,Z$ independent, $V(Y+Z | X=x) = V(Y|X=x) + V(Z|X=x)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+% Chapter 9
+
+\begin{note}
+  \begin{field}
+    \tiny 51
+  \end{field}
+  \begin{field}
+    $P(X \geq \epsilon)$
+  \end{field}
+  \begin{field}
+    $P(X \geq \epsilon) \leq E(X) / \epsilon$ (Markov's Inequality )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 52
+  \end{field}
+  \begin{field}
+    $P(|X-\mu| \geq \epsilon)$
+  \end{field}
+  \begin{field}
+    $P(|X-\mu| \geq \epsilon) \leq \sigma^2/\epsilon^2$ (Chebyshev's inequality, if mean and variance finite )
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    \tiny 53
+  \end{field}
+  \begin{field}
+    $P(\lim_{n\to \infty} S_n/n = \mu) = $
+  \end{field}
+  \begin{field}
+  $P(\lim_{n\to \infty} S_n/n = \mu) = 1$ (Strong law of large numbers )
+\end{field}
+\end{note}
+
+%%end_tag
 %%end_tag
 
 
