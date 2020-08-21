@@ -136,7 +136,7 @@
     $$X \sim \chi^2(v) \overset{?}{\sim}$$
   \end{field}
   \begin{field}
-    $$X \sim Gamma(v/2,1/2)$$
+    $$X \sim Gamma(v/2,2)$$
 
   \end{field}
 \end{note}
@@ -193,7 +193,7 @@
 \begin{note} \begin{field} \tiny 69 \end{field}
   \begin{field}
     Special case of t
-    $$ X \sim t(1) \overset{?}{\sim}$$
+    $$ X \sim t_1 \overset{?}{\sim}$$
   \end{field}
   \begin{field}
     $$ X \sim Caucy(0,1)$$
@@ -994,10 +994,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 147 \end{field}
     \begin{field}
-        Sigma Algebra
+        \text{Sigma Algebra}
     \end{field}
     \begin{field}
-        A collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
+        \text{A} collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
             \begin{enumerate}
               \item $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
               \item If $A \in \mathcal{B}$, then $A^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation)
@@ -1090,11 +1090,9 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 \end{note}
 
 \begin{note} \begin{field} \tiny 155 \end{field}
-    \begin{field}
-        If $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = $
+    \begin{field}If $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = $
     \end{field}
-    \begin{field}
-        If $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = \sum_{i=1}^\infty P(A \cap C_i)$
+    \begin{field}If $P$ is a probability function, then for any partition $C_1, C_2, \ldots P(A) = \sum_{i=1}^\infty P(A \cap C_i)$
     \end{field}
 \end{note}
 
@@ -1334,9 +1332,9 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 \end{note}
 
 
-\begin{note} \begin{field} \tiny 173  \end{field}
+\begin{note} \begin{field} \tiny 173x  \end{field}
   \begin{field}
-    $X$ is a continuous random variable. For $y > 0$,
+    $X$ is a continuous random variable. For $y > 0$, $Y = X^2$
     $F_Y(y) = $
   \end{field}
   \begin{field}
@@ -1574,7 +1572,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 197 \end{field}
   \begin{field}
-    $f(y|x) = $
+    $f(y|x) = $ (definition of conditional)
   \end{field}
   \begin{field}
     $f(y|x) = \frac{f(x,y)}{f_x(x)}$
@@ -1683,10 +1681,10 @@ $f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
 
 \begin{note} \begin{field} \tiny 207 \end{field}
   \begin{field}
-    $|E(XY)| \leq $ (Cauchy-Schwartz)
+    $|E(XY)| $
   \end{field}
   \begin{field}
-    $|E(XY)| \leq E(|XY|) \leq (E(|X|^2))^{1/2}(E(|Y|^2))^{1/2}$
+    $|E(XY)| \leq E(|XY|) \leq (E(|X|^2))^{1/2}(E(|Y|^2))^{1/2}$ (Cauchy-Schwartz)
   \end{field}
 \end{note}
 
@@ -2225,7 +2223,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     \tiny 22
   \end{field}
   \begin{field}
-    $P(A \text{ and }B)$
+    $P(A \text{ and }B) = P(A,B) = $
   \end{field}
   \begin{field}
     $P(A \text{ and }B) = P(A|B)P(B) = P(B|A)P(A)$
@@ -2571,17 +2569,7 @@ $\Sigma_{aa} = \begin{pmatrix}
   \end{field}
 \end{note}
 
-\begin{note}
-  \begin{field}
-    \tiny 48
-  \end{field}
-  \begin{field}
-    Law of total probability, continuous
-  \end{field}
-  \begin{field}
-    $P(A) = \int_{-\infty}^\infty P(A|X=x)f_x(x)dx$
-  \end{field}
-\end{note}
+
 
 \begin{note}
   \begin{field}
@@ -2771,6 +2759,8 @@ $\Sigma_{aa} = \begin{pmatrix}
     Does $E(X_n) \to c $ imply $X_n \overset{p}{\to}c$?
   \end{field}
   \begin{field}
+    No.
+
     Let $X_n = 0, $ with prob $1 - 1/n$, $n$ with prob $1/n$.
     Then $E(X_n) = 0 \cdot P(X_n = 0) + n P(X_n = n) = 0  + n 1/n = 1$ for all n.
     But $P(|X_n - 0| > \epsilon) \leq P(X_n = n) = \frac{1}{n } \underset{n \to \infty}{\to} 0$
@@ -3463,9 +3453,11 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 276 \end{field}
   \begin{field}
-    Uniform complete sufficient statistic
+    Uniform$(0,\theta)$ complete sufficient statistic
   \end{field}
   \begin{field}
+    $T(\mathbf{X}) = X_{(n)}$
+
     Suppose that $X_1, \ldots , X_n$ are iid Uniform($0,\theta$), $\theta > 0$. We know that $T(\mathbf{X}) = X_{(n)}$ (the max order statistic) is sufficient for $\theta$. Furtheremore ,
     $$ f(t|\theta) = nt^{n-1}\theta^{-n} \quad 0 < t < \theta$$
     Now suppose that $g(t)$ is a function satisfying $E_\theta(g(T)) =0, \forall \theta$
@@ -5076,7 +5068,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 358
+        \tiny 368
     \end{field}
     \begin{field}
         If a sequence of estimators $W_n$ for a parameter $\theta$ satisfies
@@ -5094,7 +5086,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 359
+        \tiny 369
     \end{field}
     \begin{field}
         How to prove consistency:
@@ -5112,7 +5104,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 360
+        \tiny 370x
     \end{field}
     \begin{field}
         Definition of asympototic distribution of Estimators
@@ -5130,7 +5122,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 361
+        \tiny 371x
     \end{field}
     \begin{field}
         $X_i \sim Exp(\sigma)$, $\sum X_i \sim $
@@ -5142,7 +5134,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 362
+        \tiny 372
     \end{field}
     \begin{field}
         Relationship between asymptotic variance and limiting variance
@@ -5154,7 +5146,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 363
+        \tiny 373
     \end{field}
     \begin{field}
         Score function
@@ -5166,7 +5158,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 364
+        \tiny 374
     \end{field}
     \begin{field}
         Notation and test construction $X_1, \ldots, X_n$ iid
@@ -5193,7 +5185,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 365
+        \tiny 375
     \end{field}
     \begin{field}
         Important Distribution of Maximum Likelihood Estimators
@@ -5212,7 +5204,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 366
+        \tiny 376
     \end{field}
     \begin{field}
         Asymptotic Normality of MLE
@@ -5229,7 +5221,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 367
+        \tiny 377
     \end{field}
     \begin{field}
         Mann-Wald Theorem (for MLE)
@@ -5243,7 +5235,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 368
+        \tiny 378
     \end{field}
     \begin{field}
         Wald Hypothesis Tests and Confidence intervals
@@ -5262,7 +5254,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 369
+        \tiny 379
     \end{field}
     \begin{field}
         Asymptotic Likelihood-Based Test Statistics
@@ -5285,7 +5277,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 370
+        \tiny 380
     \end{field}
     \begin{field}
         Comparison between Likelihood Ratio, Wald and Score tests and intervals
@@ -5316,7 +5308,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note}
     \begin{field}
-        \tiny 371
+        \tiny 381
     \end{field}
     \begin{field}
         Variance Stabilizing Transformation
