@@ -525,10 +525,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 101 \end{field}
   \begin{field}
-    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = e^a$
+    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = $
   \end{field}
   \begin{field}
-    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = $
+    $\lim_{x \to \infty}( 1 + \frac{a}{x})^x = e^a$
   \end{field}
 \end{note}
 
@@ -1008,10 +1008,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 148 \end{field}
     \begin{field}
-        Probability Function / Kolmogorov Axioms
+        \text{Probability} Function / Kolmogorov Axioms
     \end{field}
     \begin{field}
-        Given a sample space $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies:
+        \text{Given} a sample space $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies:
             \begin{enumerate}
               \item $P(A) \geq 0$ for all $A \in \mathcal{B}$
               \item $P(S) = 1$
@@ -1193,7 +1193,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 163 \end{field}
     \begin{field}
-        Binomial Coefficient $\binom{n}{r}$
+        \text{Binomial} Coefficient $\binom{n}{r}$
     \end{field}
     \begin{field}
       Binomial Coefficient
@@ -1479,7 +1479,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
     $n$th central moment of $X$
   \end{field}
   \begin{field}
-    $E(X - \mu)^n$
+    $E[(X - \mu)^n]$
   \end{field}
 \end{note}
 
@@ -1544,7 +1544,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
     Location-scale family for $f(x)$
   \end{field}
   \begin{field}
-    $1/\sigma f((x - \mu)/\sigma)$
+    $ \frac{1}{\sigma} f(\frac{(x - \mu)}{\sigma})$
   \end{field}
 \end{note}
 
@@ -1590,13 +1590,13 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 199 \end{field}
   \begin{field}
-    Example of calculating donditional pdfs
+    Example of calculating conditional pdfs
 $f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
 
   \end{field}
   \begin{field}
     \begin{align*}
-      f_x(x) = \int_{-\infty}^\infty f(x,y) dy \\
+      f_x(x) &= \int_{-\infty}^\infty f(x,y) dy \\
       &= e^{-x}\\
       \\
       f(y|x) &= \frac{f(x,y)}{f_x(x)}\\
@@ -1691,7 +1691,7 @@ $f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
 
 \begin{note} \begin{field} \tiny 208 \end{field}
   \begin{field}
-    $E(g(X)) \geq $ where $g$ is a convex function
+    $E(g(X)) $ where $g$ is a convex function
   \end{field}
   \begin{field}
     $E(g(X)) \geq g(E(X))$ where $g$ is a convex function (Jensen's inequlity)
@@ -1847,9 +1847,8 @@ $\Sigma_{aa} = \begin{pmatrix}
   \end{field}
   \begin{field}
     \begin{itemize}
-  \item $P(\varnothing) = $
   \item $B = \Omega \cap B = (A \cup A^c) \cap B
-    = (A \cap B) \cup (A^c \cap B)$
+    = $
   \item $P(A^c) = $
   \item $P(B) = $
   \item $P(\Omega) =  \qquad P(\varnothing) = $
@@ -1862,7 +1861,6 @@ $\Sigma_{aa} = \begin{pmatrix}
   \end{field}
   \begin{field}
     \begin{itemize}
-  \item $P(\varnothing) = 0$
   \item $B = \Omega \cap B = (A \cup A^c) \cap B
     = (A \cap B) \cup (A^c \cap B)$
   \item $P(A^c) = 1 - P(A)$
@@ -1943,9 +1941,9 @@ $\Sigma_{aa} = \begin{pmatrix}
   \end{field}
   \begin{field}
     Law of total probability
-    $$P(B) = \sum_{i=1}^n P(B|A_i)P(A_i) \quad \Omega = \cup_{i=1}^n A_i$$
+    $$P(B) = \sum_{i=1}^n P(B|A_i)P(A_i) \quad \Omega = \cap_{i=1}^n A_i$$
 
-    $$P(B) = P(A \cup B) + P(A^c \cup B) $$
+    $$P(B) = P(A \cap B) + P(A^c \cap B) $$
    \end{field}
 \end{note}
 
@@ -1954,7 +1952,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     \tiny 8
   \end{field}
   \begin{field}
-    Bayes Theorem
+    Bayes Theorem $P(A_i|B) =$
   \end{field}
   \begin{field}
     Bayes Theorem
@@ -2103,7 +2101,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     \tiny 16
   \end{field}
   \begin{field}
-    Variance
+    \text{Variance}
     \begin{itemize}
       \item $V(X) = \sigma_x^2 = $
       \item $V(X+Y) =$
@@ -2111,7 +2109,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     \end{itemize}
   \end{field}
   \begin{field}
-    Variance
+    \text{Variance}
     \begin{itemize}
       \item $V(X) = \sigma_x^2 = E[(X - E(X))^2] = E(X^2) - E(X)^2$
       \item $V(X+Y) = V(X) + V(Y) + Cov(X,Y)$
@@ -4002,7 +4000,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 307 \end{field}
   \begin{field}
-    Does $S^t$ for Normal attain cramer rao?
+    Does $S^2$ for Normal attain cramer rao?
   \end{field}
   \begin{field}
     No -
@@ -4457,7 +4455,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Yes:  \[
           \psi(\mathbf{x}) =
           \begin{cases}
-               1 & x < \alpha or x > 1 \\
+               1 & x < \alpha \text{ or } x > 1 \\
                0 & \alpha < x < 1
           \end{cases}
         \]
@@ -4855,11 +4853,10 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \begin{field}
         For a unimodal posterior distribution $k(\theta|\mathbf{x})$ Highest posterior density $1 - \alpha$ credible interval is the interval $[a,b]$ such that
         \begin{enumerate}
-          \item $\int_{\theta = 1}^b k(\theta|\mathbf{x})d\theta = 1 - \alpha$
+          \item $\int_{\theta = a}^b k(\theta|\mathbf{x})d\theta = 1 - \alpha$
           \item $k(a|\theta) = k(b|\theta)$
           \item $a < \theta^* < b$ where $\theta^*$ is the mode of the posterior distribution.
         \end{enumerate}
-
         This credible interval will be the shortest. Note it might not contain the Bayes estimator for $\theta$ if the posterior distribution is very highly skewed and has a heavy tail.
     \end{field}
 \end{note}
