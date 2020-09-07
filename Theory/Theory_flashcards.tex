@@ -17,11 +17,11 @@
   \end{field}
   \begin{field}
     $X \sim Gamma(a,b)$
-    $P(X \leq X) = $
+    $P(X \leq x) = P(Y \geq a)$ Where $Y \sim $
   \end{field}
   \begin{field}
     $X \sim Gamma(a,b)$
-    $P(X \leq X) = P(Y \geq a)$
+    $P(X \leq x) = P(Y \geq a)$
     Where $Y \sim Pois (x/b)$
   \end{field}
 \end{note}
@@ -243,8 +243,8 @@
 
 \begin{note} \begin{field} \tiny 74 \end{field}
   \begin{field}
-    Min of Exponential
-    $$X_1, \ldots , X_n Exp(\lambda_i), Y = \min(X_i) \overset{?}{\sim}$$
+    Min of Exponential (using $\lambda$ parametrization)
+    $$X_1, \ldots , X_n \sim  Exp(\lambda_i), Y = \min(X_i) \overset{?}{\sim}$$
   \end{field}
   \begin{field}
     $Y \sim exp(\sum \lambda_i)$
@@ -1027,7 +1027,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
         Axiom of Finite Additivity
     \end{field}
     \begin{field}
-        If $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
+        \text{If} $A\in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
             $$P(A\cup B) = P(A) + P(B) $$
     \end{field}
 \end{note}
@@ -1053,10 +1053,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 151 \end{field}
     \begin{field}
-        If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = $$
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = $$
     \end{field}
     \begin{field}
-        If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = P(B) - P(A \cap B)$$
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then $$P(B\cap A^c) = P(B) - P(A \cap B)$$
     \end{field}
 \end{note}
 
@@ -1071,10 +1071,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 153 \end{field}
     \begin{field}
-        If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then
     \end{field}
     \begin{field}
-        If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then $P(A) \leq P(B)$
+        \text{If} $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then if $A \subset B$ then $P(A) \leq P(B)$
     \end{field}
 \end{note}
 
@@ -1109,10 +1109,10 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 157 \end{field}
     \begin{field}
-        Fundamental Theorem of Counting
+        \text{Fundamental} Theorem of Counting
     \end{field}
     \begin{field}
-        Ifa job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
+        If a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \ldots, k$, then the entire job can be done in $n_1 \times n_2 \times \cdots, \times n_k$ ways.
     \end{field}
 \end{note}
 
@@ -1289,7 +1289,7 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 171 \end{field}
   \begin{field}
-    Method of pdf
+    Method of pdf + conditions
   \end{field}
   \begin{field}
     Conditions:
@@ -1298,9 +1298,9 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
       \item $f_X(x)$ is continuous on $X$
       \item $g^{-1}(y)$ has a continuous derivative
     \end{enumerate}
-    Let $X$ have pdf $f_x(x)$ and let $Y = g(Y)$
+    Let $X$ have pdf $f_X(x)$ and let $Y = g(Y)$
 
-    $$f_Y(y) = f_x(g^{-1}(y))\big|\frac{d}{dy}g^{-1}(y)$$
+    $$f_Y(y) = f_X(g^{-1}(y))\bigg|\frac{d}{dy}g^{-1}(y)\bigg|$$
   \end{field}
 \end{note}
 
@@ -1632,7 +1632,7 @@ $f(x,y) = e^{-y}, 0 < x < y < \infty$. $f(y|x) = $
     $X,Y$ independent\\ $Z = X + Y$  \\ $M_Z(t) = $
   \end{field}
   \begin{field}
-    $M_Z(t) = M_x(t)M_Y(t)$
+    $M_Z(t) = M_X(t)M_Y(t)$
   \end{field}
 \end{note}
 
@@ -1773,7 +1773,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     PDF for Max order statistic
   \end{field}
   \begin{field}
-    $n(F(x))^{n-1}f(x)$
+    $nf(x)(F(x))^{n-1}$
   \end{field}
 \end{note}
 
@@ -1885,10 +1885,9 @@ $\Sigma_{aa} = \begin{pmatrix}
   \begin{field}
     Probability Set intersection
     \begin{itemize}
-      \item $P(\bigcup_n A_n)
-        = 1 - P(\bigcap_n A_n^c)$
-      \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)
-        \implies P(A \cup B) \leq P(A) + P(B)$
+      \item $P(\bigcup_n A_n) = $
+      \item $P(A \cup B) =
+        \implies $
       \item $P(A \cup B)
         = $
       \item $P(A \cap B^c) = $
@@ -1898,9 +1897,9 @@ $\Sigma_{aa} = \begin{pmatrix}
     Probability Set intersection
     \begin{itemize}
       \item $P(\bigcup_n A_n)
-        = 1 - P(\bigcap_n \mathsf{A_n})$
+        = 1 - P(\bigcap_n A_n)$
       \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)\\[1ex]
-        \implies P(A \cup B) \le P(A) + P(B)$
+        \implies P(A \cup B) \leq P(A) + P(B)$
       \item $P(A \cup B)
         = P(A \cap B^c) + P(A^c \cap B) + P(A \cap B)$
       \item $P(A \cap B^c) = P(A) - P(A \cap B)$
@@ -2744,6 +2743,9 @@ $\Sigma_{aa} = \begin{pmatrix}
     Does $X_n \overset{p}{\to} c$ imply $E(X_n) \to c $?
   \end{field}
   \begin{field}
+    No
+
+
     Let $X_n = 0$ with probability $1 - 1/n$, $n^2 $ with probability $1/n$
     Then $P(|X_n - 0| > \epsilon) \leq P(X_n = n^2) = 1/n \underset{n \to \infty}{\to} 0$
     On the other hand,
@@ -3274,7 +3276,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 264 \end{field}
   \begin{field}
-    The joint pdf of the sample $\mathbf{X} =(X_1, X_2, \ldots X_n)$ isSuppose that $X_1, \ldots X_n$ are iid $N(\mu,\sigma^2)$ where $\sigma^2$ is known.
+  Find the joint pdf of the sample $\mathbf{X} =(X_1, X_2, \ldots X_n)$ given that $X_1, \ldots X_n$ are iid $N(\mu,\sigma^2)$ where $\sigma^2$ is known.
   \end{field}
   \begin{field}
     \begin{align*}
@@ -3329,6 +3331,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
     Where $\boldsymbol\theta = (\theta_1, \ldots, \theta_d)$, $d\leq k$. Then
     $$ T(\mathbf{X}) = \big(\sum _{j = 1}^k t_i(x_j), \cdots , \sum _{j = 1}^k t_k(x_j)\big)$$
+    is sufficient
   \end{field}
 \end{note}
 
@@ -3423,7 +3426,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
     Equivalently, we say that $T = T(\mathbf{X})$ is a complete statistic.
 
-    In short, a statistic $T = T(\mathbf{x})$ is complete, if $E_\theta(g(T)) = 0$ for all $\theta$ implies $g(t) = 0$ with probability 1
+    In short, a statistic $T = T(\mathbf{X})$ is complete, if $E_\theta(g(T)) = 0$ for all $\theta$ implies $g(t) = 0$ with probability 1
   \end{field}
 \end{note}
 
@@ -3580,8 +3583,8 @@ $E(g(X)) \approx $, $V(g(X))\approx $
   \begin{field}
     Suppose that $\mathbf{X}$ is a discrete random vector (so we can interpret probabilities easier)
 
-    Then $L(\theta|\mathbf{x}) = P_\theta(\mathbf{X} = \mathbf{x})$. Now if we compare the likelihood function at two parameter values $\theta_1, \theta_2$ and we observe that $$P_{\theta_1}(\mathbf{X} = \mathbf{x}) = L(\theta_1|\mathbf{x}) > L(\theta_2|\mathbf{x}) = P_{\theta_2}(\mathbf{X} = \mathbf{x}$$
-    Then, the sample point $\mathbf{x}$ that we actually observed is more likely to have occured if $\theta = \theta_1$, than if $\theta= \theta_2$, which can be interpreted as that $\theta_1$, is a more plausible value for the true value of $\theta$ than $\theta_2$ is.
+    Then $L(\theta|\mathbf{x}) = P_\theta(\mathbf{X} = \mathbf{x})$. Now if we compare the likelihood function at two parameter values $\theta_1, \theta_2$ and we observe that $$P_{\theta_1}(\mathbf{X} = \mathbf{x}) = L(\theta_1|\mathbf{x}) > L(\theta_2|\mathbf{x}) = P_{\theta_2}(\mathbf{X} = \mathbf{x})$$
+    Then, the sample point $\mathbf{x}$ that we actually observed is more likely to have occurred if $\theta = \theta_1$, than if $\theta= \theta_2$, which can be interpreted as that $\theta_1$, is a more plausible value for the true value of $\theta$ than $\theta_2$ is.
   \end{field}
 \end{note}
 
@@ -3677,11 +3680,10 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 289 \end{field}
   \begin{field}
-    Find Fisher information for Normal RVs
+    Find Fisher information matrix for Normal RVs
   \end{field}
   \begin{field}
     We have that $\boldsymbol\theta = (\mu,\sigma^2)$ and $f(x|\boldsymbol\theta) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}(x - \mu)^2}$
-
     Then,
     $$ \frac{\partial}{\partial \mu} \log f(x|\boldsymbol\theta) = \frac{\partial}{\partial}[-\frac{1}{2}\log(2\pi\sigma^2) - \frac{1}{2\sigma^2}(x - \mu)^2] = \frac{(x-\mu)}{\sigma^2}$$
 
@@ -3705,11 +3707,8 @@ $E(g(X)) \approx $, $V(g(X))\approx $
       } \frac{1}{2\sigma^2} [\frac{x-\mu}{\sigma^2}\cdot 1]\big]\\
       &= \frac{1}{2\sigma^4} E_\theta[ \frac{(x-\mu)^3}{\sigma^3} - (x-\mu)]
     \end{align*}
-
     But $E_\theta[(x-\mu)^3] = E_\theta[(x - \mu)] = 0$, because $X$ is symmetric around $\mu$, and we obtain $I_{12}(\boldsymbol\theta) = I_{21}(\boldsymbol\theta) = 0$
-
     We obtain that
-
     \begin{align*}
       I_{x_1}(\boldsymbol\theta) &= \begin{pmatrix}
         I_{11}(\boldsymbol\theta) & I_{12}(\boldsymbol\theta)\\
@@ -3719,8 +3718,6 @@ $E(g(X)) \approx $, $V(g(X))\approx $
       \frac{1}{\sigma^2} & 0 \\ 0 & \frac{1}{2\sigma^4}
     \end{pmatrix}
     \end{align*}
-
-
     And hence $$ I_{\mathbf{x}}(\boldsymbol\theta) = n I_{X_1}(\boldsymbol\theta) = \begin{pmatrix}
       \frac{n}{\sigma^2} & 0 \\ 0 & \frac{n}{2\sigma^4}
     \end{pmatrix} $$
@@ -4370,7 +4367,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Monotone likelihood ratio
     \end{field}
     \begin{field}
-        The family of distributions $\{F(x|theta)\}$ indexed by parmeter $\theta \in \Theta$ has monotone likelihood ratio if there is a statistic $T(\mathbf{X})$ such that for all $\theta^* > \theta \in \Theta$ and $\mathbf{x} \in \mathscr{X}$, the likelihood ratio $$ \frac{L(\theta^*|\mathbf{x})}{L(\theta|\mathbf{x})} \quad \text{ is monotone nondecreasing in } T(\mathbf{x})$$
+        The family of distributions $\{F(x|\theta)\}$ indexed by parmeter $\theta \in \Theta$ has monotone likelihood ratio if there is a statistic $T(\mathbf{X})$ such that for all $\theta^* > \theta \in \Theta$ and $\mathbf{x} \in \mathscr{X}$, the likelihood ratio $$ \frac{L(\theta^*|\mathbf{x})}{L(\theta|\mathbf{x})} \quad \text{ is monotone nondecreasing in } T(\mathbf{x})$$
     \end{field}
 \end{note}
 
@@ -4395,8 +4392,8 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Karlin-Rubin Theorem
     \end{field}
     \begin{field}
-        Suppose the family of distributions $\{F(x|theta)\}$ indexed by parmeter $\theta \in \Theta$ has monotone likelihood ratio Then to test $$ H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta > \theta_0$$
-         the test funciton
+        Suppose the family of distributions $\{F(x|\theta)\}$ indexed by parameter $\theta \in \Theta$ has monotone likelihood ratio Then to test $$ H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta > \theta_0$$
+         the test function
          \[
            \phi(\mathbf{X}) =
            \begin{cases}
@@ -5047,7 +5044,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Suppose we have random variables $X_1, X_2, \ldots$, such that the collection $\{X_1, \ldots X_n\}$ gives information about a parameter $\theta$. A sequence of estimators $W_n = W_n(X_1, \ldots, X_n)$ is a consistent sequence of estimators of the parameter $\theta$ if FOR EVERY $\theta \in \Theta$,
-        $$W_n \overset{\to}{p} \theta $$
+        $$W_n \overset{p}{\to} \theta $$
     \end{field}
 \end{note}
 
@@ -5104,14 +5101,14 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \tiny 370x
     \end{field}
     \begin{field}
-        Definition of asympototic distribution of Estimators
+        Definition of asymptotic distribution of Estimators
     \end{field}
     \begin{field}
         Suppose that a sequence of random variables $W_n$ satisfies
-        $$k_n(W_n - \theta) \overset{\to}{d} F $$
+        $$k_n(W_n - \theta) \overset{d}{\to} F $$
         \begin{itemize}
           \item $k_n$ is the stabilizing constant,
-          \item $F$ is the asympototic distribution
+          \item $F$ is the asymptotic distribution
           \item $\sigma^2(\theta)$ the asymptotic variance (which can't depend on $n$)
         \end{itemize}
     \end{field}
@@ -5185,7 +5182,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \tiny 375
     \end{field}
     \begin{field}
-        Important Distribution of Maximum Likelihood Estimators
+        Important Assumptions of Maximum Likelihood Estimators
     \end{field}
     \begin{field}
         Note these assumptions hold in exponential families, Binomial, Poisson, etc
@@ -5208,7 +5205,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Under the common assumptions, The MLE $\hat{\theta}_n$ for $\theta$ satisfies
-        $$ \frac{\hat{\theta})n -\theta}{\sqrt{\frac{1}{n I_1(\theta)}}} \overset{\to}{d} N(0,1)$$
+        $$ \frac{\hat{\theta})n -\theta}{\sqrt{\frac{1}{n I_1(\theta)}}} \overset{d}{\to} N(0,1)$$
         Equivalently,
         $\hat{\theta}_n \dot\sim N(\theta, \frac{1}{nI_1(\theta)})$
         This implies that the MLE is asymptotically the UMVUE (as $E(\hat{\theta}_n \approx \theta)$ and $Var(\hat{\theta}_n) \approx \frac{1}{I_n(\theta)}$), the CRLB var of unbiased estimate of $\theta$
@@ -5226,7 +5223,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \begin{field}
         For any differentiable $g(\cdot)$ with non-zero first derivative:
         if $\sqrt{n}(\hat{\theta}_n - \theta) \overset{d}{\to} N(0, \frac{1}{I_1(\theta)})$, then
-        $$\sqrt{n(g(\hat{\theta}_n) - g(\theta))} \overset{d}{\to} N(0,\frac{[g'(\theta)]^2}{I_1(\theta)}) $$
+        $$\sqrt{n}(g(\hat{\theta}_n) - g(\theta)) \overset{d}{\to} N(0,\frac{[g'(\theta)]^2}{I_1(\theta)}) $$
     \end{field}
 \end{note}
 
@@ -5244,7 +5241,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
           \item Two sided alternative: Reject $H_0: \theta = \theta_0$ vs $\theta \neq \theta_0$ if
           $$|W(\theta_0)| > z_{\alpha/2} $$
           \item Confidence interval:
-          $$\bigg( \hat{\theta}_n - z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}},\bigg( \hat{\theta}_n + z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}} \bigg) $$
+          $$\bigg( \hat{\theta}_n - z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}}, \hat{\theta}_n + z_{\alpha/2} \sqrt{\frac{1}{nI_1(\hat{\theta_n})}} \bigg) $$
         \end{itemize}
     \end{field}
 \end{note}
@@ -5311,10 +5308,22 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Variance Stabilizing Transformation
     \end{field}
     \begin{field}
-        To potentially improve confidence interval coverage in settings where there is a mean-variance relationship, we can try to find a function $g(\cdot)$ such that $$(g'(\theta))^2V(\hat{\theta}) = 1 $$, That is the asymptotic variance of $g(\hat{\theta})$ does not depend on the value of $\theta$. This function $g(\cdot)$ is called teh variance stabilizing transformation for the estimate $\hat{\theta}$
+        To potentially improve confidence interval coverage in settings where there is a mean-variance relationship, we can try to find a function $g(\cdot)$ such that $$(g'(\theta))^2V(\hat{\theta}) = 1 $$ That is the asymptotic variance of $g(\hat{\theta})$ does not depend on the value of $\theta$. This function $g(\cdot)$ is called the variance stabilizing transformation for the estimate $\hat{\theta}$
     \end{field}
 \end{note}
 
+
+\begin{note}
+    \begin{field}
+        \tiny 382
+    \end{field}
+    \begin{field}
+        Find the information in the sample $X_1, \ldots, X_m, Y_1, \ldots, Y_n$ where $X_i$ iid and $Y_j$ iid and $X_i$ and $Y_i$ are independent
+    \end{field}
+    \begin{field}
+        $I_{X,Y}(\theta) = mI_{X_1}(\theta) + nI_{Y_1}(\theta)$
+    \end{field}
+\end{note}
 
 %%end_tag
 \end{document}
