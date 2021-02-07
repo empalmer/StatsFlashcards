@@ -19,7 +19,7 @@ The pdf files have an overview of all the flashcards, but are not intended to be
 Choose one of the following Options to import the deck.
 
 ## Option 1
-Option 1 is the easiest way and doesn't require a local TeX installation. However, I don't keep this files as up-to-date as the .tex file option described below. To follow this option, download the StatsFlashcards.apkg file and click "Import File" at the bottom of anki and select this file. This should import all theory and methods flashcards.
+Option 1 is the easiest way and doesn't require a local TeX installation. However, I don't keep this files as up-to-date as the .tex file option described below. To follow this option, download the Theory.apkg and Methods.apkg file and click "Import File" at the bottom of anki and select these files. This should import all theory and methods flashcards.
 
 ## Option 2 - import using TeX files
 
