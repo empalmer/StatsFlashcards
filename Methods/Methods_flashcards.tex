@@ -75,7 +75,7 @@
 
 \begin{note} \begin{field} \tiny 100006 \end{field}
  \begin{field}
-  Sampling distribution for population $Y \sim $ Normal($\mu,\sigma$)
+  Sampling distribution for population $Y \sim $ Normal($\mu,\sigma^2$)
  \end{field}
  \begin{field}
   $N(\mu,\sigma^2/n)$
@@ -373,16 +373,10 @@
   Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p) (option 1), parameter of interest $p$
   \begin{itemize}
    \item Test name
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-         \begin{itemize}
-          \item upper:
-          \item lower:
-          \item two-sided
-         \end{itemize}
-   \item Confidence interval
-   \item pvalue
+   \item Test Statistic, Test Reference Distribution
+   \item Critical Value/ Rejection region:
+         upper, lower, two-sided
+   \item Confidence interval + pvalue
    \item Consistent/Finite Sample Exact/ Asymptotically Exact
   \end{itemize}
  \end{field}
@@ -515,15 +509,10 @@
   Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 2)
   \begin{itemize}
    \item Test name:
+   \item Assumptions
    \item Procedure:
-   \item Test Statistic
-   \item Test Reference Distribution
+   \item Test Statistic, Test Reference Distribution
    \item Critical Value/ Rejection region
-         \begin{itemize}
-          \item upper:
-          \item lower:
-          \item two-sided
-         \end{itemize}
    \item Confidence interval
    \item pvalue
    \item Consistent/Finite Sample Exact/ Asymptotically Exact
@@ -532,7 +521,8 @@
  \begin{field}
   Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 1)
   \begin{itemize}
-   \item Test name: Wilcoxon signed-rank test (require symmetry assumption) - equivalently a test of the mean - Tests the pseudo-median
+   \item Test name: Wilcoxon signed-rank test
+   \item Assumptions: symmetry - equivalently a test of the mean. otherwise tests the pseudo-median
    \item Procedure: testing $c_0$ is the center (median)
          \begin{itemize}
           \item Calculate distance of each observation from $c_0$
@@ -588,11 +578,11 @@
    \item Test Reference Distribution: Under $H_0: X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2} \sim \chi_{n-1}^2$
    \item Critical Value/ Rejection region
          \begin{itemize}
-          \item  $\sigma^2 > \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1}(1-\alpha)$
-          \item $\sigma^2 < \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) < \chi^2_{n-1}(\alpha)$
-          \item $\sigma^2 \neq \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1}(1 - \alpha/2)$ or $X(\sigma_0) < \chi^2_{n-1}(\alpha/2)$
+          \item  $\sigma^2 > \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1,(1-\alpha)}$
+          \item $\sigma^2 < \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) < \chi^2_{n-1,(\alpha)}$
+          \item $\sigma^2 \neq \sigma_0^2$ Reject $H_0$ for $X(\sigma_0^2) > \chi^2_{n-1,(1 - \alpha/2)}$ or $X(\sigma_0) < \chi^2_{n-1,(\alpha/2)}$
          \end{itemize}
-   \item Confidence interval  $$ \bigg( \frac{(n-1)s^2}{\chi^2_{n-1}(1 - \alpha/2)}, \frac{(n-1)s^2}{\chi^2_{n-1}(\alpha/2)}\bigg)$$
+   \item Confidence interval  $$ \bigg( \frac{(n-1)s^2}{\chi^2_{n-1,1 - \alpha/2}}, \frac{(n-1)s^2}{\chi^2_{n-1,(\alpha/2)}}\bigg)$$
    \item pvalue
          \begin{itemize}
           \item $\sigma^2 > \sigma_0^2$: $p = 1 - pchisq(X(\sigma_0)^2,n-1)$
@@ -723,7 +713,7 @@
   Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with known $\sigma_x, \sigma_y$. Estimate $d$,
   \begin{itemize}
    \item Test name: 2 sample $z$ test
-   \item Test Statistic: $z(d_0) = \frac{(\bar{X}- \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{m} - \frac{\sigma_y^2}{n}}}$
+   \item Test Statistic: $z(d_0) = \frac{(\bar{X}- \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{m} + \frac{\sigma_y^2}{n}}}$
    \item Test Reference Distribution: Under $H_0$, $z(d_0) \sim N(0,1)$
    \item Critical Value/ Rejection region
          \begin{itemize}
@@ -864,7 +854,7 @@
    \item Test Reference Distribution: If differences are Normal (note X,Y Normal does not imply Differences are normal unless X,Y are jointly multivariate-normal) Under $H_0$, $t(d_0) \sim t_{n-1}$ (exact distribution)
    \item Critical Value/ Rejection region Same as t
    \item Confidence interval
-         $$ (\bar{X} - \bar{Y}) = t_{n-1}(1 - \frac{\alpha}{2})\sqrt{\frac{s_x^2}{n} + \frac{s_Y^2}{n} - 2 \frac{s_{XY}}{n}} = \bar{D} \pm  t_{n-1}(1 - \frac{\alpha}{2}) \sqrt{\frac{s_d^2}{n}}$$
+         $$ (\bar{X} - \bar{Y}) \pm t_{n-1,(1 - \frac{\alpha}{2})}\sqrt{\frac{s_x^2}{n} + \frac{s_Y^2}{n} - 2 \frac{s_{XY}}{n}} = \bar{D} \pm  t_{n-1,(1 - \frac{\alpha}{2})} \sqrt{\frac{s_d^2}{n}}$$
    \item Equivalent to a one sample - t-test on the differences
   \end{itemize}
  \end{field}
@@ -1279,13 +1269,18 @@
 
 \begin{note} \begin{field} \tiny 100063 \end{field}
  \begin{field}
-  Test for data setting: Sample 1: $X_{1,1}, \ldots , X_{1n_1}$ from population 1 with mean $\mu_1$,\\
-  Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$,\\ $\ldots $ Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
+  Test for data setting:
+\begin{itemize}
+  \item Sample 1: $X_{1,1}, \ldots , X_{1n_1}$ from population 1 with mean $\mu_1$,
+  \item Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$,\\ $\ldots $
+  \item \ldots
+  \item Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
   \begin{itemize}
-   \item Independence within and between groups
-   \item Populations (approximately ) normal
-   \item Equal variances
+    \item Independence within and between groups
+    \item Populations (approximately ) normal
+    \item Equal variances
   \end{itemize}
+\end{itemize}
  \end{field}
  \begin{field}
   \begin{itemize}
@@ -3052,7 +3047,7 @@
    \item $\epsilon_{ijk} \sim N(0,\sigma^2)$
    \item $0 = \sum_{i=1}^a \alpha_i = \sum_{j=1}^b \beta_j = \sum_{i=1}^a (\alpha\beta)_{ij} = \sum_{j=1}^b (\alpha\beta)_{ij}$
    \item There are $a \times b $ parameters to estimate
-   \item $a-1 \alpha_i$s , $b-1 \beta_j$s, $(a-1)(b-1) (\alpha\beta)_{ij}$s = ab total parameters
+   \item $(a-1)\, \alpha_i$s , $(b-1)\, \beta_j$s, $(a-1)(b-1) \, (\alpha\beta)_{ij}$s = $ab$ total parameters
   \end{itemize}
  \end{field}
 \end{note}
