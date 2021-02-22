@@ -926,13 +926,13 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 \begin{note} \begin{field} \tiny 140 \end{field}
   \begin{field}
     DeMorgan's Laws
-    $$(A \cup B)^c = $$
-    $$(A \cap B)^c = $$
+    $(A \cup B)^c = $\\
+    $(A \cap B)^c = $\\
   \end{field}
     \begin{field}
-      DeMorgan's Laws
-        $$(A \cup B)^c = A^c \cap B^c$$
-        $$(A \cap B)^c = A^c \cup B^c$$
+
+        $(A \cup B)^c = A^c \cap B^c$\\
+        $(A \cap B)^c = A^c \cup B^c$
     \end{field}
 \end{note}
 
@@ -1887,7 +1887,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     \begin{itemize}
       \item $P(\bigcup_n A_n) = $
       \item $P(A \cup B) =
-        \implies $
+         $
       \item $P(A \cup B)
         = $
       \item $P(A \cap B^c) = $
@@ -1912,10 +1912,10 @@ $\Sigma_{aa} = \begin{pmatrix}
     \tiny 5
   \end{field}
   \begin{field}
-    $P(A \cap B) =  \text{ when }A \text{ and } B \text{independent}$
+    $P(A \cap B) =  \text{ when }A \text{ and } B \text{ independent}$
   \end{field}
   \begin{field}
-    $P(A \cap B) = P(A)P(B) \text{ when }A \text{ and } B \text{independent}$
+    $P(A \cap B) = P(A)P(B) $
   \end{field}
   \end{note}
 
@@ -2482,11 +2482,12 @@ $\Sigma_{aa} = \begin{pmatrix}
     \tiny 42
   \end{field}
   \begin{field}
-    Poisson process
+    Times between arrivals are modeled as iid exponential random variables with parameter $\lambda = 1/\beta$. Let $N_t$ be the number of arrivals up to time $t$. Then $N_t \sim $
   \end{field}
   \begin{field}
-    Times between arrivals are modeled as iid exponential random variables with parameter $\lambda = 1/\beta$. Let $N_t$ be the number of arrivals up to time $t$. Then $N_t \sim Pois(\lambda t)$
-% go back and do properties of poisson process
+    $N_t \sim Pois(\lambda t)$
+
+    (Poisson process)
   \end{field}
 \end{note}
 
@@ -3136,10 +3137,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     where $M_X(t)$ is the mgf for some random variable $X$. Then,
   \end{field}
   \begin{field}
-    Let $\{X_n\}_{n \geq 1}$ be a sequence of random variables such that the mgf $M_{X_n}(t)$ of $X_n$ exists in a neighborhood of 0, for all , and suppose that
-
-    $$ \lim_{n \to \infty} M_{X_n}(t) = M_X(t) \quad \text{for all } t \text{ in a neighborhood of }0$$
-    where $M_X(t)$ is the mgf for some random variable $X$. Then, there exists a unique cdf $F_x(x)$ whose moments are determined by $M_y(t)$ and for all $x$, where $F_x(x)$ is continuous we have $\lim_{n \to \infty} F_{X_n}(x) = F_x(x)$
+    Then, there exists a unique cdf $F_x(x)$ whose moments are determined by $M_y(t)$ and for all $x$, where $F_x(x)$ is continuous we have $\lim_{n \to \infty} F_{X_n}(x) = F_x(x)$
   \end{field}
 \end{note}
 %%end_tag
@@ -3432,7 +3430,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 275 \end{field}
   \begin{field}
-    Complete statistic for $T$ binomially distributed
+    Binomially distributed ttatistic for $T$, show that is complete
   \end{field}
   \begin{field}
     Suppose the statistic $T \sim Binom(n,p)$, $0 < p < 1$, and let $g$ be a function such that $E_p(g(T)) = 0$ for all $p$.
@@ -4467,6 +4465,8 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Unbiased test (definition)
+        
+        A test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ is called unbiased if
     \end{field}
     \begin{field}
         A test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ is called unbiased if $\beta(\theta_1) \geq \beta(\theta_0)$ for all $\theta_1 \in \Theta_1$ and  all $\theta_0 \in \Theta_0$

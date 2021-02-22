@@ -699,18 +699,10 @@
 
 \begin{note} \begin{field} \tiny 100038 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with known $\sigma_x, \sigma_y$. Estimate $d = \mu_x - \mu_y$
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-   \item p-value
-  \end{itemize}
+  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with known $\sigma_x, \sigma_y$.\\ Estimate $d = \mu_x - \mu_y$
+
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$, $Y_1, \ldots, Y_n$ iid with known $\sigma_x, \sigma_y$. Estimate $d$,
   \begin{itemize}
    \item Test name: 2 sample $z$ test
    \item Test Statistic: $z(d_0) = \frac{(\bar{X}- \bar{Y}) - d_0}{\sqrt{\frac{\sigma_x^2}{m} + \frac{\sigma_y^2}{n}}}$
@@ -721,7 +713,7 @@
           \item Upper: $d \geq d_0$ Reject when $z(d_0) > z_{1 - \alpha} = $qnorm(1-$\alpha$)
           \item Two sided: $d \neq d_0$ Reject when $|z(d_0)| > z_{1 - \alpha/2}$ = qnorm(1 - $\alpha/2$)
          \end{itemize}
-   \item Confidence interval: $$ (\bar{X} - \bar{Y}) \pm z(1 - \frac{\alpha}{2})\sqrt{\frac{\sigma_x^2}{m} + \frac{\sigma_y^2}{n}} $$
+   \item Confidence interval: $$ (\bar{X} - \bar{Y}) \pm z_{(1 - \frac{\alpha}{2})}\sqrt{\frac{\sigma_x^2}{m} + \frac{\sigma_y^2}{n}} $$
   \end{itemize}
  \end{field}
 \end{note}
@@ -993,40 +985,27 @@
 
 \begin{note} \begin{field} \tiny 100052 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ Binomial sampling scheme
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic:
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-  \end{itemize}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$,\\ Test $H_0: p_x = p_y $ Binomial sampling scheme
+
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ Binomial sampling scheme
   \begin{itemize}
    \item Test name: Log Odds - test $H_0: \omega = 1$
-   \item Test Statistic: $\hat{\omega} = \frac{ad}{bc}$, $z = \frac{\log(\hat{omega})}{\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}$
+   \item Test Statistic: $\hat{\omega} = \frac{ad}{bc}$, $z = \frac{\log(\hat{\omega})}{\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}$
    \item Test Reference Distribution $ \log(\hat{\omega}) $ approx $\sim N(\log(\omega), \frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d})$, $z $ approx $\sim N(0,1)$
    \item Critical Value/ Rejection region
-   \item Confidence interval $(\hat{omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{omega}e^{z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
+   \item Confidence interval $(\hat{\omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{\omega}e^{z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
    \item: $\omega > 1, p_1 > p_2$, $\omega = 1, p_1 = p_2$, small $p_1, p_2$, $\omega = p_1/p_2$ = relative risk
   \end{itemize}
  \end{field}
 \end{note}
 
+
 \begin{note} \begin{field} \tiny 100053 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired) test proportions equal in groups (equally likely/probability)
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic:
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-  \end{itemize}
+  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired) \\ test proportions equal in groups (equally likely/probability)
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired), test proportions equal in groups (equally likely/probability)
   \begin{itemize}
 
    \item Note, requires a table that keeps track of the pairs
@@ -1173,10 +1152,11 @@
 
 \begin{note} \begin{field} \tiny 100059 \end{field}
  \begin{field}
-  Data setting: Data setting $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N$. $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r$
+  Data setting: Data setting $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N$.\\
+   $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r \neq 1$
  \end{field}
  \begin{field}
-  Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r$
+
   \begin{itemize}
    \item Test name: F
    \item Recall $s_x^2 = \frac{1}{n-1}\sum_{i=1}^m(X_i - \bar{X})^2$
@@ -1845,7 +1825,7 @@
   $R^2$
  \end{field}
  \begin{field}
-  $R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$
+  $$R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$$
 
   Where SS(Reg) is the regression sum of square: $\sum_{i} (\hat{y}_i - \bar{y})^2$ (fitted minus mean)
   and SS(Tot) or TSS is the total sum of squares $\sum_{i} (y_i - \bar{y})^2$
@@ -2361,7 +2341,6 @@
   $E(MS_{\text{Trt}}) = $
  \end{field}
  \begin{field}
-  $$E(MS_{\text{Trt}}) = $$
   \begin{itemize}
    \item If $H_0$ true, then $E(MS_{\text{Trt}}) = \sigma^2$
    \item If $H_A$ true, then $E(MS_{\text{Trt}})> E(MS_E)$
@@ -2611,7 +2590,6 @@
  \end{field}
  \begin{field}
   Multiple comparison method: FDR
-  (edit: define FDR)
  \end{field}
  \begin{field}
   \begin{itemize}
