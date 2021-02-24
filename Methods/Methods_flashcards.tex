@@ -402,27 +402,14 @@
 
 \begin{note} \begin{field} \tiny 100029 \end{field}
  \begin{field}
-  Test for data setting $Y_1, \ldots, Y_n$, parameter of interest: $p$ iid Bernoulli(p) (option 2)
-  \begin{itemize}
-   \item Test name
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-         \begin{itemize}
-          \item upper:
-          \item lower:
-          \item two-sided
-         \end{itemize}
-   \item Confidence interval
-   \item pvalue
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact
-  \end{itemize}
+  Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli($p$)\\
+  Parameter of interest: $p$  (Not FSE method)
  \end{field}
  \begin{field}
   Test for data setting $Y_1, \ldots, Y_n$, parameter of interest: $p$ iid Bernoulli(p) (option 2)
   \begin{itemize}
    \item Test name: Binomial $z$-test (Use when $np_0 > 5$ and $n(1-p_0) > 5$)
-   \item Test Statistic: $X  = \sum_{i=1}^n = n\bar{Y}$, $\hat{p} = X/n$, $z(p_0) = \frac{\hat{p}- p_0}{\sqrt{p_0(1-p_0)/n}}$ (score)
+   \item Test Statistic: $X  = \sum_{i=1}^n = n\bar{Y}$, $\hat{p} = X/n$, $$z(p_0) = \frac{\hat{p}- p_0}{\sqrt{p_0(1-p_0)/n}}$$ (score)
    \item Test Reference Distribution: Under $H_0$, Approximately $X \sim N(np_0,np_0(1-p_0))$ and $z(p_0) \sim N(0,1)$
    \item Critical Value/ Rejection region
          \begin{itemize}
@@ -506,16 +493,13 @@
 
 \begin{note} \begin{field} \tiny 100032 \end{field}
  \begin{field}
-  Data Setting: $X_1, \ldots, X_n$, iid parameter of interest: $M$ - median $H_0: M = M_0$ (option 2)
+  Data Setting: $X_1, \ldots, X_n$, iid \\
+  parameter of interest: $M$ - median $H_0: M = M_0$ (under symmetry assumption)
   \begin{itemize}
    \item Test name:
    \item Assumptions
    \item Procedure:
    \item Test Statistic, Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-   \item pvalue
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact
   \end{itemize}
  \end{field}
  \begin{field}
@@ -534,15 +518,7 @@
           \item Exact p-value - assume each rank has the same chance of being assigned to observations above or below $c_0$ - all possible ways to assign the ranks
           \item Normal approximation to the null distribution $S \sim N\big(\frac{n(n+1)}{4}, \frac{n(n+1)(2n+1)}{24}\big)$
          \end{itemize}
-   \item Critical Value/ Rejection region
-         \begin{itemize}
-          \item upper:
-          \item lower:
-          \item two-sided
-         \end{itemize}
-   \item Confidence interval
-   \item pvalue - Same as for Normal
-   \item Consistent Yes under symmetry assumption /Finite Sample Exact No/ Asymptotically Exact Yes (under symmetry assumption)
+   \item Consistent: Yes under symmetry assumption \\ Finite Sample Exact: No\\ Asymptotically Exact: Yes (under symmetry assumption)
   \end{itemize}
  \end{field}
 \end{note}
@@ -559,16 +535,9 @@
 
 \begin{note} \begin{field} \tiny 100034 \end{field}
  \begin{field}
-  Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$) parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-   \item pvalue
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact
-  \end{itemize}
+  Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$)\\
+  Parameter of interest: $\sigma^2 = Var(X)$: $H_0: \sigma^2 = \sigma_0^2$\\
+  Sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$,
  \end{field}
  \begin{field}
   Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$) parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
@@ -589,7 +558,7 @@
           \item $\sigma^2 < \sigma_0^2: p = pchisq(X(\sigma_0^2),n-1)$
           \item $\sigma^2 \neq \sigma_0^2: p = 2\min(1 - pchisq(X(\sigma_0^2), n-1), pchisq(X(\sigma_0^2)),n-1)$
          \end{itemize}
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact
+   \item Consistent/Finite Sample Exact/ Asymptotically Exact (fill in later)
   \end{itemize}
  \end{field}
 \end{note}
@@ -721,15 +690,12 @@
 
 \begin{note} \begin{field} \tiny 100039 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with unknown but equal  $\sigma_x, \sigma_y$ Estimate $d$
+  Data setting $X_1, \ldots , X_n$, $Y_1, \ldots, Y_m$ iid with unknown but equal  $\sigma_x, \sigma_y$ \\
+  Estimate $d = \mu_x - \mu_y$
   \begin{itemize}
    \item Test name:
    \item Estimate of $\sigma_x^2 = \sigma_y^2$
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-   \item When not equal
+   \item When $\sigma_x, \sigma_y$ not actually equal
   \end{itemize}
  \end{field}
  \begin{field}
@@ -825,15 +791,14 @@
 
 \begin{note} \begin{field} \tiny 100042 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$, $X_i$ not independent $Y_i$, $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$ Estimate $d = \mu_x - \mu_y$, $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ unknown
+  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$\\
+   $X_i$ not independent from $Y_i$\\
+    $(X_1, Y_1), \ldots , (X_n,Y_n)$ iid $F_{XY}$ $Cov(X_i,Y_i) = \sigma_{XY}$, $Cov(X_i,Y_j) = 0$
+    \\ Estimate $d = \mu_x - \mu_y$, when $\sigma_x^2, \sigma_y^2, \sigma_{XY}$ unknown
   \begin{itemize}
    \item Test name:
    \item Estimate of $\sigma_{XY}$
    \item Estimate of $Var(\bar{X} - \bar{Y})$
-   \item Test Statistic
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
   \end{itemize}
  \end{field}
  \begin{field}
@@ -956,18 +921,10 @@
 
 \begin{note} \begin{field} \tiny 100051 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$) (Fisher)
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic:
-   \item pvalue
-   \item Test Reference Distribution
-   \item Critical Value/ Rejection region
-   \item Confidence interval
-  \end{itemize}
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$\\
+   Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$) (Fisher)
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$)
   \begin{itemize}
    \item Test name: Fisher's Exact Test (of homogeneity of proportions)
    \item Test Statistic: Probability of observed table conditioning on margins: Compute all tables with the same margin totals: $\frac{\binom{C_1}{O_{11}}\binom{C_2}{O_{12}}}{\binom{N}{R_1}}$
@@ -986,15 +943,14 @@
 \begin{note} \begin{field} \tiny 100052 \end{field}
  \begin{field}
   Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$,\\ Test $H_0: p_x = p_y $ Binomial sampling scheme
-
  \end{field}
  \begin{field}
   \begin{itemize}
    \item Test name: Log Odds - test $H_0: \omega = 1$
-   \item Test Statistic: $\hat{\omega} = \frac{ad}{bc}$, $z = \frac{\log(\hat{\omega})}{\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}$
+   \item Test Statistic: $\hat{\omega} = \frac{ad}{bc}$, $z = \frac{\log(\hat{\omega})}{\sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}$
    \item Test Reference Distribution $ \log(\hat{\omega}) $ approx $\sim N(\log(\omega), \frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d})$, $z $ approx $\sim N(0,1)$
    \item Critical Value/ Rejection region
-   \item Confidence interval $(\hat{\omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{\omega}e^{z(1 - \frac{\alpha}{2})\sqrt{frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
+   \item Confidence interval $(\hat{\omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{\omega}e^{z(1 - \frac{\alpha}{2})\sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
    \item: $\omega > 1, p_1 > p_2$, $\omega = 1, p_1 = p_2$, small $p_1, p_2$, $\omega = p_1/p_2$ = relative risk
   \end{itemize}
  \end{field}
@@ -1003,7 +959,7 @@
 
 \begin{note} \begin{field} \tiny 100053 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$, $X,Y$ not independent (paired) \\ test proportions equal in groups (equally likely/probability)
+  Data setting $X_1, \ldots , X_n$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$\\ $X,Y$ not independent (paired) \\ Test proportions equal in groups (equally likely/probability)
  \end{field}
  \begin{field}
   \begin{itemize}
@@ -1032,15 +988,9 @@
 
 \begin{note} \begin{field} \tiny 100054 \end{field}
  \begin{field}
-  Data setting: $n$ observations, record Group 1 and Group 2, where each group takes on $> 2$ values, Test if there is an association between the groups
-  \begin{itemize}
-   \item Test name:
-   \item Test Statistic:
-   \item Test Reference Distribution
-  \end{itemize}
+  Data setting: $n$ observations, record Group 1 and Group 2, where each group takes on $> 2$ values\\ Test if there is an association between the groups
  \end{field}
  \begin{field}
-  Data setting: $n$ observations, record Group 1 ($r$ values) and Group 2$(c)$ values, Test if there is an association between the groups
   \begin{itemize}
    \item Test name: Pearsons $\chi^2$
    \item Test Statistic: $X = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$, where $E_{ij} = \frac{n_in_j}{N}$
@@ -1055,21 +1005,17 @@
 
 \begin{note} \begin{field} \tiny 100055 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
+  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$\\
+  Test $m_x = m_y$ (with additive assumption)
   \begin{itemize}
-   \item Test name:
    \item Assumptions
    \item Process
-   \item pvalue
-   \item Test Reference Distribution
-   \item Test Statistic:
    \item Ties
    \item Continuity correction
    \item Consistency
   \end{itemize}
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name: Wilcoxon Rank-Sum (Mann-Whitney U-test)
    \item Note this is only a test of medians only if just additive effect - $F_x$ is just a shift from $F_y$ (shape and scale must be same ) (but then just the same as a test of mean, 10th percentile, min, $F_x = F_y$ etc )
@@ -1093,15 +1039,9 @@
 
 \begin{note} \begin{field} \tiny 100056 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
-  \begin{itemize}
-   \item Test name:
-   \item Process
-   \item Test statistic:
-  \end{itemize}
+  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$\\ Test $m_x = m_y$ (medians )
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test $m_x = m_y$ (medians )
   \begin{itemize}
    \item Test name: Mood's Test for Equality of Population Medians
    \item Process:
@@ -1118,14 +1058,13 @@
 
 \begin{note} \begin{field} \tiny 100057 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test some statistic $W$
+  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$\\ Test some statistic $W$
   \begin{itemize}
    \item Test name:
    \item Process
   \end{itemize}
  \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_n$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. Test some statistic $W$
   \begin{itemize}
    \item Test name: Permutation test
    \item Process: Permute group labels across observations and recalculate statistic for each permutation to create permutation distribution - calculate p-values using the permutation distribution
@@ -1153,10 +1092,9 @@
 \begin{note} \begin{field} \tiny 100059 \end{field}
  \begin{field}
   Data setting: Data setting $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N$.\\
-   $H_0: \sigma_x^2 = \sigma_y^2$ or $H_0 \sigma_x^2/\sigma_y^2 = r \neq 1$
+   $H_0: \sigma_x^2 = \sigma_y^2$ vs $H_1: \sigma_x^2/\sigma_y^2 = r \neq 1$
  \end{field}
  \begin{field}
-
   \begin{itemize}
    \item Test name: F
    \item Recall $s_x^2 = \frac{1}{n-1}\sum_{i=1}^m(X_i - \bar{X})^2$
@@ -1231,7 +1169,8 @@
 
 \begin{note} \begin{field} \tiny 100062 \end{field}
  \begin{field}
-  Multiple 2x2 tables under $k$ different conditions $p_{xj} = P(X = 1 \text{ in Table }j), p_{yj} = P(Y = 1 \text{ in Table }j)$ $H_0: p_{xj} = p_{yj}$ for all $j$
+  Multiple 2x2 tables under $k$ different conditions\\ $p_{xj} = P(X = 1 \text{ in Table }j), p_{yj} = P(Y = 1 \text{ in Table }j)$\\
+  Test $H_0: p_{xj} = p_{yj}$ for all $j$
  \end{field}
 
  \begin{field}
@@ -1252,7 +1191,7 @@
   Test for data setting:
 \begin{itemize}
   \item Sample 1: $X_{1,1}, \ldots , X_{1n_1}$ from population 1 with mean $\mu_1$,
-  \item Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$,\\ $\ldots $
+  \item Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$
   \item \ldots
   \item Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
   \begin{itemize}
