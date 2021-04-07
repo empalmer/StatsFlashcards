@@ -370,15 +370,8 @@
 
 \begin{note} \begin{field} \tiny 100028 \end{field}
  \begin{field}
-  Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p) (option 1), parameter of interest $p$
-  \begin{itemize}
-   \item Test name
-   \item Test Statistic, Test Reference Distribution
-   \item Critical Value/ Rejection region:
-         upper, lower, two-sided
-   \item Confidence interval + pvalue
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact
-  \end{itemize}
+  Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p) (Exact test option), parameter of interest $p$
+
  \end{field}
  \begin{field}
   Test for data setting $Y_1, \ldots, Y_n$ iid Bernoulli(p), parameter of interest $p$
@@ -536,14 +529,13 @@
 \begin{note} \begin{field} \tiny 100034 \end{field}
  \begin{field}
   Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$)\\
-  Parameter of interest: $\sigma^2 = Var(X)$: $H_0: \sigma^2 = \sigma_0^2$\\
-  Sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$,
+  Parameter of interest: $\sigma^2 = Var(X)$:\\
+   $H_0: \sigma^2 = \sigma_0^2$
  \end{field}
  \begin{field}
-  Data Setting: $X_1, \ldots, X_n$, iid N($\mu,\sigma^2$) parameter of interest: $\sigma^2 = Var(X)$, sample variance: $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$, $H_0: \sigma^2 = \sigma_0^2$
   \begin{itemize}
    \item Test name: $\chi^2$ for Population Variance
-   \item Test Statistic $X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2}$
+   \item Test Statistic $X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2}$, where $s^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2$
    \item Test Reference Distribution: Under $H_0: X(\sigma_0) = \frac{(n-1)s^2}{\sigma_0^2} \sim \chi_{n-1}^2$
    \item Critical Value/ Rejection region
          \begin{itemize}
@@ -558,7 +550,7 @@
           \item $\sigma^2 < \sigma_0^2: p = pchisq(X(\sigma_0^2),n-1)$
           \item $\sigma^2 \neq \sigma_0^2: p = 2\min(1 - pchisq(X(\sigma_0^2), n-1), pchisq(X(\sigma_0^2)),n-1)$
          \end{itemize}
-   \item Consistent/Finite Sample Exact/ Asymptotically Exact (fill in later)
+   \item (fill in later)Consistent?/Finite Sample Exact?/ Asymptotically Exact?
   \end{itemize}
  \end{field}
 \end{note}
@@ -707,15 +699,25 @@
    \item Test Reference Distribution: For Normal populations, under $H_0$: $t(d_0) \sim t_{m+n-2}$
    \item Critical Value/ Rejection region
          \begin{itemize}
-          \item $d > d_0$ Reject $H_0$ for $t_e(d_0) > t_{m+n-2}(1 - \alpha)$
-          \item $d < d_0$ Reject $H_0$ for $t_e(d_0) < t_{m+n-2}(\alpha)$
-          \item $d \neq d_0$ Reject $H_0$ for $|t_e(d_0)| > t_{m+n-2}(1 - \alpha/2)$
+          \item $d > d_0$ Reject $H_0$ for $t_e(d_0) > t_{m+n-2,(1 - \alpha)}$
+          \item $d < d_0$ Reject $H_0$ for $t_e(d_0) < t_{m+n-2,(\alpha)}$
+          \item $d \neq d_0$ Reject $H_0$ for $|t_e(d_0)| > t_{m+n-2,(1 - \alpha/2)}$
          \end{itemize}
-   \item Confidence interval $ (\bar{X} - \bar{Y}) \pm t_{m+n-2}(1 - \frac{\alpha}{2})\sqrt{s_p^2(\frac{1}{m} + \frac{1}{n})}$
+   \item Confidence interval $ (\bar{X} - \bar{Y}) \pm t_{m+n-2,(1 - \frac{\alpha}{2})}\sqrt{s_p^2(\frac{1}{m} + \frac{1}{n})}$
    \item When not equal:
          \begin{itemize}
-          \item Expected value of Estimated variance is larger than it should be when the smaller sample comes from the population with smaller variance - the test statistic will be closer to zero than it should be, and rejection rates will be smaller - Less power - more conservative
-          \item Expected value of Estimated variance is smaller than it shoudl be when smaller sample comes from the population with the larger variance - test statistic will have a larger absolute value than it should an rejection rates will be larger  - more power - anti conservative
+          \item Expected value of Estimated variance is
+            \begin{itemize}
+              \item larger than it should be when the smaller sample comes from the population with smaller variance
+              \item The test statistic will be closer to zero than it should be, and rejection rates will be smaller
+              \item Less power - more conservative
+            \end{itemize}
+          \item Expected value of Estimated variance is smaller than it should be
+          \begin{itemize}
+            \item when smaller sample comes from the population with the larger variance
+            \item test statistic will have a larger absolute value than it should an rejection rates will be larger
+            \item more power - anti conservative
+          \end{itemize}
          \end{itemize}
   \end{itemize}
  \end{field}
@@ -871,10 +873,10 @@
 
 \begin{note} \begin{field} \tiny 100047 \end{field}
  \begin{field}
-  $P(X = x | G = g)$ with multinomial sampling
+  Can we estimate $P(X = x | G = g)$ with multinomial sampling?
  \end{field}
  \begin{field}
-  Can estimate
+  Yes
  \end{field}
 \end{note}
 
@@ -921,11 +923,13 @@
 
 \begin{note} \begin{field} \tiny 100051 \end{field}
  \begin{field}
-  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$), $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$\\
-   Test $H_0: p_x = p_y $ (No association between response variable $X$ and grouping variable $G$) (Fisher)
+  Data setting $X_1, \ldots , X_m$ iid Bernoulli($p_x$)\\
+  $Y_1, \ldots, Y_n$ iid Bernoulli$(p_y)$\\
+  Test $H_0: p_x = p_y $  (Fisher)
  \end{field}
  \begin{field}
   \begin{itemize}
+   \item Test for (No association between response variable $X$ and grouping variable $G$)
    \item Test name: Fisher's Exact Test (of homogeneity of proportions)
    \item Test Statistic: Probability of observed table conditioning on margins: Compute all tables with the same margin totals: $\frac{\binom{C_1}{O_{11}}\binom{C_2}{O_{12}}}{\binom{N}{R_1}}$
    \item pvalue: Sum of probability of all tables more extreme than observed table
@@ -936,6 +940,17 @@
           \item $p_x \neq p_y$ More extreme = less likely table
          \end{itemize}
   \end{itemize}
+  Note, requires a table that keeps track of the pairs
+        \begin{tabular}{|c|c c|c|}
+                       & Measurement 1 &       &       \\
+         Measurement 2 & No            & Yes   & Total \\
+         \hline                                        \\
+         No            & a             & b     & $R_1$ \\
+         Yes           & c             & d     & $R_2$ \\
+         \hline                                        \\
+         Total         & $C_1$         & $C_2$ & n     \\
+         \hline
+        \end{tabular}
  \end{field}
 \end{note}
 
@@ -953,6 +968,17 @@
    \item Confidence interval $(\hat{\omega}e^{-z(1 - \frac{\alpha}{2})\sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}}, \hat{\omega}e^{z(1 - \frac{\alpha}{2})\sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}})$
    \item: $\omega > 1, p_1 > p_2$, $\omega = 1, p_1 = p_2$, small $p_1, p_2$, $\omega = p_1/p_2$ = relative risk
   \end{itemize}
+  Note, requires a table that keeps track of the pairs
+        \begin{tabular}{|c|c c|c|}
+                       & Measurement 1 &       &       \\
+         Measurement 2 & No            & Yes   & Total \\
+         \hline                                        \\
+         No            & a             & b     & $R_1$ \\
+         Yes           & c             & d     & $R_2$ \\
+         \hline                                        \\
+         Total         & $C_1$         & $C_2$ & n     \\
+         \hline
+        \end{tabular}
  \end{field}
 \end{note}
 
@@ -978,7 +1004,7 @@
    \item Test name: McNemar's Test
    \item Test Statistic: $z = \frac{b-c}{\sqrt{b+c}}$
    \item Test Reference Distribution: $z \sim N(0,1)$, $z^2 \sim \chi_1^2$
-   \item Critical Value/ Rejection region: Two sided rejecct $|z| > z(1 - \alpha/2)$
+   \item Critical Value/ Rejection region: Two sided rejecct $|z| > z_{(1 - \alpha/2)}$
    \item Note equivalent to performing a paired t-test on the differences:
          $$ t = \frac{b-c}{\sqrt{\frac{n}{n-1}(b + c - \frac{(b-c)^2}{40})}} $$ compare to $t_{n-1}$
   \end{itemize}
@@ -1091,8 +1117,8 @@
 
 \begin{note} \begin{field} \tiny 100059 \end{field}
  \begin{field}
-  Data setting: Data setting $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N$.\\
-   $H_0: \sigma_x^2 = \sigma_y^2$ vs $H_1: \sigma_x^2/\sigma_y^2 = r \neq 1$
+  Data setting: $X_1, \ldots , X_m$ iid $N$, $Y_1, \ldots, Y_n$ iid $N(\mu,\sigma^2)$.\\
+  $H_0: \sigma_x^2 = \sigma_y^2$ vs $H_1: \sigma_x^2/\sigma_y^2 = r \neq 1$
  \end{field}
  \begin{field}
   \begin{itemize}
@@ -1115,7 +1141,7 @@
 
 \begin{note} \begin{field} \tiny 100060 \end{field}
  \begin{field}
-  Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$
+  Data setting: $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$
   \begin{itemize}
    \item Test name:
    \item Process:
@@ -1124,7 +1150,6 @@
   \end{itemize}
  \end{field}
  \begin{field}
-  Data setting: Data setting $X_1, \ldots , X_m$ iid $F_x$, $Y_1, \ldots, Y_n$ iid $F_y$. $H_0: \sigma_x^2 = \sigma_y^2$
   \begin{itemize}
    \item Test name: Levene's Test
    \item Process:
@@ -1194,16 +1219,18 @@
   \item Sample 2: $X_{2,1}, \ldots , X_{2n_2}$ from population 2 with mean $\mu_2$
   \item \ldots
   \item Sample M: $X_{M,1}, \ldots , X_{Mn_M}$ from population M with mean $\mu_M$
-  \begin{itemize}
-    \item Independence within and between groups
-    \item Populations (approximately ) normal
-    \item Equal variances
-  \end{itemize}
+
 \end{itemize}
  \end{field}
  \begin{field}
   \begin{itemize}
    \item Test name: ANOVA
+   \item Assumptions
+   \begin{itemize}
+     \item Independence within and between groups
+     \item Populations (approximately ) normal
+     \item Equal variances
+   \end{itemize}
    \item Estimate of common variance $s_p = \frac{(n_1-1)s_1^2 + \cdots + (n_M -1)s_M^2}{(n_1-1) + \cdots + (n_M-1)}$
    \item Could use two-sample-t test on two population means
    \item Could test are population means 1 through M equal to each other?
@@ -1214,7 +1241,7 @@
    \item Sum of squares total
          $$ SST  = \sum_{i=1}^{n_1}(X_{1,i} - \bar{X})^2 + \cdots + \sum_{i=1}^{n_M} (X_{M,i} - \bar{X})^2$$
          degrees of freedom: $n-1$
-   \item Sum of squares between groups: $ SSB = SST - SSW = \sum_{j=1}^Mn_j(\bar{X}_j - \bar{X})^2$ df: $(n-1) - (n-M) = M-1$
+   \item Sum of squares between groups: $$ SSB = SST - SSW = \sum_{j=1}^Mn_j(\bar{X}_j - \bar{X})^2$$ df: $(n-1) - (n-M) = M-1$
    \item Test statistic: $$ F = \frac{MSB}{MSW} = \frac{SSB/(M-1)}{SSW/(n-M)} $$
    \item Reference distribution: Under $H_0, F \sim F_{M-1, n-M}$
   \end{itemize}
@@ -1429,7 +1456,7 @@
 
 \begin{note} \begin{field} \tiny 100083 \end{field}
  \begin{field}
-  Interpretation of slopes of linear model
+  Interpretation of slopes of linear model + example when $p = 0$
  \end{field}
  \begin{field}
   Change in mean response for 1 unit change in the value of the explanatory, keeping all other variables constant. When $p = 2$
@@ -1485,7 +1512,7 @@
 
 \begin{note} \begin{field} \tiny 100088 \end{field}
  \begin{field}
-  $$  \frac{\partial}{\partial \beta} L(\beta) = $$
+  $$  \frac{\partial}{\partial \beta} L(\beta) = $$ (Finding estimate for least squares)
  \end{field}
  \begin{field}
   \begin{align*}
@@ -1540,13 +1567,13 @@
 
 \begin{note} \begin{field} \tiny 100093 \end{field}
  \begin{field}
-  Properties of projection matrix
+  Properties of projection matrix $H$
  \end{field}
  \begin{field}
   \begin{itemize}
-   \item $H$ and $\mathbf{I} - \mathbf{H}$ are symmetric matrices
-   \item $\mathbf{HX} = X$
-         item $(\mathbf{I} - \mathbf{X})\mathbf{X} = \mathbf{0}$
+   \item $\mathbf{H}$ and $\mathbf{I} - \mathbf{H}$ are symmetric matrices
+   \item $\mathbf{HX} = \mathbf{X}$
+   \item $(\mathbf{I} - \mathbf{X})\mathbf{X} = \mathbf{0}$
    \item $\mathbf{H}^2 = \mathbf{H}$
    \item $(\mathbf{I} - \mathbf{H})\mathbf{H} = 0$
    \item $\mathbf{X}^t \mathbf{e} = 0$
@@ -1557,7 +1584,7 @@
 
 \begin{note} \begin{field} \tiny 100094 \end{field}
  \begin{field}
-  Unbiased estimate of $\sigma^2$
+  Unbiased estimate of $\sigma^2$ for linear models
  \end{field}
  \begin{field}
   $\hat{\sigma}^2 = \frac{1}{n- (p+1)} \sum_{i=1}^n e_i^2 = \frac{1}{n- (p+1)} \mathbf{e}^t \mathbf{e}$
@@ -1652,7 +1679,7 @@
  \begin{field}
   Linear Hypothesis testing single parameter $H_0: \mathbf{c}^t \beta = d$
   \begin{itemize}
-   \item $E(\mathbf{c}^t \beta)$, $V(\mathbf{c}^t \beta)= $
+   \item $E(\mathbf{c}^t \beta) = $, $V(\mathbf{c}^t \beta)= $
    \item Test statistic and distribution
    \item Item of setting up hypothesis test
    \item Rejection Region
@@ -1665,7 +1692,12 @@
    \item Thus $$ \frac{\mathbf{c}^t \hat{\beta} - \mathbf{c}^t \beta }{\sigma \sqrt{\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim N(0,1)$$ and under $H_0$
          $$ T = \frac{\mathbf{c}^t \hat{\beta} - d}{ \sqrt{\hat{\sigma}^2\mathbf{c}^t(\mathbf{X}^t \mathbf{X})^{-1} \mathbf{c}}} \sim t_{n - (p+1)}$$
    \item Example: testing $H_0: \beta_1 = \beta_2, \mathbf{c} = (0,1,-1)^t, d = 0$
-   \item Reject $H_a: c^t \beta \neq d:  |T| > t_{n - (p+1)}(1-\alpha/2)$\\ $c^t \beta > d, T > t_{n-(p+1)}(\alpha)$\\ $c^t\beta < d: T < t(1 - \alpha)$
+   \item Reject $H_a: c^t \beta \neq d: $
+\begin{itemize}
+  \item $  |T| > t_{n - (p+1)}(1-\alpha/2)$
+  \item $c^t \beta > d, T > t_{n-(p+1)}(\alpha)$
+  \item $c^t\beta < d: T < t(1 - \alpha)$
+\end{itemize}
   \end{itemize}
  \end{field}
 \end{note}
@@ -1711,12 +1743,11 @@
  \begin{field}
   Tests if any predictors are related to the response
   \begin{itemize}
-   \item Full model: $\mathbf{Y} = \mathbf{X}\beta + \epsilon$
-   \item Reduced model a nested model with $q$ estimated parameters
+   \item Full model $\Omega$: $\mathbf{Y} = \mathbf{X}\beta + \epsilon$
+   \item Reduced model $\omega$: a nested model with $q$ estimated parameters
    \item eg: Reduced model: $\mathbf{Y} = \beta_0 + \epsilon$, $q = 1$
    \item $H_0: \beta_1 =  \ldots = \beta_p = 0$
    \item $F = \frac{(RSS_\omega - RSS_\Omega)/(p-q)}{RSS_\Omega/(n-p)}$
-   \item
   \end{itemize}
  \end{field}
 \end{note}
@@ -1766,11 +1797,12 @@
  \begin{field}
   $$R^2 = \frac{SS(Reg)}{SS(Tot)} = 1 - \frac{SS(Res)}{SS(Tot)}$$
 
-  Where SS(Reg) is the regression sum of square: $\sum_{i} (\hat{y}_i - \bar{y})^2$ (fitted minus mean)
-  and SS(Tot) or TSS is the total sum of squares $\sum_{i} (y_i - \bar{y})^2$
-  and SS(Res) (or error sum of squares) $SS_E$ or RSS is the residual sum of squares $\sum_i (y_i - \hat{y}_i)^2 = \sum_{i} e_i$
-
-  And SS(Tot) = SS(Res) + SS(Reg)
+  \begin{itemize}
+    \item Where SS(Reg) is the regression sum of square: $\sum_{i} (\hat{y}_i - \bar{y})^2$ (fitted minus mean)
+    \item SS(Tot) or TSS is the total sum of squares $\sum_{i} (y_i - \bar{y})^2$
+    \item SS(Res) (or error sum of squares) $SS_E$ or RSS is the residual sum of squares $\sum_i (y_i - \hat{y}_i)^2 = \sum_{i} e_i$
+    \item SS(Tot) = SS(Res) + SS(Reg)
+  \end{itemize}
  \end{field}
 \end{note}
 
@@ -1796,7 +1828,7 @@
  \end{field}
  \begin{field}
   Predicting a future response
-  $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
+  $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p,(\alpha/2)}\hat{\sigma} \sqrt{1 + x_0^t(X^tX)^{-1}x_0}$
 
   A 95\% prediction interval for a response with (list values) is between and
  \end{field}
@@ -1809,7 +1841,7 @@
   Confidence interval
  \end{field}
  \begin{field}
-  Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p}(\alpha/2)\hat{\sigma} \sqrt{x_0^t(X^tX)^{-1}x_0}$
+  Confidence in mean response $\mathbf{x}_0^t \hat{\beta} \pm t_{n-p,(\alpha/2)}\hat{\sigma} \sqrt{x_0^t(X^tX)^{-1}x_0}$
   With 95\% confidence, the expected mean response
  \end{field}
 \end{note}
@@ -1852,13 +1884,16 @@
 
 \begin{note} \begin{field} \tiny 100116 \end{field}
  \begin{field}
-  Influential
+  Influential point
  \end{field}
  \begin{field}
-    if fitted model depends highly on the value
+    If fitted model depends highly on the value of the observation
+
   Measure using cook's distance
   $$ D_i = \frac{(\hat{Y} - \hat{Y}_{(i)})^t(\hat{Y} - \hat{Y}_{(i)})}{(p+1)\hat{\sigma}^2} = \frac{1}{p+1}r_i^2 \frac{h_i}{(1 - h_i)}$$
-  Where $Y_{i}$ is the vector of fitted values when the model is fitted to the data without the $i$ ths observationl Moderate if $>1 $ Large if $>6$
+  Where $Y_{i}$ is the vector of fitted values when the model is fitted to the data without the $i$th observation
+
+   Moderate if $>1 $ Large if $>6$
  \end{field}
 \end{note}
 
@@ -1882,7 +1917,7 @@
 
 \begin{note} \begin{field} \tiny 100118 \end{field}
  \begin{field}
-  Ridge Regression
+  Ridge Regression parameter estimate
  \end{field}
  \begin{field}
   $\hat{\beta} = (X^tX + \lambda I)^{-1} X^t Y$, where $\lambda$ is chosen. Note these are biased estimators
@@ -2111,17 +2146,15 @@
   Hypothesis test and interval estimates for $\mu_i$ in CRD
  \end{field}
  \begin{field}
-  $\hat{\mu}_i = \bar{y}_i$ = sample mean of $y_{i1}, \cdots y_{in_{i}} \sim iid N(\mu_i,\sigma^2)$
 
-  $$ \bar{y}_i \sim N(\mu_i, \frac{\sigma^2}{n_i})$$
-
-  $SE(\bar{y}_i) = \sqrt{\frac{s^2}{n_i}}$
-
-  CI: $\bar{y}_i \pm t_{(a/2,N-g)} \sqrt{\frac{s^2}{n_i}}$
-
-  $H_0: \mu_i = 0$
-  $t = \frac{\bar{y}_i}{\sqrt{s^2/n_i}} \sim t_{(N-g)}$
-
+   \begin{itemize}
+     \item $\hat{\mu}_i = \bar{y}_i$ = sample mean of $y_{i1}, \cdots y_{in_{i}} \sim \text{ iid } N(\mu_i,\sigma^2)$
+     \item $ \bar{y}_i \sim N(\mu_i, \frac{\sigma^2}{n_i})$
+     \item $SE(\bar{y}_i) = \sqrt{\frac{s^2}{n_i}}$
+     \item CI: $\bar{y}_i \pm t_{(a/2,N-g)} \sqrt{\frac{s^2}{n_i}}$
+     \item $H_0: \mu_i = 0$
+     \item $t = \frac{\bar{y}_i}{\sqrt{s^2/n_i}} \sim t_{(N-g)}$
+   \end{itemize}
  \end{field}
 \end{note}
 
@@ -2147,7 +2180,7 @@
    \end{pmatrix} \begin{pmatrix}
     \mu_{1} \\ \mu_2 \\ \mu_3
    \end{pmatrix} + \begin{pmatrix}
-    \epsilon_{11} \\ \vdots \epsilon_{32}
+    \epsilon_{11} \\ \vdots \\ \epsilon_{32}
    \end{pmatrix}$$
  \end{field}
 \end{note}
@@ -2206,7 +2239,7 @@
    \end{pmatrix} \begin{pmatrix}
     \mu \\ \alpha_1 \\ \alpha_2
    \end{pmatrix} + \begin{pmatrix}
-    \epsilon_{11} \\ \vdots \epsilon_{32}
+    \epsilon_{11} \\ \vdots \\ \epsilon_{32}
    \end{pmatrix} $$
 
   Note that $\alpha_3 = -\alpha_1 - \alpha_2$

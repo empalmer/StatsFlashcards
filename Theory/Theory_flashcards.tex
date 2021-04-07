@@ -1449,7 +1449,8 @@ F($v_1,v_2), E(X) = \frac{v_1}{v_2-2}, V(X) = 2\big(\frac{v_2}{v_2-2}\big)^2\fra
 
 \begin{note} \begin{field} \tiny 184 \end{field}
   \begin{field}
-    Using MGF to relate distributions: MGF exp = $( 1 - \beta t)^{-1}$
+    Using MGF to relate distributions: MGF exp = $( 1 - \beta t)^{-1}$\\
+    Distribution of $Y = \sum X_i$
   \end{field}
   \begin{field}
     $Y = \sum X_i$ is gamma as MGF gamma is $(1 - \beta t)^{-\alpha}$
@@ -3045,7 +3046,7 @@ $\Sigma_{aa} = \begin{pmatrix}
     A sequence $\{X_n\}_{n \geq 1}$ of random variables converges in probability to a constant $c \in \mathbb{R}$ if and only if
   \end{field}
   \begin{field}
-    A sequence $\{X_n\}_{n \geq 1}$ of random variables converges in probability to a constant $c \in \mathbb{R}$ if and only if the sequence converges in distribution to $c$
+    The sequence converges in distribution to $c$
   \end{field}
 \end{note}
 
@@ -3430,7 +3431,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
 
 \begin{note} \begin{field} \tiny 275 \end{field}
   \begin{field}
-    Binomially distributed ttatistic for $T$, show that is complete
+    Binomially distributed statistic for $T$, show that is complete
   \end{field}
   \begin{field}
     Suppose the statistic $T \sim Binom(n,p)$, $0 < p < 1$, and let $g$ be a function such that $E_p(g(T)) = 0$ for all $p$.
@@ -4080,12 +4081,12 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         Parametric Inference
     \end{field}
     \begin{field}
-        Inference (estimation and/or hypothesis testing performed under the assumption taht the data come from a popluation distribution that belongs to some family of distributions $F(x;\theta)$) parametrized by a finite-dimensional parameter $\theta$
+      \begin{itemize}
+        \item Inference (estimation and/or hypothesis testing performed under the assumption that the data come from a population distribution that belongs to some family of distributions $F(x;\theta)$) parametrized by a finite-dimensional parameter $\theta$
+        \item Parameter space: The set $\Theta$ of all possible values of the parameter $\theta$
+        \item vs. Nonparametric Inference - where no or limited assumptions or specifications of the form of the population distributions
+      \end{itemize}
 
-
-        Parameter space: The set $\Theta$ of all possible values of the parameter $\theta$
-
-        Vs Nonparametric Inference - where no or limited assumptions or specifications of the form of the population distributions
     \end{field}
 \end{note}
 
@@ -4186,7 +4187,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \begin{field}
         We can summarize the performance of a test procedure through the power function:
         \begin{align*}
-          \text{Power}(\theta) = \beta(\theta) &= P_\theta(\text{Reject } H_0 \text{ when } \theta \text{is the true value of the parameter of interest})\\
+          \text{Power}(\theta) = \beta(\theta) &= P_\theta(\text{Reject } H_0 \text{ when } \theta \text{ is the true value of the parameter of interest})\\
           &= P_\theta((X_1, \ldots X_n) \in \mathscr{R}) \\
           &= P_\theta(T(X_1, \ldots, X_n) \in \mathscr{R}_t)
         \end{align*}
@@ -4465,7 +4466,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Unbiased test (definition)
-        
+
         A test of $H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$ is called unbiased if
     \end{field}
     \begin{field}
@@ -5119,10 +5120,10 @@ $E(g(X)) \approx $, $V(g(X))\approx $
         \tiny 371x
     \end{field}
     \begin{field}
-        $X_i \sim Exp(\sigma)$, $\sum X_i \sim $
+        $X_i \sim Exp(\lambda)$, $\sum X_i \sim $
     \end{field}
     \begin{field}
-        $\sum X_i \sim Gamma(n,\sigma)$
+        $\sum X_i \sim Gamma(n,\lambda)$
     \end{field}
 \end{note}
 
@@ -5205,7 +5206,7 @@ $E(g(X)) \approx $, $V(g(X))\approx $
     \end{field}
     \begin{field}
         Under the common assumptions, The MLE $\hat{\theta}_n$ for $\theta$ satisfies
-        $$ \frac{\hat{\theta})n -\theta}{\sqrt{\frac{1}{n I_1(\theta)}}} \overset{d}{\to} N(0,1)$$
+        $$ \frac{\hat{\theta}_n -\theta}{\sqrt{\frac{1}{n I_1(\theta)}}} \overset{d}{\to} N(0,1)$$
         Equivalently,
         $\hat{\theta}_n \dot\sim N(\theta, \frac{1}{nI_1(\theta)})$
         This implies that the MLE is asymptotically the UMVUE (as $E(\hat{\theta}_n \approx \theta)$ and $Var(\hat{\theta}_n) \approx \frac{1}{I_n(\theta)}$), the CRLB var of unbiased estimate of $\theta$
